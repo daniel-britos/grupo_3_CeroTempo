@@ -1,8 +1,9 @@
-# grupo_3_e-commerce
-Proyecto integrador 
+- <h1> Proyecto Integrador </h1>
+
+- <h3> La empresa </h3>
 
 
-- <h1> Desarrolladores </h1>
+- <h3> Desarrolladores </h3>
 
 Daniel Britos
 
