@@ -1,20 +1,33 @@
-<h1> Proyecto Integrador </h1>
-
-- <h2> La empresa </h2>
-
-- <h2> Misión </h2>
-
-
-- <h2> Público </h2>
-
-- <h2> Manual Corporativo </h2>
-
-- <h2> Productos </h2>
-
-- <h2> Sitio </h2>
+<div align="center">
+  <h1> Proyecto Integrador </h1>
+</div>
 
 <div align="center">
-  - <h2>Desarrolladores</h2>  
+  <h2> La empresa </h2>
+</div>
+
+<div align="center">
+  <h2> Misión </h2>
+</div>
+
+<div align="center">
+  <h2> Público </h2>
+</div>
+
+<div align="center">
+  <h2> Manual Corporativo </h2>
+</div>
+
+<div align="center">
+  <h2> Productos </h2>
+</div>
+
+<div align ="center">
+  <h2> Sitio </h2>
+</div>
+
+<div align="center">
+   <h2>Desarrolladores</h2>  
 </div>
 
 
