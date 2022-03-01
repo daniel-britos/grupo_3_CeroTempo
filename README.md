@@ -5,4 +5,4 @@ Proyecto integrador
 - ### **Desarrolladores del proyecto**
 Daniel
 
-<span style="color:blue;">Texto *rojo cursiva* normal</span>
+<h3 style="color: red;"> Texto de color </h3>
