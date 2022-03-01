@@ -8,12 +8,9 @@ Daniel
 <h3 style="color: red;"> Texto de color </h3>
 
 
----
-
-***
-
----
-
-<hr />
+Cabecera A | Cabecera B
+-- | --
+Campo A1 | Campo B1
+Campo A2 | Campo B2
 
 
