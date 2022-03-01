@@ -1,23 +1,17 @@
 <h1> Proyecto Integrador </h1>
-<hr/>
 
-- <h3> La empresa </h3>
-<hr/>
+- <h2> La empresa </h2>
 
-- <h3> Misión </h3>
-<hr/>
+- <h2> Misión </h2>
 
-- <h3> Público </h3>
-<hr/>
 
-- <h3> Manual Corporativo </h3>
-<hr/>
+- <h2> Público </h2>
 
-- <h3> Productos </h3>
-<hr/>
+- <h2> Manual Corporativo </h2>
 
-- <h3> Sitio </h3>
-<hr/>
+- <h2> Productos </h2>
+
+- <h2> Sitio </h2>
 
 - <h2> Desarrolladores </h2>
 
