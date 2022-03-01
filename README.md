@@ -13,7 +13,7 @@
 
 - <h2> Sitio </h2>
 
-- <h2><center>Desarrolladores</center></h2>
+- <center><h2>Desarrolladores</h2></center>
 
 <p><i>María Carmen nacida en 2001, en Argentina es estudiante de sistemas y programación web y está aplicando su pasión por la guitarra  y su excelente predisposición para asesorar de la mejor manera.</i></p>
 <p><i>Fernando Ezequiel Baca, nacido en la provincia de Jujuy, Argentina. Apasionado por la tecnología, las series y el deporte. Entre sus cualidades se destacan el compañerismo, el respeto y la paciencia.</i></p>
