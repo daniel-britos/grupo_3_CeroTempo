@@ -2,5 +2,5 @@
 Proyecto integrador 
 
 
-### Desarrolladores del proyecto
+### **Desarrolladores del proyecto**
 Daniel
