@@ -1,33 +1,33 @@
 <div align="center">
-  <h1> Proyecto Integrador </h1>
+  <h1> PROYECTO INTEGRADOR </h1>
 </div>
 
 <div align="center">
-  <h2> La empresa </h2>
+  <h2> LA EMPRESA </h2>
 </div>
 
 <div align="center">
-  <h2> Misión </h2>
+  <h2> MISIÓN </h2>
 </div>
 
 <div align="center">
-  <h2> Público </h2>
+  <h2> CLIENTES </h2>
 </div>
 
 <div align="center">
-  <h2> Manual Corporativo </h2>
+  <h2> IDENTIDAD CORPORATIVA </h2>
 </div>
 
 <div align="center">
-  <h2> Productos </h2>
+  <h2> PRODUCTOS </h2>
 </div>
 
 <div align ="center">
-  <h2> Sitio </h2>
+  <h2> SITIO </h2>
 </div>
 
 <div align="center">
-   <h2>Desarrolladores</h2>  
+   <h2>DESARROLLADORES</h2>  
 </div>
 
 
