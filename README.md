@@ -6,6 +6,14 @@ Proyecto integrador
 Daniel
 
 <h3 style="color: red;"> Texto de color </h3>
+
+
 ---
+
+***
+
+---
+
+<hr />
 
 
