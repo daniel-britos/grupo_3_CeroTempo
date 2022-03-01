@@ -13,7 +13,7 @@
 - <h3> Sitio </h3>
 
 - <h3> Desarrolladores </h3>
-* María Carmen nacida en 2001, en Argentina es estudiante de sistemas y programación web y está aplicando su pasión por la guitarra  y su excelente predisposición para asesorar de la mejor manera.*
+<i>María Carmen nacida en 2001, en Argentina es estudiante de sistemas y programación web y está aplicando su pasión por la guitarra  y su excelente predisposición para asesorar de la mejor manera.</i>
 
 
 
