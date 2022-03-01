@@ -2,9 +2,11 @@
 Proyecto integrador 
 
 
-- ### **Desarrolladores del proyecto**
-Daniel
+- <h1> Desarrolladores </h1>
 --
+Daniel Britos
+
+
 
 
 Cabecera A | Cabecera B
