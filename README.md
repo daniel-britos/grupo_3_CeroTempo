@@ -1,5 +1,6 @@
 <div align="center">
   <h1> PROYECTO INTEGRADOR </h1>
+  <img src="C:\Users\Daniel\Desktop\Digital House\Integrador\Sprint01\materiales\Design" alt="Girl in a jacket" >
 </div>
 
 <div align="center">
