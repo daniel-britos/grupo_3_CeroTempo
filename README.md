@@ -17,7 +17,7 @@
 
 <div align="center">
   <h2> IDENTIDAD CORPORATIVA </h2>
-  <h3 align="left">Visita nuestro manual corporativo: </h3>
+  <p align="left">Visita nuestro manual corporativo: [Instagram](https://www.instagram.com/danielbritos.vfx/) .</p>
 </div>
 
 <div align="center">
