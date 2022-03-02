@@ -17,6 +17,7 @@
 
 <div align="center">
   <h2> IDENTIDAD CORPORATIVA </h2>
+  <h3 align="left">Visita nuestro manual corporativo: </h3>
 </div>
 
 <div align="center">
