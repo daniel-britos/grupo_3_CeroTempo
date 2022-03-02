@@ -1,6 +1,6 @@
 <div align="center">
   <h1> PROYECTO INTEGRADOR </h1>
-  <img src="C:\Users\Daniel\Desktop\Digital House\Integrador\Sprint01\materiales\Design" alt="Girl in a jacket" >
+  ![imagen_logotipo(https://github.com/daniel-britos/grupo_3_CeroTempo/blob/main/Design/logo.png "logotipo")]
 </div>
 
 <div align="center">
