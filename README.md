@@ -1,8 +1,7 @@
 <div align="center">
   <h1> PROYECTO INTEGRADOR </h1>
 </div>
-
-![imagen_logotipo](https://github.com/daniel-britos/grupo_3_CeroTempo/blob/main/Design/logo.png =250x250)
+<img src="https://github.com/daniel-britos/grupo_3_CeroTempo/blob/main/Design/logo.png" width="250" height="250">
 
 <div align="center">
   <h2> LA EMPRESA </h2>
