@@ -1,7 +1,7 @@
 <div align="center">
-  <h1> PROYECTO INTEGRADOR </h1>
-  <img src="C:\Users\Daniel\Desktop\Digital House\Integrador\Sprint01\materiales\Design" alt="Girl in a jacket" >
+  <img src="https://github.com/daniel-britos/grupo_3_CeroTempo/blob/main/doc/logo.png" width="450" height="450">
 </div>
+
 
 <div align="center">
   <h2> LA EMPRESA </h2>
@@ -17,6 +17,7 @@
 
 <div align="center">
   <h2> IDENTIDAD CORPORATIVA </h2>
+  <p align="left">Visita nuestro manual corporativo: <a href="https://github.com/daniel-britos/grupo_3_CeroTempo/blob/main/Design/logo.png">Identidad corporativa</a> .</p>
 </div>
 
 <div align="center">
