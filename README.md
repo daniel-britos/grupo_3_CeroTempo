@@ -22,7 +22,7 @@
 
 <div align="center">
   <h2> PRODUCTOS Y SERVICIOS </h2>
-  <p><i>TEMPO SHOP fue fundada en (inserte un año ramdon) con un proposito en mente de poner los medios necesarios en la mano de los musicos y aficionados para cumplir su sueño de triunfar en la musica. tenemos el conocimiento y la capacidad como para informarte acerca de las mejores elecciones para tu compra, desde una guitarra criolla hasta un microfono y aplificadores no importa. (Los tiempos cambian, y los músicos también, así que constantemente debemos estar allí con los últimos avances de la tecnología en instrumentos y dispositivos de sonido.)</i></p>
+  <p><i>CEROTEMPO SHOP fue fundada en 1986 con un proposito en mente de poner los medios necesarios en las manos de los musicos y aficionados para cumplir su sueño de triunfar en la musica. Tenemos el conocimiento y la capacidad como para informar acerca de las mejores elecciones para su compra, desde una guitarra criolla hasta un microfono y aplificadores no importa. (Los tiempos cambian, y los músicos también, así que constantemente debemos estar allí con los últimos avances de la tecnología en instrumentos y dispositivos de sonido). No te pierdas de visitar nuestro extenso catalogo de productos.</i></p>
 </div>
 
 <div align ="center">
