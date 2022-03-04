@@ -7,8 +7,8 @@
   <h2> LA EMPRESA </h2>
   <p><i>
     CERO TEMPO
-     Somos una empresa de música donde podemos garantizarte el acceso a los mejores productos a un precio accesible y lo que es aun      mejor  ser asesorado y atendido por músicos.<br/>
-
+     Somos una empresa de música donde podemos garantizarte el acceso a los mejores productos a un precio accesible y lo que es aun      mejor  ser asesorado y atendido por músicos.</i><p>
+  <p><i>
     Buscamos ante todo la satisfacción de nuestros clientes en todo el proceso de su compra.
     Ya seas profesional, o te estés iniciando en el mundo de la música, encontrarás en Cero Tempo un equipo dispuesto a ayudarte y orientarte para sacar el máximo partido a tu presupuesto. ¡Esperamos tu visita! 
   </i></p>
