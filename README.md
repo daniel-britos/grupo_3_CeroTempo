@@ -7,7 +7,7 @@
   <h2> LA EMPRESA </h2>
   <p><i>
     CERO TEMPO
-     Somos una empresa de música donde podemos garantizarte el acceso a los mejores productos a un precio accesible y lo que es aun      mejor  ser asesorado y atendido por músicos.
+     Somos una empresa de música donde podemos garantizarte el acceso a los mejores productos a un precio accesible y lo que es aun      mejor  ser asesorado y atendido por músicos.<br/>
 
     Buscamos ante todo la satisfacción de nuestros clientes en todo el proceso de su compra.
     Ya seas profesional, o te estés iniciando en el mundo de la música, encontrarás en Cero Tempo un equipo dispuesto a ayudarte y orientarte para sacar el máximo partido a tu presupuesto. ¡Esperamos tu visita! 
@@ -16,13 +16,14 @@
 
 <div align="center">
   <h2> MISIÓN </h2>
-  <p><i>
-Ser referentes para la comunidad como proveedores de instrumentos musicales de alta calidad, trabajando con vocación para responder a las exigencias del público.
-
-Satisfacer las necesidades y superar las expectativas de nuestros clientes a través de la mejora continua, asegurando una rentabilidad que permita un crecimiento sustentable.
-
-Desarrollar nuestro trabajo en un entorno laboral gratificante, dentro de una atmósfera que inspire el desarrollo y la satisfacción profesional así como también el crecimiento personal de nuestro equipo.
- </p></i>
+  <p>
+    <i>
+      Ser referentes para la comunidad como proveedores de instrumentos musicales de alta calidad, trabajando con vocación para responder a las exigencias del      público.<br/>
+      Satisfacer las necesidades y superar las expectativas de nuestros clientes a través de la mejora continua, asegurando una rentabilidad que permita un   crecimiento  sustentable.<br/>
+      Desarrollar nuestro trabajo en un entorno laboral gratificante, dentro de una atmósfera que inspire el desarrollo y la satisfacción profesional así 
+como también el crecimiento personal de nuestro equipo. <br/>
+     </i>
+   </p> 
 </div>
 
 <div align="center">
