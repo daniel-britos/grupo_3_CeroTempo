@@ -17,7 +17,7 @@
 
 <div align="center">
   <h2> IDENTIDAD CORPORATIVA </h2>
-  <p align="left">Visita nuestro manual corporativo: <a href="https://github.com/daniel-britos/grupo_3_CeroTempo/blob/main/doc/Design/manual_corporativo.pdf">MANUAL CORPORATIVO</a></p>
+  <p align="left">Visita nuestro manual corporativo: <a href="https://github.com/daniel-britos/grupo_3_CeroTempo/blob/main/doc/Design/manual_corporativo.pdf">MANUAL</a></p>
 </div>
 
 <div align="center">
