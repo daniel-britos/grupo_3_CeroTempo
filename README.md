@@ -30,6 +30,11 @@ como también el crecimiento personal de nuestro equipo. <br/>
 
 <div align="center">
   <h2> CLIENTES </h2>
+  <p>
+    <i>
+      Estamos orientados hacia aquellas personas a las que les gusta y disfrutan de la música, tanto de forma profesional como así también de manera entusiasta. Queremos brindarles y poner a su alcance los medios para que continúen desarrollándose en este apasionante mundo comprometiéndonos cada día a construir ese vínculo especial que genera la música.
+    </i>
+  </p>
 </div>
 
 <div align="center">
