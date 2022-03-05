@@ -5,19 +5,41 @@
 
 <div align="center">
   <h2> LA EMPRESA </h2>
+  <p><i>
+     CERO TEMPO es una empresa dedicada a la comnercialización y difusión en el ámbito de la música, donde podemos garantizarte el acceso 
+     a los mejores productos al mejor precio y aun mejor podrás ser asesorado y atendido por músicos profesionales.</i><p>
+  <p><i>
+    Buscamos ante todo la satisfacción de nuestros clientes en todo el proceso de su compra,
+    Ya seas profesional, o estés iniciando en el mundo de la música, encontrarás en Cero 
+    Tempo un equipo dispuesto a ayudarte y orientarte para sacar el máximo 
+    partido a tu presupuesto. <br/>¡Esperamos tu visita! 
+  </i></p>
 </div>
 
 <div align="center">
   <h2> MISIÓN </h2>
+  <p>
+    <i>
+      - Ser referentes para la comunidad como proveedores de instrumentos músicales de alta calidad, trabajando con vocación para responder a las exigencias del      público mas exigente.<br/>
+      - Satisfacer las necesidades y superar las expectativas de nuestros clientes a través de la mejora continua, asegurando una rentabilidad que permita un   crecimiento  sustentable.<br/>
+      - Desarrollar nuestro trabajo en un entorno laboral gratificante, dentro de una atmósfera que inspire el desarrollo y la satisfacción profesional así 
+como también el crecimiento personal de nuestro equipo. <br/>
+     </i>
+   </p> 
 </div>
 
 <div align="center">
   <h2> CLIENTES </h2>
+  <p>
+    <i>
+      Estamos orientados hacia aquellas personas a las que les gusta y disfrutan de la música, tanto de forma profesional como así también de manera entusiasta. Queremos brindarles y poner a su alcance los medios para que continúen desarrollándose en este apasionante mundo comprometiéndonos cada día a construir ese vínculo especial que genera la música.
+    </i>
+  </p>
 </div>
 
 <div align="center">
   <h2> IDENTIDAD CORPORATIVA </h2>
-  <p align="left">Visita nuestro manual corporativo: <a href="https://github.com/daniel-britos/grupo_3_CeroTempo/blob/main/Design/logo.png">Identidad corporativa</a> .</p>
+  <p align="left">Visita nuestro manual corporativo: <a href="https://github.com/daniel-britos/grupo_3_CeroTempo/blob/main/doc/Design/manual_corporativo.pdf">MANUAL</a></p>
 </div>
 
 <div align="center">
@@ -27,6 +49,13 @@
 
 <div align ="center">
   <h2> SITIO </h2>
+  <p>
+    <i>
+      El desarrollo de nuestro sitio web fué diseñado con una arquitectura amigable para el usuario que le permita tener una experiencia
+      de agradable al recorrer el sitio. El mismo se encuentra diseñado con una metodologia "modal first" que permite al usuario utilizar
+      el sitio sin ningun problema de visibilidad o navegación permitiendole utilizar cualquier celular, tablet, notebook o pc de escritorio.
+    </i>
+  </p>
 </div>
 
 <div align="center">
