@@ -59,6 +59,7 @@ como también el crecimiento personal de nuestro equipo. <br/>
 
 <div align ="center">
   <h2> SITIO </h2>
+  <img src="https://github.com/daniel-britos/grupo_3_CeroTempo/blob/main/doc/Design/sitio.png">
   <p>
     <i>
       El desarrollo de nuestro sitio web fué diseñado con una arquitectura amigable para el usuario que le permita tener una experiencia
