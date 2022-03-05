@@ -49,6 +49,13 @@ como también el crecimiento personal de nuestro equipo. <br/>
 
 <div align ="center">
   <h2> SITIO </h2>
+  <p>
+    <i>
+      El desarrollo de nuestro sitio web fué diseñado con una arquitectura amigable para el usuario que le permita tener una experiencia
+      de agradable al recorrer el sitio.<br/> El mismo se encuentra diseñado con una metodologia "modal first" que permite al usuario utilizar
+      el sitio sin ningun problema de visibilidad o navegación permitiendole utilizar cualquier celular, tablet, notebook o pc de escritorio.
+    </i>
+  </p>
 </div>
 
 <div align="center">
