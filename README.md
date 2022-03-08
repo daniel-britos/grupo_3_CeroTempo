@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://github.com/daniel-britos/grupo_3_CeroTempo/blob/main/doc/Design/logo.png" width="450" height="450">
+  <img src="https://github.com/daniel-britos/grupo_3_CeroTempo/blob/main/doc/Design/logoBase.png" width="450" height="450">
 </div>
 
 
