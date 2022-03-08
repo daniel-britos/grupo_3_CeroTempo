@@ -38,17 +38,28 @@ como también el crecimiento personal de nuestro equipo. <br/>
 </div>
 
 <div align="center">
+  
   <h2> IDENTIDAD CORPORATIVA </h2>
   <p align="left">Visita nuestro manual corporativo: <a href="https://github.com/daniel-britos/grupo_3_CeroTempo/blob/main/doc/Design/manual_corporativo.pdf">MANUAL</a></p>
 </div>
 
 <div align="center">
   <h2> PRODUCTOS Y SERVICIOS </h2>
+  <img src="https://github.com/daniel-britos/grupo_3_CeroTempo/blob/main/doc/Design/productos.png">
   <p><i>CEROTEMPO SHOP fue fundada en 1986 con un proposito en mente de poner los medios necesarios en las manos de los musicos y aficionados para cumplir su sueño de triunfar en la musica. Tenemos el conocimiento y la capacidad como para informar acerca de las mejores elecciones para su compra, desde una guitarra criolla hasta un microfono y aplificadores no importa. (Los tiempos cambian, y los músicos también, así que constantemente debemos estar allí con los últimos avances de la tecnología en instrumentos y dispositivos de sonido). No te pierdas de visitar nuestro extenso catalogo de productos.</i></p>
+  <img src="https://github.com/daniel-britos/grupo_3_CeroTempo/blob/main/doc/Design/clases.png">
+<p><i>
+    Brindamos clases grupales e individuales con maestros de conservatorio.<br/>
+    Consultá la disponibilidad de horarios.
+</i></p>
+  <img src="https://github.com/daniel-britos/grupo_3_CeroTempo/blob/main/doc/Design/luthiers.png">
+<p><i>
+   Nuestros luthiers son considerados los mejores del país gracias a sus años de experiencia reparando y poniendo a punto diversos instrumentos músicales para alcanzar la mejor calidad de sonido a la hora de tocar.
 </div>
 
 <div align ="center">
   <h2> SITIO </h2>
+  <img src="https://github.com/daniel-britos/grupo_3_CeroTempo/blob/main/doc/Design/sitio.png">
   <p>
     <i>
       El desarrollo de nuestro sitio web fué diseñado con una arquitectura amigable para el usuario que le permita tener una experiencia
