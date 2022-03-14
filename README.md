@@ -69,14 +69,13 @@ como también el crecimiento personal de nuestro equipo. <br/>
   </p>
 </div>
 
- <div align="center">
+ <div>
   <h2> INSPIRACIÓN </h2>
     <ul>
       <li><a href="https://www.decibullz.com/">Decibullz</a></li>
       <li><a href="https://www.kaironmusic.com.ar/">Kairon</a></li>
       <li><a href="https://cruisemaster.com.au/">Cruisemaster</a></li>
-      <li><a href="https://www.baires.rocks/"></a></li>
-      <li><a href="">Bairesrock</a></li>
+      <li><a href="https://www.baires.rocks/">Bairesrock</a></li>
    </ul>
 </div>
   
