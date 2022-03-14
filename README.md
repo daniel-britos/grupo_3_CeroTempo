@@ -71,12 +71,13 @@ como también el crecimiento personal de nuestro equipo. <br/>
 
  <div align="center">
   <h2> INSPIRACIÓN </h2>
-  
-    ###### [Decibullz](https://www.decibullz.com/).
-    ###### [Kairon](https://www.kaironmusic.com.ar/).
-    ###### [Cruisemaster](https://cruisemaster.com.au/).
-    ###### [Bairesrock](https://www.baires.rocks/).
-  
+    <ul>
+      <li><a href="https://www.decibullz.com/">Decibullz</a></li>
+      <li><a href="https://www.kaironmusic.com.ar/">Kairon</a></li>
+      <li><a href="https://cruisemaster.com.au/">Cruisemaster</a></li>
+      <li><a href="https://www.baires.rocks/"></a></li>
+      <li><a href="">Bairesrock</a></li>
+   </ul>
 </div>
   
   
