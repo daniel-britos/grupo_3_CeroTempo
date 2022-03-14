@@ -69,6 +69,17 @@ como también el crecimiento personal de nuestro equipo. <br/>
   </p>
 </div>
 
+ <div align="center">
+  <h2> INSPIRACIÓN </h2>
+  <p>
+    <i>
+
+    </i>
+  </p>
+</div>
+  
+  
+  
 <div align="center">
    <h2>DESARROLLADORES</h2>  
 </div>
