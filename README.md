@@ -112,9 +112,7 @@ como también el crecimiento personal de nuestro equipo. <br/>
         <p>Portada carrusel</p>
       </li>
       <li>
-        <a href="https://www.hoffmannmusica.com.ar/iniciar">Hoffmannmus</a>
-        <p>Login</p>
-        <p>Register</p>
+        <a href="https://www.hoffmannmusica.com.ar/iniciar">Hoffmannmus</a> <p>Login / </p><p>Register</p>
       </li>
       
    </ul>
