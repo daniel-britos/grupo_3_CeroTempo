@@ -71,7 +71,7 @@ como también el crecimiento personal de nuestro equipo. <br/>
 
  <div>
   <h2> INSPIRACIÓN </h2>
-   <h3>Todas las referencias</h3>
+   <h3>Fuentes de inspiración</h3>
     <ul>
       <li><a href="https://ar.pinterest.com/pin/4785143345966263/">Pinterest</a></li>
       <li><a href="https://www.decibullz.com/">Decibullz</a></li>
