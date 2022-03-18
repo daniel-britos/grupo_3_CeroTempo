@@ -90,12 +90,33 @@ como también el crecimiento personal de nuestro equipo. <br/>
     <ul>
       <li>
         <a href="https://www.baires.rocks/">Bairesrock</a>
-        <p><- Carrito de compras</p>
+        <p>Header</p>
+  |     <p>Carrito de compras</p>
       </li>
-      <li><a href="https://www.decibullz.com/">Decibullz</a></li>
-      <li><a href="https://www.kaironmusic.com.ar/">Kairon</a></li>
-      <li><a href="https://cruisemaster.com.au/">Cruisemaster</a></li>
-      <li><a href="https://todomusica.com.ar/">Todomusica</a></li>
+      <li>
+        <a href="https://www.decibullz.com/">Decibullz</a>
+        <p>Layout (estructura general)<p>
+      </li>
+      <li>
+        <a href="https://www.kaironmusic.com.ar/">Kairon</a>
+        <p>Footer</p>
+      </li>
+      <li>
+        <a href="https://cruisemaster.com.au/">Cruisemaster</a>
+        <p>Colores</p>
+        <p>Carrusel</p>
+        <p>Sector marcas</p>
+      </li>
+      <li>
+        <a href="https://todomusica.com.ar/">Todomusica</a>
+        <p>Portada carrusel</p>
+      </li>
+      <li>
+        <a href="https://www.hoffmannmusica.com.ar/iniciar">Hoffmannmus</a>
+        <p>Login</p>
+        <p>Register</p>
+      </li>
+      
    </ul>
 </div>
   
