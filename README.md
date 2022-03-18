@@ -89,32 +89,24 @@ como también el crecimiento personal de nuestro equipo. <br/>
    </p>
     <ul>
       <li>
-        <a href="https://www.baires.rocks/">Bairesrock</a>
-        <p>Header</p>
-  |     <p>Carrito de compras</p>
+        <a href="https://www.baires.rocks/">Bairesrock</a><p>Header / Carrito de compras</p>
       </li>
       <li>
-        <a href="https://www.decibullz.com/">Decibullz</a>
-        <p>Layout (estructura general)<p>
+        <a href="https://www.decibullz.com/">Decibullz</a> <p>Layout (estructura general)<p>
       </li>
       <li>
-        <a href="https://www.kaironmusic.com.ar/">Kairon</a>
-        <p>Footer</p>
+        <a href="https://www.kaironmusic.com.ar/">Kairon</a> <p>Footer</p>
+
       </li>
       <li>
-        <a href="https://cruisemaster.com.au/">Cruisemaster</a>
-        <p>Colores</p>
-        <p>Carrusel</p>
-        <p>Sector marcas</p>
+        <a href="https://cruisemaster.com.au/">Cruisemaster</a><p>Colores / Carrusel / Sector marcas</p>
       </li>
       <li>
-        <a href="https://todomusica.com.ar/">Todomusica</a>
-        <p>Portada carrusel</p>
+        <a href="https://todomusica.com.ar/">Todomusica</a><p>Portada carrusel</p>
       </li>
       <li>
-        <a href="https://www.hoffmannmusica.com.ar/iniciar">Hoffmannmus</a> <p>Login / </p><p>Register</p>
+        <a href="https://www.hoffmannmusica.com.ar/iniciar">Hoffmannmus</a> <p>Login / Register </p>
       </li>
-      
    </ul>
 </div>
   
