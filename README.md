@@ -88,7 +88,10 @@ como también el crecimiento personal de nuestro equipo. <br/>
       Nuestra principal inspiración de estos sitios destacados por el equipo fueron el diseño de colores oscuros como en el caso del sitio Kairon y Cruisemaster, la úbicación de elementos para la experiencia de usuario transmitida en Decibullz, posicionamiento de busquedas de productos y el metodo de carrito de Todomusica, siempre intentando generar nuestra propia inpronta y mejoras que consideramos apropiadas.
    </p>
     <ul>
-      <li><a href="https://www.baires.rocks/">Bairesrock</a></li>
+      <li>
+        <a href="https://www.baires.rocks/">Bairesrock</a>
+        <p><- Carrito de compras</p>
+      </li>
       <li><a href="https://www.decibullz.com/">Decibullz</a></li>
       <li><a href="https://www.kaironmusic.com.ar/">Kairon</a></li>
       <li><a href="https://cruisemaster.com.au/">Cruisemaster</a></li>
