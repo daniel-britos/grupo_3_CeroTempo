@@ -92,11 +92,10 @@ como también el crecimiento personal de nuestro equipo. <br/>
         <a href="https://www.baires.rocks/">Bairesrock</a><p>Header / Carrito de compras</p>
       </li>
       <li>
-        <a href="https://www.decibullz.com/">Decibullz</a> <p>Layout (estructura general)<p>
+        <a href="https://www.decibullz.com/">Decibullz</a> <p>Layout (estructura general)</p>
       </li>
       <li>
         <a href="https://www.kaironmusic.com.ar/">Kairon</a> <p>Footer</p>
-
       </li>
       <li>
         <a href="https://cruisemaster.com.au/">Cruisemaster</a><p>Colores / Carrusel / Sector marcas</p>
