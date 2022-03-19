@@ -71,7 +71,7 @@ como también el crecimiento personal de nuestro equipo. <br/>
 
  <div>
   <h2> INSPIRACIÓN </h2>
-   <h3>Todas las referencias</h3>
+   <h3>Fuentes de inspiración</h3>
     <ul>
       <li><a href="https://ar.pinterest.com/pin/4785143345966263/">Pinterest</a></li>
       <li><a href="https://www.decibullz.com/">Decibullz</a></li>
@@ -88,11 +88,24 @@ como también el crecimiento personal de nuestro equipo. <br/>
       Nuestra principal inspiración de estos sitios destacados por el equipo fueron el diseño de colores oscuros como en el caso del sitio Kairon y Cruisemaster, la úbicación de elementos para la experiencia de usuario transmitida en Decibullz, posicionamiento de busquedas de productos y el metodo de carrito de Todomusica, siempre intentando generar nuestra propia inpronta y mejoras que consideramos apropiadas.
    </p>
     <ul>
-      <li><a href="https://www.baires.rocks/">Bairesrock</a></li>
-      <li><a href="https://www.decibullz.com/">Decibullz</a></li>
-      <li><a href="https://www.kaironmusic.com.ar/">Kairon</a></li>
-      <li><a href="https://cruisemaster.com.au/">Cruisemaster</a></li>
-      <li><a href="https://todomusica.com.ar/">Todomusica</a></li>
+      <li>
+        <a href="https://www.baires.rocks/">Bairesrock</a><p>Header / Carrito de compras</p>
+      </li>
+      <li>
+        <a href="https://www.decibullz.com/">Decibullz</a> <p>Layout (estructura general)</p>
+      </li>
+      <li>
+        <a href="https://www.kaironmusic.com.ar/">Kairon</a> <p>Footer</p>
+      </li>
+      <li>
+        <a href="https://cruisemaster.com.au/">Cruisemaster</a><p>Colores / Carrusel / Sector marcas</p>
+      </li>
+      <li>
+        <a href="https://todomusica.com.ar/">Todomusica</a><p>Portada carrusel</p>
+      </li>
+      <li>
+        <a href="https://www.hoffmannmusica.com.ar/iniciar">Hoffmannmus</a> <p>Login / Register </p>
+      </li>
    </ul>
 </div>
   
