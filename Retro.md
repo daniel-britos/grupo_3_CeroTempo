@@ -3,7 +3,7 @@
 - Dailys
 - Revisiones del proyecto
 - Establecer horarios
-- 
+
 2. Hacer más.
 - Mayor cooperación
 - Mayor creatividad e innovación
