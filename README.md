@@ -121,7 +121,10 @@ como también el crecimiento personal de nuestro equipo. <br/>
 <p><i>Daniel Britos, Argentino. Es compositor de imagen y video, aficionado al desarrollo de aplicaciónes web y el mundo del desarrollo. Algunas de sus mayores virtudes son la paciencia, la amabilidad y el esfuerzo.</i></p>
 <p><i>Ubira Rivero, Venezolana. Estudiante de sistema y programación web, le encanta viajar y conocer otras culturas, en sus cualidades se destaca la paciencia, el trabajo en equipo y la empatia</i></p>
 
-
+<div align="center">
+  <h2>Tablero de trabajo</h2>
+  <a href="https://trello.com/b/Tn5yxmL2/grupo3-com14cerotempo"> Trello </a>
+</div>
 
 
 
