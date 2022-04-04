@@ -1,0 +1,20 @@
+header,
+main,
+footer {
+    max-width: 1224px;
+    margin: 0 auto; 
+}
+ul, li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+a {
+    color: black;
+    list-style: none;
+    text-decoration: none;
+}
+
+:root {
+    --orangeLogo: #f25824;
+}

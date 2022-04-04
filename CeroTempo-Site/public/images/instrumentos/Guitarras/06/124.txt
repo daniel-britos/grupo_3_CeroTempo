@@ -1,0 +1,32 @@
+Place of Origin:
+Sichuan, China
+Brand Name:
+Farida
+Model Number:
+F-5050
+Type:
+Electric Guitar
+Body Material:
+Alder
+Neck Material:
+American Maple Back Buried Laurel
+Fingerboard Material:
+Maple
+Product Name:
+Electric Guitar
+Product number:
+F-5050
+body:
+Alder
+neck:
+Maple
+Fingerboard:
+Maple
+bridge:
+Vintage Tremolo bridge
+tuner:
+closed tuners
+scale line:
+21F
+MOQ:
+1pcs

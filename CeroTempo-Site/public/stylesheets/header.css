@@ -1,0 +1,41 @@
+/* HEADER-NAV */
+.header-nav {
+    display: flex;
+    flex-direction: column;
+}
+.header-nav-intro {
+    background-color: black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-bottom: 10px;
+}
+.header-logo {
+    width: 140px;
+    height: 97px;
+}
+/* ICONS */
+.fa-bars {
+    font-size: 35px;
+    color: white;
+}
+.fa-user {
+    font-size: 35px;
+    color: white;
+}
+/* BUSCADOR */
+.header-nav-search {
+    display: flex;
+    margin: 10px auto;
+
+}
+.header-nav-search input {
+    background-color: rgb(177, 177, 177);
+    padding: 0;
+    padding: 0 10px;
+    border-radius: 20px;
+}
+ .fa-magnifying-glass {
+    color: black;
+    font-size: 30px;
+ }

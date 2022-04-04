@@ -1,0 +1,29 @@
+Detalles Rápidos
+Lugar de Origen :
+Guangdong, China
+Nombre de la marca :
+alegría
+Número de modelo :
+DC-15S
+Uso :
+GUITARRA
+Tipo :
+Altavoz amplificador
+Color:
+Negro
+Nombre del producto :
+Amplificador de guitarra digital
+Aplicación :
+Guitarra acústica / eléctrica
+Marca :
+alegría
+modelo :
+DC-15S
+Entrada del adaptador de CA :
+CA100-240V 50-60Hz
+Salida del adaptador de CA :
+CC15V/4A
+Batería de litio :
+11,1 V/4,4 Ah
+Bluetooth:
+Bluetooth 4.0
