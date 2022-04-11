@@ -1,0 +1,42 @@
+body{
+    color: black;
+    font-family: 'Roboto', sans-serif;
+}
+
+img.piano-1{
+    height: 300px;
+    width: auto;
+} 
+
+footer{
+    color: white;
+    background-color: black;
+    font-family: 'Roboto', sans-serif;
+}
+
+.info-li{
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+.contact-li{
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+h1, h2{
+    color: #f25824;
+    font-family: 'Roboto', sans-serif;
+}
+
+input.product-quantity-i{
+    background-color: gray;
+}
+input.buy-now-i{
+    background-color: #FF4A00;
+}
+input.add-cart-i{
+    background-color:gray ;
+}
+
+::placeholder{
+    color: black;
+}
