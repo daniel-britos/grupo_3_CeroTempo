@@ -1,0 +1,40 @@
+.form-div{
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    display: grid;
+}
+.sign-up{
+    justify-content: center;
+    align-items: center;
+    display: grid;
+    text-align: center;
+}
+
+input{
+    background-color: #FF6C3B;
+}
+.sign-up-p{
+    font-size: 33px;
+    align-content: flex-start;
+}
+.sign-up-button{
+    justify-content: center;
+    align-items: center;
+    display: grid;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 70px;
+}
+button{
+    border-radius: 60px;
+    justify-content: center;
+    align-items: center;
+    display: grid;
+    text-align: center;
+    background-color: #FF6C3B;
+}
+h1{
+    flex-direction: flex-start;
+    text-align: left;
+}

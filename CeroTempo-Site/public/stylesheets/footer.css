@@ -1,20 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Raleway:wght@200&family=Roboto:ital,wght@1,100&family=Rubik+Glitch&display=swap');
 /*FOOTER*/
-footer{
-    color: white;
-    background-color: black;
-    font-family: 'Roboto', sans-serif;
+.main-footer {
+    display: flex;
+    justify-content: space-between;
 }
-
-.info-li{
+.info-li li a {
     color: white;
-    font-family: 'Roboto', sans-serif;
 }
-.contact-li{
+.contact-li li a {
     color: white;
     font-family: 'Roboto', sans-serif;
 }
-h1, h2{
-    color: #f25824;
-    font-family: 'Roboto', sans-serif;
+.main-footer p {
+    text-align: center;
 }
