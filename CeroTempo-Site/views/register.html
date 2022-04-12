@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+</head>
+<body>
+    <header>
+        <nav class="header-nav">
+            <div class="header-nav-intro">
+                <i class="fa-solid fa-bars"></i>
+                <img src="/images/logo.png" alt="logo" class="header-logo">
+                <i class="fa-solid fa-user"></i>
+            </div>
+            <div class="header-nav-search">
+                <input type="text" placeholder="What are you looking for?">              
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+        </nav>
+    </header>
+    <form action="/my-handling-form-page" method="post">
+        <p>¡REGISTRATE!</p>
+        <ul>
+            <li>
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" name="user_name"/>
+            </li>
+            <li>
+                <label for="mail">Correo electrónico:</label>
+                <input type="email" id="mail" name="user_email"/>
+            </li>
+            <li>
+                <label for="msg">Mensaje:</label>
+                <textarea id="msg" name="user_message"></textarea>
+            </li>
+        </ul>
+    </form>
+</body>
+</html>
