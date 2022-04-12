@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Product Cart</title>
     <script src="https://kit.fontawesome.com/5bbec2626f.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
   </head>
   <body>
     <!-- <header>
@@ -23,66 +23,160 @@
       </nav>
     </header> -->
     <main>
-      <div>
+      <div class="main__title">
         <h1>Mi carrito</h1>
-        <h2>Productos</h2>
+        <h2>Productos: xxx</h2>
       </div>
-      <section>
-        <h3>Direccion de entrega</h3>
-        <a href="">Otra direccion</a>
-        <p>Avenida Siempreviva 742</p>
-        <p>C.P. 4600 - San Salvador de Jujuy, Jujuy</p>
-        <p>Cosme Fulanito - Telefono: 555-2633</p>
+      <section class="main__direction">
+        <div class="main__direction__title">
+          <h3>Direccion de entrega</h3>
+          <a href="">Otra direccion</a>
+        </div>
+        <div class="main__direction__description">
+          <p>Avenida Siempreviva 742</p>
+          <p>C.P. 4600 - San Salvador de Jujuy, Jujuy</p>
+          <p>Cosme Fulanito - Telefono: 555-2633</p>
+        </div>
       </section>
-      <section>
-        <article>
-          <div>
-            <img src="/images/instrumentos/Guitarras/01/093.jpg" alt="" width="50%" />
-            <a href=""></a>
-            <h4>Marca de Guitarra</h4>
-            <h4>Modelo de Guitarra</h4>
-            <h4>Precio</h4>
-            <div>
-              <button>
-                <i class="fa-solid fa-trash-can"></i>
-              </button>
+      <section class="detail">
+        <article class="product">
+          <div class="main__image">
+            <img src="/images/instrumentos/Guitarras/01/093.jpg" alt="" width="125px" />
+            <!-- <a href=""></a> -->
+          </div>
+          <div class="main__product">
+            <div class="main__product__title">
+              <h4>Marca de Guitarra</h4>
+              <h4>Modelo de Guitarra</h4>
             </div>
-            <div>
-              <button>
-                <i class="fa-solid fa-circle-minus"></i>
-              </button>
-            </div>
-            <h4>01</h4>
-            <div>
-              <button>
-                <i class="fa-solid fa-circle-plus"></i>
-              </button>
+            <div class="main__product__detail">
+              <h4>Precio</h4>
+              <div>
+                <button>
+                  <i class="fa-solid fa-trash-can"></i>
+                </button>
+              </div>
+              <div>
+                <button>
+                  <i class="fa-solid fa-circle-minus"></i>
+                </button>
+              </div>
+              <h4>01</h4>
+              <div>
+                <button>
+                  <i class="fa-solid fa-circle-plus"></i>
+                </button>
+              </div>
             </div>
           </div>
         </article>
       </section>
-      <section>
-        <h5>Cupon de descuento</h5>
+
+      <section class="detail">
+        <article class="product">
+          <div class="main__image">
+            <img src="/images/instrumentos/Guitarras/02/100.jpg" alt="" width="125px" />
+            <!-- <a href=""></a> -->
+          </div>
+          <div class="main__product">
+            <div class="main__product__title">
+              <h4>Marca de Guitarra</h4>
+              <h4>Modelo de Guitarra</h4>
+            </div>
+            <div class="main__product__detail">
+              <h4>Precio</h4>
+              <div>
+                <button>
+                  <i class="fa-solid fa-trash-can"></i>
+                </button>
+              </div>
+              <div>
+                <button>
+                  <i class="fa-solid fa-circle-minus"></i>
+                </button>
+              </div>
+              <h4>01</h4>
+              <div>
+                <button>
+                  <i class="fa-solid fa-circle-plus"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </article>
       </section>
-      <section>
-        <h5>Medio de pago</h5>
-        <a href="">Cambiar</a>
-        <p>Tarjeta **** **** **** 6633</p>
+
+      <section class="detail">
+        <article class="product">
+          <div class="main__image">
+            <img src="/images/instrumentos/Guitarras/04/112.jpg" alt="" width="125px" />
+            <!-- <a href=""></a> -->
+          </div>
+          <div class="main__product">
+            <div class="main__product__title">
+              <h4>Marca de Guitarra</h4>
+              <h4>Modelo de Guitarra</h4>
+            </div>
+            <div class="main__product__detail">
+              <h4>Precio</h4>
+              <div>
+                <button>
+                  <i class="fa-solid fa-trash-can"></i>
+                </button>
+              </div>
+              <div>
+                <button>
+                  <i class="fa-solid fa-circle-minus"></i>
+                </button>
+              </div>
+              <h4>01</h4>
+              <div>
+                <button>
+                  <i class="fa-solid fa-circle-plus"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </article>
       </section>
-      <section>
-        <h4>Subtotal</h4>
-        <h4>999999.99</h4>
-        <h4>Envio</h4>
-        <h4>999999.99</h4>
-        <h4>Descuento</h4>
-        <h4>999999.99</h4>
-        <h4>Total</h4>
-        <h4>999999.99</h4>
+
+      <section class="main__descuento">
+        <h4>Cupon de descuento</h4>
+        <div class="main__descuento__cupon">
+          <input type="text" placeholder="Ingrese su cupon" />
+        </div>
       </section>
-      <button>Finalizar Compra</button>
+      <section class="main__payment">
+        <div class="main__payment__title">
+          <h3>Medio de pago</h3>
+          <a href="">Cambiar</a>
+        </div>
+        <div class="main__payment__description">
+          <p>Tarjeta **** **** **** 6633</p>
+        </div>
+      </section>
+      <section class="main__priceTotal">
+        <div class="main__priceTotal__line">
+          <h4>Subtotal</h4>
+          <h4>999999.99</h4>
+        </div>
+        <div class="main__priceTotal__line">
+          <h4>Envio</h4>
+          <h4>999999.99</h4>
+        </div>
+        <div class="main__priceTotal__line">
+          <h4>Descuento</h4>
+          <h4>999999.99</h4>
+        </div>
+        <div class="main__priceTotal__line">
+          <h4>Total</h4>
+          <h4>999999.99</h4>
+        </div>
+      </section>
+      <but  ton class="main__confirmation">Finalizar Compra</button>
     </main>
     <footer>
-      <nav>
+      <nav class="footer__contact">
         <ul>
           <li><a href="">About</a></li>
           <li><a href="">FAQ</a></li>
