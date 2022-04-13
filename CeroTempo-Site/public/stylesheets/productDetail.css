@@ -22,20 +22,31 @@ img.piano-1{
 .name{
     font-size: 20px;
 }
-input.product-quantity-i{
+.product-quantity-i{
     background-color: gray;
     margin-bottom: 2rem;
     text-align: left;
+    width: 250px;
+    height: 35px;
+    border-radius: 10px;
+
 }
-input.buy-now-i{
+.buy-now-i{
     background-color: #FF4A00;
     margin-bottom: 1rem;
     text-align: center;
+    width: 250px;
+    height: 35px;
+    border-radius: 10px;
+
 }
-input.add-cart-i{
+.add-cart-i{
     background-color:gray;
     margin-bottom: 1rem;
     text-align: center;
+    width: 250px;
+    height: 35px;
+    border-radius: 10px;
 }
 
 ::placeholder{
@@ -46,18 +57,142 @@ input.add-cart-i{
 
 }
 .price{
-    font-size: 30px;
+    font-size: 35px;
+    margin-bottom: 50px;
 }
-.characteristic-p1{
-    font-size: 30px;
+.r-price-div p,
+.r-cart-div
+{
+    text-align: left;
+    margin-left: 5px;
+}
+.characteristic-p1,
+.description-p1,
+.payment-methods-p,
+.recommended-p
+{
+    font-size: 25px;
+ 
+}
+.credit-p,
+.debit-p,
+.cash-p
+{
+    font-size: 20px;
 }
 
 .detail-div{
     margin: 30px;
 }
-
+.product-characteristics{
+    margin-bottom: 50px;
+}
+.product-description{
+    margin-bottom: 50px;
+}
+.payment-methods{
+    margin-bottom: 50px;
+}
 .input-three{
     justify-content: center;
     align-items: center;
     display: grid;
+    margin-bottom: 50px;
+
+
+}
+
+.recomm1{
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    height: 250px;
+    width: 100px;
+    flex-direction: column;
+    border-color: #989898;
+    border-width: 1px;
+    border-style: solid;
+
+
+}
+.recomm2{
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    height: 250px;
+    width: 100px;
+    flex-direction: column;
+    border-color: #989898;
+    border-width: 1px;
+    border-style: solid;
+    
+
+
+}
+.recomm3{
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    height: 250px;
+    width: 100px;
+    flex-direction: column;
+    border-color: #989898;
+    border-width: 1px;
+    border-style: solid;
+    
+
+}
+.recommended-div2{
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+    margin-right: 20px;
+    height: 250px;
+    justify-content: space-between;
+
+}
+
+
+.viola,
+.guitar,
+.speaker{
+    width: 100px;
+    height: 100px;
+
+}
+.cart{
+    width: 15px;
+    height: 15px; 
+}
+.add{
+    color: blue;
+    font-size: 12px;
+    bottom: 0px;
+
+}
+.r-cart-div{
+    justify-content: end;
+}
+.name-p{
+    font-size: 14px;
+    height: 55px;
+    text-align: left;
+    margin-left: 5px;
+}
+
+.main-footer{
+    flex-wrap: wrap;
+}
+.footer-phrase,
+.footer-info,
+.footer-contact{
+    margin-left: 40px;
+}
+
+
+@media (max-width: 425px){
+    .main-footer{
+        flex-direction: column;
+    }
+
 }
