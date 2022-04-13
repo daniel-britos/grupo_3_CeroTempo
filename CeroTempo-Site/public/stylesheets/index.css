@@ -249,6 +249,11 @@
 .electronics {
     background-image: url(/images/instrumentos/Afinador/02/011.jpg);
 }
+/* BILLBOARD */
+.main-billboard {
+    display: none;
+}
+
 /* CONTACT */
 .contact-comment{
     padding-top: 10px;
