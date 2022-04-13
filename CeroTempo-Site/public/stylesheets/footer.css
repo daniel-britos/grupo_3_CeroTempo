@@ -3,9 +3,11 @@
 /* FOOTER */
 footer {
     background-color: black;
+    padding-bottom: 10px;
 }
 .main-footer {
-    text-align: center;
+    text-align: center; 
+    padding-top: 10px;
 }
 .footer-phrase {
     border-bottom: 1px solid white; 
@@ -26,7 +28,7 @@ footer {
 #copyright {
     font-size: 12px;
     text-align: center;
-    padding-top: 10px;
+    margin: 0;
 }
 
 /* TABLET */

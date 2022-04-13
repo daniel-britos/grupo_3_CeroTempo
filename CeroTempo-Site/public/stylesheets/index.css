@@ -135,7 +135,21 @@
     border-radius: 10px;
     border: 3px black solid;
     
-}   
+}
+.main-offers i {
+    font-size: 20px;
+    color: white;
+    margin: 10px;
+    transform: rotate(90deg);
+} 
+.offers-arrow {
+    background-color: black;
+    border-radius: 50%;
+    margin: 10px 0px;
+}
+.offers-arrow:hover {
+    background-color: var(--orangeLogo);
+}
 .main-offers article img {
     width: 100%;
     height: 300px;
@@ -280,7 +294,10 @@
     height: 200px;
     width: 300px;
     border: solid 4px black;
+    border-radius: 10%;
+    padding-left: 20px;
 }
+
 .comment-box label {
     color: white;
     font-size: 20px;
@@ -290,7 +307,7 @@
     width: 99%;
     height: 300px;
     border: 4px black solid;
-    border-radius: 50%;
+    border-radius: 10%;
 }
 .maps p {
     margin: 0;
@@ -352,21 +369,20 @@
     .main-offers {
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: space-around;
         flex-wrap: wrap;
     }
     .main-offers article {
-        width: 350px;     
+        width: 300px;
     }
     .main-offers i {
-        font-size: 40px;
-        color: white;
-        margin: 10px;
+        transform: rotate(0deg);
+    } 
+    .offers-arrow:hover {
+        transition: all 0.5s;
+        transform: scale(1.1);
     }
-    .offers-arrow {
-        background-color: black;
-        border-radius: 50%;
-    }
+ 
     /* CATEGORIES */
     .main-categories {
         flex-direction: row;
@@ -385,6 +401,57 @@
         width: 300px;
         height: 520px;    
     }
+
+    /* BILLBOARD */
+    .main-billboard {
+        background-color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-top: solid white 1px;
+
+    }
+    .billboard-container {
+        height: 450px;
+        padding-top: 50px;
+    }
+    .wave-orange {
+        width: 600px;
+        height: 400px;
+        background-color: var(--orangeLogo);
+        border-radius: 50%;
+        position: relative;
+        right: 120px;
+
+    }
+    .cover-wave {
+        width: 580px;
+        height: 380px;
+        background-color: black;
+        border-radius: 50%;
+        position: relative;
+        z-index: 1;
+        bottom: 360px;
+        right: 140px;
+    }
+    .billboard-text {
+        width: 400px;
+        text-align: center;
+        position: relative;
+        z-index: 2;
+        left: 350px;
+    }
+    .billboard-text h2 {
+        color: white;
+        font-size: 40px;
+        margin: 0;
+    }
+    .billboard-text p {
+        color: white;
+        font-size: 30px;
+        margin: 0;
+    }
+
     /* CONTACT */
     .main-contact {
         display: flex;
