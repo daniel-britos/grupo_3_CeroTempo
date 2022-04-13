@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Raleway:wght@200&family=Roboto:ital,wght@1,100&family=Rubik+Glitch&display=swap');
+
+/* FOOTER */
+footer {
+    background-color: black;
+}
+.main-footer {
+    text-align: center;
+}
+.footer-phrase {
+    border-bottom: 1px solid white; 
+    text-align: center;
+}
+.main-footer article ul li a {
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+}
+.main-footer article h2 {
+    font-size: 1.6rem;
+    margin: 5px;
+}
+.main-footer article {
+    margin: 20px;
+}
+#copyright {
+    font-size: 12px;
+    text-align: center;
+    padding-top: 10px;
+}
+
+/* TABLET */
+@media (min-width: 545px) {
+    .main-footer {
+        display: flex;
+    }    
+}
+
+/* DESKTOP */
+@media (min-width: 1024px) {
+    .main-footer {    
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 30px;
+        text-align: left;
+    }
+    .footer-phrase {
+        width: 40%;
+    }
+    .main-footer article ul li a {
+        font-size: 20px;
+    }  
+    .footer-phrase h1 {
+        font-size: 40px;
+    }
+    
+    #copyright {
+        text-align: center;
+        font-size: 16px;
+        margin: 0;
+        padding: 20px 0 20px 0;
+    }
+}
+

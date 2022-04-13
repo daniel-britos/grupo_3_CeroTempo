@@ -68,63 +68,78 @@
     font-family: 'Bebas Neue', cursive;
     font-weight: 100;
 }
-/* MARCAS */
+/* BRANDS */
 .brand {
     display: flex;
     flex-direction: column;
     align-items: center;
-    
-
 }
 .brand div {
     display: flex;
     justify-content: center;
-    align-items: center;
-    background-color: black;
+    align-items: center;    
     margin: 5px;
     width: 90%;
     height: 300px;
+    background-size: cover;
+    background-repeat: no-repeat;  
+    border: 4px black solid;  
+    border-radius: 10px;
 }
-.brand div h2 {
+.brand div a h2 {
+    text-align: center;
     color: white;
+    width: 100%;
     font-family: 'Rubik Glitch', cursive;
     font-weight: 100;
-    color: var(--orangeLogo);
     font-size: 3.5rem;
 }
-/* VIDEO */
-.intro-video {
-    background-color: black;
-    height: 300px;
-    margin-bottom: 10px;
-    
+.brand div a {
+    background-color: rgba(0, 0, 0, 0.4);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.intro-video h2 {
-    color: white;
+.img-1 {
+    background-image: url(../images/brands/guitarFender_1920.jpg);
 }
-/* OFERTAS */
-.offers {
+.img-2 {
+    background-image: url(../images/brands/celloCremona.jpg);
+}
+.img-3 {
+    background-image: url(../images/brands/pianoYamaha.jpg);
+}
+.img-4 {
+    background-image: url(../images/brands/bateria.jpg);
+}
+/* OFFERS */
+.main-offers {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
 }
-.offers h2 {
+.main-offers h2 {
     color: var(--naranjaLogo);
     font-size: 2rem;
     margin: 10px;
     padding: 0;
 
 }
-.offers article {
+.main-offers article {
     width: 90%;
     margin: 5px;
     background-color: black;
     border-radius: 10px;
+    border: 3px black solid;
+    
 }   
-.offers article img {
+.main-offers article img {
     width: 100%;
     height: 300px;
+    border-radius: 6px;
 }
 .foot-offers {
     display: flex;
@@ -138,27 +153,151 @@
     margin: 0;
     padding: 0;
 }
-.offers-data p {
-    margin: 0;
-    padding: 0;
-}
+
 #price {
     font-size: 1.2rem;
     font-family: 'Raleway', sans-serif;
     color: white;
     text-align: right;
+    margin: 5px;
 }
 #discount {
     font-size: 1.7rem;
     font-family: 'Raleway', sans-serif;
     color: rgb(3, 212, 10);
     font-weight: 600;
+    margin: 5px;
     
 }
-
-
-
-
+.main-offers article a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    font-size: 35px;  
+    position: relative;
+    
+}
+.main-offers article a p {
+    position: absolute;
+    top: 50px;
+    background-color: rgba(0, 0, 0, 0.4);
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    
+}
+/* CATEGORIES */
+.main-categories {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+.categories-box {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.categories-article {
+    width: 90%;
+    height: 250px;
+    background-size: cover;
+    background-position: center;
+    border: white solid 1px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-top: 10px;
+}
+.categories-article h3 {
+    background-color: white;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+.strings {
+    background-image: url(/images/categories/guitarra.jpg);
+}
+.wind {
+    background-image: url(/images/categories/saxophone.jpg);
+}
+.percussion {
+    background-image: url(/images/categories/drums.jpg);
+}
+.idiophones {
+    background-image: url(/images/categories/xylophone.jpg);
+}
+.electronics {
+    background-image: url(/images/instrumentos/Afinador/02/011.jpg);
+}
+/* CONTACT */
+.contact-comment{
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.main-contact {
+    background-color: var(--orangeLogo);
+}
+.comment-box {
+    display: flex;
+    flex-direction: column;
+}
+#contact-email {
+    margin: 10px 0;
+    width: 200px;
+    border: 2px solid black;
+}
+#contact-btn {
+    height: 30px;
+    width: 60px;
+    margin: 0;
+    color: white;
+    background-color: black;
+    border: 1px solid white;
+    border-radius: 10%; 
+}
+#contact-btn:hover {
+    cursor: pointer;
+    background-color: var(--orangeLogo);
+    transition: all 0.5s;
+    transform: scale(1.1);
+}
+.contact-input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 10px;
+}
+.comment-box textarea {
+    resize: none;
+    height: 200px;
+    width: 300px;
+    border: solid 4px black;
+}
+.comment-box label {
+    color: white;
+    font-size: 20px;
+}
+/* MAP */
+.maps iframe {
+    width: 99%;
+    height: 300px;
+    border: 4px black solid;
+    border-radius: 50%;
+}
+.maps p {
+    margin: 0;
+    color: white;
+    text-align: center;
+    padding-bottom: 10px;
+}
 
 /* MEDIA QUERY */
 
@@ -176,6 +315,101 @@
     }
     
 }
+@media (min-width: 1024px){
+    /* PORTADA-2 */
+    .cover-2 {
+        width: 100%;
+    }
+    .cover-2 img { 
+        width: 80%; 
+        height: 300px;
+    }
+    .cover-2 h2 {
+        width: 650px;
+        font-size: 40px;
+    }
+    /* BRAND */
+    .brand {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .brand div {
+        width: 400px;
+        height: 400px;
+        margin: 30px;
+    }
+    /* VIDEO */
+    .intro-video {
+        background-color: black;  
+    }
+    #home-video {
+        width: 100%;
+        height: 400px;
+    }
+    /* OFFERS */
+    .main-offers {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .main-offers article {
+        width: 350px;     
+    }
+    .main-offers i {
+        font-size: 40px;
+        color: white;
+        margin: 10px;
+    }
+    .offers-arrow {
+        background-color: black;
+        border-radius: 50%;
+    }
+    /* CATEGORIES */
+    .main-categories {
+        flex-direction: row;
+    }
+    .categories-box {
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 544px;
+    }
+    .categories-article {
+        width: 250px;
+        height: 250px;
+        margin: 10px;
+    }
+    .strings {
+        width: 300px;
+        height: 520px;    
+    }
+    /* CONTACT */
+    .main-contact {
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .comment-box textarea {
+        height: 250px;
+        width: 400px;
+    }
+    .contact-input {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+    }
+    #contact-email {
+        width: 300px;
+    }
+
+    /* MAP */
+    .maps {
+        margin: 10px;
+    }
 
 
-
+    
+}

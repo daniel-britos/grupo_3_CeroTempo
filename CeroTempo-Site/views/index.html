@@ -8,127 +8,285 @@
     <link rel="stylesheet" href="/stylesheets/style.css">
     <title>Home CeroTempo</title>
 </head>
-<body>
-    <header>
-        <nav class="header-nav">
-            <div class="header-nav-intro">
-                <i class="fa-solid fa-bars"></i>
-                <img src="/images/logo.png" alt="logo" class="header-logo">
-                <i class="fa-solid fa-user"></i>
-            </div>
-            <div class="header-nav-search">
-                <input type="text" placeholder="What are you looking for?">              
-                <i class="fa-solid fa-magnifying-glass"></i>
-            </div>
-        </nav>
-    </header>
-    <main>
-        <section>
-            <nav class="slider-container">
-                <ul class="slider-banner">
-                    <li id="slide1">
-                        <img src="/images/productos.png" alt="banner">
-                    </li>
-                    <li id="slide2">
-                        <img src="/images/producto.png" alt="banner">
-                    </li>
-                    <li id="slide3">
-                        <img src="/images/clases.png" alt="banner">
-                    </li>
-                </ul>
-                <ul class="menu-slider">
-                    <li>
-                        <a href="#slide1">1</a>
-                    </li>
-                    <li>
-                        <a href="#slide2">2</a>
-                    </li>
-                    <li>
-                        <a href="#slide3">3</a>
-                    </li>
-                </ul>
+    <body>
+        <header class="main-header">
+            <nav class="header-nav">
+                <div class="header-nav-intro">
+                    <i class="fa-solid fa-bars"></i>
+                    <img src="/images/logo.png" alt="logo" class="header-logo">
+                    <div class="header-search-desktop">
+                        <input type="text" placeholder="What are you looking for?">              
+                        <button class="header-search-btn">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>  
+                    </div>
+                    <div class="header-icons">
+                        <span>
+                            <p>Help</p>
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </span>
+                        <span>
+                            <p>Shopping Cart</p>
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </span>
+                        <span>
+                            <p>Account</p>
+                            <i class="fa-solid fa-user"></i>
+                        </span>
+                    </div>
+                </div>
+                <!-- MENU -->
+                <nav class="nav-menu">
+                    <ul class="menu-horizontal">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About us</a></li>
+                        <li>
+                            <a href="#">Products</a>
+                            <ul class="menu-vertical">
+                                <li><a href="#">Guitars</a></li>
+                                <li><a href="#">Basses</a></li>
+                                <li><a href="#">Pianos</a></li>
+                                <li><a href="#">Keyboards</a></li>
+                                <li><a href="#">Drums</a></li>
+                                <li><a href="#">Violins</a></li>
+                                <li><a href="#">Cellos</a></li>
+                                <li><a href="#">Violas</a></li>
+                                <li><a href="#">Electronics</a></li>
+                                <li><a href="#">Cables</a></li>
+                                <li><a href="#">Others</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">Courses</a>
+                            <ul class="menu-vertical">
+                                <li><a href="#">Guitar lessons</a></li>
+                                <li><a href="#">Violin lessons</a></li>
+                                <li><a href="#">Cello lessons</a></li>
+                                <li><a href="#">Piano lessons</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Luthier</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </nav>
+                                
+                <div class="header-search">
+                    <input type="text" placeholder="What are you looking for?"> 
+                    <button class="header-search-btn">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>            
+                </div>
             </nav>
-        </section>
+        </header>
+        <main>
 
-        <section> 
-            <article class="cover-2">
-                <img src="/images/logoSolo.png" alt="">
-                <h2>Empresa número uno en la industra de la música</h2>
-            </article>
-            <article class="brand">
-                <div class="brand-1">
-                    <h2>Fender</h2>
-                </div>
-                <div class="brand-2">
-                    <h2>Cremona</h2>
-                </div>
-                <div class="brand-3">
-                    <h2>Yamaha</h2>
-                </div>
-                <div class="brand-4">
-                    <h2>Mapex</h2>
-                </div>
-            </article>
-        </section>
-        
-        <section>
-            <article class="intro-video">
-                <video width="1080" height="1024" autoplay muted>
-                    <source src="/images/video-music.mp4" type="video/mp4">
-                </video>
-            </article>
-        </section>
+            <!-- SLIDER -->
+            <section class="main-slider">
+                <nav class="slider-container">
+                    <ul class="slider-banner">
+                        <li id="slide1">
+                            <img src="/images/productos.png" alt="banner">
+                        </li>
+                        <li id="slide2">
+                            <img src="/images/producto.png" alt="banner">
+                        </li>
+                        <li id="slide3">
+                            <img src="/images/clases.png" alt="banner">
+                        </li>
+                    </ul>
+                    <ul class="menu-slider">
+                        <li>
+                            <a href="#slide1">1</a>
+                        </li>
+                        <li>
+                            <a href="#slide2">2</a>
+                        </li>
+                        <li>
+                            <a href="#slide3">3</a>
+                        </li>
+                    </ul>
+                </nav>
+            </section>
 
-        <section class="offers">
-            <h2>Ofertas</h2>
-            <article class="offers-1">
-                <img src="/images/instrumentos/Guitarras/06/125.jpg" alt="">
-                <div class="foot-offers"> 
-                    <h4 id="titulo-oferta">Guitarra Electrica Fender 20</h4>
-                    <div class="offers-data">
-                        <p id="price">$70.500</p>    
-                        <p id="discount">10% off</p>   
+            <!-- DESCRIPCIÓN Y BUSQUEDA POR MARCA -->
+            <section class="main-description"> 
+                <article class="cover-2">
+                    <img src="/images/logoSolo.png" alt="">
+                    <h2>Empresa número uno en la industra de la música</h2>
+                </article>
+                <article class="brand">
+                    <div class="img-1">
+                        <a href="#">
+                            <h2>Fender</h2>
+                        </a>
                     </div>
-                </div>
-            </article>
-            <article class="offers-2">
-                <img src="/images/instrumentos/Cello/01/069.jpg" alt="">
-                <div class="foot-offers"> 
-                    <h4 id="title-offers">Ancona 610 Macizo</h4>
-                    <div class="offers-data">
-                        <p id="price">$120.000</p>    
-                        <p id="discount">30% off</p>   
+                    <div class="img-2">
+                        <a href="#">
+                            <h2>Cremona</h2>                            
+                        </a>
                     </div>
-                </div>
-            </article>
-            <article class="offers-3">
-                <img src="/images/instrumentos/Parlantes/133.jpg" alt="">
-                <div class="foot-offers"> 
-                    <h4 id="title-offers">Parlante stereo PH-300</h4>
-                    <div class="offers-data">
-                        <p id="price">$35.200</p>    
-                        <p id="discount">20% off</p>   
+                    <div class="img-3">
+                        <a href="#">
+                            <h2>Yamaha</h2>                            
+                        </a>
                     </div>
+                    <div class="img-4">
+                        <a href="#">
+                            <h2>Mapex</h2>                             
+                        </a>
+                    </div>
+                </article>
+            </section>
+            
+            <!--  VIDEO -->
+            <section class="main-video">
+                <article class="intro-video">
+                    <video id="home-video" autoplay muted>
+                        <source src="/images/video-music.mp4" type="video/mp4">
+                    </video>
+                </article>
+            </section>
+
+            <!-- OFERTAS -->
+            <section class="main-offers">
+                <div class="offers-arrow">
+                    <i class="fas fa-arrow-left"></i>
                 </div>
-            </article>
-        </section>
+                <article class="offers-1">
+                    <a href="http://www.google.com">
+                        <p>See Offer</p>
+                        <img src="/images/instrumentos/Guitarras/06/125.jpg" alt="">
+                    </a>
+                    <div class="foot-offers"> 
+                        <h4 id="title-offers">Guitarra Electrica Fender 20</h4>
+                        <div class="offers-data">
+                            <p id="price">$70.500</p>    
+                            <p id="discount">10% off</p>   
+                        </div>
+                    </div>
+                </article>
+                <article class="offers-2">
+                    <a href="http://www.google.com">
+                        <p>See Offer</p>
+                        <img src="/images/instrumentos/Cello/01/069.jpg" alt="">
+                    </a>
+                    <div class="foot-offers"> 
+                        <h4 id="title-offers">Ancona 610 Macizo</h4>
+                        <div class="offers-data">
+                            <p id="price">$120.000</p>    
+                            <p id="discount">30% off</p>   
+                        </div>
+                    </div>
+                </article>
+                <article class="offers-3">
+                    <a href="http://www.google.com">
+                        <p>See Offer</p>
+                        <img src="/images/instrumentos/Parlantes/133.jpg" alt="">
+                    </a>
+                    <div class="foot-offers"> 
+                        <h4 id="title-offers">Parlante stereo PH-300</h4>
+                        <div class="offers-data">
+                            <p id="price">$35.200</p>    
+                            <p id="discount">20% off</p>   
+                        </div>
+                    </div>
+                </article>
+                <div class="offers-arrow">
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+            </section>
 
-    </main>
-</body>
-<!--    
-    Medidas predeterminadas en ancho o width
+            <!-- Categories -->
+            <section class="main-categories">
+                <article class="categories-article strings">                    
+                    <h3>Strings</h3>
+                </article>
+                <div class="categories-box">
+                    <article class="categories-article wind">                    
+                        <h3>Wind</h3>
+                    </article>
+                    <article class="categories-article percussion">                    
+                        <h3>Percussion</h3>
+                    </article>
+                    <article class="categories-article idiophones">                    
+                        <h3>Idiophones</h3>
+                    </article>
+                    <article class="categories-article electronics">                    
+                        <h3>Electronics</h3>
+                    </article>
+                </div>
+            </section>
 
-Mobile-Small: 320px
-Mobile-Medium: 375px
-Mobile-Large: 425px
-
-Tablet - L : 768px
-Tablet - S : 545px
-
-Laptop: 1024px
-Desktop: 1440px
-4k o televisores: 2560px
-
--->
-
+            <!-- CONTACTO -->
+            <section class="main-contact">
+                <form class="contact-comment">
+                    <div class="comment-box">
+                        <label for="">Message</label>
+                        <textarea name="" id="" placeholder="let us a comment..." autofocus></textarea>
+                    </div> 
+                    <div class="contact-input">
+                        <input id="contact-email" type="email" placeholder="example@gmail.com">
+                        <input id="contact-btn" type="submit" value="Send">                                
+                    </div>
+                </form>
+                <article class="maps">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3281.6438257705518!2d-58.56146160611527!3d-34.66369694262935!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc7d15e801f83%3A0x6999843b2805f2eb!2sAv.%20de%20Mayo%202222%2C%20B1704BVV%20Ramos%20Mej%C3%ADa%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1627746511105!5m2!1ses-419!2sar" allowfullscreen="" loading="lazy">
+                    </iframe>
+                    <p>Street Avenue 512 - New York</p>
+                </article>
+            </section>
+        </main>
+        <!-- FOOTER -->
+        <footer>
+            <section class="main-footer">
+                <article class="footer-phrase">
+                    <h1>
+                        Always go forward, never go backwards.
+                    </h1>
+                </article>
+                <article class="footer-info">
+                    <h2>Info</h2>
+                    <ul class="info-li">
+                        <li>
+                            <a href="#">About</a>
+                        </li>
+                        <li>
+                            <a href="#">Wholesalers</a>
+                        </li>
+                        <li>
+                            <a href="#">Branch Offices</a>
+                        </li>
+                        <li>
+                            <a href="#">Frequent Questions</a>
+                        </li>
+                        <li>
+                            <a href="#">Contact</a>
+                        </li>
+                    </ul>
+                </article>
+                <article class="footer-contact">
+                    <h2>Contact</h2>
+                    <ul class="contact-li">
+                        <li>
+                            <a href="#">119815213664</a>
+                        </li>
+                        <li>
+                            <a href="#">Sarasa Branch</a>
+                        </li>
+                        <li>
+                            <a href="#">cerotempo@gmail.com</a>
+                        </li>
+                        <li>
+                            <a href="#">Location</a>
+                        </li>
+                        <li>
+                            <a href="#">Facebook</a>
+                        </li>
+                    </ul>
+                </article>
+            </section>
+            <p id="copyright"> Copyright © 2022 All Rights Reserved by CeroTempo</p>
+        </footer>
+    </body>
 </html>

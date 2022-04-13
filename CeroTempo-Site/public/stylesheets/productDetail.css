@@ -1,0 +1,18 @@
+footer{
+    color: white;
+    background-color: black;
+    font-family: 'Roboto', sans-serif;
+}
+
+.info-li{
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+.contact-li{
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+h1, h2{
+    color: #f25824;
+    font-family: 'Roboto', sans-serif;
+}
