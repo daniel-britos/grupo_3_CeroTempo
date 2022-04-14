@@ -16,10 +16,6 @@
     text-align: center;
 }
 
-input{
-    background-color: #FF6C3B;
-}
-
 .sign-up-p{
     font-size: 33px;
     align-content: flex-start;
@@ -56,6 +52,7 @@ h1{
     width: 150px;
     height: 15px;
     margin-bottom: 15px;
+    background-color: #FF6C3B;
 }
 .name-l,
 .surname-l,
@@ -77,6 +74,7 @@ h1{
         align-items: center;
         height: 60vh;
         display: grid;
+        flex-wrap: wrap;
     }
     button{
         border-radius: 60px;
@@ -120,6 +118,7 @@ h1{
         align-items: center;
         height: 60vh;
         display: grid;
+        flex-wrap: wrap;
     }
     button{
         border-radius: 60px;
