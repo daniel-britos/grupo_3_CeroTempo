@@ -29,15 +29,8 @@ footer {
     font-size: 12px;
     text-align: center;
     margin: 0;
-    color: white;
-    font-family: 'Roboto', sans-serif;
-    font-size: 10px;
 }
-h1, h2{
-    color: #f25824;
-    font-family: 'Roboto', sans-serif;
-    text-align: center;
-}
+
 /* TABLET */
 @media (min-width: 545px) {
     .main-footer {
