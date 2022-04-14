@@ -1,0 +1,15 @@
+/* FOOTER */
+.main-footer {
+    display: flex;
+    justify-content: space-between;
+}
+.info-li li a {
+    color: white;
+}
+.contact-li li a {
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+.main-footer p {
+    text-align: center;
+}
