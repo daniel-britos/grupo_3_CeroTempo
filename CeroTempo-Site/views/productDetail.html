@@ -12,17 +12,33 @@
         <title>Product Detail</title>
     </head>
     <body>
-        <header>
+        <header class="main-header">
             <nav class="header-nav">
                 <div class="header-nav-intro">
                     <i class="fa-solid fa-bars"></i>
                     <img src="/images/logo.png" alt="logo" class="header-logo">
-                    <i class="fa-solid fa-user"></i>
+                    <div class="header-search-desktop">
+                        <input type="text" placeholder="What are you looking for?">              
+                        <button class="header-search-btn">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>  
+                    </div>
+                    <div class="header-icons">
+                        <span>
+                            <p>Help</p>
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </span>
+                        <span>
+                            <p>Shopping Cart</p>
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </span>
+                        <span>
+                            <p>Account</p>
+                            <i class="fa-solid fa-user"></i>
+                        </span>
+                    </div>
                 </div>
-                <div class="header-nav-search">
-                    <input type="text" placeholder="What are you looking for?">              
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                </div>
+                <!-- MENU -->
             </nav>
         </header>
         <!-- ************** SECCION DETALLE DEL PRODUCTO ************** -->
@@ -244,11 +260,13 @@
         </div>
     </body>
     <footer>
-        <div class="main-footer">
-            <div class="footer-phrase">
-                <h1>Phrase or some text</h1>
-            </div>
-            <div class="footer-info">
+        <section class="main-footer">
+            <article class="footer-phrase">
+                <h1>
+                    Always go forward, never go backwards.
+                </h1>
+            </article>
+            <article class="footer-info">
                 <h2>Info</h2>
                 <ul class="info-li">
                     <li>
@@ -267,8 +285,8 @@
                         <a href="#">Contact</a>
                     </li>
                 </ul>
-            </div>
-            <div class="footer-contact">
+            </article>
+            <article class="footer-contact">
                 <h2>Contact</h2>
                 <ul class="contact-li">
                     <li>
@@ -287,8 +305,8 @@
                         <a href="#">Facebook</a>
                     </li>
                 </ul>
-            </div>
-        </div>
-        <p> Copyright © 2022 All Rights Reserved by CeroTempo</p>
+            </article>
+        </section>
+        <p id="copyright"> Copyright © 2022 All Rights Reserved by CeroTempo</p>
     </footer>
 </html>

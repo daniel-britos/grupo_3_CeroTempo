@@ -1,35 +1,79 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Raleway:wght@200&family=Roboto:ital,wght@1,100&family=Rubik+Glitch&display=swap');
+
 /* FOOTER */
-footer{
+footer {
     background-color: black;
-}
-footer p{
-    color: white;
-    font-size: 10px;
-    text-align: center;
+    padding-bottom: 10px;
 }
 .main-footer {
-    display: flex;
-    justify-content: space-between;
-    background-color: black;
+    text-align: center; 
+    padding-top: 10px;
+    justify-content: center;
 }
-.info-li li a {
-    color: white;
-    font-size: 15px;
-}
-.contact-li li a {
-    color: white;
-    font-size: 15px;
-}
-.main-footer p {
+.footer-phrase {
+    border-bottom: 1px solid white; 
     text-align: center;
 }
-
-h1,
-h2
-{
-    color: #f25824;
-}
-a{
+.main-footer article ul li a {
     color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+}
+.main-footer article h2 {
+    font-size: 1.6rem;
+    margin: 5px;
+}
+.main-footer article {
+    margin: 20px;
+}
+#copyright {
+    font-size: 12px;
+    text-align: center;
+    margin: 0;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 10px;
+}
+h1, h2{
+    color: #f25824;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+}
+.footer-info,
+.footer-contact{
+    justify-content: center;
+}
+
+
+/* TABLET */
+@media (min-width: 545px) {
+    .main-footer {
+        display: flex;
+    }    
+}
+
+/* DESKTOP */
+@media (min-width: 1024px) {
+    .main-footer {    
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 30px;
+        text-align: left;
+    }
+    .footer-phrase {
+        width: 40%;
+    }
+    .main-footer article ul li a {
+        font-size: 20px;
+    }  
+    .footer-phrase h1 {
+        font-size: 40px;
+    }
+    
+    #copyright {
+        text-align: center;
+        font-size: 16px;
+        margin: 0;
+        padding: 20px 0 20px 0;
+    }
 }
