@@ -1,7 +1,4 @@
-body{
-    color: black;
-    font-family: 'Roboto', sans-serif;
-}
+
 /* ************** SECCION DETALLE DEL PRODUCTO ************** */
 
 
@@ -98,7 +95,8 @@ img.piano-1{
 }
 
 .detail-div{
-    margin: 30px;
+    margin: 0;
+	padding: 0;
 }
 .product-characteristics{
     margin-bottom: 50px;
@@ -400,6 +398,31 @@ img.piano-1{
 .slick-prev:hover {
 	opacity: 0.8;
 }
+.slider-carousel{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+}
+
+
+.img-item{
+	width: 300px;
+	height: 300px;
+
+}
+
+.producto-item{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+
+}
+
+
 
 
 
