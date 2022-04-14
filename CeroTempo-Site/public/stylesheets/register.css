@@ -28,7 +28,7 @@
     margin-top: 50px;
     margin-bottom: 70px;
 }
-button{
+.button-f{
     border-radius: 60px;
     justify-content: center;
     align-items: center;
@@ -39,10 +39,7 @@ button{
     height: 30px;
     margin-top: 40px;
 }
-h1{
-    flex-direction: flex-start;
-    text-align: left;
-}
+
 #name,
 #surname,
 #birth,
@@ -76,7 +73,7 @@ h1{
         display: grid;
         flex-wrap: wrap;
     }
-    button{
+    .button-f{
         border-radius: 60px;
         justify-content: center;
         align-items: center;
@@ -120,7 +117,7 @@ h1{
         display: grid;
         flex-wrap: wrap;
     }
-    button{
+    .button-f{
         border-radius: 60px;
         justify-content: center;
         align-items: center;
