@@ -1,13 +1,15 @@
 /* SLIDER */
 .slider-container {
     background-color: white;
-    width: 100%;   
+    width: 100%;
 }
+
 .slider-banner {
     height: 300px;
     position: relative;
     width: 100%;
 }
+
 .slider-banner li {
     position: absolute;
     opacity: 0;
@@ -15,25 +17,31 @@
     height: inherit;
     transition: opacity .5s;
 }
+
 .slider-banner li img {
     width: inherit;
     height: 300px;
     object-fit: cover;
 }
+
 .slider-banner li:first-child {
     opacity: 1;
 }
+
 .slider-banner li:target {
     opacity: 1;
 }
+
 .menu-slider {
     text-align: center;
     margin: 0;
 }
+
 .menu-slider li {
     display: inline-block;
     text-align: center;
 }
+
 .menu-slider li a {
     display: inline-block;
     color: white;
@@ -46,6 +54,7 @@
     border-radius: 100%;
     margin: 3px;
 }
+
 .menu-slider li a:hover {
     transition: all 0.5s;
     transform: scale(1.2);
@@ -62,10 +71,12 @@
     position: relative;
     margin-bottom: 10px;
 }
-.cover-2 img { 
-    width: 100%; 
+
+.cover-2 img {
+    width: 100%;
     height: 150px;
 }
+
 .cover-2 h2 {
     color: white;
     text-align: center;
@@ -73,24 +84,27 @@
     font-family: 'Bebas Neue', cursive;
     font-weight: 100;
 }
+
 /* BRANDS */
-.brand {    
+.brand {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
 .brand div {
     display: flex;
     justify-content: center;
-    align-items: center;    
+    align-items: center;
     margin: 5px;
     width: 90%;
     height: 300px;
     background-size: cover;
-    background-repeat: no-repeat;  
-    border: 4px black solid;  
+    background-repeat: no-repeat;
+    border: 4px black solid;
     border-radius: 10px;
 }
+
 .brand div a h2 {
     text-align: center;
     color: white;
@@ -99,6 +113,7 @@
     font-weight: 100;
     font-size: 3.5rem;
 }
+
 .brand div a {
     background-color: rgba(0, 0, 0, 0.4);
     width: 100%;
@@ -107,18 +122,23 @@
     justify-content: center;
     align-items: center;
 }
+
 .img-1 {
     background-image: url(../images/brands/guitarFender_1920.jpg);
 }
+
 .img-2 {
     background-image: url(../images/brands/celloCremona.jpg);
 }
+
 .img-3 {
     background-image: url(../images/brands/pianoYamaha.jpg);
 }
+
 .img-4 {
     background-image: url(../images/brands/bateria.jpg);
 }
+
 /* OFFERS */
 .main-offers {
     display: flex;
@@ -126,6 +146,7 @@
     justify-content: center;
     flex-direction: column;
 }
+
 .main-offers h2 {
     color: var(--naranjaLogo);
     font-size: 2rem;
@@ -133,38 +154,45 @@
     padding: 0;
 
 }
+
 .main-offers article {
     width: 90%;
     margin: 5px;
     background-color: black;
     border-radius: 10px;
     border: 3px black solid;
-    
+
 }
+
 .main-offers i {
     font-size: 20px;
     color: white;
     margin: 10px;
     transform: rotate(90deg);
-} 
+}
+
 .offers-arrow {
     background-color: black;
     border-radius: 50%;
     margin: 10px 0px;
 }
+
 .offers-arrow:hover {
     background-color: var(--orangeLogo);
 }
+
 .main-offers article img {
     width: 100%;
     height: 300px;
     border-radius: 6px;
 }
+
 .foot-offers {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
 }
+
 #title-offers {
     width: 60%;
     color: white;
@@ -180,23 +208,26 @@
     text-align: right;
     margin: 5px;
 }
+
 #discount {
     font-size: 1.7rem;
     font-family: 'Raleway', sans-serif;
     color: rgb(3, 212, 10);
     font-weight: 600;
     margin: 5px;
-    
+
 }
+
 .main-offers article a {
     display: flex;
     flex-direction: column;
     align-items: center;
     color: white;
-    font-size: 35px;  
+    font-size: 35px;
     position: relative;
-    
+
 }
+
 .main-offers article a p {
     position: absolute;
     top: 50px;
@@ -204,8 +235,9 @@
     width: 100%;
     text-align: center;
     padding: 10px 0;
-    
+
 }
+
 /* CATEGORIES */
 .main-categories {
     background-color: black;
@@ -214,8 +246,9 @@
     align-items: center;
     flex-direction: column;
     padding-bottom: 10px;
-    
+
 }
+
 .categories-box {
     display: flex;
     flex-direction: column;
@@ -223,6 +256,7 @@
     justify-content: center;
     align-items: center;
 }
+
 .categories-article {
     width: 90%;
     height: 250px;
@@ -234,56 +268,68 @@
     justify-content: flex-end;
     margin-top: 10px;
 }
+
 .categories-article:hover {
     opacity: 80%;
     transition: all 0.5s;
     transform: scale(1.02);
 }
+
 .categories-article h3 {
     background-color: white;
     text-align: center;
     margin: 0;
     padding: 0;
 }
+
 .strings {
     background-image: url(/images/categories/guitarra.jpg);
 }
+
 .wind {
     background-image: url(/images/categories/saxophone.jpg);
 }
+
 .percussion {
     background-image: url(/images/categories/drums.jpg);
 }
+
 .idiophones {
     background-image: url(/images/categories/xylophone.jpg);
 }
+
 .electronics {
     background-image: url(/images/categories/headphone.jpg);
 }
+
 /* BILLBOARD */
 .main-billboard {
     display: none;
 }
 
 /* CONTACT */
-.contact-comment{
+.contact-comment {
     padding-top: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
 .main-contact {
     background-color: var(--orangeLogo);
 }
+
 .comment-box {
     display: flex;
     flex-direction: column;
 }
+
 #contact-email {
     margin: 10px 0;
     width: 200px;
     border: 2px solid black;
 }
+
 #contact-btn {
     height: 30px;
     width: 60px;
@@ -291,20 +337,23 @@
     color: white;
     background-color: black;
     border: 1px solid white;
-    border-radius: 10%; 
+    border-radius: 10%;
 }
+
 #contact-btn:hover {
     cursor: pointer;
     background-color: var(--orangeLogo);
     transition: all 0.5s;
     transform: scale(1.1);
 }
+
 .contact-input {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding-bottom: 10px;
 }
+
 .comment-box textarea {
     resize: none;
     height: 200px;
@@ -318,6 +367,7 @@
     color: white;
     font-size: 20px;
 }
+
 /* MAP */
 .maps iframe {
     width: 99%;
@@ -325,6 +375,7 @@
     border: 4px black solid;
     border-radius: 10%;
 }
+
 .maps p {
     margin: 0;
     color: white;
@@ -333,32 +384,37 @@
 }
 
 /* MEDIA QUERY */
-
 @media (max-width: 426px) {
     .slider-banner {
         height: 180px;
     }
+
     .slider-banner li img {
         width: 100vw;
         height: 180px;
         object-fit: fill;
     }
+
     .intro-video {
         display: none;
     }
-    
+
 }
+
 /*TABLET 545*/
 @media (min-width: 545px) {
+
     /* PORTADA-2 */
-    .cover-2 img { 
-        width: 80%; 
+    .cover-2 img {
+        width: 80%;
         height: 200px;
     }
+
     .cover-2 h2 {
         width: 100%;
         font-size: 30px;
     }
+
     /* BRAND */
     .brand {
         flex-direction: row;
@@ -367,21 +423,24 @@
         flex-wrap: wrap;
         background: white;
     }
+
     .brand div {
         width: 300px;
         height: 300px;
         margin: 10px;
     }
-    
+
     /*VIDEO*/
     #home-video {
         width: 100%;
         height: 400px;
     }
+
     /* OFFERS */
     .main-offers article {
-        width: 300px;  
+        width: 300px;
     }
+
     /* CATEGORIES */
     .categories-article {
         width: 250px;
@@ -392,6 +451,7 @@
 }
 /* TABLET 768*/
 @media (min-width: 768px) {
+
     /* OFFERS */
     .main-offers {
         display: flex;
@@ -400,53 +460,63 @@
         margin: 30px 0;
         justify-content: space-around;
     }
+
     .main-offers article {
-        width: 200px;  
+        width: 200px;
     }
+
     .main-offers article a img {
-        height: 200px;   
+        height: 200px;
     }
+
     #title-offers {
         font-size: 16px;
     }
+
     #discount {
         font-size: 22px;
     }
+
     .main-offers i {
         transform: rotate(0deg);
-    } 
+    }
+
     .offers-arrow:hover {
         transition: all 0.5s;
         transform: scale(1.1);
-    } 
+    }
+
     /* CATEGORIES */
     .categories-box {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
     }
-   
+
 }
-
-
 /*DESKTOP*/
-@media (min-width: 1024px){
+@media (min-width: 1024px) {
+
     /* SLIDER */
     .main-slider {
         margin: 0 0 30px 0;
     }
+
     /* PORTADA-2 */
     .cover-2 {
         width: 100%;
     }
-    .cover-2 img { 
-        width: 80%; 
+
+    .cover-2 img {
+        width: 80%;
         height: 300px;
     }
+
     .cover-2 h2 {
         width: 650px;
         font-size: 40px;
     }
+
     /* BRAND */
     .brand {
         flex-direction: row;
@@ -460,29 +530,35 @@
         position: relative;
         bottom: 40px;
     }
+
     .brand div {
         width: 400px;
         height: 400px;
         margin: 30px;
     }
+
     .brand div:hover {
         transition: all 0.5s;
         transform: scale(1.1);
         background-color: rgba(0, 0, 0, 0.0);
         cursor: pointer;
     }
+
     .brand div a:hover {
         transition: all 0.5s;
         background-color: rgba(0, 0, 0, 0.0);
     }
+
     /* VIDEO */
     .intro-video {
-        background-color: black;  
+        background-color: black;
     }
+
     #home-video {
         width: 100%;
         height: 400px;
     }
+
     /* OFFERS */
     .main-offers {
         display: flex;
@@ -491,34 +567,40 @@
         flex-wrap: wrap;
         margin: 30px 0;
     }
+
     .main-offers article {
         width: 300px;
     }
+
     .main-offers i {
         transform: rotate(0deg);
-    } 
+    }
+
     .offers-arrow:hover {
         transition: all 0.5s;
         transform: scale(1.1);
     }
- 
+
     /* CATEGORIES */
     .main-categories {
         flex-direction: row;
     }
+
     .categories-box {
         flex-direction: row;
         flex-wrap: wrap;
         width: 544px;
     }
+
     .categories-article {
         width: 250px;
         height: 250px;
         margin: 10px;
     }
+
     .strings {
         width: 300px;
-        height: 520px;    
+        height: 520px;
     }
 
     /* BILLBOARD */
@@ -530,10 +612,12 @@
         border-top: solid white 1px;
 
     }
+
     .billboard-container {
         height: 450px;
         padding-top: 50px;
     }
+
     .wave-orange {
         width: 600px;
         height: 400px;
@@ -543,6 +627,7 @@
         right: 120px;
 
     }
+
     .cover-wave {
         width: 580px;
         height: 380px;
@@ -553,6 +638,7 @@
         bottom: 360px;
         right: 140px;
     }
+
     .billboard-text {
         width: 400px;
         text-align: center;
@@ -560,11 +646,13 @@
         z-index: 2;
         left: 350px;
     }
+
     .billboard-text h2 {
         color: white;
         font-size: 40px;
         margin: 0;
     }
+
     .billboard-text p {
         color: white;
         font-size: 30px;
@@ -576,10 +664,12 @@
         display: flex;
         justify-content: space-evenly;
     }
+
     .comment-box textarea {
         height: 250px;
         width: 400px;
     }
+
     .contact-input {
         display: flex;
         justify-content: space-between;
@@ -587,14 +677,16 @@
         align-items: center;
         width: 100%;
     }
+
     #contact-email {
         width: 300px;
     }
+
     /* MAP */
     .maps {
         margin: 10px;
     }
 
 
-    
+
 }
