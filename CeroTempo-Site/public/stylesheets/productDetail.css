@@ -251,7 +251,11 @@ img.piano-1{
 
 /* ************** MEDIA QUERIES ************** */
 
-/* -------------- MOBILE FIRST -------------- */
+/* -------------- MOBILE FIRST -------------- 
+Mobile-Small: 320px
+Mobile-Medium: 375px
+Mobile-Large: 425px
+*/
 @media (max-width: 426px){
     .main-footer{
         flex-direction: column;
@@ -279,7 +283,13 @@ Tablet - S : 545px
     }
 }
 
-/* -------------- DESKTOP -------------- */
+/* -------------- DESKTOP -------------- 
+Laptop: 1024px
+Desktop: 1440px
+4k o televisores: 2560px
+
+*/
+
 @media (min-width: 1024px) {
     .box-recommend {
         flex-direction: row;
