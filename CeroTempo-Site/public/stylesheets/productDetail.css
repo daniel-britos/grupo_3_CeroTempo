@@ -67,7 +67,23 @@ img.piano-1{
 }
 .product-name{
     text-align: left;
+	max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
 
+}
+.product-photo{
+	max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
+}
+.product-price{
+	max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
 }
 .price{
     font-size: 35px;
@@ -99,19 +115,32 @@ img.piano-1{
 	padding: 0;
 }
 .product-characteristics{
-    margin-bottom: 50px;
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
 }
 .product-description{
-    margin-bottom: 50px;
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
 }
 .payment-methods{
-    margin-bottom: 50px;
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
 }
 .input-three{
     justify-content: center;
     align-items: center;
     display: grid;
     margin-bottom: 50px;
+	max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
 
 
 }
