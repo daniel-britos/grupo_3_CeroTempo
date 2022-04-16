@@ -93,7 +93,6 @@
     border: 4px black solid;
     border-radius: 10px;
 }
-
 .brand div a h2 {
     text-align: center;
     color: white;
@@ -102,7 +101,6 @@
     font-weight: 100;
     font-size: 3.5rem;
 }
-
 .brand div a {
     background-color: rgba(0, 0, 0, 0.4);
     width: 100%;
@@ -111,21 +109,20 @@
     justify-content: center;
     align-items: center;
 }
-
 .img-1 {
     background-image: url(../images/brands/guitarFender_1920.jpg);
 }
 
 .img-2 {
-    background-image: url(../images/brands/celloCremona.jpg);
+    background-image: url(/images/brands/celloCremona.jpg);
 }
 
 .img-3 {
-    background-image: url(../images/brands/pianoYamaha.jpg);
+    background-image: url(/images/brands/pianoYamaha.jpg);
 }
 
 .img-4 {
-    background-image: url(../images/brands/bateria.jpg);
+    background-image: url(/images/brands/bateria.jpg);
 }
 
 /* OFFERS */
