@@ -4,13 +4,11 @@
     background-color: white;
     width: 100%;
 }
-
 .slider-banner {
     height: 300px;
     position: relative;
     width: 100%;
 }
-
 .slider-banner li {
     position: absolute;
     opacity: 0;
@@ -18,31 +16,25 @@
     height: inherit;
     transition: opacity .5s;
 }
-
 .slider-banner li img {
     width: inherit;
     height: 300px;
     object-fit: cover;
 }
-
 .slider-banner li:first-child {
     opacity: 1;
 }
-
 .slider-banner li:target {
     opacity: 1;
 }
-
 .menu-slider {
     text-align: center;
     margin: 0;
 }
-
 .menu-slider li {
     display: inline-block;
     text-align: center;
 }
-
 .menu-slider li a {
     display: inline-block;
     color: white;
@@ -55,13 +47,11 @@
     border-radius: 100%;
     margin: 3px;
 }
-
 .menu-slider li a:hover {
     transition: all 0.5s;
     transform: scale(1.2);
     background-color: var(--orangeLogo);
 }
-
 /* PORTADA-2 */
 .cover-2 {
     display: flex;
@@ -72,12 +62,10 @@
     position: relative;
     margin-bottom: 10px;
 }
-
 .cover-2 img {
     width: 100%;
     height: 150px;
 }
-
 .cover-2 h2 {
     color: white;
     text-align: center;
@@ -147,7 +135,6 @@
     justify-content: center;
     flex-direction: column;
 }
-
 .main-offers h2 {
     color: var(--naranjaLogo);
     font-size: 2rem;
@@ -155,45 +142,37 @@
     padding: 0;
 
 }
-
 .main-offers article {
     width: 90%;
     margin: 5px;
     background-color: black;
     border-radius: 10px;
     border: 3px black solid;
-
 }
-
 .main-offers i {
     font-size: 20px;
     color: white;
     margin: 10px;
     transform: rotate(90deg);
 }
-
 .offers-arrow {
     background-color: black;
     border-radius: 50%;
     margin: 10px 0px;
 }
-
 .offers-arrow:hover {
     background-color: var(--orangeLogo);
 }
-
 .main-offers article img {
     width: 100%;
     height: 300px;
     border-radius: 6px;
 }
-
 .foot-offers {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
 }
-
 #title-offers {
     width: 60%;
     color: white;
@@ -201,7 +180,6 @@
     margin: 0;
     padding: 0;
 }
-
 #price {
     font-size: 1.2rem;
     font-family: 'Raleway', sans-serif;
@@ -209,16 +187,13 @@
     text-align: right;
     margin: 5px;
 }
-
 #discount {
     font-size: 1.7rem;
     font-family: 'Raleway', sans-serif;
     color: rgb(3, 212, 10);
     font-weight: 600;
     margin: 5px;
-
 }
-
 .main-offers article a {
     display: flex;
     flex-direction: column;
@@ -226,9 +201,7 @@
     color: white;
     font-size: 35px;
     position: relative;
-
 }
-
 .main-offers article a p {
     position: absolute;
     top: 50px;
@@ -236,9 +209,7 @@
     width: 100%;
     text-align: center;
     padding: 10px 0;
-
 }
-
 /* CATEGORIES */
 .main-categories {
     background-color: black;
@@ -249,7 +220,6 @@
     padding-bottom: 10px;
 
 }
-
 .categories-box {
     display: flex;
     flex-direction: column;
@@ -257,7 +227,6 @@
     justify-content: center;
     align-items: center;
 }
-
 .categories-article {
     width: 90%;
     height: 250px;
@@ -269,20 +238,17 @@
     justify-content: flex-end;
     margin-top: 10px;
 }
-
 .categories-article:hover {
     opacity: 80%;
     transition: all 0.5s;
     transform: scale(1.02);
 }
-
 .categories-article h3 {
     background-color: white;
     text-align: center;
     margin: 0;
     padding: 0;
 }
-
 .strings {
     background-image: url(/images/categories/guitarra.jpg);
 }
@@ -290,24 +256,19 @@
 .wind {
     background-image: url(/images/categories/saxophone.jpg);
 }
-
 .percussion {
     background-image: url(/images/categories/drums.jpg);
 }
-
 .idiophones {
     background-image: url(/images/categories/xylophone.jpg);
 }
-
 .electronics {
     background-image: url(/images/categories/headphone.jpg);
 }
-
 /* BILLBOARD */
 .main-billboard {
     display: none;
 }
-
 /* CONTACT */
 .contact-comment {
     padding-top: 10px;
@@ -319,18 +280,15 @@
 .main-contact {
     background-color: var(--orangeLogo);
 }
-
 .comment-box {
     display: flex;
     flex-direction: column;
 }
-
 #contact-email {
     margin: 10px 0;
     width: 200px;
     border: 2px solid black;
 }
-
 #contact-btn {
     height: 30px;
     width: 60px;
@@ -340,21 +298,18 @@
     border: 1px solid white;
     border-radius: 10%;
 }
-
 #contact-btn:hover {
     cursor: pointer;
     background-color: var(--orangeLogo);
     transition: all 0.5s;
     transform: scale(1.1);
 }
-
 .contact-input {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding-bottom: 10px;
 }
-
 .comment-box textarea {
     resize: none;
     height: 200px;
@@ -363,12 +318,10 @@
     border-radius: 10%;
     padding-left: 20px;
 }
-
 .comment-box label {
     color: white;
     font-size: 20px;
 }
-
 /* MAP */
 .maps iframe {
     width: 99%;
@@ -376,14 +329,12 @@
     border: 4px black solid;
     border-radius: 10%;
 }
-
 .maps p {
     margin: 0;
     color: white;
     text-align: center;
     padding-bottom: 10px;
 }
-
 /* MEDIA QUERY */
 @media (max-width: 426px) {
     .slider-banner {
@@ -558,9 +509,6 @@
         justify-content: space-around;
         flex-wrap: wrap;
         margin: 30px 0;
-    }
-    .main-offers article {
-        width: 300px;
     }
     .main-offers i {
         transform: rotate(0deg);
