@@ -35,7 +35,12 @@
 }
 .fa-whatsapp {
     display: none;
+    color: rgb(53, 251, 53);
 }
+.fa-cart-shopping {
+    color: white;
+    display: none;
+}   
 /* BUSCADOR */
 .header-search-desktop {
     display: none;
@@ -79,24 +84,20 @@
     font-size: 20px;
     width: 100%;
 }
-
 .menu-horizontal {
     list-style: none;
     display: flex;
     flex-direction: column;    
 }
-
 .menu-horizontal>li>a {
     color: white;
     text-decoration: none;
     display: block;
     padding: 15px 20px;
 }
-
 .menu-horizontal > li:hover {
     background-color: #f25824;
 }
-
 .menu-vertical {
     position: relative;
     display: none;
@@ -134,12 +135,10 @@
     .fa-cart-shopping {
         display: block;
         font-size: 16px;
-        color: white;
     }
     .fa-whatsapp {
         display: block;
         font-size: 16px;
-        color: white;
     }
     .header-nav-intro p {
         display: block;
@@ -155,6 +154,11 @@
         display: flex;
         margin: 8px;
     }
+    .header-icons span a p:hover {
+        transition: all 0.5s;
+        transform: scale(1.1);
+        color: var(--orangeLogo);
+    }
     /* SEARCH */
     .header-search {
         display: none;
@@ -168,8 +172,11 @@
         border-top-left-radius: 20px;
         border: white 1px solid;
         width: 200px;
-        padding: 0 5px;
-        
+        padding: 0 5px;   
+    }
+    .header-search-desktop:hover {
+        transform: scale(1.2);
+        transition: all 0.5s;
     }
     .header-search-btn {
         background-color: rgb(177, 177, 177);
@@ -212,6 +219,29 @@
         display: block;
         color: white;
     }
+    /* animation logo */
+    .header-nav-intro img:hover {
+        animation: logo 0.82s cubic-bezier(.36,.07,.19,.97) both;
+        transform: translate3d(0, 0, 0);
+        backface-visibility: hidden;
+        perspective: 1000px;
+    }
+    @keyframes logo {
+        10%, 90% {
+            transform: translate3d(-1px, 0, 0);
+        }
+        
+        20%, 80% {
+            transform: translate3d(2px, 0, 0);
+        }
 
+        30%, 50%, 70% {
+            transform: translate3d(-4px, 0, 0);
+        }
+
+        40%, 60% {
+            transform: translate3d(4px, 0, 0);
+        }
+    }
     
  }

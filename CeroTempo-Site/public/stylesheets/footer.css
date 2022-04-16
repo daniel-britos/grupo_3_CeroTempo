@@ -13,6 +13,11 @@ footer {
     border-bottom: 1px solid white; 
     text-align: center;
 }
+.footer-phrase p {
+    font-size: 40px;
+    color: var(--orangeLogo);
+
+}
 .main-footer article ul li a {
     color: white;
     font-family: 'Roboto', sans-serif;
@@ -30,7 +35,10 @@ footer {
     text-align: center;
     margin: 0;
 }
-
+.main-footer article h2 {
+    color: var(--orangeLogo);
+    margin: 0;
+}
 /* TABLET */
 @media (min-width: 545px) {
     .main-footer {
@@ -52,7 +60,7 @@ footer {
     .main-footer article ul li a {
         font-size: 20px;
     }  
-    .footer-phrase h1 {
+    .footer-phrase p {
         font-size: 40px;
     }
     
