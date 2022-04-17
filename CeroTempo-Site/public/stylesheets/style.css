@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rubik+Glitch&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Raleway:wght@200&family=Rubik+Glitch&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Raleway:wght@200&family=Roboto:ital,wght@1,100&family=Rubik+Glitch&display=swap');
 
 @import './general.css';
 @import './index.css';
@@ -10,6 +11,10 @@
 @import './productDetail.css';
 @import './register.css';
 @import './header.css';
+<<<<<<< HEAD
 @import './footer.css';
 @import './courses.css';
 @import './luthiers.css';
+=======
+@import './footer.css';
+>>>>>>> productDetail-maria

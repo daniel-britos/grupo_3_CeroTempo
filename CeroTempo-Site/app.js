@@ -30,7 +30,7 @@ app.get('/courses',(req, res) => res.sendFile(path.resolve(__dirname,'views','co
 app.get('/luthiers',(req, res) => res.sendFile(path.resolve(__dirname,'views','luthiers.html')));
 
 
-
+app.get('/productDetail',(req, res) => res.sendFile(path.resolve(__dirname,'views','productDetail.html')));
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
