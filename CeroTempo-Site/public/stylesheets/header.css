@@ -36,6 +36,7 @@
 .fa-whatsapp {
     display: none;
 <<<<<<< HEAD
+<<<<<<< HEAD
     color: rgb(53, 251, 53);
 }
 .fa-cart-shopping {
@@ -45,6 +46,9 @@
 =======
 }
 >>>>>>> productDetail-maria
+=======
+}
+>>>>>>> register-maria
 /* BUSCADOR */
 .header-search-desktop {
     display: none;
@@ -89,18 +93,26 @@
     width: 100%;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> productDetail-maria
+=======
+
+>>>>>>> register-maria
 .menu-horizontal {
     list-style: none;
     display: flex;
     flex-direction: column;    
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> productDetail-maria
+=======
+
+>>>>>>> register-maria
 .menu-horizontal>li>a {
     color: white;
     text-decoration: none;
@@ -108,16 +120,22 @@
     padding: 15px 20px;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 .menu-horizontal > li:hover {
     background-color: #f25824;
 }
 =======
+=======
+>>>>>>> register-maria
 
 .menu-horizontal > li:hover {
     background-color: #f25824;
 }
 
+<<<<<<< HEAD
 >>>>>>> productDetail-maria
+=======
+>>>>>>> register-maria
 .menu-vertical {
     position: relative;
     display: none;
@@ -156,17 +174,25 @@
         display: block;
         font-size: 16px;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         color: white;
 >>>>>>> productDetail-maria
+=======
+        color: white;
+>>>>>>> register-maria
     }
     .fa-whatsapp {
         display: block;
         font-size: 16px;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         color: white;
 >>>>>>> productDetail-maria
+=======
+        color: white;
+>>>>>>> register-maria
     }
     .header-nav-intro p {
         display: block;
@@ -183,6 +209,7 @@
         margin: 8px;
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
     .header-icons span a p:hover {
         transition: all 0.5s;
         transform: scale(1.1);
@@ -190,6 +217,8 @@
     }
 =======
 >>>>>>> productDetail-maria
+=======
+>>>>>>> register-maria
     /* SEARCH */
     .header-search {
         display: none;
@@ -204,6 +233,7 @@
         border: white 1px solid;
         width: 200px;
 <<<<<<< HEAD
+<<<<<<< HEAD
         padding: 0 5px;   
     }
     .header-search-desktop:hover {
@@ -213,6 +243,10 @@
         padding: 0 5px;
         
 >>>>>>> productDetail-maria
+=======
+        padding: 0 5px;
+        
+>>>>>>> register-maria
     }
     .header-search-btn {
         background-color: rgb(177, 177, 177);
@@ -256,6 +290,7 @@
         color: white;
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
     /* animation logo */
     .header-nav-intro img:hover {
         animation: logo 0.82s cubic-bezier(.36,.07,.19,.97) both;
@@ -283,5 +318,8 @@
 =======
 
 >>>>>>> productDetail-maria
+=======
+
+>>>>>>> register-maria
     
  }

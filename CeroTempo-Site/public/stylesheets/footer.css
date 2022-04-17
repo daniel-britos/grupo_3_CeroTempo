@@ -14,6 +14,7 @@ footer {
     text-align: center;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 .footer-phrase p {
     font-size: 40px;
     color: var(--orangeLogo);
@@ -21,6 +22,8 @@ footer {
 }
 =======
 >>>>>>> productDetail-maria
+=======
+>>>>>>> register-maria
 .main-footer article ul li a {
     color: white;
     font-family: 'Roboto', sans-serif;
@@ -39,6 +42,7 @@ footer {
     margin: 0;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 .main-footer article h2 {
     color: var(--orangeLogo);
     margin: 0;
@@ -46,6 +50,9 @@ footer {
 =======
 
 >>>>>>> productDetail-maria
+=======
+
+>>>>>>> register-maria
 /* TABLET */
 @media (min-width: 545px) {
     .main-footer {
@@ -68,10 +75,14 @@ footer {
         font-size: 20px;
     }  
 <<<<<<< HEAD
+<<<<<<< HEAD
     .footer-phrase p {
 =======
     .footer-phrase h1 {
 >>>>>>> productDetail-maria
+=======
+    .footer-phrase h1 {
+>>>>>>> register-maria
         font-size: 40px;
     }
     
@@ -82,8 +93,12 @@ footer {
         padding: 20px 0 20px 0;
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 
 =======
 }
 >>>>>>> productDetail-maria
+=======
+}
+>>>>>>> register-maria

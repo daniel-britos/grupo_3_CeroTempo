@@ -29,8 +29,12 @@ app.get('/register',(req, res) => res.sendFile(path.resolve(__dirname,'views','r
 app.get('/courses',(req, res) => res.sendFile(path.resolve(__dirname,'views','courses.html')));
 app.get('/luthiers',(req, res) => res.sendFile(path.resolve(__dirname,'views','luthiers.html')));
 
+<<<<<<< HEAD
 
 app.get('/productDetail',(req, res) => res.sendFile(path.resolve(__dirname,'views','productDetail.html')));
+=======
+app.get('/register',(req, res) => res.sendFile(path.resolve(__dirname,'views','register.html')));
+>>>>>>> register-maria
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
