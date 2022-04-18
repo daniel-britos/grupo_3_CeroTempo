@@ -9,6 +9,9 @@
     height: 50vh;
     display: grid;
 }
+.form-div div input {
+    border-radius: 10px;
+}
 .sign-up{
     justify-content: center;
     align-items: center;
@@ -27,6 +30,11 @@
     text-align: center;
     margin-top: 50px;
     margin-bottom: 70px;
+}
+.sign-up-button button:hover {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
 }
 .button-f{
     border-radius: 60px;

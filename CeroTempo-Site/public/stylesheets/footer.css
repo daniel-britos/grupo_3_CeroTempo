@@ -25,7 +25,11 @@ footer {
     color: white;
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
-    
+}
+.main-footer article ul li:hover {
+    transform: scale(1.2);
+    transition: all .5s;
+    font-style: oblique;
 }
 .main-footer article h2 {
     font-size: 30px;

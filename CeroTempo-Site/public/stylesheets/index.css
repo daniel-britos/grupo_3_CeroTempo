@@ -283,10 +283,18 @@
     display: flex;
     flex-direction: column;
 }
+.comment-box label {
+    margin-left: 10px;
+}
 #contact-email {
     margin: 10px 0;
     width: 200px;
-    border: 2px solid black;
+    border: 4px solid black;
+    border-radius: 10px;
+}
+#contact-email:hover {
+    transition: all 0.5s;
+    transform: scale(1.2);
 }
 #contact-btn {
     height: 30px;
@@ -314,8 +322,12 @@
     height: 200px;
     width: 300px;
     border: solid 4px black;
-    border-radius: 10%;
+    border-radius: 5%;
     padding-left: 20px;
+}
+.comment-box textarea:hover {
+    transition: all .5s;
+    transform: scale(1.2);
 }
 .comment-box label {
     color: white;
@@ -326,7 +338,7 @@
     width: 99%;
     height: 300px;
     border: 4px black solid;
-    border-radius: 10%;
+    border-radius: 5%;
 }
 .maps p {
     margin: 0;
