@@ -41,8 +41,8 @@
     text-decoration: none;
     background-color: black;
     padding: 10px;
-    width: 20px;
-    height: 20px;
+    width: 40px;
+    height: 40px;
     font-size: 20px;
     border-radius: 100%;
     margin: 3px;
@@ -102,7 +102,6 @@
     font-size: 3.5rem;
 }
 .brand div a {
-    background-color: rgba(0, 0, 0, 0.4);
     width: 100%;
     height: 100%;
     display: flex;
@@ -112,7 +111,6 @@
 .img-1 {
     background-image: url(../images/brands/guitarFender_1920.jpg);
 }
-
 .img-2 {
     background-image: url(/images/brands/celloCremona.jpg);
 }
@@ -406,41 +404,40 @@
 }
 /* TABLET 768*/
 @media (min-width: 768px) {
-
-    /* OFFERS */
-    .main-offers {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        margin: 30px 0;
-        justify-content: space-around;
-    }
-
-    .main-offers article {
-        width: 200px;
-    }
-
-    .main-offers article a img {
-        height: 200px;
-    }
-
-    #title-offers {
-        font-size: 16px;
-    }
-
-    #discount {
-        font-size: 22px;
-    }
-
-    .main-offers i {
-        transform: rotate(0deg);
-    }
-
-    .offers-arrow:hover {
-        transition: all 0.5s;
-        transform: scale(1.1);
-    }
-
+        /* OFFERS */
+        .main-offers {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            margin: 30px 0;
+            justify-content: space-around;
+        }
+    
+        .main-offers article {
+            width: 200px;
+        }
+    
+        .main-offers article a img {
+            height: 200px;
+        }
+    
+        #title-offers {
+            font-size: 16px;
+        }
+    
+        #discount {
+            font-size: 22px;
+        }
+    
+        .main-offers i {
+            transform: rotate(0deg);
+        }
+    
+        .offers-arrow:hover {
+            transition: all 0.5s;
+            transform: scale(1.1);
+        }
+  
     /* CATEGORIES */
     .categories-box {
         display: flex;
@@ -473,7 +470,6 @@
         justify-content: center;
         align-items: center;
         flex-wrap: wrap;
-        background: white;
         width: 1000px;
         margin: auto;
         border-radius: 10%;
@@ -488,12 +484,12 @@
     .brand div:hover {
         transition: all 0.5s;
         transform: scale(1.1);
-        background-color: rgba(0, 0, 0, 0.0);
+        background-color: rgba(0, 0, 0, 0.4);
         cursor: pointer;
     }
     .brand div a:hover {
         transition: all 0.5s;
-        background-color: rgba(0, 0, 0, 0.0);
+        background-color: rgba(0, 0, 0, 0.4);
     }
     /* VIDEO */
     .intro-video {
@@ -556,7 +552,6 @@
         border-radius: 50%;
         position: relative;
         right: 120px;
-
     }
     .cover-wave {
         width: 580px;
@@ -565,7 +560,7 @@
         border-radius: 50%;
         position: relative;
         z-index: 1;
-        bottom: 360px;
+        bottom: 380px;
         right: 140px;
     }
     .billboard-text {
@@ -610,26 +605,29 @@
     }
     /* PUSH UP */
     .arrow-push {
-        background: black;
+        background-color: black;
+        border: 1px solid white;
         width: 40px;
         height: 40px;
+        border-radius: 50%;
+        position: fixed;
+        z-index: 5;
+        left: 95%;
+        top: 50%;
         display: flex;
         justify-content: center;
         align-items: center;
-        border-radius: 50%;
-        position: absolute;
-        left: 1230px;
-        bottom: 280px;   
-        position: sticky;
-        border: white solid 2px;
-     }
-    .arrow-push i {
+
+    }
+    .fa-arrow-up {
+        font-size: 30px;
         color: white;
-        font-size: 20px;
     }
     .arrow-push:hover {
+        cursor: pointer;
         transform: scale(1.2);
-        transition: all 0.5s;
-        background: var(--orangeLogo);
-    }  
+        transition: all .5s;
+        background-color: var(--orangeLogo);
+    }
+    
 }

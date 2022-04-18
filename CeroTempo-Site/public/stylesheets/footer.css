@@ -18,13 +18,17 @@ footer {
     color: var(--orangeLogo);
 
 }
+.main-footer article ul li {
+    margin-bottom: 5px;
+}
 .main-footer article ul li a {
     color: white;
     font-family: 'Roboto', sans-serif;
-    font-size: 12px;
+    font-size: 16px;
+    
 }
 .main-footer article h2 {
-    font-size: 1.6rem;
+    font-size: 30px;
     margin: 5px;
 }
 .main-footer article {
@@ -34,6 +38,7 @@ footer {
     font-size: 12px;
     text-align: center;
     margin: 0;
+    color: white;
 }
 .main-footer article h2 {
     color: var(--orangeLogo);
@@ -43,6 +48,7 @@ footer {
 @media (min-width: 545px) {
     .main-footer {
         display: flex;
+        flex-direction: column;
     }    
 }
 
@@ -50,6 +56,7 @@ footer {
 @media (min-width: 1024px) {
     .main-footer {    
         display: flex;
+        flex-direction: row;
         justify-content: space-between;
         padding: 10px 30px;
         text-align: left;
@@ -59,6 +66,8 @@ footer {
     }
     .main-footer article ul li a {
         font-size: 20px;
+        
+        
     }  
     .footer-phrase p {
         font-size: 40px;
