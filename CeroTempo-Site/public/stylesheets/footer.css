@@ -1,22 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Raleway:wght@200&family=Roboto:ital,wght@1,100&family=Rubik+Glitch&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Raleway:wght@200&family=Roboto:ital,wght@1,100&family=Rubik+Glitch&display=swap");
 
 /* FOOTER */
 footer {
-    background-color: black;
-    padding-bottom: 10px;
+  background-color: black;
+  padding-bottom: 10px;
 }
 .main-footer {
-    text-align: center; 
-    padding-top: 10px;
+  text-align: center;
+  padding-top: 10px;
 }
 .footer-phrase {
-    border-bottom: 1px solid white; 
-    text-align: center;
+  border-bottom: 1px solid white;
+  text-align: center;
 }
-.footer-phrase p {
-    font-size: 40px;
-    color: var(--orangeLogo);
 
+<<<<<<< HEAD
 }
 .main-footer article ul li {
     margin-bottom: 5px;
@@ -30,11 +28,22 @@ footer {
 .main-footer article h2 {
     font-size: 30px;
     margin: 5px;
+=======
+.main-footer article ul li a {
+  color: white;
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+}
+.main-footer article h2 {
+  font-size: 1.6rem;
+  margin: 5px;
+>>>>>>> 1869a0ac9c851ac6bc69f0c6a8b42344d4776a10
 }
 .main-footer article {
-    margin: 20px;
+  margin: 20px;
 }
 #copyright {
+<<<<<<< HEAD
     font-size: 12px;
     text-align: center;
     margin: 0;
@@ -43,17 +52,30 @@ footer {
 .main-footer article h2 {
     color: var(--orangeLogo);
     margin: 0;
+=======
+  font-size: 12px;
+  text-align: center;
+  margin: 0;
+>>>>>>> 1869a0ac9c851ac6bc69f0c6a8b42344d4776a10
 }
+
 /* TABLET */
 @media (min-width: 545px) {
+<<<<<<< HEAD
     .main-footer {
         display: flex;
         flex-direction: column;
     }    
+=======
+  .main-footer {
+    display: flex;
+  }
+>>>>>>> 1869a0ac9c851ac6bc69f0c6a8b42344d4776a10
 }
 
 /* DESKTOP */
 @media (min-width: 1024px) {
+<<<<<<< HEAD
     .main-footer {    
         display: flex;
         flex-direction: row;
@@ -80,4 +102,29 @@ footer {
         padding: 20px 0 20px 0;
     }
 }
+=======
+  .main-footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 30px;
+    text-align: left;
+  }
+  .footer-phrase {
+    width: 40%;
+  }
+  .main-footer article ul li a {
+    font-size: 20px;
+  }
+>>>>>>> 1869a0ac9c851ac6bc69f0c6a8b42344d4776a10
 
+  .footer-phrase h1 {
+    font-size: 40px;
+  }
+
+  #copyright {
+    text-align: center;
+    font-size: 16px;
+    margin: 0;
+    padding: 20px 0 20px 0;
+  }
+}
