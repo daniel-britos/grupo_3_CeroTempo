@@ -5,8 +5,7 @@
   width: 100%;
 }
 
-.main__title h1,
-h2 {
+.main__title * {
   font-size: 25px;
   color: white;
   margin: 5px 0;
@@ -22,8 +21,7 @@ h2 {
   margin: 0 15px;
 }
 
-.main__direction__title h3,
-a {
+.main__direction__title * {
   font-size: 15px;
   color: black;
   margin: 5px 0;
@@ -130,8 +128,7 @@ a {
   height: 30px;
 }
 
-.main__payment__title h3,
-a {
+.main__payment__title * {
   font-size: 15px;
   color: black;
   margin: 5px 0;
