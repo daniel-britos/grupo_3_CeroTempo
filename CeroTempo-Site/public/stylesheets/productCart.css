@@ -40,12 +40,10 @@ a {
   display: flex;
   flex-direction: column;
 }
-
 .pc__main .main__desktopL {
   display: flex;
   flex-direction: column;
 }
-
 .pc__main .main__desktopR {
   display: flex;
   flex-direction: column;
@@ -214,18 +212,15 @@ a {
   background-color: black;
   width: 100%;
 }
-
 .footer__contact ul {
   display: flex;
   flex-direction: column;
 }
-
 .footer__contact li {
   text-align: center;
   padding: 5px 0;
   border-bottom: solid 1px white;
 }
-
 .footer__contact ul li a {
   color: white;
 }
@@ -280,13 +275,11 @@ a {
   .footer__contact {
     padding: 5px 0;
   }
-
   .footer__contact ul {
     display: flex;
     flex-direction: row;
     justify-content: center;
   }
-
   .footer__contact li {
     width: 125px;
     border-bottom: 0;
@@ -294,7 +287,6 @@ a {
     border-right: solid 2px white;
     padding: 7px 0;
   }
-
   .footer__contact li {
     border-right: none;
   }

@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-
->>>>>>> productDetail-maria
 /* ************** SECCION DETALLE DEL PRODUCTO ************** */
 
 
@@ -70,10 +66,6 @@ img.piano-1{
 }
 .product-name{
     text-align: left;
-<<<<<<< HEAD
-
-}
-=======
 	max-width: 1200px;
     width: 90%;
     margin: 0 auto;
@@ -92,7 +84,6 @@ img.piano-1{
     margin: 0 auto;
     position: relative;
 }
->>>>>>> productDetail-maria
 .price{
     font-size: 35px;
     margin-bottom: 50px;
@@ -123,15 +114,6 @@ img.piano-1{
 	padding: 0;
 }
 .product-characteristics{
-<<<<<<< HEAD
-    margin-bottom: 50px;
-}
-.product-description{
-    margin-bottom: 50px;
-}
-.payment-methods{
-    margin-bottom: 50px;
-=======
     max-width: 1200px;
     width: 90%;
     margin: 0 auto;
@@ -148,20 +130,16 @@ img.piano-1{
     width: 90%;
     margin: 0 auto;
     position: relative;
->>>>>>> productDetail-maria
 }
 .input-three{
     justify-content: center;
     align-items: center;
     display: grid;
     margin-bottom: 50px;
-<<<<<<< HEAD
-=======
 	max-width: 1200px;
     width: 90%;
     margin: 0 auto;
     position: relative;
->>>>>>> productDetail-maria
 
 
 }
@@ -297,9 +275,6 @@ img.piano-1{
     font-size: 20px;
     padding-right: 15px;
     color: rgb(2, 198, 2);
-<<<<<<< HEAD
-}
-=======
 }.main-recommend h2 {
     font-size: 35px;
 }
@@ -340,20 +315,11 @@ img.piano-1{
     color: rgb(2, 198, 2);
 }
 
->>>>>>> productDetail-maria
 
 
 /* ************** MEDIA QUERIES ************** */
 
-<<<<<<< HEAD
-/* -------------- MOBILE FIRST -------------- 
-Mobile-Small: 320px
-Mobile-Medium: 375px
-Mobile-Large: 425px
-*/
-=======
 /* -------------- MOBILE FIRST -------------- */
->>>>>>> productDetail-maria
 @media (max-width: 426px){
     .main-footer{
         flex-direction: column;
@@ -364,15 +330,7 @@ Mobile-Large: 425px
 }
 
 
-<<<<<<< HEAD
-
-/* -------------- TABLET --------------  
-Tablet - L : 768px
-Tablet - S : 545px
-*/
-=======
 /* -------------- TABLET -------------- */
->>>>>>> productDetail-maria
 @media (max-width: 526px){
     .recommend-arrow {
         display: none;
@@ -385,18 +343,8 @@ Tablet - S : 545px
     }
 }
 
-<<<<<<< HEAD
-/* -------------- DESKTOP -------------- 
-Laptop: 1024px
-Desktop: 1440px
-4k o televisores: 2560px
-
-*/
-
-=======
 
 /* -------------- DESKTOP -------------- */
->>>>>>> productDetail-maria
 @media (min-width: 1024px) {
     .box-recommend {
         flex-direction: row;
@@ -425,11 +373,5 @@ Desktop: 1440px
 
 }
 
-<<<<<<< HEAD
-=======
 
 
-
-
-
->>>>>>> productDetail-maria
