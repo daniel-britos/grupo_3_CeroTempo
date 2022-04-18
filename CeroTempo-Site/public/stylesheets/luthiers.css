@@ -20,3 +20,21 @@
     width: 60%;
     height: 400px;
 }
+
+@media (max-width: 426px) {
+    .box-luthier {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex-wrap: wrap;
+        
+    }
+    .box-luthier p {
+        text-align: center;   
+        width: 300px;
+        
+    }
+    .box-luthier img {
+        height: 200px;
+    }
+}
