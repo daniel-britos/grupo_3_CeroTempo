@@ -36,6 +36,7 @@
 .fa-whatsapp {
   display: none;
 }
+
 /* BUSCADOR */
 .header-search-desktop {
   display: none;
@@ -134,12 +135,15 @@
     display: block;
     font-size: 16px;
     color: white;
+    color: white;
   }
   .fa-whatsapp {
     display: block;
     font-size: 16px;
     color: white;
+    color: white;
   }
+
   .header-nav-intro p {
     display: block;
     color: white;
@@ -154,6 +158,7 @@
     display: flex;
     margin: 8px;
   }
+
   /* SEARCH */
   .header-search {
     display: none;
@@ -168,7 +173,9 @@
     border: white 1px solid;
     width: 200px;
     padding: 0 5px;
+    padding: 0 5px;
   }
+
   .header-search-btn {
     background-color: rgb(177, 177, 177);
     border-bottom-right-radius: 20px;
