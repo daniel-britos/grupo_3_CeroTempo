@@ -9,18 +9,306 @@
     <title>Home CeroTempo</title>
 </head>
     <body>
-        <header>
+        <div id="openSite">
+            <div id="imageOpen"></div>
+        </div>
+        <header class="main-header" id="headerpush">
             <nav class="header-nav">
                 <div class="header-nav-intro">
                     <i class="fa-solid fa-bars"></i>
                     <img src="/images/logo.png" alt="logo" class="header-logo">
-                    <i class="fa-solid fa-user"></i>
+                    <div class="header-search-desktop">
+                        <input type="text" placeholder="What are you looking for?">              
+                        <button class="header-search-btn">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>  
+                    </div>
+                    <div class="header-icons">                        
+                        <span>
+                            <a href="#contactUs">
+                                <p>Help</p>
+                            </a>                        
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </span>
+                        <span>
+                            <a href="productCart">
+                                <p>Shopping Cart</p>
+                            </a>
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </span>
+                        <span>
+                            <a href="register">
+                                <p>Account</p>
+                            </a>
+                            <i class="fa-solid fa-user"></i>
+                        </span>
+                    </div>
                 </div>
-                <div class="header-nav-search">
-                    <input type="text" placeholder="What are you looking for?">              
-                    <i class="fa-solid fa-magnifying-glass"></i>
+                <!-- MENU -->
+                <nav class="nav-menu">
+                    <ul class="menu-horizontal">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="#aboutUs">About us</a></li>
+                        <li>
+                            <a href="#">Products</a>
+                            <ul class="menu-vertical">
+                                <li><a href="productDetail">Guitars</a></li>
+                                <li><a href="productDetail">Basses</a></li>
+                                <li><a href="productDetail">Pianos</a></li>
+                                <li><a href="productDetail">Keyboards</a></li>
+                                <li><a href="productDetail">Drums</a></li>
+                                <li><a href="productDetail">Violins</a></li>
+                                <li><a href="productDetail">Cellos</a></li>
+                                <li><a href="productDetail">Violas</a></li>
+                                <li><a href="productDetail">Electronics</a></li>
+                                <li><a href="productDetail">Cables</a></li>
+                                <li><a href="productDetail">Others</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">Courses</a>
+                            <ul class="menu-vertical">
+                                <li><a href="courses">Guitar lessons</a></li>
+                                <li><a href="courses">Violin lessons</a></li>
+                                <li><a href="courses">Cello lessons</a></li>
+                                <li><a href="courses">Piano lessons</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="luthiers">Luthier</a></li>
+                        <li><a href="#contactUs">Contact</a></li>
+                    </ul>
+                </nav>
+                                
+                <div class="header-search">
+                    <input type="text" placeholder="What are you looking for?" autofocus> 
+                    <button class="header-search-btn">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>            
                 </div>
             </nav>
         </header>
+
+        <main>
+            <!-- PUSH UP -->
+            <div class="arrow-push">
+                <i class="fa-solid fa-arrow-up"></i>
+            </div>
+            <!-- SLIDER -->
+            <section class="main-slider">
+                <nav class="slider-container">
+                    <ul class="slider-banner">
+                        <li id="slide1">
+                            <img src="/images/producto.png" alt="banner">
+                        </li>
+                        <li id="slide2">
+                            <img src="/images/productos.png" alt="banner">
+                        </li>
+                        <li id="slide3">
+                            <img src="/images/clases.png" alt="banner">
+                        </li>
+                    </ul>
+                    <ul class="menu-slider">
+                        <li>
+                            <a href="#slide1">1</a>
+                        </li>
+                        <li>
+                            <a href="#slide2">2</a>
+                        </li>
+                        <li>
+                            <a href="#slide3">3</a>
+                        </li>
+                    </ul>
+                </nav>
+            </section>
+            <!-- DESCRIPCIÓN Y BUSQUEDA POR MARCA -->
+            <section class="main-description"> 
+                <article class="cover-2">
+                    <img src="/images/logoSolo.png" alt="">
+                    <h2>Number one company in the music industry</h2>
+                </article>
+                <article class="brand">
+                    <div class="img-1">
+                        <a href="productDetail">
+                            <h2>Fender</h2>
+                        </a>
+                    </div>
+                    <div class="img-2">
+                        <a href="productDetail">
+                            <h2>Cremona</h2>                            
+                        </a>
+                    </div>
+                    <div class="img-3">
+                        <a href="productDetail">
+                            <h2>Yamaha</h2>                            
+                        </a>
+                    </div>
+                    <div class="img-4">
+                        <a href="productDetail">
+                            <h2>Mapex</h2>                             
+                        </a>
+                    </div>
+                </article>
+            </section>
+            <!--  VIDEO -->
+            <section class="main-video">
+                <article class="intro-video">
+                    <video id="home-video" autoplay muted>
+                        <source src="/images/video-music.mp4" type="video/mp4">
+                    </video>
+                </article>
+            </section>
+            <!-- OFERTAS -->
+            <section class="main-offers">
+                <div class="offers-arrow">
+                    <i class="fas fa-arrow-left"></i>
+                </div>
+                <article class="offers-1">
+                    <a href="productDetail">
+                        <p>See Offer</p>
+                        <img src="/images/instrumentos/Guitarras/06/125.jpg" alt="">
+                    </a>
+                    <div class="foot-offers"> 
+                        <h4 id="title-offers">Guitarra Electrica Fender 20</h4>
+                        <div class="offers-data">
+                            <p id="price">$70.500</p>    
+                            <p id="discount">10% off</p>   
+                        </div>
+                    </div>
+                </article>
+                <article class="offers-2">
+                    <a href="productDetail">
+                        <p>See Offer</p>
+                        <img src="/images/instrumentos/Cello/01/069.jpg" alt="">
+                    </a>
+                    <div class="foot-offers"> 
+                        <h4 id="title-offers">Ancona 610 Macizo</h4>
+                        <div class="offers-data">
+                            <p id="price">$120.000</p>    
+                            <p id="discount">30% off</p>   
+                        </div>
+                    </div>
+                </article>
+                <article class="offers-3">
+                    <a href="productDetail">
+                        <p>See Offer</p>
+                        <img src="/images/instrumentos/Parlantes/133.jpg" alt="">
+                    </a>
+                    <div class="foot-offers"> 
+                        <h4 id="title-offers">Parlante stereo PH-300</h4>
+                        <div class="offers-data">
+                            <p id="price">$35.200</p>    
+                            <p id="discount">20% off</p>   
+                        </div>
+                    </div>
+                </article>
+                <div class="offers-arrow">
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+            </section>
+            <!-- Categories -->
+            <section class="main-categories">
+                <article class="categories-article strings">                    
+                    <h3>Strings</h3>
+                </article>
+                <div class="categories-box">
+                    <article class="categories-article wind">                    
+                        <h3>Wind</h3>
+                    </article>
+                    <article class="categories-article percussion">                    
+                        <h3>Percussion</h3>
+                    </article>
+                    <article class="categories-article idiophones">                    
+                        <h3>Idiophones</h3>
+                    </article>
+                    <article class="categories-article electronics">                    
+                        <h3>Electronics</h3>
+                    </article>
+                </div>
+            </section>
+            <!-- CARTEL -->
+            <section class="main-billboard" id="aboutUs">
+                <div class="billboard-text"> 
+                    <h2>ABOUT THE COMPANY</h2>
+                    <p>
+                        Company dedicated to the sale of musical instruments and teaching.
+                        Since 1986 we lead among the best companies in the music field.
+                    </p>
+                </div>
+                <div class="billboard-container">
+                    <div class="wave-orange"></div>
+                    <div class="cover-wave"></div>
+                </div>
+            </section>
+            <!-- CONTACTO -->
+            <section class="main-contact">
+                <form class="contact-comment">
+                    <div class="comment-box">
+                        <label for="">Message</label>
+                        <textarea name="" id="" placeholder="let us a comment..."></textarea>
+                    </div> 
+                    <div class="contact-input" id="contactUs">
+                        <input id="contact-email" type="email" placeholder="example@gmail.com">
+                        <input id="contact-btn" type="submit" value="Send">                                
+                    </div>
+                </form>
+                <article class="maps">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3281.6438257705518!2d-58.56146160611527!3d-34.66369694262935!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc7d15e801f83%3A0x6999843b2805f2eb!2sAv.%20de%20Mayo%202222%2C%20B1704BVV%20Ramos%20Mej%C3%ADa%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1627746511105!5m2!1ses-419!2sar" allowfullscreen="" loading="lazy">
+                    </iframe>
+                    <p>Street Avenue 512 - New York</p>
+                </article>
+            </section>
+        </main>
+        <!-- FOOTER -->
+        <footer>
+            <section class="main-footer">
+                <article class="footer-phrase">
+                    <p>
+                        "Always go forward, never go backwards"
+                    </p>
+                </article>
+                <article class="footer-info">
+                    <h2>Info</h2>
+                    <ul class="info-li">
+                        <li>
+                            <a href="#">About</a>
+                        </li>
+                        <li>
+                            <a href="#">Wholesalers</a>
+                        </li>
+                        <li>
+                            <a href="#">Branch Offices</a>
+                        </li>
+                        <li>
+                            <a href="#">Frequent Questions</a>
+                        </li>
+                        <li>
+                            <a href="#">Contact</a>
+                        </li>
+                    </ul>
+                </article>
+                <article class="footer-contact">
+                    <h2>Contact</h2>
+                    <ul class="contact-li">
+                        <li>
+                            <a href="#">119815213664</a>
+                        </li>
+                        <li>
+                            <a href="#">Sarasa Branch</a>
+                        </li>
+                        <li>
+                            <a href="#">cerotempo@gmail.com</a>
+                        </li>
+                        <li>
+                            <a href="#">Location</a>
+                        </li>
+                        <li>
+                            <a href="#">Facebook</a>
+                        </li>
+                    </ul>
+                </article>
+            </section>
+            <p id="copyright"> Copyright © 2022 All Rights Reserved by CeroTempo</p>
+        </footer>
     </body>
 </html>

@@ -1,3 +1,6 @@
+* {
+    box-sizing: border-box;
+}
 header,
 main,
 footer {
@@ -17,4 +20,57 @@ a {
 
 :root {
     --orangeLogo: #f25824;
+}
+#openSite  {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-position: center;
+    background-size: cover;
+    z-index: 20;
+    position: absolute;
+    animation: open 4s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;  
+}
+@keyframes open {
+    from {
+        opacity: 100%;
+        z-index: 1;
+    }
+
+    to {
+        opacity: 0%;
+        z-index: -1;
+    }
+}
+
+#imageOpen {
+    background-image: url(../images/logo.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 350px;
+    height: 250px;
+    z-index: 30;
+    position: absolute;
+    animation: imag 4s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes imag {
+    from {
+        opacity: 100%;
+        z-index: 1;
+    }
+
+    to {
+        opacity: 0%;
+        z-index: -1;
+    }
 }
