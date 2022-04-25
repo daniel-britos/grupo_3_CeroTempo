@@ -16,9 +16,14 @@
 
 
 
-img.piano-1{
+img.piano-1,
+img.piano-2,
+img.piano-3,
+img.piano-4,
+img.piano-5
+{
     height: 300px;
-    width: auto;
+    width: 300px;
     display: block;
     margin: auto;
 } 
