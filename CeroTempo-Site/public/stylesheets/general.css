@@ -36,6 +36,7 @@ a {
     animation: open 4s;
     animation-delay: 2s;
     animation-fill-mode: forwards;  
+    animation-timing-function: 1;
 }
 @keyframes open {
     from {
@@ -61,6 +62,7 @@ a {
     animation: imag 4s;
     animation-delay: 2s;
     animation-fill-mode: forwards;
+    animation-timing-function: 1;
 }
 
 @keyframes imag {
