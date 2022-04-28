@@ -88,4 +88,4 @@ function onListening() {
     : 'port ' + addr.port;
   debug('Listening on ' + bind);
 }
-console.log(`Servidor abierto en - http://localhost:${port}`);
+console.log(`Server up in - http://localhost:${port}`);

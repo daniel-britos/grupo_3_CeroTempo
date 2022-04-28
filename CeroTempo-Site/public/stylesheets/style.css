@@ -17,14 +17,14 @@ font-family: 'Roboto', sans-serif;
 font-family: 'Rubik Glitch', cursive;
 */
 
+@import './normalize.css';
+@import './general.css';
 @import './courses.css';
 @import './footer.css';
-@import './general.css';
 @import './header.css';
 @import './index.css';
 @import './login.css';
 @import './luthiers.css';
-@import './normalize.css';
 @import './productCart.css';
 @import './productDetail.css';
 @import './register.css';

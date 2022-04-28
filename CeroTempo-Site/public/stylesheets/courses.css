@@ -45,7 +45,6 @@
 }
 
 @media (max-width: 426px){
-
     .main-courses span {
         flex-direction: column;
     }
