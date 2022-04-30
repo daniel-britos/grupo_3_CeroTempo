@@ -25,6 +25,7 @@ footer {
     color: white;
     font-family: 'Raleway', sans-serif;
     font-size: 16px;
+    text-decoration: none;
 }
 .main-footer article ul li:hover {
     transform: scale(1.2);

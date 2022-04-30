@@ -87,7 +87,7 @@
   .menu-horizontal {
     list-style: none;
     display: flex;
-    flex-direction: column;    
+    flex-direction: column;  
   }
   .menu-horizontal>li>a {
     color: white;

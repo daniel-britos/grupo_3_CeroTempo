@@ -6,12 +6,10 @@ router.get('/', function(req, res, next) {
   res.send('respond with a resource');
 });
 
-router.get('/register', function(req, res){
-  res.render('register');
-});
+const {register, login} = require('../controllers/usersController');
 
-router.get('/login', function(req, res){
-  res.render('login');
-});
+router.get('/register', register);
+
+router.get('/login', login);
 
 module.exports = router;
