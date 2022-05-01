@@ -118,8 +118,16 @@ como también el crecimiento personal de nuestro equipo. <br/>
 
 <p><i>María Carmen nacida en 2001, en Argentina es estudiante de sistemas y programación web y está aplicando su pasión por la guitarra  y su excelente predisposición para asesorar de la mejor manera.</i></p>
 <p><i>Fernando Ezequiel Baca, nacido en la provincia de Jujuy, Argentina. Apasionado por la tecnología, las series y el deporte. Entre sus cualidades se destacan el compañerismo, el respeto y la paciencia.</i></p>
-<p><i>Daniel Britos, Argentino. Es compositor de imagen y video, aficionado al desarrollo de aplicaciónes web y el mundo del desarrollo. Algunas de sus mayores virtudes son la paciencia, la amabilidad y el esfuerzo.</i></p>
-<p><i>Ubira Rivero, Venezolana. Estudiante de sistema y programación web, le encanta viajar y conocer otras culturas, en sus cualidades se destaca la paciencia, el trabajo en equipo y la empatia</i></p>
+<p>
+  <i>
+    Daniel Britos, Argentino. Es compositor de imagen y video, aficionado al desarrollo de aplicaciónes web y el mundo del desarrollo. Algunas de     sus mayores virtudes son la paciencia, la amabilidad y el esfuerzo.
+  </i>
+</p>
+<p>
+  <i>
+   Belén Calpanchay González, argentina, ex-estudiante de Lic. en Diseño Industrial y emprendedora,  me gusta practicar inglés y diseñar en 3D y 2D. Me caracteriza la flexibilidad y la persistencia.
+  </i>
+</p>
 
 <div align="center">
   <h2>Tablero de trabajo</h2>
