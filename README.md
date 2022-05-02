@@ -125,7 +125,7 @@ como también el crecimiento personal de nuestro equipo. <br/>
 </p>
 <p>
   <i>
-   Belén Calpanchay González, argentina, ex-estudiante de Lic. en Diseño Industrial y emprendedora,  me gusta practicar inglés y diseñar en 3D y 2D. Me caracteriza la flexibilidad y la persistencia.
+   Belén Calpanchay González, argentina, emprendedora y ex-estudiante de diseño, me gusta diseñar y prácticar inglés y aplicarlo a mis proyectos de desarrollo web. Me caracteriza la flexibilidad y la persistencia.
   </i>
 </p>
 
