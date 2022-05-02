@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+        <link rel="stylesheet" href="/stylesheets/style.css">
+        <title>Registration | CeroTempo</title>
+    </head>
+    <body>
+        <header class="main-header" id="headerpush">
+            <nav class="header-nav">
+                <div class="header-nav-intro">
+                    <i class="fa-solid fa-bars"></i>
+                    <a href="/">
+                        <img src="/images/logo.png" alt="logo" class="header-logo">
+                    </a>
+                    <div class="header-search-desktop">
+                        <input type="text" placeholder="What are you looking for?">              
+                        <button class="header-search-btn">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>  
+                    </div>
+                    <div class="header-icons">                        
+                        <span>
+                            <a href="#contactUs">
+                                <p>Help</p>
+                            </a>                        
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </span>
+                        <span>
+                            <a href="productCart">
+                                <p>Shopping Cart</p>
+                            </a>
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </span>
+                        <span>
+                            <a href="/users/register">
+                                <p>Account</p>
+                            </a>
+                            <i class="fa-solid fa-user"></i>
+                        </span>
+                    </div>
+                </div>
+                <!-- MENU -->
+                <nav class="nav-menu">
+                    <ul class="menu-horizontal">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="#aboutUs">About us</a></li>
+                        <li>
+                            <a href="#">Products</a>
+                            <ul class="menu-vertical">
+                                <li><a href="productDetail">Guitars</a></li>
+                                <li><a href="productDetail">Basses</a></li>
+                                <li><a href="productDetail">Pianos</a></li>
+                                <li><a href="productDetail">Keyboards</a></li>
+                                <li><a href="productDetail">Drums</a></li>
+                                <li><a href="productDetail">Violins</a></li>
+                                <li><a href="productDetail">Cellos</a></li>
+                                <li><a href="productDetail">Violas</a></li>
+                                <li><a href="productDetail">Electronics</a></li>
+                                <li><a href="productDetail">Cables</a></li>
+                                <li><a href="productDetail">Others</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">Courses</a>
+                            <ul class="menu-vertical">
+                                <li><a href="courses">Guitar lessons</a></li>
+                                <li><a href="courses">Violin lessons</a></li>
+                                <li><a href="courses">Cello lessons</a></li>
+                                <li><a href="courses">Piano lessons</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="luthiers">Luthier</a></li>
+                        <li><a href="#contactUs">Contact</a></li>
+                    </ul>
+                </nav>
+                                
+                <div class="header-search">
+                    <input type="text" placeholder="What are you looking for?" autofocus> 
+                    <button class="header-search-btn">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>            
+                </div>
+            </nav>
+        </header>
+        <main>
+            <form action="#" class="form-r" method="post">
+                <div class="sign-up">
+                    <p class="sign-up-p">¡SIGN UP!</p> 
+                </div>
+                <div class="form-div">
+                    <div class="sign-up">
+                        <label for="name" class="name-l">NAME</label>
+                        <input type="text" id="name" name="user-name"/>
+                    </div>
+                    <div class="sign-up">
+                        <label for="surname" class="surname-l">SURNAME</label>
+                        <input type="text" id="surname" name="user-surname"/>
+                    </div>
+                    <div class="sign-up">
+                        <label for="birth" class="birth-l">DATE OF BIRTH</label>
+                        <input type="date" id="birth" name="user-birth"/>
+                    </div>
+                    <div class="sign-up">
+                        <label for="email" class="email-l">EMAIL</label>
+                        <input type="email" id="email" name="user-email"/>
+                    </div>
+                    <div class="sign-up">
+                        <label for="pass1" class="pass1-l">CREATE A PASSWORD</label>
+                        <input type="password" id="pass1" name="user-pass1"/>
+                    </div>
+                    <div class="sign-up">
+                        <label for="pass2" class="pass2-l">CONFIRM PASSWORD</label>
+                        <input type="password" id="pass2" name="user-pass2"/>
+                    </div>
+                </div>
+                <div class="sign-up-button">
+                    <button type="submit" class="button-f" >SIGN UP</button>
+                </div>
+            </form>
+    
+            <!-- CONTACTO -->
+            <section class="main-contact">
+                <form class="contact-comment">
+                    <div class="comment-box">
+                        <label for="">Message</label>
+                        <textarea name="" id="" placeholder="let us a comment..."></textarea>
+                    </div> 
+                    <div class="contact-input" id="contactUs">
+                        <input id="contact-email" type="email" placeholder="example@gmail.com">
+                        <input id="contact-btn" type="submit" value="Send">                                
+                    </div>
+                </form>
+                <article class="maps">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3281.6438257705518!2d-58.56146160611527!3d-34.66369694262935!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc7d15e801f83%3A0x6999843b2805f2eb!2sAv.%20de%20Mayo%202222%2C%20B1704BVV%20Ramos%20Mej%C3%ADa%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1627746511105!5m2!1ses-419!2sar" allowfullscreen="" loading="lazy">
+                    </iframe>
+                    <p>Street Avenue 512 - New York</p>
+                </article>
+            </section>
+        </main>
+        <!-- FOOTER -->
+        <footer>
+            <section class="main-footer">
+                <article class="footer-phrase">
+                    <p>
+                        "Always go forward, never go backwards"
+                    </p>
+                </article>
+                <article class="footer-info">
+                    <h2>Info</h2>
+                    <ul class="info-li">
+                        <li>
+                            <a href="#aboutUs">About</a>
+                        </li>
+                        <li>
+                            <a href="www.google.com">Wholesalers</a>
+                        </li>
+                        <li>
+                            <a href="https://www.google.com/maps/search/telecom/@-34.6155012,-58.433642,12z/data=!3m1!4b1">Branch Offices</a>
+                        </li>
+                        <li>
+                            <a href="#">Frequent Questions</a>
+                        </li>
+                        <li>
+                            <a href="#contactUs">Contact</a>
+                        </li>
+                    </ul>
+                </article>
+                <article class="footer-contact">
+                    <h2>Contact</h2>
+                    <ul class="contact-li">
+                        <li>
+                            <a href="#">119815213664</a>
+                        </li>
+                        <li>
+                            <a href="https://www.google.com/maps/place/Telecom/@-34.6100053,-58.5931134,12z/data=!4m9!1m2!2m1!1stelecom!3m5!1s0x95bcca02cebf962d:0x3017c344505b62d5!8m2!3d-34.6100113!4d-58.4612683!15sCgd0ZWxlY29tIgOIAQGSASN0ZWxlY29tbXVuaWNhdGlvbnNfc2VydmljZV9wcm92aWRlcg">Office center</a>
+                        </li>
+                        <li>
+                            <a href="www.gmail.com">cerotempo@gmail.com</a>
+                        </li>
+                        <li>
+                            <a href="https://www.google.com/maps/place/Telecom/@-34.6100053,-58.5931134,12z/data=!4m9!1m2!2m1!1stelecom!3m5!1s0x95bcca02cebf962d:0x3017c344505b62d5!8m2!3d-34.6100113!4d-58.4612683!15sCgd0ZWxlY29tIgOIAQGSASN0ZWxlY29tbXVuaWNhdGlvbnNfc2VydmljZV9wcm92aWRlcg">Location</a>
+                        </li>
+                        <li>
+                            <a href="www.facebook.com">Facebook</a>
+                        </li>
+                    </ul>
+                </article>
+            </section>
+            <p id="copyright"> Copyright © 2022 All Rights Reserved by CeroTempo</p>
+        </footer>
+    </body>
+</html>

@@ -23,9 +23,14 @@ footer {
 }
 .main-footer article ul li a {
     color: white;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Raleway', sans-serif;
     font-size: 16px;
-    
+    text-decoration: none;
+}
+.main-footer article ul li:hover {
+    transform: scale(1.2);
+    transition: all .5s;
+    font-style: oblique;
 }
 .main-footer article h2 {
     font-size: 30px;
@@ -39,6 +44,7 @@ footer {
     text-align: center;
     margin: 0;
     color: white;
+    font-family: 'Raleway', sans-serif;
 }
 .main-footer article h2 {
     color: var(--orangeLogo);
@@ -62,7 +68,7 @@ footer {
         text-align: left;
     }
     .footer-phrase {
-        width: 40%;
+        width: 40%;        
     }
     .main-footer article ul li a {
         font-size: 20px;
@@ -71,6 +77,8 @@ footer {
     }  
     .footer-phrase p {
         font-size: 40px;
+        font-family: 'Anton', sans-serif;
+        
     }
     
     #copyright {
@@ -80,4 +88,3 @@ footer {
         padding: 20px 0 20px 0;
     }
 }
-

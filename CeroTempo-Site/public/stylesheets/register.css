@@ -1,0 +1,156 @@
+.form-r{
+    text-align: center;
+    padding-top: 10px;
+    
+}
+.form-div{
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    display: grid;
+}
+.form-div div input {
+    border-radius: 10px;
+}
+.sign-up{
+    justify-content: center;
+    align-items: center;
+    display: grid;
+    text-align: center;
+}
+
+.sign-up-p{
+    font-size: 33px;
+    align-content: flex-start;
+}
+.sign-up-button{
+    justify-content: center;
+    align-items: center;
+    display: grid;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 70px;
+}
+.sign-up-button button:hover {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+}
+.button-f{
+    border-radius: 60px;
+    justify-content: center;
+    align-items: center;
+    display: grid;
+    text-align: center;
+    background-color: #FF6C3B;
+    width: 100px;
+    height: 30px;
+    margin-top: 40px;
+}
+
+#name,
+#surname,
+#birth,
+#email,
+#pass1,
+#pass2{
+    width: 150px;
+    height: 15px;
+    margin-bottom: 15px;
+    background-color: #FF6C3B;
+}
+.name-l,
+.surname-l,
+.birth-l,
+.email-l,
+.pass1-l,
+.pass2-l{
+    font-size: 15px;
+}
+
+/* TABLET */
+@media (min-width: 545px) {
+    .sign-up-p{
+        font-size: 45px;
+        align-content: flex-start;
+    }
+    .form-div{
+        justify-content: center;
+        align-items: center;
+        height: 60vh;
+        display: grid;
+        flex-wrap: wrap;
+    }
+    .button-f{
+        border-radius: 60px;
+        justify-content: center;
+        align-items: center;
+        display: grid;
+        text-align: center;
+        background-color: #FF6C3B;
+        width: 150px;
+        height: 30px;
+    }
+    #name,
+    #surname,
+    #birth,
+    #email,
+    #pass1,
+    #pass2{
+        width: 300px;
+        height: 20px;
+    }
+
+    .name-l,
+    .surname-l,
+    .birth-l,
+    .email-l,
+    .pass1-l,
+    .pass2-l{
+        font-size: 23px;
+    }
+
+}
+
+/* DESKTOP */
+@media (min-width: 1024px){
+    .sign-up-p{
+        font-size: 60px;
+        align-content: flex-start;
+    }
+    .form-div{
+        justify-content: center;
+        align-items: center;
+        height: 60vh;
+        display: grid;
+        flex-wrap: wrap;
+    }
+    .button-f{
+        border-radius: 60px;
+        justify-content: center;
+        align-items: center;
+        display: grid;
+        text-align: center;
+        background-color: #FF6C3B;
+        width: 200px;
+        height: 40px;
+    }
+    #name,
+    #surname,
+    #birth,
+    #email,
+    #pass1,
+    #pass2{
+        width: 500px;
+        height: 25px;
+    }
+
+    .name-l,
+    .surname-l,
+    .birth-l,
+    .email-l,
+    .pass1-l,
+    .pass2-l{
+        font-size: 37px;
+    }
+}
