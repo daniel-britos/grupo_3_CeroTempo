@@ -1,18 +1,17 @@
 
 1. Comenzar a hacer.
-- Dailys
-- Revisiones del proyecto
-- Establecer horarios
+- Mantenernos actualizados
+- Revisiones del proyecto mas frecuentes
+- Cumplir horarios
 
 2. Hacer más.
 - Mayor cooperación
-- Mayor creatividad e innovación
-- Mejorar la comunicación
+- Mayor desempeño
+- Mejorar la revisión en equipo
 
 3. Continuar haciendo.
 - Reuniones
-- Predisposición
-- Correcciónes
+- Actualizandonos
 
 4. Hacer menos.
 - No cumplir con dias y horarios de reuniones
@@ -21,5 +20,4 @@
 
 5. Dejar de hacer.
 - Cambios innecesarios
-- No estudiar bien las herramientas que se utilicen
-- No revisar el material antes de entregar o presentar
+- Respetar horarios para trabajar en el proyecto
