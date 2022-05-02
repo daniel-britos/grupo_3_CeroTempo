@@ -8,6 +8,7 @@
 - Mayor cooperación
 - Mayor desempeño
 - Mejorar la revisión en equipo
+- Hacer mas uso del trello
 
 3. Continuar haciendo.
 - Reuniones
