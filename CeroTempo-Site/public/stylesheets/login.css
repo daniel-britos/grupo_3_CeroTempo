@@ -1,0 +1,143 @@
+.l__header .fa-square-xmark {
+    font-size: 35px;
+    color: white;
+  }
+  
+  .l__main {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 50px 0;
+  }
+  
+  .l__main h1 {
+    display: flex;
+    justify-content: center;
+    color: black;
+    margin: 25px 0;
+  }
+  
+  .l__main h2 {
+    color: black;
+    font-size: 20px;
+    margin: 0 auto;
+    width: 60%;
+  }
+  
+  .l__main__credentials {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px;
+  }
+  
+  .l__main__credentials__imput {
+    background-color: #ee9877;
+    width: 60%;
+    height: 25px;
+    border: none;
+  }
+  
+  .l__main__login {
+    background-color: #ee9877;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #f25824;
+    border-radius: 25px;
+    margin: 25px auto;
+    width: 40%;
+    height: 30px;
+  }
+  
+  .l__main__options {
+    margin: 25px 0;
+  }
+  
+  .l__main__options__link {
+    display: flex;
+    justify-content: center;
+    margin: 25px 0;
+  }
+  
+  .l__main__copyright {
+    display: none;
+  }
+  
+  @media (min-width: 768px) {
+    .l__main h1 {
+      font-size: 50px;
+      margin: 75px 0;
+    }
+  
+    .l__main h2 {
+      font-size: 30px;
+    }
+  
+    .l__main__credentials {
+      margin-bottom: 50px;
+    }
+  
+    .l__main__credentials__imput {
+      height: 30px;
+    }
+  
+    .l__main__login {
+      font-size: 30px;
+      margin: 75px auto;
+      width: 30%;
+      height: 35px;
+    }
+  
+    .l__main__options {
+      margin: 25px 0;
+    }
+  
+    .l__main__options__link {
+      display: flex;
+      justify-content: center;
+      font-size: 75px;
+      margin: 25px 0;
+    }
+  
+    .l__main__options__link a {
+      font-size: large;
+    }
+  
+    .l__main__copyright {
+      display: flex;
+      justify-content: center;
+      margin: 50px 0;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .l__main {
+      margin: 25px 0;
+    }
+  
+    .l__main h1 {
+      margin: 25px 0;
+    }
+  
+    .l__main h2 {
+      width: 50%;
+    }
+  
+    .l__main__credentials {
+      margin-bottom: 25px;
+    }
+  
+    .l__main__credentials__imput {
+      width: 50%;
+    }
+  
+    .l__main__login {
+      margin: 50px auto;
+    }
+  
+    .l__main__options {
+      margin: 0;
+    }
+  }
