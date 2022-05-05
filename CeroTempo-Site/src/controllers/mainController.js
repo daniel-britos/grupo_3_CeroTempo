@@ -2,6 +2,9 @@ module.exports = {
     index : (req, res) => {
         return res.render('index');
     },
+    create : (req, res) => {
+        return res.render('admin/create');
+    },
     courses : (req, res) => {
         return res.render('courses');
     },

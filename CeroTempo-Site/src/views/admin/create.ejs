@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('../partials/head') %> 
+<body>
+    <%- include('../partials/header') %> 
+    <main>
+        <form class="admin-form" action="">
+            <div class="admin-containter">
+                <div class="admin-box admin-product-img">
+                    <label for="">Add Image</label>
+                    <input type="file" name="productName" id="imageProduct">
+                    <span class="validation-text" hidden>Required Field</span>
+                </div>   
+                <div class="admin-box">
+                    <label for="categories">Category</label>
+                    <select name="categories" id="category-select">
+                        <option value="">...</option>
+                        <option value="">Strings</option>
+                        <option value="">Wind</option>
+                        <option value="">Percussion</option>
+                        <option value="">Idiophones</option>
+                        <option value="">Electronics</option>
+                    </select>
+                    <span class="validation-text" hidden>Required Field</span>
+                </div>         
+                <div class="admin-box">
+                    <label for="">Product Title</label>
+                    <input type="text" name="productName" id="">
+                    <span class="validation-text" hidden>Required Field</span>                
+                </div>
+                <div class="admin-box">
+                    <label for="">Description</label>
+                    <input type="text" name="productName" id="">
+                    <span class="validation-text" hidden>Required Field</span>
+                </div>
+            
+                <div class="admin-box">
+                    <label for="price">Price</label>
+                    <input type="number" name="price" id="">
+                    <span class="validation-text" hidden>Required Field</span>
+                </div>
+                <div class="admin-box">                    
+                    <label for="discount">Discount</label>
+                    <input type="number" name="discount" id="">
+                    <span class="validation-text" hidden>Required Field</span>            
+                </div>
+            </div>
+        </form>
+        <%- include('../partials/footer') %> 
+    </main>
+</body>
+</html>
