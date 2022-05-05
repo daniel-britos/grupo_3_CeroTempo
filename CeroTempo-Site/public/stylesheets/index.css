@@ -1,0 +1,577 @@
+/*HEADERPUSH*/
+.arrow-push {
+    display: none;
+}
+/* SLIDER */
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+}
+
+
+/* PORTADA-2 */
+.cover-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: black;
+    object-fit: cover;
+    position: relative;
+    margin-bottom: 10px;
+}
+.cover-2 img {
+    width: 100%;
+    height: 150px;
+}
+.cover-2 h2 {
+    color: white;
+    text-align: center;
+    width: 250px;
+    font-weight: 100;
+    font-family: 'Lato', sans-serif;
+    padding-bottom: 20px;
+    border-top: 1px white solid;
+}
+
+/* BRANDS */
+.brand {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.brand div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    width: 90%;
+    height: 300px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: 4px black solid;
+    border-radius: 10px;
+}
+.brand div a h2 {
+    text-align: center;
+    color: white;
+    width: 100%;
+    font-family: 'Rubik Glitch', cursive;
+    font-weight: 100;
+    font-size: 3.5rem;
+}
+.brand div a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.img-1 {
+    background-image: url(../images/brands/guitarFender_1920.jpg);
+}
+.img-2 {
+    background-image: url(/images/brands/celloCremona.jpg);
+}
+
+.img-3 {
+    background-image: url(/images/brands/pianoYamaha.jpg);
+}
+
+.img-4 {
+    background-image: url(/images/brands/bateria.jpg);
+}
+
+/* OFFERS */
+.main-offers {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.main-offers h2 {
+    color: var(--naranjaLogo);
+    font-size: 2rem;
+    margin: 10px;
+    padding: 0;
+}
+.main-offers article {
+    width: 90%;
+    margin: 5px;
+    background-color: black;
+    border-radius: 10px;
+    border: 3px black solid;
+}
+.main-offers i {
+    font-size: 20px;
+    color: white;
+    margin: 10px;
+    transform: rotate(90deg);
+}
+.offers-arrow {
+    background-color: black;
+    border-radius: 50%;
+    margin: 10px 0px;
+}
+.offers-arrow:hover {
+    background-color: var(--orangeLogo);
+}
+.main-offers article img {
+    width: 100%;
+    height: 300px;
+    border-radius: 6px;
+}
+.foot-offers {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+}
+#price {
+    font-size: 16px;
+    font-family: 'Raleway', sans-serif;
+    color: white;
+    text-align: right;
+    margin: 5px;
+}
+#discount {
+    font-size: 26px;
+    font-family: 'Righteous';
+    color: rgb(0, 255, 47) !important;
+    margin: 5px;
+}
+#title-offers {
+    width: 60%;
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+.offers-data {
+    width: 40%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-left: 1px solid white;
+
+
+}
+.main-offers article a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    font-size: 35px;
+    position: relative;
+}
+.main-offers article a p {
+    position: absolute;
+    top: 50px;
+    background-color: rgba(0, 0, 0, 0.4);
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+}
+.main-offers article a p:hover {
+    transform: scale(1.2);
+    transition: all 0.5s;
+    position: absolute;
+}
+/* CATEGORIES */
+.main-categories {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 10px;
+}
+.categories-box {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.categories-article {
+    width: 90%;
+    height: 250px;
+    background-size: cover;
+    background-position: center;
+    border: white solid 1px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-top: 10px;
+}
+.categories-article:hover {
+    opacity: 80%;
+    transition: all 0.5s;
+    transform: scale(1.02);
+}
+.categories-article h3 {
+    background-color: white;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+.strings {
+    background-image: url(/images/categories/guitarra.jpg);
+}
+
+.wind {
+    background-image: url(/images/categories/saxophone.jpg);
+}
+.percussion {
+    background-image: url(/images/categories/drums.jpg);
+}
+.idiophones {
+    background-image: url(/images/categories/xylophone.jpg);
+}
+.electronics {
+    background-image: url(/images/categories/headphone.jpg);
+}
+/* BILLBOARD */
+.main-billboard {
+    display: none;
+}
+/* CONTACT */
+.contact-comment {
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-contact {
+    background-color: var(--orangeLogo);
+}
+.comment-box {
+    display: flex;
+    flex-direction: column;
+}
+.comment-box label {
+    margin-left: 10px;
+}
+#contact-email {
+    margin: 10px 0;
+    width: 200px;
+    border: 4px solid black;
+    border-radius: 10px;
+}
+#contact-email:hover {
+    transition: all 0.5s;
+    transform: scale(1.2);
+}
+#contact-btn {
+    height: 30px;
+    width: 60px;
+    margin: 0;
+    color: white;
+    background-color: black;
+    border: 1px solid white;
+    border-radius: 10%;
+}
+#contact-btn:hover {
+    cursor: pointer;
+    background-color: var(--orangeLogo);
+    transition: all 0.5s;
+    transform: scale(1.1);
+}
+.contact-input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 10px;
+}
+.comment-box textarea {
+    resize: none;
+    height: 200px;
+    width: 300px;
+    border: solid 4px black;
+    border-radius: 5%;
+    padding-left: 20px;
+}
+.comment-box textarea:hover {
+    transition: all .5s;
+    transform: scale(1.05);
+}
+.comment-box label {
+    color: white;
+    font-size: 20px;
+}
+/* MAP */
+.maps iframe {
+    width: 99%;
+    height: 300px;
+    border: 4px black solid;
+    border-radius: 5%;
+}
+.maps p {
+    margin: 0;
+    color: white;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+
+/* MEDIA QUERY */
+@media (max-width: 426px) {
+    .slider-banner {
+        height: 180px;
+    }
+
+    .slider-banner li img {
+        width: 100vw;
+        height: 180px;
+        object-fit: fill;
+    }
+
+    .intro-video {
+        display: none;
+    }
+
+}
+@media (max-width: 545px) {
+    #home-video {
+        display: none; 
+    }
+}
+/*TABLET 545*/
+@media (min-width: 545px) {
+    /* PORTADA-2 */
+    .cover-2 img {
+        width: 80%;
+        height: 200px;
+    }
+    .cover-2 h2 {
+        width: 100%;
+        font-size: 30px;
+    }
+    /* BRAND */
+    .brand {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        background: white;
+    }
+    .brand div {
+        width: 300px;
+        height: 300px;
+        margin: 10px;
+    }
+    /*VIDEO*/
+    #home-video {
+        width: 100%;
+        height: 400px;
+        
+    }
+    /* CATEGORIES */
+    .categories-article {
+        width: 250px;
+        height: 250px;
+        margin: 10px;
+    }
+
+}
+/* TABLET 768*/
+@media (min-width: 768px) {
+    /* OFFERS */
+    .main-offers {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .main-offers article {
+        width: 300px;
+
+    }
+    .main-offers i {
+        transform: rotate(0deg);
+    }
+
+    /* CATEGORIES */
+    .categories-box {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+}
+/*DESKTOP*/
+@media (min-width: 1024px) {
+    /* PORTADA-2 */
+    .cover-2 {
+        width: 100%;
+    }
+    .cover-2 img {
+        width: 80%;
+        height: 300px;
+    }
+    .cover-2 h2 {
+        width: 650px;
+        font-size: 40px;
+    }
+    /* BRAND */
+    .brand {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 1000px;
+        margin: auto;
+        border-radius: 10%;
+        position: relative;
+        bottom: 40px;
+    }
+    .brand div {
+        width: 400px;
+        height: 400px;
+        margin: 30px;
+    }
+    .brand div:hover {
+        transition: all 0.5s;
+        transform: scale(1.1);
+        background-color: rgba(0, 0, 0, 0.4);
+        cursor: pointer;
+    }
+    .brand div a:hover {
+        transition: all 0.5s;
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+    /* VIDEO */
+    .intro-video {
+        background-color: black;
+    }
+    #home-video {
+        width: 100%;
+        height: 400px;
+    }
+    /* OFFERS */
+    /* CATEGORIES */
+    .main-categories {
+        flex-direction: row;
+    }
+    .categories-box {
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 544px;
+    }
+    .categories-article {
+        width: 250px;
+        height: 250px;
+        margin: 10px;
+    }
+    .strings {
+        width: 300px;
+        height: 520px;
+    }
+    /* BILLBOARD */
+    .main-billboard {
+        background-color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-top: solid white 1px;
+    }
+    .billboard-container {
+        height: 450px;
+        padding-top: 50px;
+    }
+    .wave-orange {
+        width: 600px;
+        height: 400px;
+        background-color: var(--orangeLogo);
+        border-radius: 50%;
+        position: relative;
+        right: 120px;
+    }
+    .cover-wave {
+        width: 580px;
+        height: 380px;
+        background-color: black;
+        border-radius: 50%;
+        position: relative;
+        z-index: 1;
+        bottom: 380px;
+        right: 140px;
+    }
+    .billboard-text {
+        width: 400px;
+        text-align: center;
+        position: relative;
+        z-index: 2;
+        left: 350px;
+    }
+    .billboard-text h2 {
+        color: white;
+        font-size: 40px;
+        margin: 0;
+        font-family: 'Anton', sans-serif;
+        border-bottom: 1px solid white;
+        padding-bottom: 10px;
+    }
+    .billboard-text p {
+        padding-top: 10px;
+        color: white;
+        font-size: 26px;
+        margin: 0;
+        font-weight: 100;
+        font-family: 'Lato', sans-serif;
+        
+    }
+    /* CONTACT */
+    .main-contact {
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .comment-box textarea {
+        height: 250px;
+        width: 400px;
+    }
+    .contact-input {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+    }
+    #contact-email {
+        width: 300px;
+    }
+    /* MAP */
+    .maps {
+        margin: 10px;
+    }
+    /* PUSH UP */
+    .arrow-push {
+        background-color: black;
+        border: 1px solid white;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        position: fixed;
+        z-index: 5;
+        left: 95%;
+        top: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+    .fa-arrow-up {
+        font-size: 30px;
+        color: white;
+    }
+    .arrow-push:hover {
+        cursor: pointer;
+        transform: scale(1.2);
+        transition: all .5s;
+        background-color: var(--orangeLogo);
+    }
+    
+}

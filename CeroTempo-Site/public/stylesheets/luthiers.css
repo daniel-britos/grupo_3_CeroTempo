@@ -1,0 +1,40 @@
+.main-luthier {
+    margin-bottom: 20px;
+}
+.main-luthier h2 {
+    font-size: 40px;
+    margin: 20px 0 0px 10px;
+}
+.box-luthier {
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box-luthier p {
+    width: 40%;
+    color: white;
+    margin: 10px;
+}
+.box-luthier img {
+    width: 60%;
+    height: 400px;
+}
+
+@media (max-width: 426px) {
+    .box-luthier {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex-wrap: wrap;
+        
+    }
+    .box-luthier p {
+        text-align: center;   
+        width: 300px;
+        
+    }
+    .box-luthier img {
+        height: 200px;
+    }
+}

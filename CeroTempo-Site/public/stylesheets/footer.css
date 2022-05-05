@@ -1,65 +1,90 @@
-@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Raleway:wght@200&family=Roboto:ital,wght@1,100&family=Rubik+Glitch&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Raleway:wght@200&family=Roboto:ital,wght@1,100&family=Rubik+Glitch&display=swap');
 
 /* FOOTER */
 footer {
-  background-color: black;
-  padding-bottom: 10px;
+    background-color: black;
+    padding-bottom: 10px;
 }
 .main-footer {
-  text-align: center;
-  padding-top: 10px;
+    text-align: center; 
+    padding-top: 10px;
 }
 .footer-phrase {
-  border-bottom: 1px solid white;
-  text-align: center;
+    border-bottom: 1px solid white; 
+    text-align: center;
+}
+.footer-phrase p {
+    font-size: 40px;
+    color: var(--orangeLogo);
+
+}
+.main-footer article ul li {
+    margin-bottom: 5px;
 }
 .main-footer article ul li a {
-  color: white;
-  font-family: "Roboto", sans-serif;
-  font-size: 12px;
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    text-decoration: none;
+}
+.main-footer article ul li:hover {
+    transform: scale(1.2);
+    transition: all .5s;
+    font-style: oblique;
 }
 .main-footer article h2 {
-  font-size: 1.6rem;
-  margin: 5px;
+    font-size: 30px;
+    margin: 5px;
 }
 .main-footer article {
-  margin: 20px;
+    margin: 20px;
 }
 #copyright {
-  font-size: 12px;
-  text-align: center;
-  margin: 0;
+    font-size: 12px;
+    text-align: center;
+    margin: 0;
+    color: white;
+    font-family: 'Raleway', sans-serif;
 }
-
+.main-footer article h2 {
+    color: var(--orangeLogo);
+    margin: 0;
+}
 /* TABLET */
 @media (min-width: 545px) {
-  .main-footer {
-    display: flex;
-  }
+    .main-footer {
+        display: flex;
+        flex-direction: column;
+    }    
 }
 
 /* DESKTOP */
 @media (min-width: 1024px) {
-  .main-footer {
-    display: flex;
-    justify-content: space-between;
-    padding: 10px 30px;
-    text-align: left;
-  }
-  .footer-phrase {
-    width: 40%;
-  }
-  .main-footer article ul li a {
-    font-size: 20px;
-  }
-  .footer-phrase h1 {
-    font-size: 40px;
-  }
-
-  #copyright {
-    text-align: center;
-    font-size: 16px;
-    margin: 0;
-    padding: 20px 0 20px 0;
-  }
+    .main-footer {    
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 10px 30px;
+        text-align: left;
+    }
+    .footer-phrase {
+        width: 40%;        
+    }
+    .main-footer article ul li a {
+        font-size: 20px;
+        
+        
+    }  
+    .footer-phrase p {
+        font-size: 40px;
+        font-family: 'Anton', sans-serif;
+        
+    }
+    
+    #copyright {
+        text-align: center;
+        font-size: 16px;
+        margin: 0;
+        padding: 20px 0 20px 0;
+    }
 }
