@@ -1,302 +1,294 @@
-.main__title {
-  background-color: black;
-  display: flex;
-  justify-content: space-around;
-  width: 100%;
-}
-
-.main__title h1,
-h2 {
-  font-size: 25px;
-  color: white;
-  margin: 5px 0;
-}
-
-.main__direction {
-  background-color: #f25824;
-}
-
-.main__direction__title {
-  display: flex;
-  justify-content: space-between;
-  margin: 0 15px;
-}
-
-.main__direction__title h3,
-a {
-  font-size: 15px;
-  color: black;
-  margin: 5px 0;
-}
-
-.main__direction__description p {
-  font-size: 15px;
-  color: white;
-  margin: 5px 15px;
-  /* padding: 0 15px; */
-}
-
-/* .pc__main {
-  display: flex;
-  flex-direction: column;
-}
-
-.pc__main .main__desktopL {
-  display: flex;
-  flex-direction: column;
-}
-
-.pc__main .main__desktopR {
-  display: flex;
-  flex-direction: column;
-} */
-
-.detail {
-  display: flex;
-  border-bottom: 1px solid #f25824;
-  /* margin: 5px 0; */
-}
-
-.product {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-}
-
-.main__image {
-  /* background-image: url(/images/instrumentos/Guitarras/01/093.jpg);
-  background-position: center;
-  background-size: cover; */
-  display: flex;
-  width: 30%;
-}
-
-.main__product {
-  display: flex;
-  flex-direction: column;
-  width: 70%;
-  margin: auto 0;
-}
-
-.main__product__title {
-  background-color: white;
-  width: 60%;
-}
-
-.main__product__title h4 {
-  margin: 0;
-  padding: 5px 0;
-}
-
-.main__product__title {
-  width: 75%;
-  margin: 0 5px;
-  display: flex;
-  flex-direction: column;
-  font-size: 15px;
-}
-
-.main__product__detail {
-  width: 75%;
-  background-color: white;
-  display: flex;
-  /* flex-direction: row; */
-  align-items: center;
-  justify-content: space-between;
-  margin: 0 5px;
-}
-
-.main__product__detail .ordenar {
-  width: 50%;
-  /* padding: 5px; */
-  /* background-color: white; */
-
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-evenly;
-}
-
-.main__payment {
-  display: flex;
-  flex-direction: column;
-  background-color: #f25824;
-  width: 100%;
-}
-
-.main__payment__title {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 0 15px;
-  height: 30px;
-}
-
-.main__payment__title h3,
-a {
-  font-size: 15px;
-  color: black;
-  margin: 5px 0;
-}
-
-.main__payment__description p {
-  color: white;
-  display: flex;
-  align-items: center;
-  margin: 0 15px;
-  /* padding: 0 15px; */
-  height: 30px;
-}
-
-.main__descuento {
-  background-color: white;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  /* margin: 5px 0; */
-  height: 60px;
-  border-bottom: 1px solid #f25824;
-}
-
-.main__descuento h4 {
-  font-size: 15px;
-  margin: 0;
-}
-
-.main__descuento__cupon {
-  border: 1px solid #f25824;
-  border-radius: 2px;
-}
-
-.main__priceTotal {
-  background-color: white;
-  display: flex;
-  /* flex-direction: column; */
-  /* justify-content: space-between; */
-
-  height: 120px;
-  margin: auto 0;
-
-  flex-wrap: wrap;
-  align-content: center;
-}
-
-.main__priceTotal__line {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 80%;
-  /* height: 30px; */
-  margin: 0 auto;
-}
-
-.main__priceTotal__line h4 {
-  margin: 2px;
-}
-
-.main__confirmation {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  /* margin: auto; */
-  height: 30px;
-  /* padding: 5px 0; */
-}
-
-.main__confirmation button {
-  background-color: #f25824;
-  border: 1px solid;
-  border-radius: 5px;
-}
-
-/* 
-.footer__contact {
-  background-color: black;
-  width: 100%;
-}
-
-.footer__contact ul {
-  display: flex;
-  flex-direction: column;
-}
-
-.footer__contact li {
-  text-align: center;
-  padding: 5px 0;
-  border-bottom: solid 1px white;
-}
-
-.footer__contact ul li a {
-  color: white;
-}
-*/
-
-@media (min-width: 768px) {
-  .main__priceTotal__line {
-    width: 60%;
+.main-cart {
+    margin: 20px 0;
   }
-
-  .main__confirmation button {
-    width: 40%;
-  }
-}
-
-@media (min-width: 1024px) {
-  .pc__main {
+  .main__title {
+    background-color: black;
     display: flex;
+    justify-content: space-around;
     width: 100%;
   }
-
+  
+  .main__title * {
+    font-size: 25px;
+    color: white;
+    margin: 5px 0;
+  }
+  
+  .main__direction {
+    background-color: #f25824;
+  }
+  
+  .main__direction__title {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 15px;
+  }
+  
+  .main__direction__title * {
+    font-size: 15px;
+    color: black;
+    margin: 5px 0;
+  }
+  
+  .main__direction__description p {
+    font-size: 15px;
+    color: white;
+    margin: 5px 15px;
+    /* padding: 0 15px; */
+  }
+  
+  /* .pc__main {
+    display: flex;
+    flex-direction: column;
+  }
   .pc__main .main__desktopL {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    width: 60%;
-    /* border: 1px solid #f25824; */
   }
-
   .pc__main .main__desktopR {
     display: flex;
     flex-direction: column;
-    width: 40%;
-    /* border: 1px solid #f25824; */
-  }
-
+  } */
+  
   .detail {
     display: flex;
+    border-bottom: 1px solid #f25824;
     /* margin: 5px 0; */
-    width: 95%;
   }
-
-  .main__priceTotal {
-    /* background-color: white;
-    display: flex; */
-
-    width: 95%;
+  
+  .product {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .main__image {
+    /* background-image: url(/images/instrumentos/Guitarras/01/093.jpg);
+    background-position: center;
+    background-size: cover; */
+    display: flex;
+    width: 30%;
+  }
+  
+  .main__product {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin: auto 0;
+  }
+  
+  .main__product__title {
+    background-color: white;
+    width: 60%;
+  }
+  
+  .main__product__title h4 {
     margin: 0;
-  }
-
-  /* 
-  .footer__contact {
     padding: 5px 0;
   }
-
-  .footer__contact ul {
+  
+  .main__product__title {
+    width: 75%;
+    margin: 0 5px;
+    display: flex;
+    flex-direction: column;
+    font-size: 15px;
+  }
+  
+  .main__product__detail {
+    width: 75%;
+    background-color: white;
+    display: flex;
+    /* flex-direction: row; */
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 5px;
+  }
+  
+  .main__product__detail .ordenar {
+    width: 50%;
+    /* padding: 5px; */
+    /* background-color: white; */
+  
     display: flex;
     flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  
+  .main__payment {
+    display: flex;
+    flex-direction: column;
+    background-color: #f25824;
+    width: 100%;
+  }
+  
+  .main__payment__title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 15px;
+    height: 30px;
+  }
+  
+  .main__payment__title * {
+    font-size: 15px;
+    color: black;
+    margin: 5px 0;
+  }
+  
+  .main__payment__description p {
+    color: white;
+    display: flex;
+    align-items: center;
+    margin: 0 15px;
+    /* padding: 0 15px; */
+    height: 30px;
+  }
+  
+  .main__descuento {
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* margin: 5px 0; */
+    height: 60px;
+    border-bottom: 1px solid #f25824;
+  }
+  
+  .main__descuento h4 {
+    font-size: 15px;
+    margin: 0;
+  }
+  
+  .main__descuento__cupon {
+    border: 1px solid #f25824;
+    border-radius: 2px;
+  }
+  
+  .main__priceTotal {
+    background-color: white;
+    display: flex;
+    /* flex-direction: column; */
+    /* justify-content: space-between; */
+  
+    height: 120px;
+    margin: auto 0;
+  
+    flex-wrap: wrap;
+    align-content: center;
+  }
+  
+  .main__priceTotal__line {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    /* height: 30px; */
+    margin: 0 auto;
+  }
+  
+  .main__priceTotal__line h4 {
+    margin: 2px;
+  }
+  
+  .main__confirmation {
+    width: 100%;
+    display: flex;
     justify-content: center;
+    /* margin: auto; */
+    height: 30px;
+    /* padding: 5px 0; */
   }
-
-  .footer__contact li {
-    width: 125px;
-    border-bottom: 0;
-    display: inline-block;
-    border-right: solid 2px white;
-    padding: 7px 0;
+  
+  .main__confirmation button {
+    background-color: #f25824;
+    border: 1px solid;
+    border-radius: 5px;
   }
-
+  
+  /* 
+  .footer__contact {
+    background-color: black;
+    width: 100%;
+  }
+  .footer__contact ul {
+    display: flex;
+    flex-direction: column;
+  }
   .footer__contact li {
-    border-right: none;
+    text-align: center;
+    padding: 5px 0;
+    border-bottom: solid 1px white;
+  }
+  .footer__contact ul li a {
+    color: white;
   }
   */
-}
+  
+  @media (min-width: 768px) {
+    .main__priceTotal__line {
+      width: 60%;
+    }
+  
+    .main__confirmation button {
+      width: 40%;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .pc__main {
+      display: flex;
+      width: 100%;
+    }
+  
+    .pc__main .main__desktopL {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 60%;
+      /* border: 1px solid #f25824; */
+    }
+  
+    .pc__main .main__desktopR {
+      display: flex;
+      flex-direction: column;
+      width: 40%;
+      /* border: 1px solid #f25824; */
+    }
+  
+    .detail {
+      display: flex;
+      /* margin: 5px 0; */
+      width: 95%;
+    }
+  
+    .main__priceTotal {
+      /* background-color: white;
+      display: flex; */
+  
+      width: 95%;
+      margin: 0;
+    }
+  
+    /* 
+    .footer__contact {
+      padding: 5px 0;
+    }
+    .footer__contact ul {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+    }
+    .footer__contact li {
+      width: 125px;
+      border-bottom: 0;
+      display: inline-block;
+      border-right: solid 2px white;
+      padding: 7px 0;
+    }
+    .footer__contact li {
+      border-right: none;
+    }
+    */
+  }
