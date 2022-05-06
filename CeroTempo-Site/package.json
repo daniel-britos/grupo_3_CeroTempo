@@ -11,14 +11,7 @@
     "ejs": "~2.6.1",
     "express": "~4.16.1",
     "http-errors": "~1.6.3",
-<<<<<<< HEAD
     "method-override": "^3.0.0",
-=======
-<<<<<<< HEAD
->>>>>>> register-maria
-=======
->>>>>>> productCart-fernando
->>>>>>> login-maria
     "morgan": "~1.9.1"
   }
 }
