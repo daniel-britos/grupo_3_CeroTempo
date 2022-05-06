@@ -12,7 +12,11 @@ var productsRouter = require('./routes/products');
 var app = express();
 
 // view engine setup
+<<<<<<< HEAD:CeroTempo-Site/src/app.js
 app.set('views', path.join(__dirname, 'views')); // lo escribimos asi para usar sub carpetas
+=======
+app.set('views', path.join(__dirname, '/views/')); // lo escribimos asi para usar sub carpetas
+>>>>>>> register-maria:CeroTempo-Site/app.js
 app.set('view engine', 'ejs');
 
 
@@ -21,6 +25,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '..' ,'public')));
+<<<<<<< HEAD:CeroTempo-Site/src/app.js
 app.use(methodOverride('_method'));
 
 
@@ -28,6 +33,12 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/products', productsRouter); 
 
+=======
+
+app.use('/', indexRouter);
+app.use('/users', usersRouter);
+app.use('/products', productsRouter); // http://localhost:3000/products/productCart
+>>>>>>> register-maria:CeroTempo-Site/app.js
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

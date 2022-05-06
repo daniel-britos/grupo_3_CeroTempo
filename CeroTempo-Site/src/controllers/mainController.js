@@ -2,6 +2,7 @@ module.exports = {
     index : (req, res) => {
         return res.render('index');
     },
+<<<<<<< HEAD
     panel : (req, res) => {
         return res.render('admin/panel');
     },
@@ -11,6 +12,8 @@ module.exports = {
     edit : (req, res) => {
         return res.render('admin/edit');
     },
+=======
+>>>>>>> register-maria
     courses : (req, res) => {
         return res.render('courses');
     },
