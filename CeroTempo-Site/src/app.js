@@ -11,7 +11,7 @@ var productsRouter = require('./routes/products');
 var app = express();
 
 // view engine setup
-app.set('views', path.join(__dirname, '/views/')); // lo escribimos asi para usar sub carpetas
+app.set('views', path.join(__dirname, 'views')); // lo escribimos asi para usar sub carpetas
 app.set('view engine', 'ejs');
 
 
