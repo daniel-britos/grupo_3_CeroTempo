@@ -1,0 +1,41 @@
+.main-panel-admin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding:30px 0;
+}
+
+.main-panel-admin p {
+    text-align: center;
+    font-size: 25px;
+    width: 300px;
+
+}
+.main-panel-admin div a {
+    text-decoration: none;
+
+}
+.btn-admin {
+    border-radius: 5px;
+    margin: 10px;
+}
+.btn-admin:hover {
+    transform: scale(1.2);
+    transition: all 0.5s;
+}
+.btn-admin a:hover {
+    color: white;
+}
+.btn-create {
+    border: 3px solid black;
+}
+.btn-create:hover{
+    background-color: black;
+}
+.btn-edit {
+    border: 3px solid var(--orangeLogo);
+}
+.btn-edit:hover {
+    background-color: var(--orangeLogo);
+}
