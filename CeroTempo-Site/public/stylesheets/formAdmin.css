@@ -1,45 +1,90 @@
-.admin-containter {
+.main-form-create {
+    margin: 30px 0;
+    
+}
+.admin-form {
+    display: flex;
+    justify-content: center;
+}
+.admin-form div {
+    margin: 20px;
+}
+.left-container {
     display: flex;
     flex-direction: column;
-}
-.admin-box{
-    display: flex;
-    flex-direction: column;
-
-}
-#category-select option {
-    background-color: var(--orangeLogo);
-}
-
-.admin-product-img {
-	position:relative;
-	margin:50px;
-	padding:10px;
-	width:150px;
-	background-color: #2499e3;
-    border-radius: 10px;
-}
-.admin-product-img:hover {
-    background-color: rgba(116, 118, 240, 0.2);
-}
-#imageProduct {
-    position:absolute;
-	top:0px;
-	left:0px;
-	right:0px;
-	bottom:0px;
-	width:100%;
-	height:100%;
-	opacity: 0;
-}
-
-.admin-product-img label {
-    color: white;
-    text-align: center;
+    padding-top: 10px;
 }
 .admin-box {
-    margin: 10px;
+    display: flex;
+    flex-direction: column;
 }
 .admin-box input {
     background-color: var(--orangeLogo);
+    border: 4px solid black;
+    border-radius: 5px;
+    color: white;
+}
+
+#text-description {
+    background-color: var(--orangeLogo);
+    border: 4px solid black;
+    border-radius: 5px;
+    color: white;
+}
+
+
+
+
+/* add img */
+.into-admin-box {
+    display: flex;   
+    justify-content: space-evenly;
+}
+.add-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.add-img label {
+    position:relative;
+    top: 10px;
+    margin:0;
+	padding:10px;
+	width:100px;
+	background-color: black;
+    border-radius: 10px;
+  
+}
+
+.add-img label:hover {
+    background-color: var(--orangeLogo);
+    cursor: pointer;
+}
+#imageProduct { 
+	position: absolute;
+    width:100px;
+    opacity: 0;
+}
+.add-img label {
+    color: white;
+    text-align: center;
+    font-size: 12px;
+}
+.img-create-preview img {
+    width: 300px;
+    height: 300px;
+    border: 4px solid black;
+}
+.img-create-preview h2 {
+    font-size: 20px;
+}
+
+#category-select {
+    background-color: var(--orangeLogo);
+    color: white;
+    border: 4px solid black;
+    border-radius: 5px;
+    
 }
