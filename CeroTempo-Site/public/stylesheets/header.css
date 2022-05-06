@@ -251,6 +251,13 @@
     color: white;
     display: none;
   }   
+<<<<<<< HEAD
+  .fa-circle-exclamation{
+    color: red;
+    display: none;
+  }
+=======
+>>>>>>> productCart-fernando
   /* BUSCADOR */
   .header-search-desktop {
     display: none;
@@ -353,6 +360,13 @@
         display: block;
         font-size: 16px;
     }
+<<<<<<< HEAD
+    .fa-circle-exclamation{
+        display: block;
+        font-size: 16px;
+    }
+=======
+>>>>>>> productCart-fernando
     .header-nav-intro p {
         display: block;
         color: white;

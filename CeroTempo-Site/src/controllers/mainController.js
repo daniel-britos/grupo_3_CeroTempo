@@ -3,9 +3,12 @@ module.exports = {
         return res.render('index');
     },
 <<<<<<< HEAD
+<<<<<<< HEAD
     panel : (req, res) => {
         return res.render('admin/panel');
     },
+=======
+>>>>>>> login-maria
     create : (req, res) => {
         return res.render('admin/create');
     },
@@ -13,7 +16,11 @@ module.exports = {
         return res.render('admin/edit');
     },
 =======
+<<<<<<< HEAD
 >>>>>>> register-maria
+=======
+>>>>>>> productCart-fernando
+>>>>>>> login-maria
     courses : (req, res) => {
         return res.render('courses');
     },
