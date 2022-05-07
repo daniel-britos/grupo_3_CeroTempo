@@ -6,16 +6,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:ital@1&family=Montserrat+Alternates:ital,wght@1,300&family=Raleway:wght@200;500&family=Roboto:ital,wght@1,100&family=Rubik+Glitch&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:ital@1&family=Montserrat+Alternates:ital,wght@1,300&family=Raleway:wght@200;500&family=Righteous&family=Roboto:ital,wght@1,100&family=Rubik+Glitch&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Lato:ital@1&family=Montserrat+Alternates:ital,wght@1,300&family=Raleway:wght@200;500&family=Righteous&family=Roboto:ital,wght@1,100&family=Rubik+Glitch&display=swap');
-/*
-font-family: 'Anton', sans-serif;
-font-family: 'Bebas Neue', cursive;
-font-family: 'Lato', sans-serif;
-font-family: 'Montserrat Alternates', sans-serif;
-font-family: 'Raleway', sans-serif;
-font-family: 'Righteous', cursive;
-font-family: 'Roboto', sans-serif;
-font-family: 'Rubik Glitch', cursive;
-*/
 
 @import './normalize.css';
 @import './general.css';
@@ -31,3 +21,26 @@ font-family: 'Rubik Glitch', cursive;
 @import './formAdmin.css';
 @import './panel.css';
 
+
+/*
+font-family: 'Anton', sans-serif;
+font-family: 'Bebas Neue', cursive;
+font-family: 'Lato', sans-serif;
+font-family: 'Montserrat Alternates', sans-serif;
+font-family: 'Raleway', sans-serif;
+font-family: 'Righteous', cursive;
+font-family: 'Roboto', sans-serif;
+font-family: 'Rubik Glitch', cursive;
+
+Mobile-Small: 320px
+Mobile-Medium: 375px
+Mobile-Large: 425px
+
+Tablet - L : 768px
+Tablet - S : 545px
+
+Laptop: 1024px
+Desktop: 1440px
+4k o televisores: 2560px
+
+*/

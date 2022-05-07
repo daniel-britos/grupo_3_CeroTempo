@@ -52,6 +52,18 @@
     
 }
 .panel-logo img {
+    margin-top: 15px;
     width: 600px;
     height: 260px;
+}
+
+@media (max-width:  425px) {
+    .main-panel-admin div {
+        display: flex;
+        flex-direction: column;
+    }
+    .panel-logo img {
+        width: 300px;
+        height: 130px;
+    }
 }
