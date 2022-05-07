@@ -100,6 +100,7 @@
     color: #fff;
     padding: 7px;
     border-radius: 5px;
+    font-family: 'Anton', sans-serif;
 }
 .buy-now-i:hover{
     background-color: #ef835e;

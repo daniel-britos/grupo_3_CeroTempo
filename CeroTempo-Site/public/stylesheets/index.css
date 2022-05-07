@@ -275,6 +275,7 @@
     background-color: black;
     border: 1px solid white;
     border-radius: 10%;
+    font-family: 'Anton', sans-serif;
 }
 #contact-btn:hover {
     cursor: pointer;

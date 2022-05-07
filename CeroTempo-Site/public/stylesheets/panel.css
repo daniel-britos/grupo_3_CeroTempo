@@ -10,11 +10,14 @@
     text-align: center;
     font-size: 25px;
     width: 300px;
+    font-family: 'Bebas Neue', cursive;
 
 }
 .main-panel-admin div a {
     text-decoration: none;
-
+    font-family: 'Anton', sans-serif;
+    color: black;
+    
 }
 .btn-admin {
     border-radius: 5px;
@@ -38,4 +41,17 @@
 }
 .btn-edit:hover {
     background-color: var(--orangeLogo);
+}
+.panel-logo {
+    margin: 50px 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 2px black solid;
+    
+}
+.panel-logo img {
+    width: 600px;
+    height: 260px;
 }
