@@ -1,4 +1,7 @@
 module.exports = {
+    pMain : (req, res) => {
+        res.render('products/productMain');
+    },
     pCart : (req, res) => {
         res.render('products/productCart');
     },

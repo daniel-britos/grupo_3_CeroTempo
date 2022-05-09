@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('../partials/head') %>
+
+  <body>
+    <%- include('../partials/header') %>
+    <main>
+      <div class="bg-main">
+        <div class="container">
+          <div class="box">
+            <div class="breadcumb">
+              <a href="/index">home</a>
+              <span><i class="fa-solid fa-chevron-right"></i></span>
+              <a href="/products">all products</a>
+            </div>
+          </div>
+          <div class="box">
+            <div class="row">
+              <div class="col-3 filter-col" id="filter-col">
+                <div class="box filter-toggle-box">
+                  <button class="btn-flat btn-hover" id="filter-close">
+                    close
+                  </button>
+                </div>
+                <div class="box">
+                  <span class="filter-header"> Categories </span>
+                  <ul class="filter-list">
+                    <li><a href="#">Guitars</a></li>
+                    <li><a href="#">Basses</a></li>
+                    <li><a href="#">Pianos</a></li>
+                    <li><a href="#">Keyboards</a></li>
+                    <li><a href="#">Drums</a></li>
+                    <li><a href="#">Violins</a></li>
+                    <li><a href="#">Cellos</a></li>
+                    <li><a href="#">Violas</a></li>
+                    <li><a href="#">Electronics</a></li>
+                    <li><a href="#">Cables</a></li>
+                    <li><a href="#">Others</a></li>
+                  </ul>
+                </div>
+
+                <div class="box">
+                  <span class="filter-header"> Price </span>
+                  <div class="price-range">
+                    <input type="text" />
+                    <span>-</span>
+                    <input type="text" />
+                  </div>
+                </div>
+                <div class="box">
+                  <span class="filter-header"> Discount </span>
+                  <ul class="filter-list">
+                    <li>
+                      <div class="group-checkbox">
+                        <input type="checkbox" id="status1" />
+                        <label for="status1">
+                          10% OFF
+                          <i class="fa-solid fa-check"></i>
+                        </label>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="group-checkbox">
+                        <input type="checkbox" id="status2" />
+                        <label for="status2">
+                          20% OFF
+                          <i class="fa-solid fa-check"></i>
+                        </label>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="group-checkbox">
+                        <input type="checkbox" id="status3" />
+                        <label for="status3">
+                          30% OFF
+                          <i class="fa-solid fa-check"></i>
+                        </label>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="group-checkbox">
+                        <input type="checkbox" id="status3" />
+                        <label for="status3">
+                          40% OFF
+                          <i class="fa-solid fa-check"></i>
+                        </label>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="box">
+                  <span class="filter-header"> Brands </span>
+                  <ul class="filter-list">
+                    <li>
+                      <div class="group-checkbox">
+                        <input type="checkbox" id="brand1" checked="checked" />
+                        <label for="brand1">
+                          brand 1
+                          <i class="fa-solid fa-check"></i>
+                        </label>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="group-checkbox">
+                        <input type="checkbox" id="brand2" />
+                        <label for="brand2">
+                          brand 2
+                          <i class="fa-solid fa-check"></i>
+                        </label>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="group-checkbox">
+                        <input type="checkbox" id="brand3" />
+                        <label for="brand3">
+                          brand 3
+                          <i class="fa-solid fa-check"></i>
+                        </label>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="group-checkbox">
+                        <input type="checkbox" id="brand4" />
+                        <label for="brand4">
+                          Brand 4
+                          <i class="fa-solid fa-check"></i>
+                        </label>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="group-checkbox">
+                        <input type="checkbox" id="brand5" />
+                        <label for="brand5">
+                          Brand 5
+                          <i class="fa-solid fa-check"></i>
+                        </label>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="col-9 col-md-12">
+                <div class="box filter-toggle-box">
+                  <button class="btn-flat btn-hover" id="filter-toggle">
+                    filter
+                  </button>
+                </div>
+
+                <div class="box">
+                  <!-- <div class="row" id="products"> -->
+
+                  <div class="main-offers product-wrap">
+                    <article class="offers-1">
+                      <a href="productDetail">
+                        <!-- <p>See Offer</p> -->
+                        <img
+                          src="/images/instrumentos/Guitarras/06/125.jpg"
+                          alt=""
+                        />
+                      </a>
+                      <div class="foot-offers">
+                        <h4 id="title-offers">Guitarra Electrica Fender 20</h4>
+                        <div class="offers-data">
+                          <p id="price">$70.500</p>
+                          <!-- <p id="discount">10% off</p> -->
+                        </div>
+                      </div>
+                    </article>
+                    <article class="offers-2">
+                      <a href="productDetail">
+                        <!-- <p>See Offer</p> -->
+                        <img
+                          src="/images/instrumentos/Cello/01/069.jpg"
+                          alt=""
+                        />
+                      </a>
+                      <div class="foot-offers">
+                        <h4 id="title-offers">Ancona 610 Macizo</h4>
+                        <div class="offers-data">
+                          <p id="price">$120.000</p>
+                          <!-- <p id="discount">30% off</p> -->
+                        </div>
+                      </div>
+                    </article>
+                    <article class="offers-1">
+                      <a href="productDetail">
+                        <!-- <p>See Offer</p> -->
+                        <img
+                          src="/images/instrumentos/Guitarras/06/125.jpg"
+                          alt=""
+                        />
+                      </a>
+                      <div class="foot-offers">
+                        <h4 id="title-offers">Guitarra Electrica Fender 20</h4>
+                        <div class="offers-data">
+                          <p id="price">$70.500</p>
+                          <!-- <p id="discount">10% off</p> -->
+                        </div>
+                      </div>
+                    </article>
+                    <article class="offers-2">
+                      <a href="productDetail">
+                        <!-- <p>See Offer</p> -->
+                        <img
+                          src="/images/instrumentos/Cello/01/069.jpg"
+                          alt=""
+                        />
+                      </a>
+                      <div class="foot-offers">
+                        <h4 id="title-offers">Ancona 610 Macizo</h4>
+                        <div class="offers-data">
+                          <p id="price">$120.000</p>
+                          <!-- <p id="discount">30% off</p> -->
+                        </div>
+                      </div>
+                    </article>
+                    <article class="offers-1">
+                      <a href="productDetail">
+                        <!-- <p>See Offer</p> -->
+                        <img
+                          src="/images/instrumentos/Guitarras/06/125.jpg"
+                          alt=""
+                        />
+                      </a>
+                      <div class="foot-offers">
+                        <h4 id="title-offers">Guitarra Electrica Fender 20</h4>
+                        <div class="offers-data">
+                          <p id="price">$70.500</p>
+                          <!-- <p id="discount">10% off</p> -->
+                        </div>
+                      </div>
+                    </article>
+                    <article class="offers-2">
+                      <a href="productDetail">
+                        <!-- <p>See Offer</p> -->
+                        <img
+                          src="/images/instrumentos/Cello/01/069.jpg"
+                          alt=""
+                        />
+                      </a>
+                      <div class="foot-offers">
+                        <h4 id="title-offers">Ancona 610 Macizo</h4>
+                        <div class="offers-data">
+                          <p id="price">$120.000</p>
+                          <!-- <p id="discount">30% off</p> -->
+                        </div>
+                      </div>
+                    </article>
+                    <article class="offers-1">
+                      <a href="productDetail">
+                        <!-- <p>See Offer</p> -->
+                        <img
+                          src="/images/instrumentos/Guitarras/06/125.jpg"
+                          alt=""
+                        />
+                      </a>
+                      <div class="foot-offers">
+                        <h4 id="title-offers">Guitarra Electrica Fender 20</h4>
+                        <div class="offers-data">
+                          <p id="price">$70.500</p>
+                          <!-- <p id="discount">10% off</p> -->
+                        </div>
+                      </div>
+                    </article>
+                    <article class="offers-2">
+                      <a href="productDetail">
+                        <!-- <p>See Offer</p> -->
+                        <img
+                          src="/images/instrumentos/Cello/01/069.jpg"
+                          alt=""
+                        />
+                      </a>
+                      <div class="foot-offers">
+                        <h4 id="title-offers">Ancona 610 Macizo</h4>
+                        <div class="offers-data">
+                          <p id="price">$120.000</p>
+                          <!-- <p id="discount">30% off</p> -->
+                        </div>
+                      </div>
+                    </article>
+                    <article class="offers-1">
+                      <a href="productDetail">
+                        <!-- <p>See Offer</p> -->
+                        <img
+                          src="/images/instrumentos/Guitarras/06/125.jpg"
+                          alt=""
+                        />
+                      </a>
+                      <div class="foot-offers">
+                        <h4 id="title-offers">Guitarra Electrica Fender 20</h4>
+                        <div class="offers-data">
+                          <p id="price">$70.500</p>
+                          <!-- <p id="discount">10% off</p> -->
+                        </div>
+                      </div>
+                    </article>
+                    <article class="offers-2">
+                      <a href="productDetail">
+                        <!-- <p>See Offer</p> -->
+                        <img
+                          src="/images/instrumentos/Cello/01/069.jpg"
+                          alt=""
+                        />
+                      </a>
+                      <div class="foot-offers">
+                        <h4 id="title-offers">Ancona 610 Macizo</h4>
+                        <div class="offers-data">
+                          <p id="price">$120.000</p>
+                          <!-- <p id="discount">30% off</p> -->
+                        </div>
+                      </div>
+                    </article>
+                    <article class="offers-1">
+                      <a href="productDetail">
+                        <!-- <p>See Offer</p> -->
+                        <img
+                          src="/images/instrumentos/Guitarras/06/125.jpg"
+                          alt=""
+                        />
+                      </a>
+                      <div class="foot-offers">
+                        <h4 id="title-offers">Guitarra Electrica Fender 20</h4>
+                        <div class="offers-data">
+                          <p id="price">$70.500</p>
+                          <!-- <p id="discount">10% off</p> -->
+                        </div>
+                      </div>
+                    </article>
+                    <article class="offers-2">
+                      <a href="productDetail">
+                        <!-- <p>See Offer</p> -->
+                        <img
+                          src="/images/instrumentos/Cello/01/069.jpg"
+                          alt=""
+                        />
+                      </a>
+                      <div class="foot-offers">
+                        <h4 id="title-offers">Ancona 610 Macizo</h4>
+                        <div class="offers-data">
+                          <p id="price">$120.000</p>
+                          <!-- <p id="discount">30% off</p> -->
+                        </div>
+                      </div>
+                    </article>
+                    <article class="offers-1">
+                      <a href="productDetail">
+                        <!-- <p>See Offer</p> -->
+                        <img
+                          src="/images/instrumentos/Guitarras/06/125.jpg"
+                          alt=""
+                        />
+                      </a>
+                      <div class="foot-offers">
+                        <h4 id="title-offers">Guitarra Electrica Fender 20</h4>
+                        <div class="offers-data">
+                          <p id="price">$70.500</p>
+                          <!-- <p id="discount">10% off</p> -->
+                        </div>
+                      </div>
+                    </article>
+                    <article class="offers-2">
+                      <a href="productDetail">
+                        <!-- <p>See Offer</p> -->
+                        <img
+                          src="/images/instrumentos/Cello/01/069.jpg"
+                          alt=""
+                        />
+                      </a>
+                      <div class="foot-offers">
+                        <h4 id="title-offers">Ancona 610 Macizo</h4>
+                        <div class="offers-data">
+                          <p id="price">$120.000</p>
+                          <!-- <p id="discount">30% off</p> -->
+                        </div>
+                      </div>
+                    </article>
+                    <article class="offers-1">
+                      <a href="productDetail">
+                        <!-- <p>See Offer</p> -->
+                        <img
+                          src="/images/instrumentos/Guitarras/06/125.jpg"
+                          alt=""
+                        />
+                      </a>
+                      <div class="foot-offers">
+                        <h4 id="title-offers">Guitarra Electrica Fender 20</h4>
+                        <div class="offers-data">
+                          <p id="price">$70.500</p>
+                          <!-- <p id="discount">10% off</p> -->
+                        </div>
+                      </div>
+                    </article>
+                    <article class="offers-2">
+                      <a href="productDetail">
+                        <!-- <p>See Offer</p> -->
+                        <img
+                          src="/images/instrumentos/Cello/01/069.jpg"
+                          alt=""
+                        />
+                      </a>
+                      <div class="foot-offers">
+                        <h4 id="title-offers">Ancona 610 Macizo</h4>
+                        <div class="offers-data">
+                          <p id="price">$120.000</p>
+                          <!-- <p id="discount">30% off</p> -->
+                        </div>
+                      </div>
+                    </article>
+                  </div>
+
+                  <!-- </div> -->
+                </div>
+
+                <div class="box">
+                  <ul class="pagination">
+                    <li>
+                      <a href="#"><i class="fa-solid fa-chevron-left"></i></a>
+                    </li>
+                    <li><a href="#" class="active0">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li>
+                      <a href="#"><i class="fa-solid fa-chevron-right"></i></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <%- include('../partials/footer') %>
+    <!-- <script>
+      let filter_col = document.querySelector("#filter-col");
+
+      document
+        .querySelector("#filter-toggle")
+        .addEventListener("click", () => filter_col.classList.toggle("active"));
+
+      document
+        .querySelector("#filter-close")
+        .addEventListener("click", () => filter_col.classList.toggle("active"));
+    </script> -->
+  </body>
+</html>
