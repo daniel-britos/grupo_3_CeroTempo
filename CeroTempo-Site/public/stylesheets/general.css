@@ -12,15 +12,18 @@ ul, li {
     margin: 0;
     padding: 0;
 }
+
 a {
     color: black;
-    list-style: none;
-    text-decoration: none;
+    list-style: armenian;
+    text-decoration: none !important;
 }
 
 :root {
     --orangeLogo: #f25824;
 }
+/*
+ANIMACIÓN INICIO DE PAGINA, ACTIVAR POSTERIORMENTE
 #openSite  {
     background-color: black;
     display: flex;
@@ -76,3 +79,5 @@ a {
         z-index: -1;
     }
 }
+
+*/

@@ -7,12 +7,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:ital@1&family=Montserrat+Alternates:ital,wght@1,300&family=Raleway:wght@200;500&family=Righteous&family=Roboto:ital,wght@1,100&family=Rubik+Glitch&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Lato:ital@1&family=Montserrat+Alternates:ital,wght@1,300&family=Raleway:wght@200;500&family=Righteous&family=Roboto:ital,wght@1,100&family=Rubik+Glitch&display=swap');
 
-@import './normalize.css';
+
 @import './general.css';
+/*
+@import './normalize.css';
 @import './courses.css';
 @import './footer.css';
 @import './header.css';
-@import './index.css';
 @import './login.css';
 @import './luthiers.css';
 @import './productCart.css';
@@ -20,6 +21,13 @@
 @import './register.css';
 @import './formAdmin.css';
 @import './panel.css';
+*/
+@import './index.css';
+
+
+
+
+
 
 
 /*
