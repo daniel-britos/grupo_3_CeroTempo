@@ -1,6 +1,9 @@
+.product-main{
+    min-height: 100vh;
+}
 .bg-main {
     background-color: #fff;
-    height: 100vh;
+    height: 100%;
     position: relative;
 }
 
