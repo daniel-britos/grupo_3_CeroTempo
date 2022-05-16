@@ -1,0 +1,75 @@
+[
+    {
+        "id" : 1,
+        "name" : "nombre 1",
+        "price" : 120000,
+        "detail" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, quas laudantium? Consequatur iusto non natus! Nostrum id libero ipsum possimus repellat voluptate alias similique magnam, maiores labore? Et, quidem explicabo!",
+        "characteristics" : ["characteristic 1", "characteristic 2", "characteristic 3", "characteristic 4", "characteristic 5", "characteristic 6", "characteristic 7"],
+        "image" : "084.jpg"
+    },
+    {
+        "id" : 2,
+        "name" : "nombre 2",
+        "price" : 7000,
+        "detail" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, quas laudantium? Consequatur iusto non natus! Nostrum id libero ipsum possimus repellat voluptate alias similique magnam, maiores labore? Et, quidem explicabo!",
+        "characteristics" : ["characteristic 1", "characteristic 2", "characteristic 3", "characteristic 4", "characteristic 5", "characteristic 6", "characteristic 7"],
+        "image" : "093.jpg"
+    },
+    {
+        "id" : 3,
+        "name" : "nombre 3",
+        "price" : 80000,
+        "detail" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, quas laudantium? Consequatur iusto non natus! Nostrum id libero ipsum possimus repellat voluptate alias similique magnam, maiores labore? Et, quidem explicabo!",
+        "characteristics" : ["characteristic 1", "characteristic 2", "characteristic 3", "characteristic 4", "characteristic 5", "characteristic 6", "characteristic 7"],
+        "image" : "084.jpg"
+    },
+    {
+        "id" : 4,
+        "name" : "nombre 4",
+        "price" : 95000,
+        "detail" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, quas laudantium? Consequatur iusto non natus! Nostrum id libero ipsum possimus repellat voluptate alias similique magnam, maiores labore? Et, quidem explicabo!",
+        "characteristics" : ["characteristic 1", "characteristic 2", "characteristic 3", "characteristic 4", "characteristic 5", "characteristic 6", "characteristic 7"],
+        "image" : "131.jpg"
+    },
+    {
+        "id" : 5,
+        "name" : "nombre 5",
+        "price" : 3000,
+        "detail" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, quas laudantium? Consequatur iusto non natus! Nostrum id libero ipsum possimus repellat voluptate alias similique magnam, maiores labore? Et, quidem explicabo!",
+        "characteristics" : ["characteristic 1", "characteristic 2", "characteristic 3", "characteristic 4", "characteristic 5", "characteristic 6", "characteristic 7"],
+        "image" : "138.jpg"
+    },
+    {
+        "id" : 6,
+        "name" : "nombre 6",
+        "price" : 24000,
+        "detail" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, quas laudantium? Consequatur iusto non natus! Nostrum id libero ipsum possimus repellat voluptate alias similique magnam, maiores labore? Et, quidem explicabo!",
+        "characteristics" : ["characteristic 1", "characteristic 2", "characteristic 3", "characteristic 4", "characteristic 5", "characteristic 6", "characteristic 7"],
+        "image" : "186.jpg"
+    },
+    {
+        "id" : 7,
+        "name" : "nombre 7",
+        "price" : 45000,
+        "detail" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, quas laudantium? Consequatur iusto non natus! Nostrum id libero ipsum possimus repellat voluptate alias similique magnam, maiores labore? Et, quidem explicabo!",
+        "characteristics" : ["characteristic 1", "characteristic 2", "characteristic 3", "characteristic 4", "characteristic 5", "characteristic 6", "characteristic 7"],
+        "image" : "084.jpg"
+    },
+    {
+        
+        "id" : 8,
+        "name" : "nombre 8",
+        "price" : 600,
+        "detail" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, quas laudantium? Consequatur iusto non natus! Nostrum id libero ipsum possimus repellat voluptate alias similique magnam, maiores labore? Et, quidem explicabo!",
+        "characteristics" : ["characteristic 1", "characteristic 2", "characteristic 3", "characteristic 4", "characteristic 5", "characteristic 6", "characteristic 7"],
+        "image" : "084.jpg"
+    },
+    {
+        "id" : 9,
+        "name" : "nombre 9",
+        "price" : 8000,
+        "detail" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, quas laudantium? Consequatur iusto non natus! Nostrum id libero ipsum possimus repellat voluptate alias similique magnam, maiores labore? Et, quidem explicabo!",
+        "characteristics" : ["characteristic 1", "characteristic 2", "characteristic 3", "characteristic 4", "characteristic 5", "characteristic 6", "characteristic 7"],
+        "image" : "084.jpg"
+    }
+]
