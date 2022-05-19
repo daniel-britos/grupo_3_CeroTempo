@@ -5,33 +5,35 @@
         <%- include('../partials/header') %> 
         <main>
             <section class="pDetail-container">
+
                 <article class="pDetail-images-container">
                     <div class="pDetail-image">
-                        <img class="pDetail-image-img" src="/images/instrumentos/piano-1/138.jpg" alt="photo of piano ">
+                        <img class="pDetail-image-img" src="<%= product.image[0] %>" alt=" ">
                     </div>
                     <div class="pDetail-zoomImage-container">
                         <div class="pDetail-zoomImage-items">
-                            <img src="/images/instrumentos/piano-1/139.png" alt="photo of piano ">
+                            <img src="<%= product.image[1] %>" alt="photo of piano ">
                         </div>
                         <div class="pDetail-zoomImage-items">
-                            <img src="/images/instrumentos/piano-1/140.png" alt="photo of piano ">
+                            <img src="<%= product.image[2] %>" alt="photo of piano ">
                         </div>
                         <div class="pDetail-zoomImage-items">                            
-                            <img src="/images/instrumentos/piano-1/141.png" alt="photo of piano ">
+                            <img src="<%= product.image[3] %>" alt="photo of piano ">
                         </div>
                     </div>
                 </article>
+
                 <!-- ************** product title, price,buttons ************** -->
                 <article class="pDetail-buy-payment-container">
                     <div class="pDetail-buy-container">
                         <div class="pDetail-title-container">
                             <h3 class="pDetail-title">
-                                Kawai RX-5 Acoustic Grand Piano Polished Black
+                                <%= product.name %>
                             </h3>
                         </div>
                         <div class="pDetail-price-container">
                             <p class="pDetail-price">
-                                $ 1.170.000
+                                $ <%= product.price %>
                             </p>
                         </div>
         

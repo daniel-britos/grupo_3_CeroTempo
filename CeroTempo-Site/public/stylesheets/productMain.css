@@ -1,0 +1,348 @@
+.product-main{
+    min-height: 100vh;
+}
+.bg-main {
+    background-color: #fff;
+    height: 100%;
+    position: relative;
+}
+
+.container-products {
+    max-width: 1366px;
+    margin: auto;
+    padding: 0 20px;
+    position: relative;
+    height: 100%;
+    
+}
+
+.padding-general {
+    padding: 20px;
+}
+
+.anchor-index {
+    font-weight: 600;
+    padding: 20px;
+}
+
+.anchor-index a {
+    text-transform: capitalize;
+    color: #000;
+    text-decoration: none;
+}
+
+.anchor-index a:hover {
+    color: var(--orangeLogo);
+}
+
+.anchor-index span {
+    margin: 0 15px;
+}
+
+.row-direction {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+}
+
+.column-3 {
+    width: 25%;
+}
+
+.column-9 {
+    width: 75%;
+}
+.button-flat {
+    display: inline-block;
+    border: 2px solid rgb(0, 0, 0);
+    background-color: rgb(10, 10, 10);
+    color: #fff;
+    padding: 15px 35px;
+    font-size: 15px;
+    outline: 0;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+button.button-flat:hover{
+    background-color: var(--orangeLogo);
+}
+.button-hover {
+    transition: all 0.3s ease-in-out;
+}
+
+
+.filter-toggle-box {
+    display: none;
+}
+.filter-header {
+    display: block;
+    margin: 20px 0;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+.filter-toggle-box {
+    display: none;
+}
+.filter > ul{
+    padding-left: 0px!important;
+}
+.filter-list > li  {
+    margin-bottom: 20px;
+    padding-left: 0;
+}
+.filter-list li a{
+    text-decoration: none;
+    color: #000;
+}
+.price-range {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.price-range span {
+    flex-grow: 1;
+    text-align: center;
+    margin: 0 10px;
+}
+
+.price-range input {
+    width: 40%;
+    outline: none;
+    padding: 5px;
+}
+
+
+
+
+.group-checkbox {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 30px;
+    text-align: left;
+}
+
+.group-checkbox input {
+    opacity: 0;
+    height: 0;
+    width: 0;
+    cursor: pointer;
+}
+
+.group-checkbox label {
+    cursor: pointer;
+    padding-left: 40px;
+    position: relative;
+}
+
+.group-checkbox label::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -4px;
+    width: 22px;
+    height: 22px;
+    background-color: #fff;
+    border: 2px solid #000!important;
+}
+
+.group-checkbox label > i {
+    position: absolute;
+    left: 2px;
+    top: -2px;
+    color: #000;
+    transform: scale(0);
+    font-size: 21px;
+    transition: transform 0.1s ease-in-out;
+}
+
+.product-cards {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.product-cards h2 {
+    color: var(--orangeLogo);
+    font-size: 2rem;
+    margin: 10px;
+    padding: 0;
+}
+.product-cards article {
+    width: 280px!important;
+    height: 360px;
+    margin: 5px;
+    background-color: black;
+    border-radius: 10px;
+    border: 3px black solid;
+}
+.product-cards i {
+    font-size: 20px;
+    color: white;
+    margin: 10px;
+    transform: rotate(90deg);
+}
+.product-cards article img {
+    width: 100%;
+    max-height: 300px;
+    min-height: 300px;
+    border-radius: 6px;
+}
+.product-cards article a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #000;
+    font-size: 35px;
+    position: relative;
+}
+.product-cards article a p {
+    position: absolute;
+    top: 50px;
+    background-color: rgba(0, 0, 0, 0.4);
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+}
+.product-cards article a p:hover {
+    transform: scale(1.2);
+    transition: all 0.5s;
+    position: absolute;
+}
+.product-cards-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 55px;
+    /* margin-top: 10px; */
+}
+.cards-data {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-left: 1px solid white;
+    height: 55px;
+}
+#cards-title{
+    width: 60%;
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0;
+    padding: 0;
+    text-align: center; 
+}
+#cards-price {
+    font-size: 16px;
+    font-family: 'Raleway', sans-serif;
+    color: white;
+    text-align: right;
+    margin-bottom: 0;
+}
+#cards-discount {
+    font-size: 18px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    color: rgb(176, 245, 0)!important;
+    margin-bottom: 0;
+}
+.group-checkbox input:checked + label i {
+    transform: scale(1);
+}
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pagination > li > a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    margin-left: 5px;
+    font-size: 20px;
+    text-decoration: none;
+    color: #000;
+}
+
+.pagination > li > a.active {
+    background-color: #000!important;
+    color: pink!important;
+}
+
+.pagination > li > a:hover {
+    background-color:var(--orangeLogo)!important;
+    color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 1080px) {
+    .column-md-3 {
+        width: 25%;
+    }
+    
+    .column-9 {
+        width: 100%;
+    }
+    
+    .filter-col {
+        position: fixed;
+        top:0;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        z-index: 98;
+        left: 100%;
+        height: 100vh;
+        overflow-y: scroll;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        transition: left 0.2s ease-in-out;
+    }
+
+    .filter-col.active {
+        left: 0;
+    }
+    .filter-toggle-box {
+        display: block;
+    }
+    .pagination {
+        justify-content: center;
+    }
+
+}
+@media (min-width: 768px) {
+    /* OFFERS */
+    .product-cards {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .product-cards article {
+        width: 300px;
+
+    }
+    .product-cards i {
+        transform: rotate(0deg);
+    }
+}
