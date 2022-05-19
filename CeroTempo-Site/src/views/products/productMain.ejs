@@ -159,8 +159,12 @@
                       <div class="product-cards-info">
                         <h4 id="cards-title"><%= product.name %></h4>
                         <div class="cards-data">
-                          <p id="price">$<%= product.price %></p>
-                          <!-- <p id="discount">10% off</p> -->
+                          <% if (product.discount > 0) { %>
+                            <p id="cards-price">$<%= product.price %></p>
+                            <p id="cards-discount"><%= product.discount %>% off</p>
+                            <% } else { %>
+                          <p id="cards-price">$<%= product.price %></p>
+                          <% }  %>
                         </div>
                       </div>
                     </article>

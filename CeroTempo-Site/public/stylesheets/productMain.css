@@ -215,14 +215,17 @@ button.button-flat:hover{
     justify-content: center;
     align-items: center;
     width: 100%;
-    margin-top: 10px;
+    height: 55px;
+    /* margin-top: 10px; */
 }
 .cards-data {
     width: 40%;
     display: flex;
-    align-items: center;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     border-left: 1px solid white;
+    height: 55px;
 }
 #cards-title{
     width: 60%;
@@ -234,12 +237,19 @@ button.button-flat:hover{
     padding: 0;
     text-align: center; 
 }
-#price {
+#cards-price {
     font-size: 16px;
     font-family: 'Raleway', sans-serif;
     color: white;
     text-align: right;
-    margin: 5px;
+    margin-bottom: 0;
+}
+#cards-discount {
+    font-size: 18px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    color: rgb(176, 245, 0)!important;
+    margin-bottom: 0;
 }
 .group-checkbox input:checked + label i {
     transform: scale(1);
