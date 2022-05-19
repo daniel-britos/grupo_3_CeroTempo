@@ -151,199 +151,20 @@
                   <!-- <div class="row" id="products"> -->
 
                   <div class="product-cards product-wrap">
+                    <% products.forEach(product => { %>
                     <article>
                       <a href="productDetail">
-                        <!-- <p>See Offer</p> -->
-                        <img
-                          src="/images/instrumentos/Guitarras/06/125.jpg"
-                          alt=""
-                        />
+                        <img src="<%= product.image[0] %>" alt="" />
                       </a>
                       <div class="product-cards-info">
-                        <h4 id="cards-title">Guitarra Electrica Fender 20</h4>
+                        <h4 id="cards-title"><%= product.name %></h4>
                         <div class="cards-data">
-                          <p id="price">$70.500</p>
+                          <p id="price">$<%= product.price %></p>
                           <!-- <p id="discount">10% off</p> -->
                         </div>
                       </div>
                     </article>
-                    <article>
-                      <a href="productDetail">
-                        <!-- <p>See Offer</p> -->
-                        <img
-                          src="/images/instrumentos/Cello/01/069.jpg"
-                          alt=""
-                        />
-                      </a>
-                      <div class="product-cards-info">
-                        <h4 id="cards-title">Ancona 610 Macizo</h4>
-                        <div class="cards-data">
-                          <p id="price">$120.000</p>
-                          <!-- <p id="discount">10% off</p> -->
-                        </div>
-                      </div>
-                    </article>
-                    <article>
-                      <a href="productDetail">
-                        <!-- <p>See Offer</p> -->
-                        <img
-                          src="/images/instrumentos/Guitarras/06/125.jpg"
-                          alt=""
-                        />
-                      </a>
-                      <div class="product-cards-info">
-                        <h4 id="cards-title">Guitarra Electrica Fender 20</h4>
-                        <div class="cards-data">
-                          <p id="price">$70.500</p>
-                          <!-- <p id="discount">10% off</p> -->
-                        </div>
-                      </div>
-                    </article>
-                    <article>
-                      <a href="productDetail">
-                        <!-- <p>See Offer</p> -->
-                        <img
-                          src="/images/instrumentos/Cello/01/069.jpg"
-                          alt=""
-                        />
-                      </a>
-                      <div class="product-cards-info">
-                        <h4 id="cards-title">Ancona 610 Macizo</h4>
-                        <div class="cards-data">
-                          <p id="price">$120.000</p>
-                          <!-- <p id="discount">10% off</p> -->
-                        </div>
-                      </div>
-                    </article>
-                    <article>
-                      <a href="productDetail">
-                        <!-- <p>See Offer</p> -->
-                        <img
-                          src="/images/instrumentos/Guitarras/06/125.jpg"
-                          alt=""
-                        />
-                      </a>
-                      <div class="product-cards-info">
-                        <h4 id="cards-title">Guitarra Electrica Fender 20</h4>
-                        <div class="cards-data">
-                          <p id="price">$70.500</p>
-                          <!-- <p id="discount">10% off</p> -->
-                        </div>
-                      </div>
-                    </article>
-                    <article>
-                      <a href="productDetail">
-                        <!-- <p>See Offer</p> -->
-                        <img
-                          src="/images/instrumentos/Cello/01/069.jpg"
-                          alt=""
-                        />
-                      </a>
-                      <div class="product-cards-info">
-                        <h4 id="cards-title">Ancona 610 Macizo</h4>
-                        <div class="cards-data">
-                          <p id="price">$120.000</p>
-                          <!-- <p id="discount">10% off</p> -->
-                        </div>
-                      </div>
-                    </article>
-                    <article>
-                      <a href="productDetail">
-                        <!-- <p>See Offer</p> -->
-                        <img
-                          src="/images/instrumentos/Guitarras/06/125.jpg"
-                          alt=""
-                        />
-                      </a>
-                      <div class="product-cards-info">
-                        <h4 id="cards-title">Guitarra Electrica Fender 20</h4>
-                        <div class="cards-data">
-                          <p id="price">$70.500</p>
-                          <!-- <p id="discount">10% off</p> -->
-                        </div>
-                      </div>
-                    </article>
-                    <article>
-                      <a href="productDetail">
-                        <!-- <p>See Offer</p> -->
-                        <img
-                          src="/images/instrumentos/Cello/01/069.jpg"
-                          alt=""
-                        />
-                      </a>
-                      <div class="product-cards-info">
-                        <h4 id="cards-title">Ancona 610 Macizo</h4>
-                        <div class="cards-data">
-                          <p id="price">$120.000</p>
-                          <!-- <p id="discount">10% off</p> -->
-                        </div>
-                      </div>
-                    </article>
-                    <article>
-                      <a href="productDetail">
-                        <!-- <p>See Offer</p> -->
-                        <img
-                          src="/images/instrumentos/Guitarras/06/125.jpg"
-                          alt=""
-                        />
-                      </a>
-                      <div class="product-cards-info">
-                        <h4 id="cards-title">Guitarra Electrica Fender 20</h4>
-                        <div class="cards-data">
-                          <p id="price">$70.500</p>
-                          <!-- <p id="discount">10% off</p> -->
-                        </div>
-                      </div>
-                    </article>
-                    <article>
-                      <a href="productDetail">
-                        <!-- <p>See Offer</p> -->
-                        <img
-                          src="/images/instrumentos/Cello/01/069.jpg"
-                          alt=""
-                        />
-                      </a>
-                      <div class="product-cards-info">
-                        <h4 id="cards-title">Ancona 610 Macizo</h4>
-                        <div class="cards-data">
-                          <p id="price">$120.000</p>
-                          <!-- <p id="discount">10% off</p> -->
-                        </div>
-                      </div>
-                    </article>
-                    <article>
-                      <a href="productDetail">
-                        <!-- <p>See Offer</p> -->
-                        <img
-                          src="/images/instrumentos/Guitarras/06/125.jpg"
-                          alt=""
-                        />
-                      </a>
-                      <div class="product-cards-info">
-                        <h4 id="cards-title">Guitarra Electrica Fender 20</h4>
-                        <div class="cards-data">
-                          <p id="price">$70.500</p>
-                          <!-- <p id="discount">10% off</p> -->
-                        </div>
-                      </div>
-                    </article>
-                    <article>
-                      <a href="productDetail">
-                        <!-- <p>See Offer</p> -->
-                        <img
-                          src="/images/instrumentos/Cello/01/069.jpg"
-                          alt=""
-                        />
-                      </a>
-                      <div class="product-cards-info">
-                        <h4 id="cards-title">Ancona 610 Macizo</h4>
-                        <div class="cards-data">
-                          <p id="price">$120.000</p>
-                          <!-- <p id="discount">10% off</p> -->
-                        </div>
-                      </div>
-                    </article>
-
+                    <% }) %>
                   </div>
 
                   <!-- </div> -->

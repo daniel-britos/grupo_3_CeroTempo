@@ -1,3 +1,4 @@
+const products = require('../data/productsDataBase.json'); 
 module.exports = {
     pMain : (req, res) => {
         res.render('products/productMain');

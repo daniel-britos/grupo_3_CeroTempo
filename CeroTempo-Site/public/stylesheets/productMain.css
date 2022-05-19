@@ -186,6 +186,7 @@ button.button-flat:hover{
 .product-cards article img {
     width: 100%;
     max-height: 300px;
+    min-height: 300px;
     border-radius: 6px;
 }
 .product-cards article a {
@@ -214,7 +215,7 @@ button.button-flat:hover{
     justify-content: center;
     align-items: center;
     width: 100%;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 .cards-data {
     width: 40%;
