@@ -1,18 +1,27 @@
-const res = require('express/lib/response')
-const products = require('../data/productsDataBase.json');
+const fs = require('fs');
+const path = require('path');
+
+const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');
+
+const readProduct = () => {  
+	const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8')); 
+    return products
+}
 
 module.exports = {
     pMain : (req, res) => {
+        const listProduct = readProduct()
         res.render('products/productMain', {
-            products
+            listProduct
         });
     },
     pCart : (req, res) => {
         res.render('products/productCart');
     },
     pDetail : (req, res) => {
+        const listProduct = readProduct()
         const {id} = req.params;
-        const product = products.find(product => product.id === +id);
+        const product = listProduct.find(product => product.id === +id);
         res.render('products/productDetail', {product
         });
     }
