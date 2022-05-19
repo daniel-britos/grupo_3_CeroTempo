@@ -152,8 +152,9 @@
 
                   <div class="product-cards product-wrap">
                     <% products.forEach(product => { %>
+
                     <article>
-                      <a href="productDetail">
+                      <a href="productDetail/<%= product.id %>">
                         <img src="<%= product.image[0] %>" alt="" />
                       </a>
                       <div class="product-cards-info">
@@ -168,6 +169,7 @@
                         </div>
                       </div>
                     </article>
+
                     <% }) %>
                   </div>
 

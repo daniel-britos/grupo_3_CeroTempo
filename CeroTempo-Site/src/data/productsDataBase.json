@@ -17,7 +17,7 @@
         "category" : 2,
         "detail" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, quas laudantium? Consequatur iusto non natus! Nostrum id libero ipsum possimus repellat voluptate alias similique magnam, maiores labore? Et, quidem explicabo!",
         "characteristics" : ["characteristic 1", "characteristic 2", "characteristic 3", "characteristic 4", "characteristic 5", "characteristic 6", "characteristic 7"],
-        "image" : ["/images/instrumentos/Amplificador/01/016.png", "/images/instrumentos/Amplificador/01/017.png", "/images/instrumentos/Amplificador/01/018.png", "/images/instrumentos/Amplificador/01/019.png"]
+        "image" : ["/images/instrumentos/Amplificador/01/016.png", "/images/instrumentos/Amplificador/01/017.png", "/images/instrumentos/Amplificador/01/018.png", "/images/instrumentos/Amplificador/01/019.jpg"]
     },
     {
         "id" : 3,
@@ -88,7 +88,7 @@
         "category" : 9,
         "detail" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, quas laudantium? Consequatur iusto non natus! Nostrum id libero ipsum possimus repellat voluptate alias similique magnam, maiores labore? Et, quidem explicabo!",
         "characteristics" : ["characteristic 1", "characteristic 2", "characteristic 3", "characteristic 4", "characteristic 5", "characteristic 6", "characteristic 7"],
-        "image" : ["/images/instrumentos/piano-1/138.jpg", "/images/instrumentos/piano-1/139.jpg", "/images/instrumentos/piano-1/140.jpg", "/images/instrumentos/piano-1/141.jpg"]
+        "image" : ["/images/instrumentos/piano-1/138.jpg", "/images/instrumentos/piano-1/139.png", "/images/instrumentos/piano-1/140.png", "/images/instrumentos/piano-1/141.png"]
     },
     {
         "id" : 10,
@@ -98,7 +98,7 @@
         "category" : 9,
         "detail" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, quas laudantium? Consequatur iusto non natus! Nostrum id libero ipsum possimus repellat voluptate alias similique magnam, maiores labore? Et, quidem explicabo!",
         "characteristics" : ["characteristic 1", "characteristic 2", "characteristic 3", "characteristic 4", "characteristic 5", "characteristic 6", "characteristic 7"],
-        "image" : ["/images/instrumentos/piano-2/144.jpg", "/images/instrumentos/piano-2/145.jpg", "/images/instrumentos/piano-2/146.jpg", "/images/instrumentos/piano-2/147.jpg"]
+        "image" : ["/images/instrumentos/piano-2/144.jpg", "/images/instrumentos/piano-2/145.jpg", "/images/instrumentos/piano-2/146.png", "/images/instrumentos/piano-2/147.png"]
     },
     {
         "id" : 11,
@@ -128,7 +128,7 @@
         "category" : 12,
         "detail" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, quas laudantium? Consequatur iusto non natus! Nostrum id libero ipsum possimus repellat voluptate alias similique magnam, maiores labore? Et, quidem explicabo!",
         "characteristics" : ["characteristic 1", "characteristic 2", "characteristic 3", "characteristic 4", "characteristic 5", "characteristic 6", "characteristic 7"],
-        "image" : ["/images/instrumentos/teclado-1/167.png", "/images/instrumentos/teclado-1/168.png", "/images/instrumentos/teclado-1/169.png", "/images/instrumentos/teclado-1/170.png"]
+        "image" : ["/images/instrumentos/teclado-1/167.png", "/images/instrumentos/teclado-1/168.png", "/images/instrumentos/teclado-1/169.png", "/images/instrumentos/teclado-1/170.jpg"]
     },
     {
         "id" : 14,
