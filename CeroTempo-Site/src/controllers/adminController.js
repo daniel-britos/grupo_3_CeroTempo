@@ -7,7 +7,7 @@ const readProduct = () => {
 	const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8')); 
     return products
 }
-const saveProducts = (product) => fs.writeFileSync(productsFilePath, JSON.stringify(product, null, 3))
+const saveProducts = (products) => fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 3))
 
 module.exports = {
     panel : (req, res) => {
@@ -18,20 +18,20 @@ module.exports = {
     },
     store : (req, res) =>{
         let products = readProduct()
-        const {id, name, price, discount, category, detail, characteristics, image} = req.body;
+        const { name, price, discount, category, detail, characteristics, image} = req.body;
         let oProducts = {
-            id: products[products.length-1].id+1,
+            id: products[products.length - 1].id + 1,
             name: name.trim(),
             price: +price,
             discount: +discount,
-            category: category,
-            detail: detail,
-            characteristics: characteristics,
-            image: req.file? req.filename: 'default-image.png'
+            category : category,
+            detail: detail.trim(),
+            characteristics: characteristics.trim(),
+            image : "default-image.png"         
         }
-        products.push(oProducts)
-        saveProducts(products)
-        return res.redirect('admin/create');
+        products.push(oProducts);
+        saveProducts(products);
+        return res.redirect('create');
     },
     edit : (req, res) => {
         return res.render('admin/edit');
