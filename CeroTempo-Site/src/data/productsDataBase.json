@@ -18,5 +18,15 @@
       "detail": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, quas laudantium? Consequatur iusto non natus! Nostrum id libero ipsum possimus repellat voluptate alias similique magnam, maiores labore? Et, quidem explicabo!",
       "characteristics": "Caracteristicas por defecto",
       "image": "002.jpg"
+   },
+   {
+      "id": 3,
+      "name": "Cello Cremona 14",
+      "price": 123000,
+      "discount": 10,
+      "category": "strings",
+      "detail": "cello ancona madera maciza",
+      "characteristics": "macizo, cuerdas, microafinadrores",
+      "image": "default-image.png"
    }
 ]
