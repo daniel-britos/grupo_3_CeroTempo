@@ -34,6 +34,33 @@ module.exports = {
         return res.redirect('create');
     },
     edit : (req, res) => {
-        return res.render('admin/edit');
-    }
+        let products = readProduct()											
+        let product = products.find(product => product.id === +req.params.id); 
+        return res.render('admin/edit', {
+            product
+        });
+    },
+	update: (req, res) => {
+		let products = readProduct(); 											
+		const { name, price, discount, category, detail, characteristics, image} = req.body; 		
+		const product = products.find(product => product.id === +req.params.id);
+		const updateProducts = products.map(product => {					
+			if (product.id === +req.params.id) {
+				let updateProduct = { 										
+					...product,													
+                    name: name.trim(),
+                    price: +price,
+                    discount: +discount,
+                    category : category,
+                    detail: detail.trim(),
+                    characteristics: characteristics.trim(),
+                    image : "default-image.png"  
+				}
+				return updateProduct;
+			}
+			return product;
+		})
+		saveProducts(updateProducts);
+		return res.redirect('/products/productMain');
+	},
 }

@@ -28,5 +28,35 @@
       "detail": "cello ancona madera maciza",
       "characteristics": "macizo, cuerdas, microafinadrores",
       "image": "default-image.png"
+   },
+   {
+      "id": 4,
+      "name": "Guitarrita chiquita",
+      "price": 50000,
+      "discount": 10,
+      "category": "strings",
+      "detail": "guitarrita re loca",
+      "characteristics": "muchas caracteristicas",
+      "image": "default-image.png"
+   },
+   {
+      "id": 5,
+      "name": "Nikon Reflex D3500 - Kits",
+      "price": 123123,
+      "discount": 10,
+      "category": "percussion",
+      "detail": "asdasd",
+      "characteristics": "asdasd",
+      "image": "default-image.png"
+   },
+   {
+      "id": 6,
+      "name": "Piano loco",
+      "price": 23,
+      "discount": 20,
+      "category": "idiophones",
+      "detail": "Piano que no anda pero esta bueno",
+      "characteristics": "Piano negro con teclas blancas",
+      "image": "default-image.png"
    }
 ]

@@ -6,53 +6,61 @@
     <main class="main-admin">
         <h2>Edit Product</h2>
         <section class="main-form-create">
-            <form class="admin-form" action="">
+            <form class="admin-form" action="/admin/update/<%= product.id %>?_method=PUT" method="POST">
                 <div class="left-container">       
                     <div class="admin-box">
-                        <label for="productName">Product Title</label>
-                        <input type="text" name="productName" id="">
+                        <label for="name">Product Title</label>
+                        <input type="text" name="name" id="" value="<%= product.name %> ">
                         <span class="validation-text" hidden>Required Field</span>                
                     </div>                
                     <div class="admin-box">
                         <label for="price">Price</label>
-                        <input type="number" name="price" id="">
+                        <input type="number" name="price" id="" value="<%= product.price %>">
                         <span class="validation-text" hidden>Required Field</span>
                     </div>
                     <div class="admin-box">                    
                         <label for="discount">Discount</label>
-                        <input type="number" name="discount" id="">
+                        <input type="number" name="discount" id="" value="<%= product.discount %>">
                         <span class="validation-text" hidden>Required Field</span>            
                     </div>
                     <div class="admin-box box-description">
-                        <label for="productDescription">Description</label>
-                        <textarea name="productDescription" id="text-description" cols="30" rows="3" style="resize: none;"></textarea>                        
+                        <label for="detail">Description</label>
+                        <textarea name="detail" id="text-description" cols="30" rows="3" style="resize: none;"><%= product.detail %></textarea>                        
+                        <span class="validation-text" hidden>Required Field</span>
+                    </div>
+                    <div class="admin-box box-description">
+                        <label for="characteristics">characteristics</label>
+                        <textarea name="characteristics" id="text-description" cols="30" rows="3" style="resize: none;"><%= product.characteristics %></textarea>                        
                         <span class="validation-text" hidden>Required Field</span>
                     </div>
                 </div>
                 <div class="right-container">
                     <div class="img-create-preview">
                         <h2>PREVIEW</h2>
-                        <img src="/images/instrumentos/Cello/01/069.jpg" alt="">
+                        <img src="/images/instrumentos/<%= product.image %>" alt="">
                     </div>
                     <div class="into-admin-box">
                         <div class="admin-box add-img">
-                            <label for="addImage">ADD IMAGE</label>
-                            <input type="file" name="addImage" id="imageProduct">
+                            <label for="image">ADD IMAGE</label>
+                            <input type="file" name="image" id="imageProduct" accept="image/*">
                             <span class="validation-text" hidden>Required Field</span>
-                        </div>   
+                        </div>  
                         <div class="admin-box">
-                            <label for="categories">Category</label>
-                            <select name="categories" id="category-select">
-                                <option value="">...</option>
-                                <option value="">Strings</option>
-                                <option value="">Wind</option>
-                                <option value="">Percussion</option>
-                                <option value="">Idiophones</option>
-                                <option value="">Electronics</option>
+                            <label for="category">Category</label>
+                            <select name="category" id="category-select">
+                                <option value="" hidden selected>...</option>
+                                <option value="strings" <%= product.category === "strings" && "selected" %>  >Strings</option>
+                                <option value="wind" <%= product.category === "wind" && "selected" %>  >Wind</option>
+                                <option value="percussion" <%= product.category === "percussion" && "selected" %>  >Percussion</option>
+                                <option value="idiophones" <%= product.category === "idiophones" && "selected" %>  >Idiophones</option>
+                                <option value="electronics" <%= product.category === "electronics" && "selected" %>  >Electronics</option>
                             </select>
                             <span class="validation-text" hidden>Required Field</span>
                         </div>  
                     </div>
+                </div>
+                <div class="btn-send-create">
+                    <button type="submit">Save Changes</button>
                 </div>
             </form>        
         </section>
