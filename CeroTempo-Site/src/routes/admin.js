@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 
 
-const  {panel, create, store, edit, update} = require('../controllers/adminController');
+const  {panel, create, store, edit, update, remove} = require('../controllers/adminController');
 
 
 
@@ -12,5 +12,7 @@ router.post('/create', store);
 
 router.get('/edit/:id', edit);
 router.put('/update/:id', update);
+
+router.delete("/remove/:id", remove);
 
 module.exports = router;

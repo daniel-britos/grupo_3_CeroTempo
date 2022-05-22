@@ -6,7 +6,9 @@
         <main>
             <div class="box-btn-detail">
                 <a href="/admin/edit/<%= product.id %>" class="btn-detail-edit">EDIT</a>
-                <a href="/admin/delete/" class="btn-detail-delete">DELETE</a>
+                <form action="/admin/remove/<%= product.id %>?_method=DELETE" method="POST" class="form-delete">
+                    <button type="submit" class="btn-detail-delete">DELETE</button>
+                </form>
             </div>
 
             <section class="pDetail-container">

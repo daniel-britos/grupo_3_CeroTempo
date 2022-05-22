@@ -110,7 +110,9 @@
     transform: scale(1.1);
     border: 2px solid black;
 }
-
+.form-delete {
+    display: inline-block;
+}
 
 @media (max-width:  425px) {
     .admin-form {

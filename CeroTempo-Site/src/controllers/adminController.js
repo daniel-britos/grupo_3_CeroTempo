@@ -63,4 +63,11 @@ module.exports = {
 		saveProducts(updateProducts);
 		return res.redirect('/products/productMain');
 	},
+    remove: (req, res) => {
+		let products = readProduct(); 												//leo lo sproductos
+		const productsModify = products.filter(product => product.id !== +req.params.id); // traigo todos los que son distintos al id que ingresa por parametro
+
+		saveProducts(productsModify);
+		return res.redirect('/products/productMain');
+      }
 }
