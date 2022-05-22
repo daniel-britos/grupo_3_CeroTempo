@@ -8,5 +8,15 @@
       "detail": "cello ancona madera maciza",
       "characteristics": "macizo, cuerdas, microafinadrores",
       "image": "default-image.png"
+   },
+   {
+      "id": 4,
+      "name": "Piano",
+      "price": 13423,
+      "discount": 10,
+      "category": "wind",
+      "detail": "Producto de china el mejor",
+      "characteristics": "madera, teclas blancas",
+      "image": "default-image.png"
    }
 ]
