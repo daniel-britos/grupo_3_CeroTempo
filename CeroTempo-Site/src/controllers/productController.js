@@ -11,18 +11,19 @@ const readProduct = () => {
 module.exports = {
     pMain : (req, res) => {
         const listProduct = readProduct()
-        res.render('products/productMain', {
+        res.render('productMain', {
             listProduct
         });
     },
     pCart : (req, res) => {
-        res.render('products/productCart');
+        res.render('productCart');
     },
     pDetail : (req, res) => {
         const listProduct = readProduct()
         const {id} = req.params;
         const product = listProduct.find(product => product.id === +id);
-        res.render('products/productDetail', {product
+        res.render('productDetail', {
+            product
         });
     }
 }

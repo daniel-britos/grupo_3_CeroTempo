@@ -2,7 +2,7 @@
 <html lang="en">
     <%- include('../partials/head') %> 
     <body>
-        <%- include('../partials/header') %> 
+        <%- include('./partials/header') %> 
         <main>
             <div class="box-btn-detail">
                 <a href="/admin/edit/<%= product.id %>" class="btn-detail-edit">EDIT</a>
@@ -158,8 +158,8 @@
             </section>
             <hr class="pDetail-hr">
             <h2 class="pDetail-recommend-title">Recommended</h2>
-            <%- include('../partials/sliderOffers') %>
+            <%- include('./partials/sliderOffers') %>
         </main>
-        <%- include('../partials/footer') %> 
+        <%- include('./partials/footer') %> 
     </body>
 </html>

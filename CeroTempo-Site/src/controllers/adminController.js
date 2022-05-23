@@ -11,10 +11,10 @@ const saveProducts = (products) => fs.writeFileSync(productsFilePath, JSON.strin
 
 module.exports = {
     panel : (req, res) => {
-        return res.render('admin/panel');
+        return res.render('panel');
     },
     create : (req, res) => {
-        return res.render('admin/create');
+        return res.render('create');
     },
     store : (req, res) =>{
         let products = readProduct()
@@ -36,7 +36,7 @@ module.exports = {
     edit : (req, res) => {
         let products = readProduct()											
         let product = products.find(product => product.id === +req.params.id); 
-        return res.render('admin/edit', {
+        return res.render('edit', {
             product
         });
     },
@@ -61,13 +61,13 @@ module.exports = {
 			return product;
 		})
 		saveProducts(updateProducts);
-		return res.redirect('/products/productMain');
+		return res.redirect('productMain');
 	},
     remove: (req, res) => {
 		let products = readProduct(); 												//leo lo sproductos
 		const productsModify = products.filter(product => product.id !== +req.params.id); // traigo todos los que son distintos al id que ingresa por parametro
 
 		saveProducts(productsModify);
-		return res.redirect('/products/productMain');
+		return res.redirect('productMain');
       }
 }
