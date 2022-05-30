@@ -15,6 +15,7 @@ module.exports = {
             listProduct
         });
     },
+    
     courses : (req, res) => {
         return res.render('courses');
     },

@@ -11,10 +11,10 @@ const saveProducts = (products) => fs.writeFileSync(productsFilePath, JSON.strin
 
 module.exports = {
     panel: (req, res) => {
-        return res.render('admin/panel');
+        return res.render('panel');
     },
     create: (req, res) => {
-        return res.render('admin/create');
+        return res.render('create');
     },
     store: (req, res) => {
         let products = readProduct()
@@ -27,7 +27,7 @@ module.exports = {
             category: category,
             detail: detail.trim(),
             characteristics: characteristics.trim(),
-            default: req.file ? req.file.filename : 'default-image.png' ,
+            image: req.file ? req.file.filename : 'default-image.png' ,
         }
         products.push(oProducts);
         saveProducts(products);
@@ -42,7 +42,7 @@ module.exports = {
     },
     update: (req, res) => {
         let products = readProduct();
-        const { name, price, discount, category, detail, characteristics, image } = req.body;
+        const { name, price, discount, category, detail, characteristics, image, } = req.body;
         const product = products.find(product => product.id === +req.params.id);
         const updateProducts = products.map(product => {
             if (product.id === +req.params.id) {
@@ -54,7 +54,7 @@ module.exports = {
                     category: category,
                     detail: detail.trim(),
                     characteristics: characteristics.trim(),
-                    image: "default-image.png"
+                    image: req.file ? req.file.filename : 'default-image.png',
                 }
                 return updateProduct;
             }

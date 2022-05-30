@@ -23,7 +23,8 @@ module.exports = {
         const {id} = req.params;
         const product = listProduct.find(product => product.id === +id);
         res.render('productDetail', {
-            product
+            product,
+            listProduct
         });
     }
 }

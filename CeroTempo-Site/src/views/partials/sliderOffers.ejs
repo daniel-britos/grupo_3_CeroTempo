@@ -3,23 +3,23 @@
     <div class="offers-arrow">
         <i class="fas fa-arrow-left"></i>
     </div>
-<% listProduct.forEach(product => { %>  
-    <% if (product.preview === "on" && product.discount > 0) { %>
+<!--  listProduct.forEach(product => {   -->
+    <!--  if (product.discount >= 20) {  -->
     <article class="offers-1">
         <a href="/products/productDetail">
             <p>See Offer</p>
-            <img src="/images/instrumentos/<%= product.image %>" alt="">
+            <img src="/images/instrumentos/<%= listProduct.image %>" alt="">
         </a>
         <div class="foot-offers"> 
-            <h4 id="title-offers"><%= product.name %></h4>
+            <h4 id="title-offers"><%= listProduct.name %></h4>
             <div class="offers-data">
-                <p id="price">$<%= product.price %></p>    
-                <p id="discount"><%= product.discount %>% off</p>   
+                <p id="price">$<%= listProduct.price %></p>    
+                <p id="discount"><%= listProduct.discount %>% off</p>   
             </div>
         </div>
     </article>
-    <% }  %>
-    <% }) %>
+    <!--  }  -->
+     <!-- })  -->
     <div class="offers-arrow">
         <i class="fas fa-arrow-right"></i>
     </div>
