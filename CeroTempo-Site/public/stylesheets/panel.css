@@ -36,12 +36,6 @@
 .btn-create:hover{
     background-color: black;
 }
-.btn-edit {
-    border: 3px solid var(--orangeLogo);
-}
-.btn-edit:hover {
-    background-color: var(--orangeLogo);
-}
 .panel-logo {
     margin: 50px 0;
     width: 100%;

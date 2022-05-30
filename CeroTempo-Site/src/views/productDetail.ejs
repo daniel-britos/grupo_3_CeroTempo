@@ -2,10 +2,15 @@
 <html lang="en">
     <%- include('../partials/head') %> 
     <body>
-        <%- include('../partials/header') %> 
+        <%- include('./partials/header') %> 
         <main>
+            <div class="box-btn-detail">
+                <a href="/admin/edit/<%= product.id %>" class="btn-detail-edit">EDIT</a>
+                <form action="/admin/remove/<%= product.id %>?_method=DELETE" method="POST" class="form-delete">
+                    <button type="submit" class="btn-detail-delete">DELETE</button>
+                </form>
+            </div>
             <section class="pDetail-container">
-
                 <article class="pDetail-images-container">
                     <div class="pDetail-image">
                         <img class="pDetail-image-img" src="<%= product.image[0] %>" alt=" ">
@@ -35,9 +40,7 @@
                             <p class="pDetail-price">
                                 $ <%= product.price %>
                             </p>
-                        </div>
-        
-        
+                        </div>        
                         <div class="pDetail-buttons-container">
         
                             <div class="pDetail-counter">
@@ -68,17 +71,13 @@
                             </p>
                         </div>
                         <!-- logos container -->
-                        <div class="pDetail-payment-logos-container">
-        
+                        <div class="pDetail-payment-logos-container">        
                             <!-- credit -->
                             <div class="pDetail-credit-div">
                                 <p class="credit-p">
                                     Credit cards
                                 </p>
                                 <div class="pDetail-credit-logosContainer">
-        
-
-
                                     <div>
                                         <img class="pDetail-credit-logo" src="/images/icons-m/visad-m.png" alt="">
                                     </div>
@@ -89,19 +88,15 @@
         
                                     <div >
                                         <img class="pDetail-credit-logo"src="/images/icons-m/naranja-m.png" alt="">
-                                    </div>
-        
+                                    </div>        
                                 </div>
-                            </div>
-        
+                            </div>        
                             <!-- debit -->
                             <div class="pDetail-debit-div">
                                 <p class="debit-title">
                                     Debit cards
                                 </p>
-                                <div class="pDetail-debit-logosContainer">
-                                    
-                                    
+                                <div class="pDetail-debit-logosContainer">                                  
                                     <div >
                                         <img  class="pDetail-debit-logo" src="/images/icons-m/visad-m.png" alt="">
                                     </div>
@@ -145,16 +140,7 @@
                         </h4>
                         <div class="characteristic-list-container">
                             <ul class="pDetail-list">
-                                <li class="pDetail-list-item">Resplendent tone and great power.</li>
-                                <li class="pDetail-list-item">Made in Japan.</li>
-                                <li class="pDetail-list-item">Weight: 351kg.</li>
-                                <li class="pDetail-list-item">Dimensions: 200x153x102cm.</li>
-                                <li class="pDetail-list-item">Action Kawai Millennium Ultra Responsive Action Soundboard.
-                                </li>
-                                <li class="pDetail-list-item">solid fir</li>
-                                <li class="pDetail-list-item">Soft, full sustain and sustain pedals.</li>
-                                <li class="pDetail-list-item">Ebony Polish finishes.</li>
-                                <li class="pDetail-list-item">Dimensions 197 x 153 x 102 cm</li>
+                                <li class="pDetail-list-item"><%= product.characteristics %></li>
                             </ul>
                         </div>
                     </div>
@@ -165,29 +151,15 @@
                                 Description
                         </h4>                    
                         <p class="pDetail-description-text">
-                            For over 85 years, KAWAI has been the architect of the modern piano, not only for the ideas but
-                            for the state-of-the-art materials that revolutionized piano making.
-                        </p>
-                        <p class="pDetail-description-text">
-                            Today we can affirm that nine decades of experience and tradition gave rise to the excellent
-                            sound and pulsation. All this would be impossible to preserve and maintain for tomorrow without
-                            the renowned technology that characterizes KAWAI.
-                        </p>
-                        <p class="pDetail-description-text">
-                            This innovative spirit is the essence and the main reason KAWAI keeps a generation ahead in
-                            delivering outstanding and enduring performance.
-                        </p>
-                        <p class="pDetail-description-text">
-                            The GL series of grand pianos possess all the essential qualities that have made KAWAI pianos
-                            the favorite choice of pianists and teachers for generations.
+                            <%= product.detail %>
                         </p>
                     </div>
                 </article>
             </section>
             <hr class="pDetail-hr">
             <h2 class="pDetail-recommend-title">Recommended</h2>
-            <%- include('../partials/sliderOffers') %>
+            <%- include('./partials/sliderOffers') %>
         </main>
-        <%- include('../partials/footer') %> 
+        <%- include('./partials/footer') %> 
     </body>
 </html>

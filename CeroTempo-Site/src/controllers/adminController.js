@@ -1,3 +1,14 @@
+const fs = require('fs');
+const path = require('path');
+
+const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');
+
+const readProduct = () => {  
+	const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8')); 
+    return products
+}
+const saveProducts = (products) => fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 3))
+
 module.exports = {
     panel: (req, res) => {
         return res.render('admin/panel');

@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 
-const  {index, courses, luthiers, panel, create, edit} = require('../controllers/mainController');
+const  {index, courses, luthiers} = require('../controllers/mainController');
 
 /* GET home page. */
 router.get('/', index);

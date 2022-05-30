@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./partials/head') %> 
+<body>
+    <%- include('./partials/header') %>
+    <main class="main-admin">
+        <h2>ADD PRODUCT</h2>
+        <section class="main-form-create">
+            <form class="admin-form" action="/admin/create" method="POST">      
+                <div class="left-container">       
+                    <div class="admin-box">
+                        <label for="name">Product Title</label>
+                        <input type="text" name="name" id="">
+                        <span class="validation-text" hidden>Required Field</span>                
+                    </div>                
+                    <div class="admin-box">
+                        <label for="price">Price</label>
+                        <input type="number" name="price" id="">
+                        <span class="validation-text" hidden>Required Field</span>
+                    </div>
+                    <div class="admin-box">                    
+                        <label for="discount">Discount</label>
+                        <input type="number" name="discount" id="">
+                        <span class="validation-text" hidden>Required Field</span>            
+                    </div>
+                    <div class="admin-box box-description">
+                        <label for="detail">Description</label>
+                        <textarea name="detail" id="text-description" cols="30" rows="3" style="resize: none;"></textarea>                        
+                        <span class="validation-text" hidden>Required Field</span>
+                    </div>
+                    <div class="admin-box box-description">
+                        <label for="characteristics">characteristics</label>
+                        <textarea name="characteristics" id="text-description" cols="30" rows="3" style="resize: none;"></textarea>                        
+                        <span class="validation-text" hidden>Required Field</span>
+                    </div>
+                </div>
+                <div class="right-container">
+                    <div class="img-create-preview">
+                        <h2>PREVIEW</h2>
+                        <img src="/images/instrumentos/Cello/01/068.jpg" id="imgPreview" alt="">
+                    </div>
+                    <div class="into-admin-box">
+                        <div class="admin-box add-img">
+                            <label for="image">ADD IMAGE</label>
+                            <input type="file" name="image" id="imageProduct" accept="image/*">
+                            <span class="validation-text" hidden>Required Field</span>
+                        </div>   
+                        <div class="admin-box">
+                            <label for="category">Category</label>
+                            <select name="category" id="category-select">
+                                <option value="" hidden selected>...</option>
+                                <option value="strings">Strings</option>
+                                <option value="wind">Wind</option>
+                                <option value="percussion">Percussion</option>
+                                <option value="idiophones">Idiophones</option>
+                                <option value="electronics">Electronics</option>
+                            </select>
+                            <span class="validation-text" hidden>Required Field</span>
+                        </div>  
+                    </div>
+                    <div class="btn-send-create">
+                        <button type="submit">Send</button>
+                    </div>
+                </div>
+            </form>        
+        </section>
+        <%- include('./partials/footer') %>
+    </main>
+</body>
+</html>

@@ -214,6 +214,43 @@
     border: 1px solid #363636;
     width: 100%;
 }
+
+/* btns admin */
+.box-btn-detail {
+    text-align: center;
+    padding-top: 15px;
+}
+.btn-detail-delete {
+    border: 3px black solid;
+    color: black;
+    padding:4px 15px;
+    border-radius: 5px;
+    font-family: 'Anton', sans-serif;
+    font-weight: 100;
+    font-size: 18px;
+}
+.btn-detail-delete:hover {
+    background-color: black;
+    transition: all 0.5s;
+    transform: scale(1.1);
+    color: white;
+}
+.btn-detail-edit {
+    border: 3px black solid;
+    color: black;
+    padding:4px 15px;
+    border-radius: 5px;
+    font-family: 'Anton', sans-serif;
+    font-weight: 100;
+    font-size: 18px;
+}
+.btn-detail-edit:hover {
+    background-color: var(--orangeLogo);
+    transition: all 0.5s;
+    transform: scale(1.1);
+    color: white;
+}
+
 /* tablet */
 @media (min-width: 769px) {
     .pDetail-image-img {
