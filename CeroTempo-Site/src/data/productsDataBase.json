@@ -1,22 +1,91 @@
 [
    {
       "id": 1,
-      "name": "Cello Cremona 106",
-      "price": 123000,
+      "name": "nombre 1",
+      "price": 120000,
       "discount": 10,
-      "category": "strings",
-      "detail": "cello ancona madera maciza",
-      "characteristics": "macizo, cuerdas, microafinadrores",
-      "image": "default-image.png"
+      "category": 1,
+      "detail": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, quas laudantium? Consequatur iusto non natus! Nostrum id libero ipsum possimus repellat voluptate alias similique magnam, maiores labore? Et, quidem explicabo!",
+      "characteristics": [
+         "characteristic 1",
+         "characteristic 2",
+         "characteristic 3",
+         "characteristic 4",
+         "characteristic 5",
+         "characteristic 6",
+         "characteristic 7"
+      ],
+      "image": [
+         "/images/instrumentos/Afinador/01/001.jpg",
+         "/images/instrumentos/Afinador/01/002.jpg",
+         "/images/instrumentos/Afinador/01/003.jpg",
+         "/images/instrumentos/Afinador/01/004.jpg"
+      ]
    },
    {
       "id": 2,
-      "name": "Guitarra fender",
-      "price": 103000,
-      "discount": 10,
-      "category": "strings",
-      "detail": "Electric guitarr x4 mic",
-      "characteristics": "Made in China\r\nColor Blue",
+      "name": "nombre 2",
+      "price": 7000,
+      "discount": 0,
+      "category": 2,
+      "detail": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, quas laudantium? Consequatur iusto non natus! Nostrum id libero ipsum possimus repellat voluptate alias similique magnam, maiores labore? Et, quidem explicabo!",
+      "characteristics": [
+         "characteristic 1",
+         "characteristic 2",
+         "characteristic 3",
+         "characteristic 4",
+         "characteristic 5",
+         "characteristic 6",
+         "characteristic 7"
+      ],
+      "image": [
+         "/images/instrumentos/Amplificador/01/016.png",
+         "/images/instrumentos/Amplificador/01/017.png",
+         "/images/instrumentos/Amplificador/01/018.png",
+         "/images/instrumentos/Amplificador/01/019.jpg"
+      ]
+   },
+   {
+      "id": 3,
+      "name": "nombre 3",
+      "price": 80000,
+      "discount": 20,
+      "category": 3,
+      "detail": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, quas laudantium? Consequatur iusto non natus! Nostrum id libero ipsum possimus repellat voluptate alias similique magnam, maiores labore? Et, quidem explicabo!",
+      "characteristics": [
+         "characteristic 1",
+         "characteristic 2",
+         "characteristic 3",
+         "characteristic 4",
+         "characteristic 5",
+         "characteristic 6",
+         "characteristic 7"
+      ],
+      "image": [
+         "/images/instrumentos/Bajos/01/034.jpg",
+         "/images/instrumentos/Bajos/01/035.jpg",
+         "/images/instrumentos/Bajos/01/036.jpg",
+         "/images/instrumentos/Bajos/01/037.jpg"
+      ]
+   },
+   {
+      "id": 4,
+      "name": "producto_prueba",
+      "price": 20,
+      "discount": 50,
+      "category": "percussion",
+      "detail": "dgfdsag",
+      "characteristics": "nfgng\r\nhgf\r\ngfshsg",
+      "image": "default-image.png"
+   },
+   {
+      "id": 5,
+      "name": "gsdg",
+      "price": 12,
+      "discount": 61,
+      "category": "wind",
+      "detail": "jhsgfj",
+      "characteristics": "hgsfj",
       "image": "default-image.png"
    },
    {
