@@ -18,5 +18,45 @@
       "detail": "Electric guitarr x4 mic",
       "characteristics": "Made in China\r\nColor Blue",
       "image": "default-image.png"
+   },
+   {
+      "id": 3,
+      "name": "asdasd",
+      "price": 131231,
+      "discount": 11,
+      "category": "wind",
+      "detail": "asdasda",
+      "characteristics": "asdasds",
+      "image": "default-image.png"
+   },
+   {
+      "id": 4,
+      "name": "Piano Yammaha",
+      "price": 54000,
+      "discount": 10,
+      "category": "",
+      "detail": "Piano electrico re piola",
+      "characteristics": "made in china,\r\nnegro,\r\n1.5mt",
+      "image": "default-image.png"
+   },
+   {
+      "id": 5,
+      "name": "Triangulo Metalico",
+      "price": 3000,
+      "discount": 10,
+      "category": "",
+      "detail": "Triangulo melodico, inoxidable",
+      "characteristics": "made in USA\r\npalitos\r\nTriangulo\r\nFunda",
+      "image": "default-image.png"
+   },
+   {
+      "id": 6,
+      "name": "Afinador Digit Tuner Clip",
+      "price": 3200,
+      "discount": 10,
+      "category": "electronics",
+      "detail": "Detalles Rápidos\r\nLugar de Origen :\r\nGuangdong, China\r\nNombre de la marca :\r\nenlace\r\nNúmero de modelo :\r\nLK-JYY-001\r\nUso :\r\nGUITARRA\r\nTipo :\r\nSintonizador\r\nNombre del producto :\r\nAfinador de guitarra\r\nmodelo :\r\nAT-01A\r\nTamaño :\r\n48*73*28mm\r\nPeso :\r\n23g\r\nColor :\r\nNegro\r\nElementos de ajuste :\r\nCromático (C)/ Guitarra (G)/ Bajo (B)/ Ukulele (U)/ Violín (V)\r\nRango de tono :\r\n440Hz\r\nPrecisión de afinación :\r\n±0,5 céntimo\r\nFuente de alimentación :\r\n1 * batería CR2032 (no incluida)\r\nConjunto combinado ofrecido :",
+      "characteristics": "Elementos de ajuste :\r\nCromático (C)/ Guitarra (G)/ Bajo (B)/ Ukulele (U)/ Violín (V)\r\nRango de tono :\r\n440Hz\r\nPrecisión de afinación :\r\n±0,5 céntimo\r\nFuente de alimentación :\r\n1 * batería CR2032 (no incluida)\r\nConjunto combinado ofrecido :",
+      "image": "default-image.png"
    }
 ]
