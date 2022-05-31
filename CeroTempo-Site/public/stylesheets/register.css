@@ -1,35 +1,33 @@
-.form-r{
-    text-align: center;
-    padding-top: 10px;
-    
+
+.form-r {
+    margin: 30px 0;
 }
 .form-div{
+    display: flex;
     justify-content: center;
     align-items: center;
-    height: 50vh;
-    display: grid;
+    flex-direction: column;
+
 }
 .form-div div input {
     border-radius: 10px;
 }
 .sign-up{
+    display: flex;
     justify-content: center;
     align-items: center;
-    display: grid;
     text-align: center;
+    flex-direction: column;
 }
 
 .sign-up-p{
-    font-size: 33px;
+    font-size: 18px;
     align-content: flex-start;
 }
 .sign-up-button{
+    display: flex;
     justify-content: center;
     align-items: center;
-    display: grid;
-    text-align: center;
-    margin-top: 50px;
-    margin-bottom: 70px;
 }
 .sign-up-button button:hover {
     cursor: pointer;
@@ -37,17 +35,24 @@
     color: white;
 }
 .button-f{
+    display: flex;
     border-radius: 60px;
     justify-content: center;
     align-items: center;
-    display: grid;
     text-align: center;
     background-color: #FF6C3B;
     width: 100px;
     height: 30px;
-    margin-top: 40px;
 }
-
+.sign-up-terms {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 15px;
+}
+#terms {
+    margin-right: 10px;
+}
 #name,
 #surname,
 #birth,
@@ -65,7 +70,7 @@
 .email-l,
 .pass1-l,
 .pass2-l{
-    font-size: 15px;
+    font-size: 16px;
 }
 
 /* TABLET */
@@ -75,17 +80,16 @@
         align-content: flex-start;
     }
     .form-div{
+        display: flex;
         justify-content: center;
         align-items: center;
-        height: 60vh;
-        display: grid;
         flex-wrap: wrap;
     }
     .button-f{
+        display: flex;
         border-radius: 60px;
         justify-content: center;
         align-items: center;
-        display: grid;
         text-align: center;
         background-color: #FF6C3B;
         width: 150px;
@@ -93,43 +97,33 @@
     }
     #name,
     #surname,
-    #birth,
     #email,
     #pass1,
     #pass2{
         width: 300px;
         height: 20px;
     }
-
-    .name-l,
-    .surname-l,
-    .birth-l,
-    .email-l,
-    .pass1-l,
-    .pass2-l{
-        font-size: 23px;
+    #birth {
+        width: 150px;
+        height: 20px;
     }
 
 }
 
 /* DESKTOP */
 @media (min-width: 1024px){
-    .sign-up-p{
-        font-size: 60px;
-        align-content: flex-start;
-    }
+
     .form-div{
+        display: flex;
         justify-content: center;
         align-items: center;
-        height: 60vh;
-        display: grid;
         flex-wrap: wrap;
     }
     .button-f{
+        display: flex;
         border-radius: 60px;
         justify-content: center;
         align-items: center;
-        display: grid;
         text-align: center;
         background-color: #FF6C3B;
         width: 200px;
@@ -137,20 +131,10 @@
     }
     #name,
     #surname,
-    #birth,
     #email,
     #pass1,
     #pass2{
         width: 500px;
         height: 25px;
-    }
-
-    .name-l,
-    .surname-l,
-    .birth-l,
-    .email-l,
-    .pass1-l,
-    .pass2-l{
-        font-size: 37px;
     }
 }
