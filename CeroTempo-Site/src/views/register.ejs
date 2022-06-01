@@ -25,12 +25,17 @@
                         <label for="email" class="email-l">EMAIL</label>
                         <input type="email" id="email" name="userEmail"
                         value="<%= locals.old && old.userEmail ? old.userEmail : null %>" />
-                        <span class="register__text-error"><%= locals.errores && errores.userEmail ? errores.userEmail.msg : null %></span>
-                        
-                    </div>
+                        <span class="register__text-error"><%= locals.errores && errores.userEmail ? errores.userEmail.msg : null %></span>            
+                    </div>        
+
+
+
+
+                    
                     <div class="sign-up">
                         <label for="pass1" class="pass1-l">CREATE A PASSWORD</label>
                         <input type="text" id="pass1" name="userPass"
+                        
                         value="<%= locals.old && old.userPass ? old.userPass : null %>" />
                         <span class="register__text-error"><%= locals.errores && errores.userPass ? errores.userPass.msg : null %></span>
                     </div>

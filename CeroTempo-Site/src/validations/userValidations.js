@@ -1,18 +1,31 @@
 const {check, body} = require('express-validator');
-const usuarios = require('../data/userDataBase.json')
+const users = require('../data/userDataBase.json')
 
 module.exports = [
     check('userName')
-        .isLength({min: 2}).withMessage('El nombre debe contener al menos 2 letras').bail()
-        .isAlpha().withMessage('Introduzca un nombre..'),
+        .notEmpty().withMessage('This field is required').bail()
+        .isLength({min: 2}).withMessage('The field must contain at least two letters').bail()
+        .isAlpha().withMessage('Enter your name...'),
+
     check('userSurname')
-        .isLength({min: 2}).withMessage('El nombre debe contener al menos 2 letras').bail()
-        .isAlpha().withMessage('Introduzca un apellido..'),
-    check('userEmail')
-        .notEmpty().withMessage('Debes ingresar tu email').bail()
-        .isAlpha().withMessage('Introduzca un e-mail'),
-    check('userPass')
-        .isLength({min: 2}).withMessage('Como mínimo dos letras').bail()
-        .isAlpha().withMessage('Introduzca un password'),
+        .notEmpty().withMessage('This field is required').bail()
+        .isLength({min: 2}).withMessage('The field must contain at least two letters').bail()
+        .isAlpha().withMessage('Enter your name...'),
+
+    // check('userEmail')
+    //     .notEmpty().withMessage('This field is required').bail()
+    //     .isEmail().withMessage('Invalid..').bail()
+    //     .custom((value) => {
+    //         const user = users.find(user => user.userEmail === value);
+    //         if(user){
+    //             return false
+    //         }else{
+    //             return true
+    //         }
+    //     }).withMessage('e-mail in use..')
+
+    // check('userPass')
+    //     .isLength({min: 2}).withMessage('The field must contain at least two letters').bail()
+    //     .isAlpha().withMessage('Enter your password')
         
 ]

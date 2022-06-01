@@ -1,7 +1,7 @@
 const { validationResult } = require("express-validator");
 const fs = require("fs");
 const path = require("path");
-const usuarios = require('../data/userDataBase.json');
+const users = require('../data/userDataBase.json');
 
 module.exports = {
     register: (req, res) => {
@@ -14,9 +14,9 @@ module.exports = {
         let errors = validationResult(req); 
 
         if (errors.isEmpty()) {    
-          let { userName, userSurname } = req.body;
-          let lastID = usuarios.length !== 0 ? usuarios[usuarios.length - 1].id : 0;
-          let nuevoUsuario = {
+          let { userName, userSurname, userPass, userBirth } = req.body;
+          let lastID = users.length !== 0 ? users[users.length - 1].id : 0;
+          let newUser = {
             id: +lastID + 1,
             userName: userName.trim(),
             userSurname: userSurname.trim(),
@@ -26,11 +26,11 @@ module.exports = {
             avatar: req.file ? req.file.filename : "default-image-avatar.png"
           };
     
-          usuarios.push(nuevoUsuario);
+          users.push(newUser);
     
           fs.writeFileSync(
             path.resolve(__dirname, "..", "data", "userDataBase.json"),
-            JSON.stringify(usuarios, null, 3),
+            JSON.stringify(users, null, 3),
             "utf-8"
           );
         return res.redirect("/");
