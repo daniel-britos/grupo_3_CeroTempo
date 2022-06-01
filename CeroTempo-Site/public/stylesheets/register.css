@@ -48,7 +48,15 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
     margin: 15px;
+}
+.terms-box {
+    margin-bottom: 5px;
+}
+.alert-validation {
+    color: red;
+    font-weight: 600;
 }
 #terms {
     margin-right: 10px;

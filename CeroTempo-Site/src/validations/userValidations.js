@@ -33,6 +33,10 @@ module.exports = [
                 return false
             }
             return true
-        }).withMessage('The password does not match')
+        }).withMessage('The password does not match'),
 
+        
+    check('terms')
+        .isString('on')
+        .withMessage('You must agree to terms and conditions.')
 ]
