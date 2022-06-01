@@ -14,7 +14,7 @@ module.exports = {
         let errors = validationResult(req); 
 
         if (errors.isEmpty()) {    
-          let { userName, userSurname, userPass, userBirth } = req.body;
+          let { userName, userSurname, userPass, userBirth, userEmail } = req.body;
           let lastID = users.length !== 0 ? users[users.length - 1].id : 0;
           let newUser = {
             id: +lastID + 1,
