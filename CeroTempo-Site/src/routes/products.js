@@ -7,8 +7,6 @@ const {pCart, pDetail, pMain, pSearch} = require('../controllers/productControll
 router.get('/productMain', pMain);
 router.get('/productCart', pCart);
 router.get('/productDetail/:id', pDetail);
-
-/* Ruta nueva barra de busqueda */
 router.get("/search", pSearch);
 
 

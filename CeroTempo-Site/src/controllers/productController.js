@@ -27,8 +27,6 @@ module.exports = {
             listProduct
         });
     },
-    
-    /*  busqueda de productos por query string */
     pSearch: (req, res) => {
     const listProduct = readProduct();
     const { keyword } = req.query;
