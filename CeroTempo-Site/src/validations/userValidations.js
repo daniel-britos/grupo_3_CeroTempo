@@ -22,10 +22,17 @@ module.exports = [
             }else{
                 return true
             }
-        }).withMessage('e-mail in use..')
+        }).withMessage('e-mail in use..'),
 
-    // check('userPass')
-    //     .isLength({min: 2}).withMessage('The field must contain at least two letters').bail()
-    //     .isAlpha().withMessage('Enter your password')
-        
+    check('userPass')
+        .isLength({min: 6, max:12}).withMessage('The field must contain at least 6 and 12 letters').bail(),
+
+    check('userPassConfirm')
+        .custom((value,{req}) => {
+            if(value !== req.body.userPass){
+                return false
+            }
+            return true
+        }).withMessage('The password does not match')
+
 ]
