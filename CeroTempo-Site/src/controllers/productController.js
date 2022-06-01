@@ -26,5 +26,16 @@ module.exports = {
             product,
             listProduct
         });
-    }
+    },
+    
+    /*  busqueda de productos por query string */
+    pSearch: (req, res) => {
+    const listProduct = readProduct();
+    const { keyword } = req.query;
+    const result = listProduct.filter((product) => product.name.toLowerCase().includes(keyword.toLowerCase()));
+    res.render("search", {
+      products: result,
+      keyword,
+    });
+  }
 }
