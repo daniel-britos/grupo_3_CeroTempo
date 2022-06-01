@@ -5,12 +5,21 @@
             <a href="/">
                 <img src="/images/logo.png" alt="logo" class="header-logo">
             </a>
-            <div class="header-search-desktop">
-                <input type="text" placeholder="What are you looking for?">              
-                <button class="header-search-btn">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                </button>  
-            </div>
+            
+            <!-- Formulario de busqueda --> 
+            <!-- - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+            <ul>
+                <form action="/products/search" method="GET">
+                    <div>
+                        <input type="text" name="keyword" placeholder="What are you looking for?" />
+                        <button type="submit">Buscar</button>
+                    </div>
+                </form>
+            </ul>
+
+            <!-- - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
             <div class="header-icons">   
                 <span>
                     <a href="/admin/panel">
