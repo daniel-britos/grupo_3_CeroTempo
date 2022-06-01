@@ -7,5 +7,14 @@
       "userPass": "4414425",
       "userBirth": "1986-06-10",
       "avatar": "1654096612756_img.jpg"
+   },
+   {
+      "id": 2,
+      "userName": "prueba",
+      "userSurname": "prueba",
+      "userEmail": "prueba@prueba.com",
+      "userPass": "$2a$10$W3T51Bu.Ivg.xLp8bMx1ouNFKBwBLC20dRLcUuq5nOgLP38ry3uRu",
+      "userBirth": "2022-06-01",
+      "avatar": "default-image-avatar.png"
    }
 ]

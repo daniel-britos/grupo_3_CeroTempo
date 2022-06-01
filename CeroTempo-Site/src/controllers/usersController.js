@@ -1,5 +1,6 @@
 const { validationResult } = require("express-validator");
 const fs = require("fs");
+const bcryptjs = require('bcryptjs');
 const path = require("path");
 const users = require('../data/userDataBase.json');
 
@@ -29,7 +30,7 @@ module.exports = {
             userName: userName.trim(),
             userSurname: userSurname.trim(),
             userEmail,
-            userPass: userPass.trim(),
+            userPass: bcryptjs.hashSync(userPass.trim(), 10),
             userBirth,
             avatar: req.file ? req.file.filename : "default-image-avatar.png"
           };
