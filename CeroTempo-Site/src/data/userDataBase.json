@@ -1,3 +1,11 @@
 [
-
+   {
+      "id": 1,
+      "userName": "Daniel",
+      "userSurname": "Britos",
+      "userEmail": "danielbritospersonal@gmail.com",
+      "userPass": "4414425",
+      "userBirth": "1986-06-10",
+      "avatar": "1654096612756_img.jpg"
+   }
 ]

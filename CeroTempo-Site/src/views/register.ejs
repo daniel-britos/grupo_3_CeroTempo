@@ -47,9 +47,12 @@
                         <span class="alert-validation"><%= locals.errores && errores.userBirth ? errores.userBirth.msg : null %></span>
                     </div>
                     <div class="sign-up">
+                        <div>
+                            <img src="" alt="" id="imagePreview" style="height: 250px; width: 250px;"/>
+                        </div>
                         <label><b>Imagen de perfil:</b></label>
-                        <input type="file" name="avatar" class="form-control"
-                        value="<%= locals.old && old.avatar ? old.avatar : null %>" />
+                        <input id="imgCreate" type="file" name="avatar" class="form-control"
+                        value="<%= locals.old && old.avatar ? old.avatar : null %>"/>
                         <span class="alert-validation"><%= locals.errores && errores.avatar ? errores.avatar.msg : null %></span>
                     </div>
                     <div class="sign-up-terms">
@@ -68,5 +71,15 @@
             <!-- FOOTER -->
             <%- include('./partials/footer') %>
         </main>
+        <script>
+            	document.getElementById('imgCreate').addEventListener('change',(e)=> {
+                let reader = new FileReader();
+                reader.readAsDataURL(e.target.files[0])
+                reader.onload = () => {
+                    document.getElementById('imagePreview').src = reader.result
+                }
+                })
+
+        </script>
     </body>
 </html>

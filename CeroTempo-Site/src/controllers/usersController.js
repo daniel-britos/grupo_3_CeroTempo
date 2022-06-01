@@ -3,9 +3,17 @@ const fs = require("fs");
 const path = require("path");
 const users = require('../data/userDataBase.json');
 
+const usersFilePath = path.join(__dirname, '../data/userDataBase.json');
+
+const readUsers = () => {  
+	const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8')); 
+    return users
+}
+
 module.exports = {
     register: (req, res) => {
-        return res.render('register');
+      const readUser = readUsers();
+      return res.render('register');
     },
     login: (req, res) => {
         return res.render('login');
