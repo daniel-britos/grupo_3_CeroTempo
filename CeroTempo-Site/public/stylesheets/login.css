@@ -7,8 +7,8 @@
     background-color: white;
     display: flex;
     flex-direction: column;
-    width: 100%;
-    margin: 50px 0;
+    width: 80%;
+    margin: auto;
   }
   
   .l__main h1 {
@@ -18,7 +18,7 @@
     margin: 25px 0;
   }
   
-  .l__main h2 {
+  .l__main label {
     color: black;
     font-size: 20px;
     margin: 0 auto;
@@ -27,17 +27,25 @@
   
   .l__main__credentials {
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    margin-bottom: 25px;
+    align-items: center;
+    margin: 25px auto;
+    text-align: left;
   }
   
   .l__main__credentials__imput {
-    background-color: #ee9877;
-    width: 60%;
-    height: 25px;
-    border: none;
+    background-color: #ee9877!important;
+    width: 60%!important;
+    height: 25px!important;
+    border: none!important;
   }
-  
+  .l_maincredentials_remember{
+    display: flex;
+    justify-content: flex-start;
+    margin: auto;
+    width: 50%;
+  }
   .l__main__login {
     background-color: #ee9877;
     font-size: 20px;

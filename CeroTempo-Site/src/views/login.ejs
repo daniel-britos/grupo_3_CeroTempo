@@ -87,27 +87,35 @@
         </nav>
     </header>
     <main class="l__main">
-      <h1>¡hola de nuevo!</h1>
-      <div>
-        <h2>email</h2>
-        <div class="l__main__credentials">
-          <input class="l__main__credentials__imput" type="text" placeholder="Ingrese su email" />
-        </div>
-      </div>
-      <div>
-        <h2>contraseña</h2>
-        <div class="l__main__credentials">
-            <input class="l__main__credentials__imput" type="text" placeholder="Ingrese su contraseña" />
-        </div>
-      </div>
-      <button class="l__main__login">iniciar sesion</button>
-      <nav class="l__main__options">
-        <ul>
-          <li class="l__main__options__link"><a href="">no recuerdo mi contraseña</a></li>
-          <li class="l__main__options__link"><a href="">crear cuenta</a></li>
-        </ul>
-      </l__nav>
-      <p class="l__main__copyright">CeroTempo all rights reserved</p>
+        <form method="POST" action="../routes/users.js">
+            <h1>Welcome!</h1>
+
+            <div class="l_main_credentials">
+                <label for="email">email</label>
+                <input class="l_maincredentials_imput" type="email" id="email" name="email" placeholder="Please, enter your email" />
+            </div>
+            <small class="textDanger"><%= locals.errors && errors.email ? errors.email.msg : null %></small>
+            <div class="l_main_credentials">
+                <label for="nombre">contraseña</label>
+                <input class="l_maincredentials_imput" type="password" id="password" name="password" placeholder="Please, enter your password" />
+            </div>
+            <small class="text-danger"><%= locals.errors && errors.password ? errors.password.msg: null %> </small>
+
+            <div class="login__form-box login__center">
+                <input class="" type="checkbox" name="remember" id="remember">
+            <label for="remember">Remember me</label>
+
+            <button class="l_main_login">Login in</button>
+            <nav class="l_main_options">
+                <ul>
+                    <li class="l_mainoptions_link">
+                        <a href="">I don't remember my password</a>
+                    </li>
+                    <li class="l_mainoptions_link"><a href="">Register</a></li>
+                </ul>
+            </nav>
+            <p class="l_main_copyright">CeroTempo all rights reserved</p>
+        </form>
     </main>
         <!-- FOOTER -->
         <footer>
