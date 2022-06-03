@@ -30,7 +30,7 @@
                     </div> 
                     <div class="sign-up">
                         <label for="pass1" class="pass1-l">CREATE A PASSWORD</label>
-                        <input type="text" id="pass1" name="userPass"
+                        <input type="password" id="pass1" name="userPass"
                         value="<%= locals.old && old.userPass ? old.userPass : null %>" />
                         <span class="alert-validation"><%= locals.errores && errores.userPass ? errores.userPass.msg : null %></span>
                     </div>

@@ -72,3 +72,6 @@ module.exports = {
         return res.redirect('productMain');
     }
 }
+
+
+//falta el multer de productos con array.

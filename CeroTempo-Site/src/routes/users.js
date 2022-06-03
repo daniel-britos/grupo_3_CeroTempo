@@ -6,6 +6,7 @@ const path = require('path');
 
 const registerValidator = require('../validations/userValidations');
 const upload = require('../middlewares/uploadImagesAvatar');
+const loginValidator = require('../validations/loginValidation');
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
@@ -13,11 +14,12 @@ router.get('/', function(req, res, next) {
 });
 
 
-const {register, login, processRegister} = require('../controllers/usersController');
+const {register, login, processRegister, processLogin, } = require('../controllers/usersController');
 
 
 router.get('/register', register)
       .post('/register', upload.single('avatar'), registerValidator, processRegister)
-      .get('/login', login);
+      .get('/login', login)
+      .post('/login', loginValidator, processLogin);
 
 module.exports = router;

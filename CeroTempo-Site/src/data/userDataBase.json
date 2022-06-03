@@ -16,5 +16,25 @@
       "userPass": "$2a$10$W3T51Bu.Ivg.xLp8bMx1ouNFKBwBLC20dRLcUuq5nOgLP38ry3uRu",
       "userBirth": "2022-06-01",
       "avatar": "default-image-avatar.png"
+   },
+   {
+      "id": null,
+      "userName": "martin",
+      "userSurname": "martin",
+      "userEmail": "martintin@gmail.com",
+      "userPass": "$2a$10$h99VqtWIxJ2hADGVPt3rVOuJUjNbCgcGEsP64/R4L.8.Lx2FAHDAy",
+      "userBirth": "1981-06-15",
+      "avatar": "1654297962862_img.jpg",
+      "rol": "user"
+   },
+   {
+      "id": 1,
+      "userName": "julian",
+      "userSurname": "julia",
+      "userEmail": "julian@gmail.com",
+      "userPass": "$2a$10$FG1vRF6jMKzKWeg9S9sjaOlNbL9YUa2kXwignqW7yHGY3iD/qkc4W",
+      "userBirth": "1993-06-08",
+      "avatar": "1654298068564_img.jpg",
+      "rol": "user"
    }
 ]
