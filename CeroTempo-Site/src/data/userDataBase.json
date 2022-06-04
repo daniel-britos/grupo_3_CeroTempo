@@ -36,5 +36,25 @@
       "userBirth": "1993-06-08",
       "avatar": "1654298068564_img.jpg",
       "rol": "user"
+   },
+   {
+      "id": 2,
+      "userName": "martin",
+      "userSurname": "martin",
+      "userEmail": "martin@gmail.com",
+      "userPass": "$2a$10$rF.eZrBL0KPwO9Q5MGRTDu7Es4FaNEf56eXWHYGtCs7K7TBhfwqTG",
+      "userBirth": "1995-05-20",
+      "avatar": "1654369239885_img.jpg",
+      "rol": "user"
+   },
+   {
+      "id": 3,
+      "userName": "marcos",
+      "userSurname": "marcos",
+      "userEmail": "marcos@marcos.com",
+      "userPass": "$2a$10$K1PAyOtELZ6t9.tccsA8dOYX/rdFGw0G0uas40zoNT7b8MC9/5zey",
+      "userBirth": "1230-12-20",
+      "avatar": "1654376305087_img.jpg",
+      "rol": "user"
    }
 ]

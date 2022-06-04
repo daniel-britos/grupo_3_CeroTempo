@@ -32,7 +32,8 @@ module.exports = {
             userEmail,
             userPass: bcryptjs.hashSync(userPass.trim(), 10),
             userBirth,
-            avatar: req.file ? req.file.filename : "default-image-avatar.png"
+            avatar: req.file ? req.file.filename : "default-image-avatar.png",
+            rol: "user"
           };
     
           users.push(newUser);
