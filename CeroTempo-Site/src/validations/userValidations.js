@@ -27,13 +27,13 @@ module.exports = [
     check('userPass')
         .isLength({min: 6, max:12}).withMessage('The field must contain at least 6 and 12 letters').bail(),
 
-    check('userPassConfirm')
+    body('userPassConfirm') //cambie check por body
         .custom((value,{req}) => {
             if(value !== req.body.userPass){
                 return false
             }
             return true
-        }).withMessage('The password does not match'),
+        }).withMessage("The passwords don't match"),
 
         
     check('terms')
