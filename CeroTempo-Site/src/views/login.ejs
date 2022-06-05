@@ -9,13 +9,13 @@
             <h1>Welcome!</h1>
 
             <div class="l__main__credentials">
-                <label for="email">email</label>
+                <label for="email">Email</label>
                 <input class="l__main__credentials__imput" type="email" id="email" name="userEmail"
                     placeholder="Please, enter your email" />
             </div>
             <span class="login__text-error"><%= locals.errores && errores.userEmail ? errores.userEmail.msg : null %></span>
             <div class="l__main__credentials">
-                <label for="nombre">contraseña</label>
+                <label for="nombre">Password</label>
                 <input class="l__main__credentials__imput" type="password" id="password" name="userPass"
                     placeholder="Please, enter your password" />
             </div>
@@ -28,9 +28,15 @@
             <nav class="l__main__options">
                 <ul>
                     <li class="l__main__options__link">
-                        <a href="">I don't remember my password</a>
+                        <a href="#">
+                            I don't remember my password
+                        </a>
                     </li>
-                    <li class="l__main__options__link"><a href="">Register</a></li>
+                    <li class="l__main__options__link">
+                        <a href="/users/register">
+                            Register
+                        </a>
+                    </li>
                 </ul>
             </nav>
             <p class="l__main__copyright">CeroTempo all rights reserved</p>
