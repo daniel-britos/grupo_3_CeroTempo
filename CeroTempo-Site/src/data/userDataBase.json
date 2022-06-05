@@ -4,57 +4,19 @@
       "userName": "Daniel",
       "userSurname": "Britos",
       "userEmail": "danielbritospersonal@gmail.com",
-      "userPass": "4414425",
+      "userPass": "$2a$10$hGQbqSs9c33tHwZb4AJtt.dTiv/Hr0m.xYd79yiJf6VINdJM9Rnx2",
       "userBirth": "1986-06-10",
-      "avatar": "1654096612756_img.jpg"
+      "avatar": "1654445121238_img.jpg",
+      "rol": "admin"
    },
    {
       "id": 2,
-      "userName": "prueba",
-      "userSurname": "prueba",
-      "userEmail": "prueba@prueba.com",
-      "userPass": "$2a$10$W3T51Bu.Ivg.xLp8bMx1ouNFKBwBLC20dRLcUuq5nOgLP38ry3uRu",
-      "userBirth": "2022-06-01",
-      "avatar": "default-image-avatar.png"
-   },
-   {
-      "id": null,
-      "userName": "martin",
-      "userSurname": "martin",
-      "userEmail": "martintin@gmail.com",
-      "userPass": "$2a$10$h99VqtWIxJ2hADGVPt3rVOuJUjNbCgcGEsP64/R4L.8.Lx2FAHDAy",
-      "userBirth": "1981-06-15",
-      "avatar": "1654297962862_img.jpg",
-      "rol": "user"
-   },
-   {
-      "id": 1,
-      "userName": "julian",
-      "userSurname": "julia",
-      "userEmail": "julian@gmail.com",
-      "userPass": "$2a$10$FG1vRF6jMKzKWeg9S9sjaOlNbL9YUa2kXwignqW7yHGY3iD/qkc4W",
-      "userBirth": "1993-06-08",
-      "avatar": "1654298068564_img.jpg",
-      "rol": "user"
-   },
-   {
-      "id": 2,
-      "userName": "martin",
-      "userSurname": "martin",
-      "userEmail": "martin@gmail.com",
-      "userPass": "$2a$10$rF.eZrBL0KPwO9Q5MGRTDu7Es4FaNEf56eXWHYGtCs7K7TBhfwqTG",
-      "userBirth": "1995-05-20",
-      "avatar": "1654369239885_img.jpg",
-      "rol": "user"
-   },
-   {
-      "id": 3,
-      "userName": "marcos",
-      "userSurname": "marcos",
-      "userEmail": "marcos@marcos.com",
-      "userPass": "$2a$10$K1PAyOtELZ6t9.tccsA8dOYX/rdFGw0G0uas40zoNT7b8MC9/5zey",
-      "userBirth": "1230-12-20",
-      "avatar": "1654376305087_img.jpg",
+      "userName": "Clark",
+      "userSurname": "Kent",
+      "userEmail": "clarkent@gmail.com",
+      "userPass": "$2a$10$hGQbqSs9c33tHwZb4AJtt.dTiv/Hr0m.xYd79yiJf6VINdJM9Rnx2",
+      "userBirth": "1986-06-10",
+      "avatar": "1654445121238_img.jpg",
       "rol": "user"
    }
 ]

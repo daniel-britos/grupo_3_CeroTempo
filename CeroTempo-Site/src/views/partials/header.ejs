@@ -22,10 +22,12 @@
 
             <div class="header-icons">   
                 <span>
-                    <a href="/admin/panel">
-                        <p>Admin</p>
-                    </a>
-                    <i class="fa-solid fa-circle-exclamation"></i>
+                    <% if (locals.userLogin?.rol === "admin") { %>
+                        <a href="/admin/panel">
+                            <p>Admin</p>
+                        </a>
+                        <i class="fa-solid fa-circle-exclamation"></i>                     
+                    <% } %>
                 </span>                     
                 <span>
                     <a href="#contactUs">
@@ -40,16 +42,26 @@
                     <i class="fa-solid fa-cart-shopping"></i>
                 </span>
                 <span>
-                    <a href="/users/login">
-                        <p>Account</p>
-                    </a>
-                    <i class="fa-solid fa-user"></i>
+                    <% if (!locals.userLogin) { %>
+                        <a href="/users/login">
+                            <p>Login</p>
+                        </a>
+                        <i class="fa-solid fa-user"></i>                        
+                    <% }else { %> 
+                        <a href="#">
+                            <p>Welcome <%= userLogin.userName %>! | </p>
+                            <a href="/users/logout">
+                                <p>Logout</p>
+                            </a>
+                        </a>
+                        <i class="fa-solid fa-user"></i>  
+                    <% } %> 
                 </span>
             </div>
         </div>
         <!-- MENU -->
         <nav class="nav-menu">
-            <ul class="menu-horizontal">
+            <ul class="menu-horizontal"> 
                 <li><a href="/">Home</a></li>
                 <li><a href="#aboutUs">About us</a></li>
                 <li>

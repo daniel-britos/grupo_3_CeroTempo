@@ -65,14 +65,13 @@ module.exports = {
       );
       req.session.userLogin = {
         id,
-        userName,
-        rol,
+        userName : userName.trim(),
+        rol
       };
       if (req.body.remember) {
         res.cookie("CeroTempo", req.session.userLogin, {
           maxAge: 1000 * 60 * 2})
       }
-
       res.redirect("/");
 
     } else {

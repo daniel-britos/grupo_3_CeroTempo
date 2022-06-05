@@ -73,5 +73,3 @@ module.exports = {
     }
 }
 
-
-//falta el multer de productos con array.
