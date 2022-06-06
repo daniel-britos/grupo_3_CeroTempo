@@ -1,5 +1,6 @@
 const { validationResult } = require("express-validator");
 const fs = require("fs");
+const bcryptjs = require('bcryptjs');
 const path = require("path");
 const users = require('../data/userDataBase.json');
 
@@ -29,9 +30,10 @@ module.exports = {
             userName: userName.trim(),
             userSurname: userSurname.trim(),
             userEmail,
-            userPass: userPass.trim(),
+            userPass: bcryptjs.hashSync(userPass.trim(), 10),
             userBirth,
-            avatar: req.file ? req.file.filename : "default-image-avatar.png"
+            avatar: req.file ? req.file.filename : "default-image-avatar.png",
+            rol: "user"
           };
     
           users.push(newUser);
@@ -49,5 +51,40 @@ module.exports = {
                 old : req.body   
             });
         }
+    },
+
+  login: (req, res) => {
+    return res.render("login");
+  },
+
+  processLogin: (req, res) => {
+    const errors = validationResult(req);
+    if (errors.isEmpty()) {
+      const { id, userName, rol } = users.find(
+        user => user.userEmail === req.body.userEmail
+      );
+      req.session.userLogin = {
+        id,
+        userName : userName.trim(),
+        rol
+      };
+      if (req.body.remember) {
+        res.cookie("CeroTempo", req.session.userLogin, {
+          maxAge: 1000 * 60 * 2})
+      }
+      res.redirect("/");
+
+    } else {
+      return res.render("login", {
+        errores: errors.mapped(),
+        old: req.body
+      });
     }
-}
+  },
+  logout : (req,res) => {
+    req.session.destroy();
+    res.cookie('userCeroTempo',null,{maxAge : -1})
+    return res.redirect('/')
+  }
+
+};

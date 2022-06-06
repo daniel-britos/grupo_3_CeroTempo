@@ -4,8 +4,29 @@
       "userName": "Daniel",
       "userSurname": "Britos",
       "userEmail": "danielbritospersonal@gmail.com",
-      "userPass": "4414425",
+      "userPass": "$2a$10$hGQbqSs9c33tHwZb4AJtt.dTiv/Hr0m.xYd79yiJf6VINdJM9Rnx2",
       "userBirth": "1986-06-10",
-      "avatar": "1654096612756_img.jpg"
+      "avatar": "1654445121238_img.jpg",
+      "rol": "admin"
+   },
+   {
+      "id": 2,
+      "userName": "Clark",
+      "userSurname": "Kent",
+      "userEmail": "clarkent@gmail.com",
+      "userPass": "$2a$10$hGQbqSs9c33tHwZb4AJtt.dTiv/Hr0m.xYd79yiJf6VINdJM9Rnx2",
+      "userBirth": "1986-06-10",
+      "avatar": "1654445121238_img.jpg",
+      "rol": "user"
+   },
+   {
+      "id": 3,
+      "userName": "Belen",
+      "userSurname": "Teresa",
+      "userEmail": "teresabelen@gmail.com",
+      "userPass": "$2a$10$0f.7PU455ej0OgSULYaUQegMnBm5JtcMK8gIbCNnVO9A6A7ENhdXu",
+      "userBirth": "1950-12-08",
+      "avatar": "1654478407372_img.jpg",
+      "rol": "user"
    }
 ]

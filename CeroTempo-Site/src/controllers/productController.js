@@ -28,12 +28,12 @@ module.exports = {
         });
     },
     pSearch: (req, res) => {
-    const listProduct = readProduct();
-    const { keyword } = req.query;
-    const result = listProduct.filter((product) => product.name.toLowerCase().includes(keyword.toLowerCase()));
-    res.render("search", {
-      products: result,
-      keyword,
+        const listProduct = readProduct();
+        const { keyword } = req.query;
+        const result = listProduct.filter((product) => product.name.toLowerCase().includes(keyword.toLowerCase()));
+        res.render("search", {
+        products: result,
+        keyword,
     });
   }
 }

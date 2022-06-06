@@ -12,10 +12,9 @@ module.exports = {
     index : (req, res) => {
         const listProduct = readProduct()
         res.render('index', {
-            listProduct
-        });
+            listProduct    
+        })
     },
-    
     courses : (req, res) => {
         return res.render('courses');
     },
