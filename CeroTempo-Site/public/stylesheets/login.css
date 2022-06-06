@@ -6,7 +6,7 @@
     background-color: white;
     display: flex;
     flex-direction: column;
-    width: 80%;
+    width: 60%;
     margin: auto;
   }
   
@@ -34,24 +34,38 @@
   }
   
   .l__main__credentials__imput {
-    background-color: #ee9877!important;
     width: 60%!important;
     height: 25px!important;
     border: none!important;
+    background: var(--orangeLogo)!important;
+    color: white!important;
+    padding: 5px!important;
+    border-radius: 5px;
+    margin-bottom: 10px!important;
+    
+  }
+  .l__main__credentials__imput::placeholder {
+    color: white;
   }
   .l_main__credentials__remember{
     display: flex;
-    justify-content: flex-center;
+    justify-content: center;
     align-items: center;
     margin: auto;
     width: 60%;
   }
   .l_main__credentials__remember label{
-    margin-left: 5px;
+    margin: 0;
+    text-align: center;
+    width: 150px;
+  }
+  .l__text__errors{
+    color: rgb(255, 0, 0)!important;
+    
   }
 
   .l__main__login {
-    background-color: #ee9877;
+    background-color: var(--orangeLogo);
     font-size: 20px;
     display: flex;
     justify-content: center;
@@ -61,8 +75,16 @@
     margin: 25px auto;
     width: 40%;
     height: 30px;
+    color: white;
+
   }
-  
+  .l__main__login:hover {
+     background-color: black;
+     transition: all .5s;
+     transform: scale(1.2);
+
+  }
+
   .l__main__options {
     margin: 25px 0;
   }
@@ -75,6 +97,11 @@
   
   .l__main__copyright {
     display: none;
+  }
+  
+  .form-login{
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+    margin: 20px;
   }
   
   @media (min-width: 768px) {

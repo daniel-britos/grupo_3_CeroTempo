@@ -4,11 +4,11 @@ const users = require("../data/userDataBase.json");
 
 module.exports = [
   check("userEmail")
-    .notEmpty().withMessage("Please, enter your email").bail()
-    .isEmail().withMessage("Please, enter a valid email"),
+    .notEmpty().withMessage("Enter your email").bail()
+    .isEmail().withMessage("Invalid email"),
 
   check("userPass")
-    .notEmpty().withMessage("Please, enter your password").bail()
+    .notEmpty().withMessage("Enter your password").bail()
     .custom((value, { req }) => {
       const user = users.find((user) => user.userEmail === req.body.userEmail);
       if (!user) {

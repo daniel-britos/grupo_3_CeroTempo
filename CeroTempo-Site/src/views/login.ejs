@@ -5,26 +5,27 @@
     <%- include('./partials/header') %>
 
     <main class="l__main">
-        <form method="POST" action="">
+        <form class="form-login" method="POST" action="">
             <h1>Welcome!</h1>
-
             <div class="l__main__credentials">
                 <label for="email">Email</label>
                 <input class="l__main__credentials__imput" 
                 type="email" id="email" name="userEmail"
                     placeholder="Please, enter your email" />
+                    <span class="l__text__errors">
+                        <%= locals.errores && errores.userEmail ? errores.userEmail.msg : null %>
+                    </span>
             </div>
-            <span class="login__text-error"><%= locals.errores && errores.userEmail ? errores.userEmail.msg : null %></span>
             <div class="l__main__credentials">
                 <label for="nombre">Password</label>
                 <input class="l__main__credentials__imput" type="password" id="password" name="userPass"
                     placeholder="Please, enter your password" />
+                <span class="l__text__errors">
+                    <%= locals.errores && errores.userPass ? errores.userPass.msg : null %>.
+                </span>
             </div>
-            <span class="login__text-error">
-                <%= locals.errores && errores.userPass ? errores.userPass.msg : null %>.
-            </span>
             <button class="l__main__login">Login</button>
-            <div class="l__main__credentials__remember">
+            <div class="l_main__credentials__remember">
                 <input type="checkbox" name="remember" id="remember">
                 <label for="remember">Remember me</label>
             </div>
@@ -42,7 +43,6 @@
                     </li>
                 </ul>
             </nav>
-            <p class="l__main__copyright">CeroTempo all rights reserved</p>
         </form>
     </main>
 
