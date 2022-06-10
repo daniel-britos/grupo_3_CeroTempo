@@ -6,7 +6,7 @@ const multer = require('multer');
 
 const storage= multer.diskStorage({
     destination:(req,file,callback)=>{
-    callback(null,'public/images/instruments')
+    callback(null,'./public/images/instruments') //--------------------LE AGREGUE DOS PUNTITOS
 }, 
 filename: (req,file, callback)=>{
     callback(null, file.fieldname+'-'+ Date.now()+ path.extname(file.originalname))
@@ -20,7 +20,7 @@ const  {panel, create, edit, update, store, remove} = require('../controllers/ad
 
 router.get('/panel', panel);
 router.get('/create', create);
-router.post('/create', upload.array('image'), store);
+router.post('/create', upload.single('image'), store);
 router.get('/edit/:id', edit);
 router.put('/update/:id', upload.array('image'), update);
 router.delete('/remove/:id', remove);
