@@ -25,7 +25,7 @@ module.exports = {
         if(errors.isEmpty()){
             let { name, price, discount, category, detail, characteristics } = req.body;
             let lastID = products[products.length - 1].id;
-            let images = req.files.map((img) => img.filename);
+            let images = req.files.map((image) => image.filename);
             let newProduct = {
                 id: +lastID + 1,
                 name: name.trim(),
@@ -34,7 +34,7 @@ module.exports = {
                 category: category,
                 detail: detail.trim(),
                 characteristics: characteristics.trim(),
-                image: images.length > 0 ? images : ['default-image.png']
+                img: images.length > 0 ? images : ['default-image.png']
             };
             products.push(newProduct);
 
@@ -77,17 +77,17 @@ module.exports = {
                     category: category,
                     detail: detail.trim(),
                     characteristics: characteristics.trim(),
-                    image: req.file ? req.file.filename : product.image,
+                    img: req.file ? req.file.filename : product.img,
                 };
                 if(req.file){
                     if(
                         fs.existsSync(
-                            path.resolve(__dirname, "..", "public", "images", "instruments", product.image)
+                            path.resolve(__dirname, "..", "public", "images", "instruments", product.img)
                           ) &&
-                          product.image !== "default-image.png"
+                          product.img !== "default-image.png"
                     ){
                         fs.unlinkSync(
-                            path.resolve(__dirname, "..", "public", "images", "instruments", product.image)
+                            path.resolve(__dirname, "..", "public", "images", "instruments", product.img)
                           ); 
                     }
                 }

@@ -10,27 +10,27 @@ const readProduct = () => {
 
 module.exports = {
     pMain : (req, res) => {
-        const listProduct = readProduct()
+        const products = readProduct()
         res.render('productMain', {
-            listProduct
+            products,
         });
     },
     pCart : (req, res) => {
         res.render('productCart');
     },
     pDetail : (req, res) => {
-        const listProduct = readProduct()
+        const products = readProduct()
         const {id} = req.params;
-        const product = listProduct.find(product => product.id === +id);
+        const product = products.find(product => product.id === +id);
         res.render('productDetail', {
             product,
-            listProduct
+            products
         });
     },
     pSearch: (req, res) => {
-        const listProduct = readProduct();
+        const products = readProduct();
         const { keyword } = req.query;
-        const result = listProduct.filter((product) => product.name.toLowerCase().includes(keyword.toLowerCase()));
+        const result = products.filter((product) => product.name.toLowerCase().includes(keyword.toLowerCase()));
         res.render("search", {
         products: result,
         keyword,
