@@ -56,18 +56,21 @@ module.exports = {
 
     edit: (req, res) => {
         const {id} = req.params;
-        let product = products.find((product) => product.id === +id);
+        let product = products.find(
+        (product) => product.id === +id);
         return res.render('edit', {
-            product
+            product,
         });
     },
     update: (req, res) => {
         let errors = validationResult(req);
         if (errors.isEmpty()){
             const{id} = req.params;
-            const { name, price, discount, category, detail, characteristics} = req.body;
+            const { name, price, discount, category, detail, 
+                characteristics} = req.body;
         
-        const productsModify = products.map((product) => {
+        const productsModify = products.map(
+            (product) => {
             if(product.id === +id){
                 let productModify = {
                     ...product,
@@ -82,12 +85,12 @@ module.exports = {
                 if(req.file){
                     if(
                         fs.existsSync(
-                            path.resolve(__dirname, "..", "public", "images", "instruments", product.img)
+                            path.resolve(__dirname, "..", "..", "public", "images", "instruments", product.img)
                           ) &&
                           product.img !== "default-image.png"
                     ){
                         fs.unlinkSync(
-                            path.resolve(__dirname, "..", "public", "images", "instruments", product.img)
+                            path.resolve(__dirname, "..", "..", "public", "images", "instruments", product.img)
                           ); 
                     }
                 }
@@ -124,6 +127,11 @@ module.exports = {
           );
         // saveProducts(productsModify);
         return res.redirect('productMain');
-    }
+    },
+    list: (req, res) => {
+        return res.render("productMain", {
+          products,
+        });
+      },
 }
 

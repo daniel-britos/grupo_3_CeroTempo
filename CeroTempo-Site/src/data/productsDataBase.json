@@ -20,5 +20,93 @@
          "/images/instrumentos/Afinador/01/002.jpg",
          "/images/instrumentos/Afinador/01/003.jpg"
       ]
+   },
+   {
+      "id": 2,
+      "name": "nombre 1",
+      "price": 120000,
+      "discount": 10,
+      "category": 1,
+      "detail": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, quas laudantium? Consequatur iusto non natus! Nostrum id libero ipsum possimus repellat voluptate alias similique magnam, maiores labore? Et, quidem explicabo!",
+      "characteristics": [
+         "characteristic 1",
+         "characteristic 2",
+         "characteristic 3",
+         "characteristic 4",
+         "characteristic 5",
+         "characteristic 6",
+         "characteristic 7"
+      ],
+      "img": [
+         "/images/instrumentos/Afinador/01/001.jpg",
+         "/images/instrumentos/Afinador/01/002.jpg",
+         "/images/instrumentos/Afinador/01/003.jpg"
+      ]
+   },
+   {
+      "id": 3,
+      "name": "nombre 1",
+      "price": 120000,
+      "discount": 10,
+      "category": 1,
+      "detail": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, quas laudantium? Consequatur iusto non natus! Nostrum id libero ipsum possimus repellat voluptate alias similique magnam, maiores labore? Et, quidem explicabo!",
+      "characteristics": [
+         "characteristic 1",
+         "characteristic 2",
+         "characteristic 3",
+         "characteristic 4",
+         "characteristic 5",
+         "characteristic 6",
+         "characteristic 7"
+      ],
+      "img": [
+         "/images/instrumentos/Afinador/01/001.jpg",
+         "/images/instrumentos/Afinador/01/002.jpg",
+         "/images/instrumentos/Afinador/01/003.jpg"
+      ]
+   },
+   {
+      "id": 4,
+      "name": "nombre 1",
+      "price": 120000,
+      "discount": 10,
+      "category": 1,
+      "detail": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, quas laudantium? Consequatur iusto non natus! Nostrum id libero ipsum possimus repellat voluptate alias similique magnam, maiores labore? Et, quidem explicabo!",
+      "characteristics": [
+         "characteristic 1",
+         "characteristic 2",
+         "characteristic 3",
+         "characteristic 4",
+         "characteristic 5",
+         "characteristic 6",
+         "characteristic 7"
+      ],
+      "img": [
+         "/images/instrumentos/Afinador/01/001.jpg",
+         "/images/instrumentos/Afinador/01/002.jpg",
+         "/images/instrumentos/Afinador/01/003.jpg"
+      ]
+   },
+   {
+      "id": 5,
+      "name": "nombre 1",
+      "price": 120000,
+      "discount": 10,
+      "category": 1,
+      "detail": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, quas laudantium? Consequatur iusto non natus! Nostrum id libero ipsum possimus repellat voluptate alias similique magnam, maiores labore? Et, quidem explicabo!",
+      "characteristics": [
+         "characteristic 1",
+         "characteristic 2",
+         "characteristic 3",
+         "characteristic 4",
+         "characteristic 5",
+         "characteristic 6",
+         "characteristic 7"
+      ],
+      "img": [
+         "/images/instrumentos/Afinador/01/001.jpg",
+         "/images/instrumentos/Afinador/01/002.jpg",
+         "/images/instrumentos/Afinador/01/003.jpg"
+      ]
    }
 ]
