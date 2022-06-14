@@ -154,7 +154,7 @@
                     <% products.forEach(product => { %>              
                       <article>
                       <a href="productDetail/<%= product.id %>">
-                        <img src="/images/instrumentos/<%= product.image %>" alt="" />
+                        <img src="<%= product.img[0]%>" alt="" />
                       </a>
                       <div class="product-cards-info">
                         <h4 id="cards-title"><%= product.name %></h4>
