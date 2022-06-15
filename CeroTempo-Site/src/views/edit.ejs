@@ -11,33 +11,33 @@
                     <div class="admin-box">
                         <label for="name">Product Title</label>
                         <input type="text" name="name" id="" value="<%= product.name %> ">
-                        <span class="validation-text" hidden>Required Field</span>                
+                        <span class="validation-text" ><%= locals.errors && errors.name ? errors.name.msg : null%></span>                
                     </div>                
                     <div class="admin-box">
                         <label for="price">Price</label>
-                        <input type="number" name="price" id="" value="<%= product.price %>">
-                        <span class="validation-text" hidden>Required Field</span>
+                        <input type="number" name="price" id="price" value="<%= product.price %>">
+                        <span class="validation-text" ><%= locals.errors && errors.price ? errors.price.msg : null%></span>
                     </div>
                     <div class="admin-box">                    
                         <label for="discount">Discount</label>
-                        <input type="number" name="discount" id="" value="<%= product.discount %>">
-                        <span class="validation-text" hidden>Required Field</span>            
+                        <input type="number" name="discount" id="discount" value="<%= product.discount %>">
+                        <span class="validation-text" ><%= locals.errors && errors.discount ? errors.discount.msg : null%></span>            
                     </div>
                     <div class="admin-box box-description">
                         <label for="detail">Description</label>
                         <textarea name="detail" id="text-description" cols="30" rows="3" style="resize: none;"><%= product.detail %></textarea>                        
-                        <span class="validation-text" hidden>Required Field</span>
+                        <span class="validation-text" ><%= locals.errors && errors.detail ? errors.detail.msg : null%></span>
                     </div>
                     <div class="admin-box box-description">
                         <label for="characteristics">characteristics</label>
                         <textarea name="characteristics" id="text-description" cols="30" rows="3" style="resize: none;"><%= product.characteristics %></textarea>                        
-                        <span class="validation-text" hidden>Required Field</span>
+                        <span class="validation-text" ><%= locals.errors && errors.characteristics ? errors.characteristics.msg : null%></span>
                     </div>
                 </div>
                 <div class="right-container">
                     <div class="img-create-preview">
                         <h2>PREVIEW</h2>
-                        <img src="/images/instrumentos/<%= product.image %>" alt="">
+                        <img src="<%= product.image %>" alt="">
                     </div>
                     <div class="into-admin-box">
                         <div class="admin-box add-img">
@@ -55,7 +55,7 @@
                                 <option value="idiophones" <%= product.category === "idiophones" && "selected" %>  >Idiophones</option>
                                 <option value="electronics" <%= product.category === "electronics" && "selected" %>  >Electronics</option>
                             </select>
-                            <span class="validation-text" hidden>Required Field</span>
+                            <span class="validation-text">Required Field</span>
                         </div>  
                     </div>
                 </div>
@@ -64,7 +64,9 @@
                 </div>
             </form>        
         </section>
-        <%- include('./partials/footer') %> 
+        
     </main>
+    <%- include('./partials/footer') %>
+    
 </body>
 </html>

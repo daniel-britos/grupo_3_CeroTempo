@@ -1,12 +1,9 @@
 var express = require('express');
 var router = express.Router();
-
-const multer = require('multer');
-const path = require('path');
-
 const registerValidator = require('../validations/userValidations');
 const upload = require('../middlewares/uploadImagesAvatar');
 const loginValidator = require('../validations/loginValidation');
+const notLogin = require('../middlewares/notLogin');
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
@@ -17,9 +14,9 @@ router.get('/', function(req, res, next) {
 const {register, login, processRegister, processLogin, logout} = require('../controllers/usersController');
 
 
-router.get('/register', register)
+router.get('/register', notLogin, register)
       .post('/register', upload.single('avatar'), registerValidator, processRegister)
-      .get('/login', login)
+      .get('/login', notLogin, login)
       .post('/login', loginValidator, processLogin)
       .get('/logout', logout);
 
