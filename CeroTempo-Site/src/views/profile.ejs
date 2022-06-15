@@ -1,51 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-      <meta charset="UTF-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Profile</title>
-  </head>
-  <body>
+
+    <%- include('./partials/head',{
+        title : 'Profile'
+    })  %> 
+
+  <body class="profile">
       <h1>My Profile </h1>
-      <form method="POST" action="" > 
-        <div class="register-profile">
-          <div class="register-p">
-            <label class="label-edit" for="name">Name: </label>
-            <input class="input-form" type="text" id="name" name="name" >
+            <h3 class="profile-edit" for="name">Name: <%= userLogin.userName %> </h3>
+            <h3 class="profile-edit" for="surname">Surname:  <%= userLogin.userSurname %></h3>
+            <h3 class="profile-edit" for="email">Email:  <%= userLogin.userEmail %></h3>
+            <h3 class="profile-edit" for="date"> Date of Birth:  <%= userLogin.userBirth %></h3>
+            <h3 class="profile-edit" for="rol">Rol: <%= userLogin.rol %></h3>
+            <div class="img-create-preview">
+              <h2>PREVIEW</h2>
+              <img src="/images/users/<%= userLogin.avatar %> " id="" alt="">
           </div>
-          <div class="register-p">
-            <label class="label-edit" for="surname">Surname: </label>
-            <input class="input-form" type="text" id="surname" name="surname" >
-          </div>
-          <div class="register-p">
-            <label class="label-edit" for="email">Mail: </label>
-            <input class="input-form" type="email" id="email" name="email" >
-          </div>
-          <div class="register-p">
-            <label class="label-edit" for="date"> Date of Birth</label>
-            <input class="input-form" type="date" name="date" id="date"   >
-          </div>
-          <div class="register-p">
-            <label class="label-edit" for="role">Role</label>
-            <input class="input-form" type="text" name="text" id="role"  >
-            <div class="options">
-              <option value="u">User</option>
-              <option value="a">Admin</option>
-            </div>
-          </div>
-          <div class="register-p">
-            <label class="label-edit" for="avatar">Attach Avatar: </label>
-            <input class="input-form=" id="image" name="avatar" accept="image/*">
-          </div>
-          <div>
-            <img  src="" alt="" id="imgview">
-          </div>
-        </div>
+            <h3 class="profile-edit" for="avatar">Attach Avatar: </h3>
+            <img  src="/images/users/<%= userLogin.avatar %>" alt="<%= userLogin.avatar %> ">
         <div class="register-button">
-          <button type="submit" class="button-register">Save</button>
-          <button class="button-register"><a href="/">Cancel</a></button>  
+          <button type="button" class="button-register"><a href="/users/update">Edit</a></button>
+          <button type="button" class="profile-button"><a href="/">Home</a></button>
         </div>
-      </form>
   </body>
 </html>

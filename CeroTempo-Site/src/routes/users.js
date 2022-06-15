@@ -11,13 +11,15 @@ router.get('/', function(req, res, next) {
 });
 
 
-const {register, login, processRegister, processLogin, logout} = require('../controllers/usersController');
+const {register, login, processRegister, processLogin, logout, profile} = require('../controllers/usersController');
 
 
 router.get('/register', notLogin, register)
       .post('/register', upload.single('avatar'), registerValidator, processRegister)
       .get('/login', notLogin, login)
       .post('/login', loginValidator, processLogin)
-      .get('/logout', logout);
+      .get('/logout', logout)
+      .get('/profile', profile);
+
 
 module.exports = router;
