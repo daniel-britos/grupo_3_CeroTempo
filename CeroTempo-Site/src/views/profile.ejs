@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Profile</title>
+  </head>
+  <body>
+      <h1>My Profile </h1>
+      <form method="POST" action="" > 
+        <div class="register-profile">
+          <div class="register-p">
+            <label class="label-edit" for="name">Name: </label>
+            <input class="input-form" type="text" id="name" name="name" >
+          </div>
+          <div class="register-p">
+            <label class="label-edit" for="surname">Surname: </label>
+            <input class="input-form" type="text" id="surname" name="surname" >
+          </div>
+          <div class="register-p">
+            <label class="label-edit" for="email">Mail: </label>
+            <input class="input-form" type="email" id="email" name="email" >
+          </div>
+          <div class="register-p">
+            <label class="label-edit" for="date"> Date of Birth</label>
+            <input class="input-form" type="date" name="date" id="date"   >
+          </div>
+          <div class="register-p">
+            <label class="label-edit" for="date">Role</label>
+            <input class="input-form" type="date" name="date" id="date"  >
+            <div class="options">
+              <option value="u">User</option>
+              <option value="a">Admin</option>
+            </div>
+          </div>
+          <div class="register-p">
+            <label class="label-edit" for="avatar">Attach Avatar: </label>
+            <input class="input-form=" id="image" name="avatar" accept="image/*">
+          </div>
+          <div>
+            <img  src="" alt="" id="imgview">
+          </div>
+        </div>
+        <div class="register-button">
+          <button type="submit" class="button-register">Save</button>
+          <button class="button-register"><a href="/">Cancel</a></button>  
+        </div>
+      </form>
+  </body>
+</html>
