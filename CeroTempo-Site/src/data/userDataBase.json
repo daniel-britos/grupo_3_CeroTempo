@@ -18,5 +18,15 @@
       "userBirth": "1986-06-10",
       "avatar": "1654552171556_img.jpg",
       "rol": "admin"
+   },
+   {
+      "id": 3,
+      "userName": "prueba",
+      "userSurname": "prueba",
+      "userEmail": "prueba@prueba.com",
+      "userPass": "$2a$10$KLcbICrsNt04brioN4.1yugiAbEL0eqLHR4vYwIfH5Nwli8yNqOFW",
+      "userBirth": "2022-06-14",
+      "avatar": "default-image-avatar.png",
+      "rol": "user"
    }
 ]
