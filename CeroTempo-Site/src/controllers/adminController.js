@@ -128,10 +128,10 @@ module.exports = {
         // saveProducts(productsModify);
         return res.redirect('productMain');
     },
-    list: (req, res) => {
-        return res.render("productMain", {
-          products,
-        });
-      },
+    // list: (req, res) => {
+    //     return res.render("productMain", {
+    //       products,
+    //     });
+    //   },
 }
 

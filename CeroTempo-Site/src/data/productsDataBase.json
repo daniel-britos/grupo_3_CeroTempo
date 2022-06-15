@@ -16,9 +16,9 @@
          "characteristic 7"
       ],
       "img": [
-         "/images/instruments/electronics_a_afinador_01.jpg",
-         "/images/instruments/electronics_a_afinador_02.jpg",
-         "/images/instruments/electronics_a_afinador_03.jpg"
+         "electronics_a_afinador_01.jpg",
+         "electronics_a_afinador_02.jpg",
+         "electronics_a_afinador_03.jpg"
       ]
    },
    {
@@ -38,75 +38,23 @@
          "characteristic 7"
       ],
       "img": [
-         "/images/instruments/Afinador/01/001.jpg",
-         "/images/instruments/Afinador/01/002.jpg",
-         "/images/instruments/Afinador/01/003.jpg"
+         "electronics_c_amplificador_01.jpg",
+         "electronics_c_amplificador_03.jpg",
+         "electronics_c_amplificador_06.jpg"
       ]
    },
-   {
-      "id": 3,
-      "name": "nombre 4",
-      "price": 8000,
+{
+      "id": 6,
+      "name": "Productosnuevo",
+      "price": 12300,
       "discount": 10,
-      "category": 1,
-      "detail": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, quas laudantium? Consequatur iusto non natus! Nostrum id libero ipsum possimus repellat voluptate alias similique magnam, maiores labore? Et, quidem explicabo!",
-      "characteristics": [
-         "characteristic 1",
-         "characteristic 2",
-         "characteristic 3",
-         "characteristic 4",
-         "characteristic 5",
-         "characteristic 6",
-         "characteristic 7"
-      ],
+      "category": "percussion",
+      "detail": "afsafa",
+      "characteristics": "afasfas",
       "img": [
-         "/images/instruments/Afinador/01/001.jpg",
-         "/images/instruments/Afinador/01/002.jpg",
-         "/images/instruments/Afinador/01/003.jpg"
-      ]
-   },
-   {
-      "id": 4,
-      "name": "nombre 5",
-      "price": 6000,
-      "discount": 0,
-      "category": 1,
-      "detail": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, quas laudantium? Consequatur iusto non natus! Nostrum id libero ipsum possimus repellat voluptate alias similique magnam, maiores labore? Et, quidem explicabo!",
-      "characteristics": [
-         "characteristic 1",
-         "characteristic 2",
-         "characteristic 3",
-         "characteristic 4",
-         "characteristic 5",
-         "characteristic 6",
-         "characteristic 7"
-      ],
-      "img": [
-         "/images/instruments/Afinador/01/001.jpg",
-         "/images/instruments/Afinador/01/002.jpg",
-         "/images/instruments/Afinador/01/003.jpg"
-      ]
-   },
-   {
-      "id": 5,
-      "name": "nombre 6",
-      "price": 140000,
-      "discount": 10,
-      "category": 1,
-      "detail": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, quas laudantium? Consequatur iusto non natus! Nostrum id libero ipsum possimus repellat voluptate alias similique magnam, maiores labore? Et, quidem explicabo!",
-      "characteristics": [
-         "characteristic 1",
-         "characteristic 2",
-         "characteristic 3",
-         "characteristic 4",
-         "characteristic 5",
-         "characteristic 6",
-         "characteristic 7"
-      ],
-      "img": [
-         "/images/instruments/Afinador/01/001.jpg",
-         "/images/instruments/Afinador/01/002.jpg",
-         "/images/instruments/Afinador/01/003.jpg"
+         "1655242487332_img.jpg",
+         "1655242487334_img.jpg",
+         "1655242487336_img.jpg"
       ]
    }
 ]
