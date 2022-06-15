@@ -1,28 +1,18 @@
 var express = require('express');
 var router = express.Router();
+const productValidation = require('../validations/productValidation'); 
+const upload = require('../middlewares/uploadImagesProducts');
 
-const path = require('path');
-const multer = require('multer');
 
-const storage= multer.diskStorage({
-    destination:(req,file,callback)=>{
-    callback(null,'public/images/instruments')
-}, 
-filename: (req,file, callback)=>{
-    callback(null, file.fieldname+'-'+ Date.now()+ path.extname(file.originalname))
-}
-});
-
-const upload= multer({storage}); 
 
 const  {panel, create, edit, update, store, remove} = require('../controllers/adminController');
 
-
-router.get('/panel', panel);
-router.get('/create', create);
-router.post('/create', upload.array('image'), store);
-router.get('/edit/:id', edit);
-router.put('/update/:id', upload.array('image'), update);
-router.delete('/remove/:id', remove);
+router
+    .get('/panel', panel)
+    .get('/create', create)
+    .post('/create', upload.array('image'), productValidation, store)
+    .get('/edit/:id', edit)
+    .put('/update/:id', upload.single('image'),productValidation, update)
+    .delete('/remove/:id', remove)
 
 module.exports = router;

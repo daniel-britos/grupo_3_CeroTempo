@@ -5,33 +5,34 @@
     <%- include('./partials/header') %>
     <main>
       <div class="box-btn-detail">
-        <a href="/admin/edit/<%= product.id %>" class="btn-detail-edit">EDIT</a>
+        <a href="/admin/edit/<%= products.id %>" class="btn-detail-edit">EDIT</a>
         <form
-          action="/admin/remove/<%= product.id %>?_method=DELETE"
+          action="/admin/remove/<%= products.id %>?_method=DELETE"
           method="POST"
           class="form-delete"
         >
           <button type="submit" class="btn-detail-delete">DELETE</button>
         </form>
       </div>
+      <!-- products's details -->
       <section class="pDetail-container">
         <article class="pDetail-images-container">
           <div class="pDetail-image">
             <img
               class="pDetail-image-img"
-              src="<%= product.image[0] %>"
-              alt=" "
+              src="/images/instruments/<%= product.img[0] %>"
+              alt="<%= product.img[0] %>"
             />
           </div>
           <div class="pDetail-zoomImage-container">
             <div class="pDetail-zoomImage-items">
-              <img src="<%= product.image[1] %>" alt="photo of piano " />
+              <img src="/images/instruments/<%= product.img[0] %>" alt="<%= product.img[0] %> " />
             </div>
             <div class="pDetail-zoomImage-items">
-              <img src="<%= product.image[2] %>" alt="photo of piano " />
+              <img src="/images/instruments/<%= product.img[1] %>" alt="<%= product.img[1] %>" />
             </div>
             <div class="pDetail-zoomImage-items">
-              <img src="<%= product.image[3] %>" alt="photo of piano " />
+              <img src="/images/instruments/<%= product.img[2] %>" alt="<%= product.img[2] %>" />
             </div>
           </div>
         </article>
@@ -173,6 +174,7 @@
           </div>
         </article>
       </section>
+      <!-- end of products's details -->
       <hr class="pDetail-hr" />
       <h2 class="pDetail-recommend-title">Recommended</h2>
       <!-- OFERTAS -->
@@ -180,12 +182,12 @@
         <div class="offers-arrow">
           <i class="fas fa-arrow-left"></i>
         </div>
-        <% listProduct.forEach(product => { %> 
+        <% products.forEach(product => { %> 
         <%if (product.discount >= 20) {%>
         <article class="offers-1">
           <a href="/products/productDetail">
             <p>See Offer</p>
-            <img src="/images/instrumentos/<%= product.image %>" alt="" />
+            <img src="<%= product.img %>" alt="" />
           </a>
           <div class="foot-offers">
             <h4 id="title-offers"><%= product.name %></h4>

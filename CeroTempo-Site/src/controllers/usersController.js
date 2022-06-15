@@ -60,12 +60,16 @@ module.exports = {
   processLogin: (req, res) => {
     const errors = validationResult(req);
     if (errors.isEmpty()) {
-      const { id, userName, rol } = users.find(
+      const { id, userName, userSurname, userEmail, userBirth, avatar, rol } = users.find(
         user => user.userEmail === req.body.userEmail
       );
       req.session.userLogin = {
         id,
         userName : userName.trim(),
+        userSurname : userSurname.trim(),
+        userEmail : userEmail.trim(),
+        userBirth : userBirth,
+        avatar: req.file ? req.file.filename : "default-image-avatar.png",
         rol
       };
       if (req.body.remember) {
@@ -85,6 +89,12 @@ module.exports = {
     req.session.destroy();
     res.cookie('userCeroTempo',null,{maxAge : -1})
     return res.redirect('/')
-  }
-
+  },
+  profile: (req,res) => {
+    let users = readUsers();
+    const user = users.find(user => user.id === req.session.userLogin.id);
+    return res.render('profile', {
+      user
+    }) 
+  }  
 };

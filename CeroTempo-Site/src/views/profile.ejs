@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <%- include('./partials/head',{
+        title : 'Profile'
+    })  %> 
+
+  <body class="profile">
+      <h1>My Profile </h1>
+            <h3 class="profile-edit" for="name">Name: <%= userLogin.userName %> </h3>
+            <h3 class="profile-edit" for="surname">Surname:  <%= userLogin.userSurname %></h3>
+            <h3 class="profile-edit" for="email">Email:  <%= userLogin.userEmail %></h3>
+            <h3 class="profile-edit" for="date"> Date of Birth:  <%= userLogin.userBirth %></h3>
+            <h3 class="profile-edit" for="rol">Rol: <%= userLogin.rol %></h3>
+            <div class="img-create-preview">
+              <h2>PREVIEW</h2>
+              <img src="/images/users/<%= userLogin.avatar %> " id="" alt="">
+          </div>
+            <h3 class="profile-edit" for="avatar">Attach Avatar: </h3>
+            <img  src="/images/users/<%= userLogin.avatar %>" alt="<%= userLogin.avatar %> ">
+        <div class="register-button">
+          <button type="button" class="button-register"><a href="/users/update">Edit</a></button>
+          <button type="button" class="profile-button"><a href="/">Home</a></button>
+        </div>
+  </body>
+</html>
