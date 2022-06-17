@@ -26,5 +26,118 @@
          "1655413917227_img.jpg",
          "1655413917227_img.jpg"
       ]
+   },
+   {
+      "id": 3,
+      "name": "producto 3",
+      "price": 13000,
+      "discount": 30,
+      "category": "percussion",
+      "detail": "adfsafasfsafsaff fas ga fg fs g sg sfg sfg sf",
+      "characteristics": [
+         [
+            "safafafaasfgdsf gsfdgsdg gfsgwsgsd",
+            "hhrthtrht",
+            "hrshrthtr"
+         ]
+      ],
+      "img": [
+         "1655443993219_img.jpg",
+         "1655443993220_img.jpg",
+         "1655443993221_img.jpg"
+      ]
+   },
+   {
+      "id": 4,
+      "name": "producto 4",
+      "price": 14000,
+      "discount": 20,
+      "category": "strings",
+      "detail": "fdagdashgd  hgshsd sh sh shds hfhshrwh  hfshfshrwh  hrhrr",
+      "characteristics": [
+         [
+            "fadfgadh g r",
+            "sdgg gwregfwr gr  rgrwgwr",
+            " wrgrwfgwrgrwgwr",
+            " grwgwrgwr"
+         ]
+      ],
+      "img": [
+         "1655444070474_img.jpg",
+         "1655444070475_img.jpg",
+         "1655444070478_img.jpg"
+      ]
+   },
+   {
+      "id": 5,
+      "name": "producto 5",
+      "price": 15000,
+      "discount": 20,
+      "category": "strings",
+      "detail": "gsgsgsgsdgsda",
+      "characteristics": [
+         [
+            "gsgsdgsdgd",
+            "gsdgsdgsdg",
+            "sgsdgsdgsdg",
+            "sdgsdgsdgs"
+         ]
+      ],
+      "img": [
+         "1655444254940_img.jpg",
+         "1655444254943_img.jpg",
+         "1655444254946_img.jpg"
+      ]
+   },
+   {
+      "id": 6,
+      "name": "producto 8",
+      "price": 18000,
+      "discount": 10,
+      "category": "idiophones",
+      "detail": "fafgasfafas",
+      "characteristics": [
+         "dasfasfas",
+         "dasdasdsad",
+         "asdasdas",
+         ""
+      ],
+      "img": [
+         "1655444868109_img.jpg",
+         "1655444868111_img.jpg",
+         "1655444868113_img.jpg"
+      ]
+   },
+   {
+      "id": 7,
+      "name": "producto 14",
+      "price": 120000,
+      "discount": 10,
+      "category": "percussion",
+      "detail": "dasdsafasf",
+      "characteristics": [
+         "fasfasfas",
+         "fasfasfasf",
+         "fasfasfasfas"
+      ],
+      "img": [
+         "1655445520036_img.jpg",
+         "1655445520037_img.jpg",
+         "1655445520038_img.jpg"
+      ]
+   },
+   {
+      "id": 8,
+      "name": "producto 80",
+      "price": 12300,
+      "discount": 10,
+      "category": "strings",
+      "detail": "gwhsfhfdshfsh",
+      "characteristics": "hshsfhfsdhf\r\nhefshfhdfhfdh\r\nhdfhdfhdfhdfh",
+      "img": [
+         "1655489342472_img.jpg",
+         "1655489342474_img.jpg",
+         "1655489342476_img.jpg"
+      ]
    }
 ]
