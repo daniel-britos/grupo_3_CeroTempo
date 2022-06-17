@@ -22,18 +22,15 @@
               class="pDetail-image-img"
               src="/images/instruments/<%= product.img[0] %>"
               alt="<%= product.img[0] %>"
+              id="imgMaster"
             />
           </div>
           <div class="pDetail-zoomImage-container">
-            <div class="pDetail-zoomImage-items">
-              <img src="/images/instruments/<%= product.img[0] %>" alt="<%= product.img[0] %> " />
-            </div>
-            <div class="pDetail-zoomImage-items">
-              <img src="/images/instruments/<%= product.img[1] %>" alt="<%= product.img[1] %>" />
-            </div>
-            <div class="pDetail-zoomImage-items">
-              <img src="/images/instruments/<%= product.img[2] %>" alt="<%= product.img[2] %>" />
-            </div>
+            <% product.img.forEach(image => { %>
+              <div class="pDetail-zoomImage-items">
+                <img src="/images/instruments/<%= image %>" alt="<%= image %> " onclick="document.getElementById('imgMaster').src = this.src" />
+              </div>
+            <% }) %>
           </div>
         </article>
 
