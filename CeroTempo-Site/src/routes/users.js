@@ -12,7 +12,7 @@ router.get('/', function(req, res, next) {
 });
 
 
-const {register, login, processRegister, processLogin, logout, profile, updateProfile} = require('../controllers/usersController');
+const {register, login, processRegister, processLogin, logout, profile, update, processUpdateProfile} = require('../controllers/usersController');
 
 
 router.get('/register', inSession, register)
@@ -21,8 +21,8 @@ router.get('/register', inSession, register)
       .post('/login', loginValidator, processLogin)
       .get('/logout', logout)
       .get('/profile', profile)
-      .put('/update-profile',uploadImagesAvatar.single('avatar'), updateProfileValidator,updateProfile);
-      // .put('/update-profile', uploadImagesAvatar.single('avatar'), updateProfile);
+      .get('/update',update)
+      .put('/update-profile',uploadImagesAvatar.single('avatar'), updateProfileValidator,processUpdateProfile);
 
 
 module.exports = router;

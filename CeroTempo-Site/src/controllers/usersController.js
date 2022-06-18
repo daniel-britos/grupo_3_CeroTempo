@@ -97,8 +97,14 @@ module.exports = {
       user
     }) 
   },
-  updateProfile : (req,res) => {
-
+  update: (req,res) => {
+    let users = readUsers();
+    const user = users.find(user => user.id === req.session.userLogin.id);
+    return res.render('update', {
+      user
+    }) 
+  },
+  processUpdateProfile : (req,res) => {
     let errors = validationResult(req);
     if (errors.isEmpty()) {
       const {userName, userSurname, userBirth} = req.body
@@ -150,6 +156,5 @@ module.exports = {
             errors : errors.mapped()
           });
     }
-
   } 
 };
