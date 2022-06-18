@@ -96,5 +96,65 @@ module.exports = {
     return res.render('profile', {
       user
     }) 
-  }  
+  },
+  update: (req,res) => {
+    let users = readUsers();
+    const user = users.find(user => user.id === req.session.userLogin.id);
+    return res.render('update', {
+      user
+    }) 
+  },
+  processUpdateProfile : (req,res) => {
+    let errors = validationResult(req);
+    if (errors.isEmpty()) {
+      const {userName, userSurname, userBirth} = req.body
+      const {id} = users.find(user => user.id === req.session.userLogin.id );
+
+      const usersModify = users.map((user) => {
+        if (user.id === id) {
+          let userModify = {
+            ...user,
+            userName: userName.trim(),
+            userSurname : userSurname.trim(),
+            userBirth: userBirth,
+            avatar : req.file ? req.file.filename : "default-image-avatar.png",
+          };
+      
+          if (req.file) {
+            if (
+              fs.existsSync(
+                path.resolve(__dirname, "..", "public", "images", "users", user.avatar)
+              ) &&
+              user.avatar !== "default-image-avatar.png"
+            ) {
+              fs.unlinkSync(
+                path.resolve(__dirname, "..", "public", "images", "users", user.avatar)
+              );
+            }
+          }
+          return userModify;
+        }
+        return user;
+      });
+
+      fs.writeFileSync(
+        path.resolve(__dirname, "..", "data", "usersDataBase.json"),
+        JSON.stringify(usersModify, null, 3),
+        "utf-8"
+      );
+
+      req.session.userLogin = {
+        ...req.session.userLogin,
+        userName
+      }
+
+      return res.redirect("/");
+    }else{
+        console.log(errors);
+        return res.render("profile", {
+            user : req.body,
+            errors : errors.mapped()
+          });
+    }
+  } 
 };
