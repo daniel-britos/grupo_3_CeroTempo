@@ -12,7 +12,7 @@ router
     .get('/create', create)
     .post('/create', upload.array('image'), productValidation, store)
     .get('/edit/:id', edit)
-    .put('/update/:id', upload.single('image'),productValidation, update)
+    .put('/update/:id', upload.single('image'), productValidation, update)
     .delete('/remove/:id', remove)
 
 module.exports = router;

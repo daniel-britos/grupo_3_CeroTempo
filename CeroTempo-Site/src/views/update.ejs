@@ -38,11 +38,9 @@
                         <span class="alert-validation"><%= locals.errores && errores.userBirth ? errores.userBirth.msg : null %></span>
                     </div>
 
-
-
                     <div class="sign-up">
                         <div>
-                            <img src="" alt="" id="imagePreview" style="height: 250px; width: 250px;"/>
+                            <img src="/images/users/<%= user.avatar %> " alt="" id="imagePreview" style="height: 250px; width: 250px;"/>
                         </div>
                         <label><b>Imagen de perfil:</b></label>
                         <input id="imgCreate" type="file" name="avatar" class="form-control"

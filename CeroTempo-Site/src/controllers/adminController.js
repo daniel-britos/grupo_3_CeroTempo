@@ -8,11 +8,9 @@ module.exports = {
         return res.render('panel');
     },
 
-
     create: (req, res) => {
         return res.render('create');
     },
-
 
     store: (req, res) => {
         let errors = validationResult(req);
@@ -110,12 +108,12 @@ module.exports = {
 
     remove: (req, res) => {
         const { id } = req.params;
-        const productFilter= products.filter((product) => product.id !== +id);
+        const productFilter = products.filter((product) => product.id !== +id);
         fs.writeFileSync(
             path.resolve(__dirname, "..", "data", "productsDataBase.json"),
             JSON.stringify(productFilter, null, 3),
             "utf-8"
           );
         return res.redirect('productMain');
-    },
+    }
 }

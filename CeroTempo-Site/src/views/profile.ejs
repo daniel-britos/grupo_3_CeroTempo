@@ -13,11 +13,10 @@
             <h3 class="profile-edit" for="date"> Date of Birth:  <%= userLogin.userBirth %></h3>
             <h3 class="profile-edit" for="rol">Rol: <%= userLogin.rol %></h3>
             <div class="img-create-preview">
-              <h2>PREVIEW</h2>
-              <img src="/images/users/<%= userLogin.avatar %> " id="" alt="">
+              <h2>User avatar</h2>
+              <img src="/images/users/<%= user.avatar %>" id="" alt="" style="height: 300px; width: 300px;">
           </div>
             <h3 class="profile-edit" for="avatar">Attach Avatar: </h3>
-            <img  src="/images/users/<%= userLogin.avatar %>" alt="<%= userLogin.avatar %> ">
         <div class="register-button">
           <button type="button" class="button-register"><a href="/users/update">Edit</a></button>
           <button type="button" class="profile-button"><a href="/">Home</a></button>

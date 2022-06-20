@@ -1,19 +1,5 @@
 [
    {
-      "id": 1,
-      "name": "producto 1",
-      "price": 1200,
-      "discount": 10,
-      "category": "idiophones",
-      "detail": "asfasfasfa",
-      "characteristics": "fasfasfsafas\r\nfasfasfasf\r\nsafasfas",
-      "img": [
-         "1655413695795_img.jpg",
-         "1655413695796_img.jpg",
-         "1655413695799_img.jpg"
-      ]
-   },
-   {
       "id": 2,
       "name": "producto 1",
       "price": 1000,

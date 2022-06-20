@@ -11,12 +11,12 @@
    },
    {
       "id": 2,
-      "userName": "Bruce",
-      "userSurname": "Wayne",
-      "userEmail": "batmanforever@gmail.com",
-      "userPass": "$2a$10$2ZOCkeaCtLU1vgovGgiyquV7OKIejoQzEduLcWELd7lJcyfvflrQG",
+      "userName": "Clark",
+      "userSurname": "Kent",
+      "userEmail": "clarkent@gmail.com",
+      "userPass": "$2a$10$JZ1/owAwoN/.y8XOv5imT.hxcBNfvNUxTVlNh/KPLQvalMCzPJsO6",
       "userBirth": "1986-06-10",
-      "avatar": "1654552171556_img.jpg",
-      "rol": "admin"
+      "avatar": "1655740343910_img.jpg",
+      "rol": "user"
    }
 ]
