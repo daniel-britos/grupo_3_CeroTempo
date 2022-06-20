@@ -160,9 +160,11 @@
             <h4 class="pDetail-characteristic-title">Characteristic</h4>
             <div class="characteristic-list-container">
               <ul class="pDetail-list">
-                <li class="pDetail-list-item">
-                  <%= product.characteristics %>
-                </li>
+                <ul class="pDetail-list">
+                  <% for(var i = 1; i < product.characteristics.length-1; i++ ) { %>
+                      <li class="pDetail-list-item"><%= product.characteristics[i] %></li>
+                   <% } %>
+              </ul>            
               </ul>
             </div>
           </div>

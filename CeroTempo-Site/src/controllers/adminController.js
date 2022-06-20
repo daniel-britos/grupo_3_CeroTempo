@@ -17,9 +17,10 @@ module.exports = {
     store: (req, res) => {
         let errors = validationResult(req);
         if(errors.isEmpty()){
-            let { name, price, discount, category, detail, characteristics } = req.body;
+            let { name, price, discount, category, detail} = req.body;
             let lastID = products[products.length - 1].id;
             let images = req.files.map((image) => image.filename);
+            let characteristicsArray = JSON.stringify(req.body.characteristics)
             let newProduct = {
                 id: +lastID + 1,
                 name: name.trim(),
@@ -27,7 +28,7 @@ module.exports = {
                 discount: +discount,
                 category: category,
                 detail: detail.trim(),
-                characteristics: characteristics.trim(),
+                characteristics: characteristicsArray.trim().split(','),
                 img: images.length > 0 ? images : ['default-image.png']
             };
             products.push(newProduct);

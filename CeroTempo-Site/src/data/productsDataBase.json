@@ -139,5 +139,250 @@
          "1655489342474_img.jpg",
          "1655489342476_img.jpg"
       ]
+   },
+   {
+      "id": 9,
+      "name": "producto82",
+      "price": 12000,
+      "discount": 10,
+      "category": "idiophones",
+      "detail": "afasasfsa",
+      "characteristics": [
+         "\"sadsafasf",
+         "sfasafasf",
+         "fasfasff\""
+      ],
+      "img": [
+         "1655569418875_img.jpg",
+         "1655569418876_img.jpg",
+         "1655569418877_img.jpg"
+      ]
+   },
+   {
+      "id": 10,
+      "name": "producto 93",
+      "price": 12000,
+      "discount": 10,
+      "category": "electronics",
+      "detail": "FJDJFGJFJFGJ",
+      "characteristics": [
+         "\"DJFSDJDGJDG",
+         "HSRHRU",
+         "DURSUER\""
+      ],
+      "img": [
+         "1655606924006_img.jpg",
+         "1655606924007_img.jpg",
+         "1655606924008_img.jpg"
+      ]
+   },
+   {
+      "id": 11,
+      "name": "PRODUCTO 94",
+      "price": 12000,
+      "discount": 10,
+      "category": "electronics",
+      "detail": "ADYHAYAEYARY",
+      "characteristics": [
+         "\"",
+         "HFDHDFHDFH",
+         "YHRSDYRY",
+         "RYREYRY",
+         "\""
+      ],
+      "img": [
+         "1655607025523_img.jpg",
+         "1655607025524_img.jpg",
+         "1655607025525_img.jpg"
+      ]
+   },
+   {
+      "id": 12,
+      "name": "PRODUCTO 96",
+      "price": 12000,
+      "discount": 12,
+      "category": "idiophones",
+      "detail": "FSAGADGADGADGDA",
+      "characteristics": [
+         "\"",
+         "GADGDAGADG",
+         "FAFASFASFSAF",
+         "DGADGDAG",
+         "\""
+      ],
+      "img": [
+         "1655607123149_img.jpg",
+         "1655607123151_img.jpg",
+         "1655607123154_img.jpg"
+      ]
+   },
+   {
+      "id": 13,
+      "name": "producto 95",
+      "price": 20000,
+      "discount": 20,
+      "category": "idiophones",
+      "detail": "safdsafasfasfas",
+      "characteristics": [
+         "\"fasfasfasfasf",
+         "dasdasdsadsad",
+         "dasdsadsadsad",
+         "\""
+      ],
+      "img": [
+         "1655607235152_img.jpg",
+         "1655607235153_img.jpg",
+         "1655607235155_img.jpg"
+      ]
+   },
+   {
+      "id": 14,
+      "name": "PRODUCTO 97",
+      "price": 120000,
+      "discount": 10,
+      "category": "electronics",
+      "detail": "gdgsdgdsgzsdgzdg",
+      "characteristics": [
+         "\"",
+         "gsdgdsgdg",
+         "dfhfdhdfhfd",
+         "hfdhfdhdfh",
+         "\""
+      ],
+      "img": [
+         "1655608124192_img.jpg",
+         "1655608124193_img.jpg",
+         "1655608124196_img.jpg"
+      ]
+   },
+   {
+      "id": 15,
+      "name": "producto 100",
+      "price": 30000,
+      "discount": 20,
+      "category": "electronics",
+      "detail": "asdsadsadsadsa",
+      "characteristics": [
+         "\"",
+         "asdasdasdsad",
+         "dsadsdsad",
+         "dsadasdas",
+         "\""
+      ],
+      "img": [
+         "1655609988020_img.png",
+         "1655609988022_img.jpg",
+         "1655609988023_img.jpg"
+      ]
+   },
+   {
+      "id": 16,
+      "name": "producto 105",
+      "price": 15000,
+      "discount": 15,
+      "category": "electronics",
+      "detail": "asdsafsafasfas",
+      "characteristics": [
+         "\"fafafasfasf",
+         "fasfasfasfasfs",
+         "fsafsafasfas\""
+      ],
+      "img": [
+         "1655688826200_img.jpg",
+         "1655688826201_img.jpg",
+         "1655688826202_img.jpg"
+      ]
+   },
+   {
+      "id": 17,
+      "name": "producto 106",
+      "price": 13000,
+      "discount": 10,
+      "category": "electronics",
+      "detail": "asfasfsafsafsa",
+      "characteristics": [
+         "\"char 1",
+         "char 2",
+         "char 3\""
+      ],
+      "img": [
+         "1655689890797_img.jpg",
+         "1655689890799_img.jpg",
+         "1655689890801_img.jpg"
+      ]
+   },
+   {
+      "id": 18,
+      "name": "producto 110",
+      "price": 12000,
+      "discount": 10,
+      "category": "idiophones",
+      "detail": "dsadasdasdsad",
+      "characteristics": [
+         "\"asdasdasd",
+         "adasdsadasdsa",
+         "dasdsadsa\""
+      ],
+      "img": [
+         "1655690203910_img.jpg",
+         "1655690203921_img.jpg",
+         "1655690203922_img.jpg"
+      ]
+   },
+   {
+      "id": 19,
+      "name": "prod 120",
+      "price": 12000,
+      "discount": 10,
+      "category": "percussion",
+      "detail": "asdsaasdsasadsa dsadfasfsaf sfsafasfas fsafsafasf",
+      "characteristics": [
+         "\"",
+         "asdasdasdas",
+         "dasdasdsadsad",
+         "dsadsadsad",
+         "\""
+      ],
+      "img": [
+         "1655691663302_img.jpg",
+         "1655691663304_img.jpg",
+         "1655691663305_img.jpg"
+      ]
+   },
+   {
+      "id": 20,
+      "name": "producto 130",
+      "price": 30000,
+      "discount": 30,
+      "category": "idiophones",
+      "detail": "DASDSADFASFASFSAF",
+      "characteristics": [
+         "\"",
+         "FASFASFAS",
+         "FASFSAFSAFSAF",
+         "FSAFAFAFASF",
+         "\""
+      ],
+      "img": [
+         "1655691816424_img.jpg",
+         "1655691816424_img.jpg",
+         "1655691816425_img.jpg"
+      ]
+   },
+   {
+      "id": 21,
+      "name": "producto 140",
+      "price": 14000,
+      "discount": 10,
+      "category": "strings",
+      "detail": "dasdasdas dasds",
+      "characteristics": [
+         "\"dasdasdasdasd\\r\\ndsadsadasdasdsa\\r\\ndasdsadsadsadsad\\r\\nerfeewgegsdgds\\r\\nffdsfdsfdsfds\""
+      ],
+      "img": [
+         "1655692312659_img.jpg",
+         "1655692312660_img.jpg",
+         "1655692312661_img.jpg"
+      ]
    }
 ]
