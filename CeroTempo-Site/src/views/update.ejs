@@ -22,15 +22,6 @@
                         value="<%= userLogin.userSurname %>" />
                         <span class="alert-validation"><%= locals.errores && errores.userSurname ? errores.userSurname.msg : null %></span>
                     </div>
-
-                    <!-- <div class="sign-up">
-                        <label for="email" class="email-l">EMAIL</label>
-                        <input type="email" id="email" name="userEmail"
-                        class="//<%= locals.errores && errores.userEmail ? 'is-invalid' : null %>"
-                        value="<%= userLogin.userEmail %>" />
-                        <span class="alert-validation"><%= locals.errores && errores.userEmail ? errores.userEmail.msg : null %></span>            
-                    </div>  -->
-
                     <div class="sign-up">
                         <label for="birth" class="birth-l">DATE OF BIRTH</label>
                         <input type="date" id="birth" name="userBirth"
@@ -51,7 +42,7 @@
                     </div>
 
                     <div class="sign-up-button">
-                        <button type="submit" class="button-f" >Save</button>
+                        <button type="submit" class="button-f">Save</button>
                     <a href="/">
                         <button type="button" class="button-f">Cancel</button>
                     </a>

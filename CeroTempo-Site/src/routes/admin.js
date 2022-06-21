@@ -5,7 +5,7 @@ const upload = require('../middlewares/uploadImagesProducts');
 
 
 
-const  {panel, create, edit, update, store, remove} = require('../controllers/adminController');
+const  {panel, create, edit, update, store, remove, list} = require('../controllers/adminController');
 
 router
     .get('/panel', panel)
@@ -14,5 +14,6 @@ router
     .get('/edit/:id', edit)
     .put('/update/:id', upload.single('image'),productValidation, update)
     .delete('/remove/:id', remove)
+    .get('/list', list)
 
 module.exports = router;

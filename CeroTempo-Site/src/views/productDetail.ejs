@@ -1,207 +1,183 @@
 <!DOCTYPE html>
 <html lang="en">
-  <%- include('./partials/head') %>
+<%- include('./partials/head') %>
+
   <body>
     <%- include('./partials/header') %>
-    <main>
-      <div class="box-btn-detail">
-        <a href="/admin/edit/<%= products.id %>" class="btn-detail-edit">EDIT</a>
-        <form
-          action="/admin/remove/<%= products.id %>?_method=DELETE"
-          method="POST"
-          class="form-delete"
-        >
-          <button type="submit" class="btn-detail-delete">DELETE</button>
-        </form>
-      </div>
-      <!-- products's details -->
-      <section class="pDetail-container">
-        <article class="pDetail-images-container">
-          <div class="pDetail-image">
-            <img
-              class="pDetail-image-img"
-              src="/images/instruments/<%= product.img[0] %>"
-              alt="<%= product.img[0] %>"
-              id="imgMaster"
-            />
-          </div>
-          <div class="pDetail-zoomImage-container">
-            <% product.img.forEach(image => { %>
-              <div class="pDetail-zoomImage-items">
-                <img src="/images/instruments/<%= image %>" alt="<%= image %> " onclick="document.getElementById('imgMaster').src = this.src" />
-              </div>
-            <% }) %>
-          </div>
-        </article>
-
-        <!-- ************** product title, price,buttons ************** -->
-        <article class="pDetail-buy-payment-container">
-          <div class="pDetail-buy-container">
-            <div class="pDetail-title-container">
-              <h3 class="pDetail-title"><%= product.name %></h3>
+      <main>
+        <div class="box-btn-detail">
+          <a href="/admin/edit/<%= products.id %>" class="btn-detail-edit">EDIT</a>
+          <form action="/admin/remove/<%= products.id %>?_method=DELETE" method="POST" class="form-delete">
+            <button type="submit" class="btn-detail-delete">DELETE</button>
+          </form>
+        </div>
+        <!-- products's details -->
+        <section class="pDetail-container">
+          <article class="pDetail-images-container">
+            <div class="pDetail-image">
+              <img class="pDetail-image-img" src="/images/instruments/<%= product.img[0] %>" alt="<%= product.img[0] %>"
+                id="imgMaster" />
             </div>
-            <div class="pDetail-price-container">
-              <p class="pDetail-price">$ <%= product.price %></p>
+            <div class="pDetail-zoomImage-container">
+              <% product.img.forEach(image=> { %>
+                <div class="pDetail-zoomImage-items">
+                  <img src="/images/instruments/<%= image %>" alt="<%= image %> "
+                    onclick="document.getElementById('imgMaster').src = this.src" />
+                </div>
+                <% }) %>
             </div>
-            <div class="pDetail-buttons-container">
-              <div class="pDetail-counter">
-                <span class="minus">-</span>
-                <span class="num">01</span>
-                <span class="plus">+</span>
+          </article>
+
+          <!-- ************** product title, price,buttons ************** -->
+          <article class="pDetail-buy-payment-container">
+            <div class="pDetail-buy-container">
+              <div class="pDetail-title-container">
+                <h3 class="pDetail-title">
+                  <%= product.name %>
+                </h3>
               </div>
-
-              <div class="pDetail-buy-now">
-                <button type="button" class="buy-now-i">Buy now</button>
+              <div class="pDetail-price-container">
+                <p class="pDetail-price">$ <%= product.price %>
+                </p>
               </div>
+              <div class="pDetail-buttons-container">
+                <div class="pDetail-counter">
+                  <span class="minus">-</span>
+                  <span class="num">01</span>
+                  <span class="plus">+</span>
+                </div>
 
-              <div class="pDetail-add-cart">
-                <button type="button" class="add-cart-i">Add to cart</button>
-              </div>
-            </div>
-          </div>
+                <div class="pDetail-buy-now">
+                  <button type="button" class="buy-now-i">Buy now</button>
+                </div>
 
-          <div class="pDetail-payment-container">
-            <!-- title -->
-            <div>
-              <p class="pDetail-payment-title">Payment Methods</p>
-            </div>
-            <!-- logos container -->
-            <div class="pDetail-payment-logos-container">
-              <!-- credit -->
-              <div class="pDetail-credit-div">
-                <p class="credit-p">Credit cards</p>
-                <div class="pDetail-credit-logosContainer">
-                  <div>
-                    <img
-                      class="pDetail-credit-logo"
-                      src="/images/icons-m/visad-m.png"
-                      alt=""
-                    />
-                  </div>
-
-                  <div>
-                    <img
-                      class="pDetail-credit-logo"
-                      src="/images/icons-m/master-m.png"
-                      alt=""
-                    />
-                  </div>
-
-                  <div>
-                    <img
-                      class="pDetail-credit-logo"
-                      src="/images/icons-m/naranja-m.png"
-                      alt=""
-                    />
-                  </div>
+                <div class="pDetail-add-cart">
+                  <button type="button" class="add-cart-i">Add to cart</button>
                 </div>
               </div>
-              <!-- debit -->
-              <div class="pDetail-debit-div">
-                <p class="debit-title">Debit cards</p>
-                <div class="pDetail-debit-logosContainer">
-                  <div>
-                    <img
-                      class="pDetail-debit-logo"
-                      src="/images/icons-m/visad-m.png"
-                      alt=""
-                    />
-                  </div>
-                  <div>
-                    <img
-                      class="pDetail-debit-logo"
-                      src="/images/icons-m/masterd-m.png"
-                      alt=""
-                    />
-                  </div>
-                  <div>
-                    <img
-                      class="pDetail-debit-logo"
-                      src="/images/icons-m/cabal-m.png"
-                      alt=""
-                    />
+            </div>
+
+            <div class="pDetail-payment-container">
+              <!-- title -->
+              <div>
+                <p class="pDetail-payment-title">Payment Methods</p>
+              </div>
+              <!-- logos container -->
+              <div class="pDetail-payment-logos-container">
+                <!-- credit -->
+                <div class="pDetail-credit-div">
+                  <p class="credit-p">Credit cards</p>
+                  <div class="pDetail-credit-logosContainer">
+                    <div>
+                      <img class="pDetail-credit-logo" src="/images/icons-m/visad-m.png" alt="" />
+                    </div>
+
+                    <div>
+                      <img class="pDetail-credit-logo" src="/images/icons-m/master-m.png" alt="" />
+                    </div>
+
+                    <div>
+                      <img class="pDetail-credit-logo" src="/images/icons-m/naranja-m.png" alt="" />
+                    </div>
                   </div>
                 </div>
-              </div>
-
-              <!-- cash -->
-              <div class="pDetail-cash-div">
-                <p class="cash-title">cash</p>
-
-                <div class="pDetail-cash-logosContainer">
-                  <div>
-                    <img
-                      class="pDetail-cash-logo"
-                      src="/images/icons-m/rapi-m.png"
-                      alt=""
-                    />
+                <!-- debit -->
+                <div class="pDetail-debit-div">
+                  <p class="debit-title">Debit cards</p>
+                  <div class="pDetail-debit-logosContainer">
+                    <div>
+                      <img class="pDetail-debit-logo" src="/images/icons-m/visad-m.png" alt="" />
+                    </div>
+                    <div>
+                      <img class="pDetail-debit-logo" src="/images/icons-m/masterd-m.png" alt="" />
+                    </div>
+                    <div>
+                      <img class="pDetail-debit-logo" src="/images/icons-m/cabal-m.png" alt="" />
+                    </div>
                   </div>
-                  <div>
-                    <img
-                      class="pDetail-cash-logo"
-                      src="/images/icons-m/pago-m.png"
-                      alt=""
-                    />
+                </div>
+
+                <!-- cash -->
+                <div class="pDetail-cash-div">
+                  <p class="cash-title">cash</p>
+
+                  <div class="pDetail-cash-logosContainer">
+                    <div>
+                      <img class="pDetail-cash-logo" src="/images/icons-m/rapi-m.png" alt="" />
+                    </div>
+                    <div>
+                      <img class="pDetail-cash-logo" src="/images/icons-m/pago-m.png" alt="" />
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-        </article>
+          </article>
 
-        <!-- ************** characteristic ************** -->
-        <article class="characteristic-description">
-          <!-- characteristic -->
-          <hr class="pDetail-hr" />
-          <div class="pDetail-characteristic-container">
-            <h4 class="pDetail-characteristic-title">Characteristic</h4>
-            <div class="characteristic-list-container">
-              <ul class="pDetail-list">
-                <ul class="pDetail-list">
-                  <% for(var i = 1; i < product.characteristics.length-1; i++ ) { %>
-                      <li class="pDetail-list-item"><%= product.characteristics[i] %></li>
-                   <% } %>
-              </ul>            
-              </ul>
-            </div>
-          </div>
-          <!-- description -->
-          <div class="pDetail-description">
+          <!-- ************** characteristic ************** -->
+          <article class="characteristic-description">
+            <!-- characteristic -->
             <hr class="pDetail-hr" />
-            <h4 class="pDetail-description-title">Description</h4>
-            <p class="pDetail-description-text"><%= product.detail %></p>
-          </div>
-        </article>
-      </section>
-      <!-- end of products's details -->
-      <hr class="pDetail-hr" />
-      <h2 class="pDetail-recommend-title">Recommended</h2>
-      <!-- OFERTAS -->
-      <section class="main-offers">
-        <div class="offers-arrow">
-          <i class="fas fa-arrow-left"></i>
-        </div>
-        <% products.forEach(product => { %> 
-        <%if (product.discount >= 20) {%>
-        <article class="offers-1">
-          <a href="/products/productDetail">
-            <p>See Offer</p>
-            <img src="<%= product.img %>" alt="" />
-          </a>
-          <div class="foot-offers">
-            <h4 id="title-offers"><%= product.name %></h4>
-            <div class="offers-data">
-              <p id="price">$<%= product.price %></p>
-              <p id="discount"><%= product.discount %>% off</p>
+            <div class="pDetail-characteristic-container">
+              <h4 class="pDetail-characteristic-title">Characteristic</h4>
+              <div class="characteristic-list-container">
+                <ul class="pDetail-list">
+                  <ul class="pDetail-list">
+                    <% for(var i=1; i < product.characteristics.length-1; i++ ) { %>
+                      <li class="pDetail-list-item">
+                        <%= product.characteristics[i] %>
+                      </li>
+                      <% } %>
+                  </ul>
+                </ul>
+              </div>
             </div>
+            <!-- description -->
+            <div class="pDetail-description">
+              <hr class="pDetail-hr" />
+              <h4 class="pDetail-description-title">Description</h4>
+              <p class="pDetail-description-text">
+                <%= product.detail %>
+              </p>
+            </div>
+          </article>
+        </section>
+        <!-- end of products's details -->
+        <hr class="pDetail-hr" />
+        <h2 class="pDetail-recommend-title">Recommended</h2>
+        <!-- OFERTAS -->
+        <section class="main-offers">
+          <div class="offers-arrow">
+            <i class="fas fa-arrow-left"></i>
           </div>
-        </article>
-        <% } %> <% }) %>
-        <div class="offers-arrow">
-          <i class="fas fa-arrow-right"></i>
-        </div>
-      </section>
-    </main>
-    <%- include('./partials/footer') %>
+          <% products.forEach(product=> { %>
+            <%if (product.discount>= 20) {%>
+              <article class="offers-1">
+                <a href="/products/productDetail">
+                  <p>See Offer</p>
+                  <img src="<%= product.img %>" alt="" />
+                </a>
+                <div class="foot-offers">
+                  <h4 id="title-offers">
+                    <%= product.name %>
+                  </h4>
+                  <div class="offers-data">
+                    <p id="price">$<%= product.price %>
+                    </p>
+                    <p id="discount">
+                      <%= product.discount %>% off
+                    </p>
+                  </div>
+                </div>
+              </article>
+              <% } %>
+                <% }) %>
+                  <div class="offers-arrow">
+                    <i class="fas fa-arrow-right"></i>
+                  </div>
+        </section>
+      </main>
+      <%- include('./partials/footer') %>
   </body>
+
 </html>

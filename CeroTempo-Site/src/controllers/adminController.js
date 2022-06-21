@@ -3,16 +3,31 @@ const fs = require('fs');
 const path = require('path');
 const products = require("../data/productsDataBase.json");
 
+
 module.exports = {
     panel: (req, res) => {
         return res.render('panel');
     },
-
-
+    edit: (req, res) => {
+        const { id } = req.params;
+        const product = products.find((product) => product.id === +id);
+    
+        return res.render("edit", {
+          product,
+        });
+      },
     create: (req, res) => {
         return res.render('create');
     },
-
+    // edit: (req, res) => {
+    //     let products= readProducts(); 
+    //     const {id} = req.params;
+    //     let product = products.find(
+    //     (product) => product.id === +id);
+    //     return res.render('edit', {
+    //         product,
+    //     });
+    // },
 
     store: (req, res) => {
         let errors = validationResult(req);
@@ -48,14 +63,7 @@ module.exports = {
     }        
     },
 
-    edit: (req, res) => {
-        const {id} = req.params;
-        let product = products.find(
-        (product) => product.id === +id);
-        return res.render('edit', {
-            product,
-        });
-    },
+    
     update: (req, res) => {
         let errors = validationResult(req);
         if (errors.isEmpty()){
@@ -107,7 +115,6 @@ module.exports = {
         });
     }
 },
-
     remove: (req, res) => {
         const { id } = req.params;
         const productFilter= products.filter((product) => product.id !== +id);
@@ -116,6 +123,11 @@ module.exports = {
             JSON.stringify(productFilter, null, 3),
             "utf-8"
           );
-        return res.redirect('productMain');
+        return res.redirect('/');
     },
+    list: (req, res) => {
+        return res.render("list", {
+          products,
+        });
+      }
 }
