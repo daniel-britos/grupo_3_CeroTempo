@@ -44,6 +44,7 @@ module.exports = {
 	},
 
     store: (req, res) => {
+        let products = readProduct();
         let errors = validationResult(req);
         if(errors.isEmpty()){
             let { name, price, discount, category, detail} = req.body;
@@ -98,18 +99,18 @@ module.exports = {
                     characteristics: characteristics.trim(),
                     img: req.file ? req.file.filename : product.img,
                 };
-                // if(req.file){
-                //     if(
-                //         fs.existsSync(
-                //             path.resolve(__dirname,  "..", "public", "images", "instruments", product.img)
-                //           ) &&
-                //           product.img !== "default-image.png"
-                //     ){
-                //         fs.unlinkSync(
-                //             path.resolve(__dirname,  "..", "public", "images", "instruments", product.img)
-                //           ); 
-                //     }
-                // }
+                if(req.file){
+                    if(
+                        fs.existsSync(
+                            path.resolve(__dirname,  "..", "public", "images", "instruments", product.img)
+                          ) &&
+                          product.img !== "default-image.png"
+                    ){
+                        fs.unlinkSync(
+                            path.resolve(__dirname,  "..", "public", "images", "instruments", product.img)
+                          ); 
+                    }
+                }
                 return productModify;
             }
             return product;
