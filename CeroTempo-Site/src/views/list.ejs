@@ -22,9 +22,9 @@
                                       </tr>
                                     </thead>
                                     <tbody>
-                                        <% products.forEach(({id,name,price},index) => { %>
+                                        <% products.forEach(({id,name,price}) => { %>
                                             <tr>
-                                                <th scope="row"><%= index + 1 %> </th>
+                                                <th scope="row"><%= id %> </th>
                                                 <td><%= name %> </td>
                                                 <td><%= price %> </td>
                                                 <td>

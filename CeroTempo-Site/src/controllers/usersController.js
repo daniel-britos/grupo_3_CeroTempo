@@ -96,7 +96,7 @@ module.exports = {
       user
     }) 
   },
-  update: (req,res) => {
+  updateProfile: (req,res) => {
     let users = readUsers();
     const user = users.find(user => user.id === req.session.userLogin.id);
     return res.render('update', {
