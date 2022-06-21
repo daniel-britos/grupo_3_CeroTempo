@@ -7,8 +7,8 @@
       <main>
         <% if (locals.userLogin?.rol === "admin") { %>
           <div class="box-btn-detail">
-            <a href="/admin/edit/<%= products.id %>" class="btn-detail-edit">EDIT</a>
-            <form action="/admin/remove/<%= products.id %>?_method=DELETE" method="POST" class="form-delete">
+            <a href="/admin/edit/<%= product.id %>" class="btn-detail-edit">EDIT</a>
+            <form action="/admin/remove/<%= product.id %>?_method=DELETE" method="POST" class="form-delete">
               <button type="submit" class="btn-detail-delete">DELETE</button>
             </form>
           </div>                   
