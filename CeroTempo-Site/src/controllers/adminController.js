@@ -36,7 +36,7 @@ module.exports = {
     //     return res.render('create');
     // },
     edit: (req, res) => {
-		let products = readProducts();
+		let products = readProduct();
 		let product = products.find(product => product.id === +req.params.id);
 		return res.render('edit',{
 			product
@@ -78,14 +78,15 @@ module.exports = {
     }        
     },
     update: (req, res) => {
+        let products = readProduct();
         let errors = validationResult(req);
         if (errors.isEmpty()){
+
             const{id} = req.params;
             const { name, price, discount, category, detail, 
                 characteristics} = req.body;
         
-        const productsModify = products.map(
-            (product) => {
+        const productsModify = products.map(product => {
             if(product.id === +id){
                 let productModify = {
                     ...product,
@@ -97,18 +98,18 @@ module.exports = {
                     characteristics: characteristics.trim(),
                     img: req.file ? req.file.filename : product.img,
                 };
-                if(req.file){
-                    if(
-                        fs.existsSync(
-                            path.resolve(__dirname, "..", "..", "public", "images", "instruments", product.img)
-                          ) &&
-                          product.img !== "default-image.png"
-                    ){
-                        fs.unlinkSync(
-                            path.resolve(__dirname, "..", "..", "public", "images", "instruments", product.img)
-                          ); 
-                    }
-                }
+                // if(req.file){
+                //     if(
+                //         fs.existsSync(
+                //             path.resolve(__dirname,  "..", "public", "images", "instruments", product.img)
+                //           ) &&
+                //           product.img !== "default-image.png"
+                //     ){
+                //         fs.unlinkSync(
+                //             path.resolve(__dirname,  "..", "public", "images", "instruments", product.img)
+                //           ); 
+                //     }
+                // }
                 return productModify;
             }
             return product;
@@ -120,7 +121,7 @@ module.exports = {
         // "utf-8"
         // );
         saveProducts(productsModify)
-        return res.redirect('productMain');
+        return res.redirect('/products/productMain');
     }else{
         console.log(errors);
         return res.render("create", {
@@ -146,6 +147,6 @@ module.exports = {
         let products = readProduct();
 		const productsModify = products.filter(product => product.id !== +req.params.id)
 		saveProducts(productsModify);
-		return res.redirect('/');
+		return res.redirect('/admin/list');
     }
 }
