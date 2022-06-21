@@ -8,6 +8,7 @@ module.exports = {
     panel: (req, res) => {
         return res.render('panel');
     },
+<<<<<<< HEAD
     edit: (req, res) => {
         const { id } = req.params;
         const product = products.find((product) => product.id === +id);
@@ -28,6 +29,12 @@ module.exports = {
     //         product,
     //     });
     // },
+=======
+
+    create: (req, res) => {
+        return res.render('create');
+    },
+>>>>>>> 0f2ca41a0b13822d126060fa6e7ddd01625d2f8e
 
     store: (req, res) => {
         let errors = validationResult(req);
@@ -117,12 +124,13 @@ module.exports = {
 },
     remove: (req, res) => {
         const { id } = req.params;
-        const productFilter= products.filter((product) => product.id !== +id);
+        const productFilter = products.filter((product) => product.id !== +id);
         fs.writeFileSync(
             path.resolve(__dirname, "..", "data", "productsDataBase.json"),
             JSON.stringify(productFilter, null, 3),
             "utf-8"
           );
+<<<<<<< HEAD
         return res.redirect('/');
     },
     list: (req, res) => {
@@ -130,4 +138,8 @@ module.exports = {
           products,
         });
       }
+=======
+        return res.redirect('productMain');
+    }
+>>>>>>> 0f2ca41a0b13822d126060fa6e7ddd01625d2f8e
 }
