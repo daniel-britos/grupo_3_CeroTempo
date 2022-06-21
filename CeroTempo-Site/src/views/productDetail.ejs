@@ -5,12 +5,15 @@
   <body>
     <%- include('./partials/header') %>
       <main>
-        <div class="box-btn-detail">
-          <a href="/admin/edit/<%= products.id %>" class="btn-detail-edit">EDIT</a>
-          <form action="/admin/remove/<%= products.id %>?_method=DELETE" method="POST" class="form-delete">
-            <button type="submit" class="btn-detail-delete">DELETE</button>
-          </form>
-        </div>
+        <% if (locals.userLogin?.rol === "admin") { %>
+          <div class="box-btn-detail">
+            <a href="/admin/edit/<%= products.id %>" class="btn-detail-edit">EDIT</a>
+            <form action="/admin/remove/<%= products.id %>?_method=DELETE" method="POST" class="form-delete">
+              <button type="submit" class="btn-detail-delete">DELETE</button>
+            </form>
+          </div>                   
+      <% } %>
+
         <!-- products's details -->
         <section class="pDetail-container">
           <article class="pDetail-images-container">
