@@ -1,12 +1,12 @@
 [
    {
       "id": 1,
-      "userName": "Daniel",
+      "userName": "Daniela",
       "userSurname": "Britos",
       "userEmail": "danielbritospersonal@gmail.com",
       "userPass": "$2a$10$hGQbqSs9c33tHwZb4AJtt.dTiv/Hr0m.xYd79yiJf6VINdJM9Rnx2",
       "userBirth": "1986-06-10",
-      "avatar": "1654445121238_img.jpg",
+      "avatar": "1655905129531_img.jpg",
       "rol": "admin"
    },
    {

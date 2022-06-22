@@ -132,7 +132,7 @@ module.exports = {
       });
 
       fs.writeFileSync(
-        path.resolve(__dirname, "..", "data", "usersDataBase.json"),
+        path.resolve(__dirname, "..", "data", "userDataBase.json"),
         JSON.stringify(usersModify, null, 3),
         "utf-8"
       );
