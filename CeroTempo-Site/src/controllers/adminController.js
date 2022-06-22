@@ -24,17 +24,6 @@ module.exports = {
     create: (req, res) => {
         return res.render('create');
     },
-    // edit: (req, res) => {
-    //     const { id } = req.params;
-    //     const product = products.find((product) => product.id === +id);
-    
-    //     return res.render("edit", {
-    //       product,
-    //     });
-    //   },
-    // create: (req, res) => {
-    //     return res.render('create');
-    // },
     edit: (req, res) => {
 		let products = readProduct();
 		let product = products.find(product => product.id === +req.params.id);
@@ -62,12 +51,6 @@ module.exports = {
                 img: images.length > 0 ? images : ['default-image.png']
             };
             products.push(newProduct);
-
-            // fs.writeFileSync(
-            //     path.resolve(__dirname, "..", "data", "productsDataBase.json"),
-            //     JSON.stringify(products, null, 3),
-            //     "utf-8"
-            //   );
             saveProducts(products)
               return res.redirect('/');
         }else{
@@ -116,11 +99,6 @@ module.exports = {
             return product;
             
         });
-        // fs.writeFileSync(
-        // path.resolve(__dirname, "..", "data", "productsDataBase.json"),
-        // JSON.stringify(productsModify, null, 3),
-        // "utf-8"
-        // );
         saveProducts(productsModify)
         return res.redirect('/products/productMain');
     }else{
@@ -131,20 +109,7 @@ module.exports = {
         });
     }
 },
-// list: (req, res) => {
-//     return res.render("list", {
-//       products,
-//     });
-//   },
     remove: (req, res) => {
-        // const { id } = req.params;
-        // const productFilter = products.filter((product) => product.id !== +id);
-        // fs.writeFileSync(
-        //     path.resolve(__dirname, "..", "data", "productsDataBase.json"),
-        //     JSON.stringify(productFilter, null, 3),
-        //     "utf-8"
-        //   );
-        // return res.redirect('/');
         let products = readProduct();
 		const productsModify = products.filter(product => product.id !== +req.params.id)
 		saveProducts(productsModify);

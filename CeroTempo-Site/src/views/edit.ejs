@@ -34,10 +34,11 @@
                         <span class="validation-text" ><%= locals.errors && errors.characteristics ? errors.characteristics.msg : null%></span>
                     </div>
                 </div>
+
                 <div class="right-container">
                     <div class="img-create-preview">
                         <h2>PREVIEW</h2>
-                        <img src="<%= product.image %>" alt="">
+                        <img src="/images/instruments/<%= product.img[0]%>" alt="">
                     </div>
                     <div class="into-admin-box">
                         <div class="admin-box add-img">
@@ -59,6 +60,7 @@
                         </div>  
                     </div>
                 </div>
+
                 <div class="btn-send-create">
                     <button type="submit">Save Changes</button>
                 </div>
@@ -67,6 +69,14 @@
         
     </main>
     <%- include('./partials/footer') %>
-    
+    <script>
+        document.getElementById('imgCreate').addEventListener('change',(e)=> {
+        let reader = new FileReader();
+        reader.readAsDataURL(e.target.files[0])
+        reader.onload = () => {
+            document.getElementById('imagePreview').src = reader.result
+        }
+        })
+</script>
 </body>
 </html>
