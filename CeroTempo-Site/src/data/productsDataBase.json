@@ -1,14 +1,12 @@
 [
    {
       "id": 21,
-      "name": "producto 140",
+      "name": "productossss 3",
       "price": 14000,
       "discount": 10,
       "category": "strings",
       "detail": "dasdasdas dasds",
-      "characteristics": [
-         "\"dasdasdasdasd\\r\\ndsadsadasdasdsa\\r\\ndasdsadsadsadsad\\r\\nerfeewgegsdgds\\r\\nffdsfdsfdsfds\""
-      ],
+      "characteristics": "\"dasdasdasdasd\\r\\ndsadsadasdasdsa\\r\\ndasdsadsadsadsad\\r\\nerfeewgegsdgds\\r\\nffdsfdsfdsfds\"",
       "img": [
          "1655692312659_img.jpg",
          "1655692312660_img.jpg",
