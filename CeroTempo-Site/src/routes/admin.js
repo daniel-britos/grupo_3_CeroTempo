@@ -11,7 +11,7 @@ const  {panel, create, edit, update, store, remove, list} = require('../controll
 
 router
     .get('/panel', adminCheck, panel)
-    .get('/create', adminCheck,create)
+    .get('/create', adminCheck, create)
     .post('/create', upload.array('image'), productValidation, store)
     .get('/edit/:id', adminCheck,edit)
     .put('/update/:id', upload.single('image'), productValidation, update)

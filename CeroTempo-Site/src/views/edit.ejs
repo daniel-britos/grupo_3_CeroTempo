@@ -6,7 +6,7 @@
     <main class="main-admin">
         <h2>Edit Product</h2>
         <section class="main-form-create">
-            <form class="admin-form" action="/admin/update/<%= product.id %>?_method=PUT" method="POST">
+            <form class="admin-form" action="/admin/update/<%= product.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
                 <div class="left-container">       
                     <div class="admin-box">
                         <label for="name">Product Title</label>
@@ -16,7 +16,7 @@
                     <div class="admin-box">
                         <label for="price">Price</label>
                         <input type="number" name="price" id="price" value="<%= product.price %>">
-                        <span class="validation-text" ><%= locals.errors && errors.price ? errors.price.msg : null%></span>
+                        <span class="validation-text"><%= locals.errors && errors.price ? errors.price.msg : null%></span>
                     </div>
                     <div class="admin-box">                    
                         <label for="discount">Discount</label>
@@ -34,10 +34,11 @@
                         <span class="validation-text" ><%= locals.errors && errors.characteristics ? errors.characteristics.msg : null%></span>
                     </div>
                 </div>
+
                 <div class="right-container">
                     <div class="img-create-preview">
                         <h2>PREVIEW</h2>
-                        <img src="/images/instruments/<%= product.img %>" alt="">
+                        <img src="/images/instruments/<%= product.img[0] %>" alt="">
                     </div>
                     <div class="into-admin-box">
                         <div class="admin-box add-img">
@@ -59,6 +60,7 @@
                         </div>  
                     </div>
                 </div>
+
                 <div class="btn-send-create">
                     <button type="submit">Save Changes</button>
                 </div>
@@ -67,7 +69,14 @@
         
     </main>
     <%- include('./partials/footer') %>
-
-
+    <script>
+        document.getElementById('imgCreate').addEventListener('change',(e)=> {
+        let reader = new FileReader();
+        reader.readAsDataURL(e.target.files[0])
+        reader.onload = () => {
+            document.getElementById('imagePreview').src = reader.result
+        }
+        })
+    </script>
 </body>
 </html>
