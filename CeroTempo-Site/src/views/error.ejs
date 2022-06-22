@@ -1,3 +1,38 @@
+<style>
+#container-error{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+#error-text {
+    background-color: black;
+    border:15px solid #ff7700;
+    border-radius: 50%;
+    height: 400px;
+    width: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.4);
+}
+#error-text > h1 {
+    color: white; 
+    text-align: center; 
+    font-size: 30px;
+}
+#error-text > a {
+    color:aquamarine; 
+    font-size: 30px;
+}
+</style>
+<div id="container-error">
+    <div id="error-text">
+        <h1>This page does not work for you.</h1>
+        <a href="/">RETURN</a>
+    </div>
+</div>
 <h1><%= message %></h1>
 <h2><%= error.status %></h2>
 <pre><%= error.stack %></pre>

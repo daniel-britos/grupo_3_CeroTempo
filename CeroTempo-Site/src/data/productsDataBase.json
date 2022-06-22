@@ -16,21 +16,34 @@
       ]
    },
    {
-      "id": 22,
-      "name": "productEdit",
-      "price": 10000,
-      "discount": 10,
+      "id": 23,
+      "name": "Cello Ancona 620P",
+      "price": 1854000,
+      "discount": 11,
       "category": "strings",
-      "detail": "sadsadasdsadasd",
+      "detail": "cello madera maciza",
       "characteristics": [
-         "\"dasdsadsa",
-         "dasdsadasd",
-         "asdasdasd\""
+         "\"made in china\\r\\n4 microafinadores\\r\\ntapa maciza\""
       ],
       "img": [
-         "1655846552962_img.jpg",
-         "1655846552994_img.jpg",
-         "1655846553002_img.jpg"
+         "1655851712310_img.jpg"
+      ]
+   },
+   {
+      "id": 24,
+      "name": "Guitarra choorizo",
+      "price": 53000,
+      "discount": 50,
+      "category": "strings",
+      "detail": "guitarra electrica",
+      "characteristics": [
+         "\"made in rusia\\r\\nmetal cromado\""
+      ],
+      "img": [
+         "1655851882199_img.jpg",
+         "1655851882200_img.jpg",
+         "1655851882205_img.jpg",
+         "1655851882209_img.jpg"
       ]
    }
 ]
