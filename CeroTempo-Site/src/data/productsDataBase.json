@@ -16,24 +16,6 @@
       ]
    },
    {
-      "id": 22,
-      "name": "productEdit",
-      "price": 10000,
-      "discount": 10,
-      "category": "strings",
-      "detail": "sadsadasdsadasd",
-      "characteristics": [
-         "\"dasdsadsa",
-         "dasdsadasd",
-         "asdasdasd\""
-      ],
-      "img": [
-         "1655846552962_img.jpg",
-         "1655846552994_img.jpg",
-         "1655846553002_img.jpg"
-      ]
-   },
-   {
       "id": 23,
       "name": "Cello Ancona 620P",
       "price": 1854000,
