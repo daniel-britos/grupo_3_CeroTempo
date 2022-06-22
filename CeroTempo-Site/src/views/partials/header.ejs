@@ -38,10 +38,12 @@
                     <i class="fa-brands fa-whatsapp"></i>
                 </span>
                 <span>
-                    <a href="/products/productCart">
-                        <p>Shopping Cart</p>
-                    </a>
-                    <i class="fa-solid fa-cart-shopping"></i>
+                    <% if (locals.userLogin) { %>
+                        <a href="/products/productCart">
+                            <p>Shopping Cart</p>
+                        </a>
+                        <i class="fa-solid fa-cart-shopping"></i>
+                    <% } %> 
                 </span>
                 <span>
                     <% if (!locals.userLogin) { %>

@@ -8,15 +8,15 @@ const adminCheck = require('../middlewares/adminCheck');
 
 
 const  {panel, create, edit, update, store, remove, list} = require('../controllers/adminController');
-//http://localhost:3000/admin/panel
+
 router
     .get('/panel', adminCheck, panel)
-    .get('/create', create)
+    .get('/create', adminCheck,create)
     .post('/create', upload.array('image'), productValidation, store)
-    .get('/edit/:id', edit)
+    .get('/edit/:id', adminCheck,edit)
     .put('/update/:id', upload.single('image'), productValidation, update)
     .delete('/remove/:id', remove)
-    .get('/list', list)
+    .get('/list',adminCheck, list)
 
         
 
