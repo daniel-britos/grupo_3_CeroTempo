@@ -84,11 +84,6 @@ module.exports = {
       });
     }
   },
-  logout : (req,res) => {
-    req.session.destroy();
-    res.cookie('userCeroTempo',null,{maxAge : -1})
-    return res.redirect('/')
-  },
   profile: (req,res) => {
     let users = readUsers();
     const user = users.find(user => user.id === req.session.userLogin.id);
@@ -116,7 +111,7 @@ module.exports = {
             userName: userName.trim(),
             userSurname : userSurname.trim(),
             userBirth: userBirth,
-            avatar : req.file ? req.file.filename : "default-image-avatar.png",
+            avatar : req.file ? req.file.filename : user.avatar,
           };
       
           if (req.file) {
@@ -150,10 +145,15 @@ module.exports = {
       return res.redirect("/");
     }else{
         console.log(errors);
-        return res.render("profile", {
+        return res.render("update", {
             user : req.body,
             errors : errors.mapped()
           });
     }
-  } 
+  },
+  logout : (req,res) => {
+    req.session.destroy();
+    res.cookie('userCeroTempo',null,{maxAge : -1})
+    return res.redirect('/')
+  }
 };

@@ -4,9 +4,9 @@
     <body>
         <%- include('./partials/header') %>
         <main class="main-register">
-            <form class="form-r" action="" method="POST"  enctype="multipart/form-data">
+            <form class="form-r" action="/users/update-profile/?_method=PUT" method="POST"  enctype="multipart/form-data">
                 <div class="sign-up">
-                    <p class="sign-up-p">Profile of <%= user.userName %> </p> 
+                    <p class="sign-up-p">Profile of <%= userLogin.userName %> </p> 
                 </div>
                 <div class="form-div">
                     <div class="sign-up"> 

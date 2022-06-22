@@ -1,25 +1,5 @@
 [
    {
-      "id": 20,
-      "name": "producto 130",
-      "price": 30000,
-      "discount": 30,
-      "category": "idiophones",
-      "detail": "DASDSADFASFASFSAF",
-      "characteristics": [
-         "\"",
-         "FASFASFAS",
-         "FASFSAFSAFSAF",
-         "FSAFAFAFASF",
-         "\""
-      ],
-      "img": [
-         "1655691816424_img.jpg",
-         "1655691816424_img.jpg",
-         "1655691816425_img.jpg"
-      ]
-   },
-   {
       "id": 21,
       "name": "producto 140",
       "price": 14000,
