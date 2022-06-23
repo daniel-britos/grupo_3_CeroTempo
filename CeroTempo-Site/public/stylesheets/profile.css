@@ -1,7 +1,137 @@
-body.profile{
-
-    background-color: orange!important;
+body.profile {
+  background-color: white;
 }
 
+.profile h1 {
+  display: flex;
+  justify-content: center;
+  background-color: var(--orangeLogo);
+  padding: 15px 0;
+  margin-bottom: 10px;
+}
 
+.profile-dates-avatar {
+  width: 90%;
+  margin: 0 auto;
+  border: 2px black solid;
+  border-radius: 10px;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+}
 
+.dates-profile {
+  padding: 5px 5px;
+}
+
+.profile-edit {
+  font-size: 1.1rem;
+}
+
+.img-create-preview {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.img-create-preview h2 {
+  padding: 0 15px;
+  margin: 0;
+}
+
+.img-create-preview img {
+  border: 3px #f25824 solid;
+  border-radius: 10px;
+}
+
+.img-create-preview h3 {
+  padding: 5px 15px;
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 15px 15px;
+}
+
+.button-register,
+.button-profile {
+  font-family: "Anton", sans-serif;
+  font-size: 18px;
+  width: 100px;
+  border: 3px black solid;
+  border-radius: 5px;
+}
+
+/* TABLET */
+@media (min-width: 768px) {
+  .profile h1 {
+    padding: 25px 0;
+  }
+  .profile-dates-avatar {
+    padding: 50px 0;
+    margin: 25px auto;
+    border: 3px black solid;
+  }
+
+  .dates-profile {
+    padding: 5px 25px;
+  }
+
+  .profile-edit {
+    padding: 5px 0;
+    font-size: 1.5rem;
+  }
+
+  .img-create-preview {
+    padding: 25px;
+  }
+}
+
+/* DESKTOP */
+@media (min-width: 1024px) {
+  .profile h1 {
+    padding: 15px 0;
+  }
+
+  .profile-dates-avatar {
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    padding: 25px;
+    margin: 25px auto;
+    border: 3px black solid;
+  }
+
+  .dates-profile {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 59%;
+    padding: 15px;
+
+    background-color: black;
+    border-radius: 10px;
+  }
+
+  .profile-edit {
+    color: white;
+  }
+
+  .img-create-preview {
+    width: 39%;
+    padding: 15px;
+
+    background-color: var(--orangeLogo);
+    border-radius: 10px;
+  }
+
+  .buttons {
+    padding: 25px 150px 15px;
+  }
+
+  .button-register,
+  .button-profile {
+    width: 150px;
+  }
+}
