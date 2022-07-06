@@ -10,11 +10,11 @@ module.exports = {
       },
       name: {
         allowNull: false,
-        type: Sequelize.STRING
+        type: Sequelize.STRING(25)
       },
       profesor: {
         allowNull: false,
-        type: Sequelize.STRING
+        type: Sequelize.STRING(25)
       },
       price: {
         allowNull: false,
@@ -23,11 +23,19 @@ module.exports = {
       },
       modeId: {
         allowNull: false,
-        type: Sequelize.INTEGER.UNSIGNED
+        type: Sequelize.INTEGER.UNSIGNED,
+        references: {
+          model: {tableName: 'modalities'},
+          key: 'id'  
+        }
       },
       timeId: {
         allowNull: false,
-        type: Sequelize.INTEGER.UNSIGNED
+        type: Sequelize.INTEGER.UNSIGNED,
+        references: {
+          model: {tableName: 'times'},
+          key: 'id'  
+        }
       },
       createdAt: {
         allowNull: false,

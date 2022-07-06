@@ -31,10 +31,19 @@ module.exports = {
         type: Sequelize.STRING
       },
       categoryId: {
-        type: Sequelize.INTEGER.UNSIGNED
+        type: Sequelize.INTEGER.UNSIGNED,
+        allowNull: false,
+        references: {
+          model: {tableName: 'categories'},
+          key: 'id'  
+        }
       },
       brandId: {
-        type: Sequelize.INTEGER.UNSIGNED
+        type: Sequelize.INTEGER.UNSIGNED,
+        references: {
+          model: {tableName: 'brands'},
+          key: 'id'  
+        }
       },
       stock: {
         allowNull: false,

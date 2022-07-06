@@ -17,8 +17,8 @@ module.exports = (sequelize, DataTypes) => {
     name: DataTypes.STRING(25),
     profesor: DataTypes.STRING(25),
     price: DataTypes.INTEGER,
-    modeId: DataTypes.INTEGER,
-    timeId: DataTypes.INTEGER
+    modeId: DataTypes.INTEGER.UNSIGNED,
+    timeId: DataTypes.INTEGER.UNSIGNED
   }, {
     sequelize,
     modelName: 'Course',

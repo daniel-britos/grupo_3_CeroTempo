@@ -27,15 +27,15 @@ module.exports = {
       },
       role: {
         allowNull: false,
-        type: Sequelize.STRING
+        type: Sequelize.STRING(25)
       },
       password: {
         allowNull: false,
-        type: Sequelize.STRING
+        type: Sequelize.STRING(25)
       },
       avatar: {
         allowNull: true,
-        type: Sequelize.STRING
+        type: Sequelize.STRING(45)
       },
       createdAt: {
         allowNull: false,
