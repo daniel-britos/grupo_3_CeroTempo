@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const db = require('../database/models'); 
 
 const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');
 
@@ -7,8 +8,8 @@ const readProduct = () => {
 	const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8')); 
     return products
 }
-
 module.exports = {
+    //http://localhost:3000/products/productMain
     pMain : (req, res) => {
         const products = readProduct()
         res.render('productMain', {
