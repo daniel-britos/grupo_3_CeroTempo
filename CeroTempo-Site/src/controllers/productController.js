@@ -11,10 +11,10 @@ const readProduct = () => {
 module.exports = {
     //http://localhost:3000/products/productMain
     pMain : (req, res) => {
-        const products = readProduct()
-        res.render('productMain', {
-            products,
-        });
+        // const products = readProduct()
+        // res.render('productMain', {
+        //     products,
+        // });
     },
     pCart : (req, res) => {
         res.render('productCart');
