@@ -1,10 +1,23 @@
 [
    {
-      "name": "producto 555",
+      "name": "producto 1",
       "price": 25000,
       "discount": 10,
       "categoryId": 1,
       "description": "dasdasdas dasds",
+      "stock": 20,
+      "images": [
+         "1655692312659_img.jpg",
+         "1655692312660_img.jpg",
+         "1655692312661_img.jpg"
+      ]
+   },
+   {
+      "name": "producto 2",
+      "price": 12000,
+      "discount": 0,
+      "categoryId": 1,
+      "description": "dasdasdas dasds asdasdd",
       "stock": 20,
       "images": [
          "1655692312659_img.jpg",
