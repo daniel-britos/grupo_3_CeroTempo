@@ -1,0 +1,20 @@
+[
+   {
+      "user_name": "Daniel",
+      "user_surname": "Britos",
+      "user_email": "danielbritospersonal@gmail.com",
+      "password": "$2a$10$hGQbqSs9c33tHwZb4AJtt.dTiv/Hr0m.xYd79yiJf6VINdJM9Rnx2",
+      "user_birthay": "1986-06-10",
+      "avatar": "1655932871465_img.jpg",
+      "role": "admin"
+   },
+   {
+      "user_name": "Clark",
+      "user_surname": "Kent",
+      "user_email": "clarkent@gmail.com",
+      "password": "$2a$10$JZ1/owAwoN/.y8XOv5imT.hxcBNfvNUxTVlNh/KPLQvalMCzPJsO6",
+      "user_birthay": "1986-06-10",
+      "avatar": "1655740343910_img.jpg",
+      "rol": "user"
+   }
+]
