@@ -4,14 +4,12 @@
       "name": "Cello Ancona",
       "price": 120000,
       "discount": 10,
-      "category": "strings",
+      "category": 1,
       "detail": "Cello madera maciza importado de Italia. con madera de 10 años de antiguedad",
       "characteristics": [
-         "\"",
          "microafinadores",
          "madera maciza",
-         "importado de italia",
-         "\""
+         "importado de italia"
       ],
       "img": [
          "1657280240540_img.jpg",
@@ -25,14 +23,12 @@
       "name": "Guitarra Fender",
       "price": 150000,
       "discount": 0,
-      "category": "strings",
+      "category": 1,
       "detail": "Guitarra fender importada, directo de china",
       "characteristics": [
-         "\"",
          "guitarra colores varios",
          "metalica alma de madera",
-         "importada de china",
-         "\""
+         "importada de china"
       ],
       "img": [
          "1657280495755_img.jpg",
@@ -47,14 +43,12 @@
       "name": "Bajo Stratocaster",
       "price": 55000,
       "discount": 12,
-      "category": "strings",
+      "category": 1,
       "detail": "Bajo colores varios, clavijero metalico",
       "characteristics": [
-         "\"",
          "bajo muchos colores",
          "metal rigido",
-         "importado de china",
-         "\""
+         "importado de china"
       ],
       "img": [
          "1657280606771_img.jpg",
@@ -68,14 +62,12 @@
       "name": "Bateria mapex",
       "price": 250000,
       "discount": 15,
-      "category": "percussion",
+      "category": 3,
       "detail": "Bateria ultima linea madera importada",
       "characteristics": [
-         "\"",
          "madera importada",
          "resonancia maxima",
-         "palitos integrados",
-         "\""
+         "palitos integrados"
       ],
       "img": [
          "1657282390667_img.jpg",
@@ -89,14 +81,12 @@
       "name": "Bateria generica",
       "price": 19999,
       "discount": 25,
-      "category": "percussion",
+      "category": 3,
       "detail": "bateria generica fabricada por luthiers",
       "characteristics": [
-         "\"",
          "4 tambores",
          "nacional",
-         "colores varios",
-         "\""
+         "colores varios"
       ],
       "img": [
          "1657282550691_img.jpg",
@@ -110,14 +100,12 @@
       "name": "bateria mapex tuned",
       "price": 110000,
       "discount": 22,
-      "category": "percussion",
+      "category": 3,
       "detail": "bateria electrica ultima generación",
       "characteristics": [
-         "\"",
          "electrica",
          "made in china",
-         "todas las funciones disponibles",
-         "\""
+         "todas las funciones disponibles"
       ],
       "img": [
          "1657282752365_img.jpg",
@@ -131,14 +119,12 @@
       "name": "trompeta imperio",
       "price": 25000,
       "discount": 0,
-      "category": "wind",
+      "category": 2,
       "detail": "trompeta nacional fabricada con el mejor material sonoro",
       "characteristics": [
-         "\"",
          "instrumento de viento de calidad",
          "fabricada en el pais",
-         "material de punta",
-         "\""
+         "material de punta"
       ],
       "img": [
          "1657283374169_img.jpg",
@@ -152,13 +138,11 @@
       "name": "Saxofon lintop",
       "price": 66000,
       "discount": 10,
-      "category": "wind",
+      "category": 2,
       "detail": "saxofon importado de la mejor calidad, sonido amplio resonante",
       "characteristics": [
-         "\"",
          "made in francia",
-         "bronce metalico",
-         "\""
+         "bronce metalico"
       ],
       "img": [
          "1657283648029_img.jpg",
@@ -172,13 +156,11 @@
       "name": "Trompeta generica",
       "price": 22000,
       "discount": 5,
-      "category": "wind",
+      "category": 2,
       "detail": "Trompeta generica con amplia sonoridad para niveles intermedio",
       "characteristics": [
-         "\"",
          "metal pintado",
-         "fabricacion nacional",
-         "\""
+         "fabricacion nacional"
       ],
       "img": [
          "1657283716383_img.jpg",
@@ -192,14 +174,12 @@
       "name": "Viola Cremona",
       "price": 80000,
       "discount": 10,
-      "category": "idiophones",
+      "category": 4,
       "detail": "Viola enchapada para principiante, excelente resonancia",
       "characteristics": [
-         "\"",
          "made in china",
          "madera maciza",
-         "microafinadores",
-         "\""
+         "microafinadores"
       ],
       "img": [
          "1657283880369_img.jpg",
@@ -213,14 +193,12 @@
       "name": "Piano italiano",
       "price": 350000,
       "discount": 20,
-      "category": "idiophones",
+      "category": 4,
       "detail": "Piano fabricado por luthiers itelianos de 40 años de antiguedad",
       "characteristics": [
-         "\"",
          "fabricado en italia",
          "maderas macizas",
-         "funcionalidad completa",
-         "\""
+         "funcionalidad completa"
       ],
       "img": [
          "1657283974795_img.jpg",
@@ -234,13 +212,11 @@
       "name": "Piano pared",
       "price": 220000,
       "discount": 10,
-      "category": "idiophones",
+      "category": 4,
       "detail": "Piano pared antiguo",
       "characteristics": [
-         "\"",
          "madera de pino de 90 años",
-         "funcionalidad y resonancia perfecta",
-         "\""
+         "funcionalidad y resonancia perfecta"
       ],
       "img": [
          "1657284066181_img.jpg",
@@ -254,13 +230,11 @@
       "name": "Afinador mapex",
       "price": 10000,
       "discount": 10,
-      "category": "electronics",
+      "category": 5,
       "detail": "Afinador mapex perfecciona el sonido",
       "characteristics": [
-         "\"",
          "made in china",
-         "afinador electrico con cargador",
-         "\""
+         "afinador electrico con cargador"
       ],
       "img": [
          "1657284168394_img.jpg",
@@ -270,18 +244,16 @@
       ]
    },
    {
-      "id": 15,
+      "id": 14,
       "name": "Teclado Yamaha",
       "price": 50000,
       "discount": 10,
-      "category": "electronics",
+      "category": 5,
       "detail": "Teclado electrico de ultima linea",
       "characteristics": [
-         "\"",
          "made in china",
          "incluye cargador",
-         "tamaño large",
-         "\""
+         "tamaño large"
       ],
       "img": [
          "1657284392354_img.png",
@@ -291,19 +263,17 @@
       ]
    },
    {
-      "id": 16,
+      "id": 15,
       "name": "Teclado generico",
       "price": 23000,
       "discount": 0,
-      "category": "electronics",
+      "category": 5,
       "detail": "Teclado generico con cargodor, sonido perfecto",
       "characteristics": [
-         "\"",
          "tamaño small",
          "cargador",
          "conectores",
-         "con soporte",
-         "\""
+         "con soporte"
       ],
       "img": [
          "1657284526595_img.jpg",

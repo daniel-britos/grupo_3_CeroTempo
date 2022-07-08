@@ -21,7 +21,7 @@ module.exports = {
         type: Sequelize.STRING(45),
         unique: true
       },
-      user_birthay: {
+      user_birthday: {
         allowNull: false,
         type: Sequelize.DATE
       },
@@ -31,7 +31,7 @@ module.exports = {
       },
       password: {
         allowNull: false,
-        type: Sequelize.STRING(25)
+        type: Sequelize.STRING
       },
       avatar: {
         allowNull: true,
