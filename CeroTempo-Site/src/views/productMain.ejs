@@ -149,11 +149,9 @@
                 
                 <div class="box">        
                   <div class="product-cards product-wrap">
-                    <% products.forEach(({id,name,price,discount,images}) => { %>
-  
-                      <article>
+                    <% products.forEach(({id,name,price,discount,images}) => { %>                   <article>
                         <a href="productDetail/<%= id %>">                          
-                            <img class="pDetail-image-img" src="/images/instruments/<%= images[0] %>" alt="<%= images[0] %>" id="imgMaster" />                        
+                            <img class="pDetail-image-img" src="/images/instruments/<%= images[0].name[0]   %>" alt="<%= images[0].name[0] %>" id="imgMaster" />                        
                         </a>
                         <div class="product-cards-info">
                           <h4 id="cards-title"><%= name %></h4>
