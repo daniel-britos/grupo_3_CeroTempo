@@ -13,7 +13,8 @@ module.exports = {
 			include : ['images']
 		})
 			.then(products => {
-				return res.render('list', {products})
+                //return res.send(products)
+				return res.render('list',{products})
 			})
 			.catch(error => console.log(error))
       },
@@ -105,15 +106,6 @@ module.exports = {
 		}).catch(error => console.log(error))
 },
     remove: (req, res) => {
-        db.Product.destroy({
-            where : {
-                id : req.params.id
-            }
-        })
-        .then((info) => {
-            return res.redirect('/')
-        })
-        .catch(error => console.log(error))
 
-    },
+    }
 }
