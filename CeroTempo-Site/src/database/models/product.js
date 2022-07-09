@@ -22,11 +22,13 @@ module.exports = (sequelize, DataTypes) => {
     discount: DataTypes.INTEGER,
     description: DataTypes.TEXT,
     characteristics: DataTypes.STRING,
+    // productId: DataTypes.INTEGER.UNSIGNED,
     categoryId: DataTypes.INTEGER.UNSIGNED,
     brandId: DataTypes.INTEGER.UNSIGNED
   }, {
     sequelize,
     modelName: 'Product',
+    paranoid: true
   });
   return Product;
 };

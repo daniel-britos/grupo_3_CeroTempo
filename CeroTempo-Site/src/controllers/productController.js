@@ -1,10 +1,9 @@
 const db = require('../database/models');
 const {Op} = require('sequelize');
-
 module.exports = {
     //http://localhost:3000/products/productMain
     pMain : (req, res) => {
-        db.Product.findAll({
+		db.Product.findAll({
 			include : ['images']
 		})
 			.then(products => {
@@ -13,8 +12,7 @@ module.exports = {
 				})
 			})
 			.catch(error => console.log(error))
-    },
-    pCart : (req, res) => {
+    },pCart : (req, res) => {
         res.render('productCart');
     },
     pDetail : (req, res) => {

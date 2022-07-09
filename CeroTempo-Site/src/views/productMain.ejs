@@ -154,10 +154,20 @@
                 
                 <div class="box">        
                   <div class="product-cards product-wrap">
+<<<<<<< HEAD
                     <% products.forEach(({id,name,price,discount,images}) => { %>                   <article>
                         <a href="productDetail/<%= id %>">                          
                             <img class="pDetail-image-img" src="/images/instruments/<%= images.id %>" alt="<%= images.id %>" id="imgMaster" />                        
                         </a>
+=======
+                    <% products.forEach(({id,name,price,discount,images}) => { %>
+                                 
+                      <article>
+                        <a href="/products/productDetail/<%= id %>">
+                          <img class="pDetail-image-img" src="/images/instruments/<%= images[0].name %>" alt="<%= images[0].name %>"
+                id="imgMaster" />
+                        </a>                            
+>>>>>>> b3e96b50095560e41d4b9706bd0f80ad79e5e296
                         <div class="product-cards-info">
                           <h4 id="cards-title"><%= name %></h4>
                           <div class="cards-data">

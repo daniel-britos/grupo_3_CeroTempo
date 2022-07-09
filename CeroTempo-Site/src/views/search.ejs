@@ -7,23 +7,24 @@
     
     <main>
 
-      <h2>Resultado de la busqueda: "<%= keyword%>"</h2>
+      <h2>Resultado de la busqueda: "<%= keywords %>"</h2>
       
       <div class="product-cards product-wrap">
         <% if (products.length > 0) { %>
-          <% products.forEach(product => { %>
+          <% products.forEach(({id,name,price,discount,images}) => { %>
             <article>
-              <a href="productDetail/<%= product.id %>">
-                <img src="/images/instruments/<%= product.img[0] %>" alt="" />
+              <a href="productDetail/<%= id %>">
+                <img class="pDetail-image-img" src="/images/instruments/<%= images[0].name %>" alt="<%= images[0].name %>"
+                id="imgMaster" />
               </a>
               <div class="product-cards-info">
-                <h4 id="cards-title"><%= product.name %></h4>
+                <h4 id="cards-title"><%= name %></h4>
                 <div class="cards-data">
-                  <% if (product.discount > 0) { %>
-                    <p id="cards-price">$<%= product.price %></p>
-                    <p id="cards-discount"><%= product.discount %>% off</p>
+                  <% if (discount > 0) { %>
+                    <p id="cards-price">$<%= price %></p>
+                    <p id="cards-discount"><%= discount %>% off</p>
                   <% } else { %>
-                    <p id="cards-price">$<%= product.price %></p>
+                    <p id="cards-price">$<%= price %></p>
                   <% }  %>
                 </div>
               </div>
@@ -37,6 +38,14 @@
     </main>
 
     <%- include('./partials/footer') %>
-  
+    <script>
+      let filter_col = document.querySelector("#filter-col");
+      document
+        .querySelector("#filter-toggle")
+        .addEventListener("click", () => filter_col.classList.toggle("active"));
+      document
+        .querySelector("#filter-close")
+        .addEventListener("click", () => filter_col.classList.toggle("active"));
+    </script>
   </body>
 </html>
