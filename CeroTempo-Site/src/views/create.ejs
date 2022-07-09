@@ -56,13 +56,11 @@
                         <div class="admin-box">
                             <label for="category">Category</label>
                             <select name="category" id="category-select">
-                                <option value="" hidden selected>selec category</option>
-                                
-                                <option <%= locals.old && old.category && old.category === "strings" ? 'selected' : null %> value="strings">Strings</option>
-                                <option <%= locals.old && old.category && old.category === "wind" ? 'selected' : null %> value="wind">Wind</option>
-                                <option <%= locals.old && old.category && old.category === "percussion" ? 'selected' : null %> value="percussion">Percussion</option>
-                                <option <%= locals.old && old.category && old.category === "idiophones" ? 'selected' : null %> value="idiophones">Idiophones</option>
-                                <option <%= locals.old && old.category && old.category === "electronics" ? 'selected' : null %> value="electronics">Electronics</option>
+                                <option value="" hidden selected>Category</option>
+                                <option value="" hidden selected>Categories</option>
+                                <% categories.forEach(category => { %>
+                                    <option value="<%= category.id %>"><%= category.name %> </option>
+                                <% }) %>
                             </select>
 
                             <span class="validation-text"><%= locals.errors && errors.category ? errors.category.msg : null%></span>

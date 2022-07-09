@@ -53,9 +53,9 @@ module.exports = {
         }
     },
 
-  login: (req, res) => {
-    return res.render("login");
-  },
+    login: (req, res) => {
+      return res.render("login");
+    },
 
   processLogin: (req, res) => {
     const errors = validationResult(req);
