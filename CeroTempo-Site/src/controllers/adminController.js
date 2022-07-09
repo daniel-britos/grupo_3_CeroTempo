@@ -105,6 +105,15 @@ module.exports = {
 		}).catch(error => console.log(error))
 },
     remove: (req, res) => {
+        db.Product.destroy({
+            where : {
+                id : req.params.id
+            }
+        })
+        .then((info) => {
+            return res.redirect('/')
+        })
+        .catch(error => console.log(error))
 
-    }
+    },
 }
