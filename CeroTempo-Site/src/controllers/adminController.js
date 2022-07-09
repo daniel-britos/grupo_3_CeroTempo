@@ -13,7 +13,7 @@ module.exports = {
 			include : ['images']
 		})
 			.then(products => {
-				return res.send(products)
+				return res.render('list', {products})
 			})
 			.catch(error => console.log(error))
       },
