@@ -3,7 +3,7 @@ const users_db = require('../../data/userDataBase.json');
 const users = users_db.map(user => {
   return {
     userName : user.userName,
-    userSurname : user.userName,
+    userSurname : user.userSurname,
     userEmail : user.userEmail,
     userBirth : user.userBirth,
     rol : user.rol,
