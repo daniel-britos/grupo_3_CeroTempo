@@ -102,8 +102,7 @@ module.exports = {
                     }
                 }
                //return res.send(req.files)
-                return res.redirect('/products/productMain');
-                
+                return res.redirect('/products/productMain');      
 		}).catch(error => console.log(error))
 },
         remove: (req, res) => {
@@ -116,7 +115,6 @@ module.exports = {
                 return res.redirect('/')
             })
             .catch(error => console.log(error))
-    
         },
     
 }
