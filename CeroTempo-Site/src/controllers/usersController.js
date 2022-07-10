@@ -1,129 +1,119 @@
 const { validationResult } = require("express-validator");
-const fs = require("fs");
-const bcryptjs = require('bcryptjs');
-const path = require("path");
-const users = require('../data/userDataBase.json');
+const bcryptjs = require("bcryptjs");
 
-const usersFilePath = path.join(__dirname, '../data/userDataBase.json');
-
-const readUsers = () => {  
-	const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8')); 
-    return users
-}
+const db = require("../database/models");
 
 module.exports = {
-    register: (req, res) => {
-      const readUser = readUsers();
-      return res.render('register');
-    },
-    login: (req, res) => {
-        return res.render('login');
-    },
-    processRegister: (req, res) => {
-        let errors = validationResult(req); 
+  register: (req, res) => {
+    return res.render("register");
+  },
 
-        if (errors.isEmpty()) {    
-          let { userName, userSurname, userPass, userBirth, userEmail } = req.body;
-          let lastID = users.length !== 0 ? users[users.length - 1].id : 0;
-          let newUser = {
-            id: +lastID + 1,
-            userName: userName.trim(),
-            userSurname: userSurname.trim(),
-            userEmail,
-            userPass: bcryptjs.hashSync(userPass.trim(), 10),
-            userBirth,
-            avatar: req.file ? req.file.filename : "default-image-avatar.png",
-            rol: "user"
-          };
-    
-          users.push(newUser);
-    
-          fs.writeFileSync(
-            path.resolve(__dirname, "..", "data", "userDataBase.json"),
-            JSON.stringify(users, null, 3),
-            "utf-8"
-          );
-        return res.redirect("/");
-    
-        }else{            
-            return res.render("register",{
-                errores : errors.mapped(),   
-                old : req.body   
-            });
-        }
-    },
+  processRegister: (req, res) => {
+    let errors = validationResult(req);
 
-    login: (req, res) => {
-      return res.render("login");
-    },
-
-  processLogin: (req, res) => {
-    const errors = validationResult(req);
     if (errors.isEmpty()) {
-      const { id, userName, userSurname, userEmail, userBirth, rol } = users.find(
-        user => user.userEmail === req.body.userEmail
-      );
-      req.session.userLogin = {
-        id,
-        userName : userName.trim(),
-        userSurname : userSurname.trim(),
-        userEmail : userEmail.trim(),
-        userBirth : userBirth,
-        rol
+      let { userName, userSurname, userPass, userBirth, userEmail } = req.body;
+      let lastID = users.length !== 0 ? users[users.length - 1].id : 0;
+      let newUser = {
+        id: +lastID + 1,
+        userName: userName.trim(),
+        userSurname: userSurname.trim(),
+        userEmail,
+        userPass: bcryptjs.hashSync(userPass.trim(), 10),
+        userBirth,
+        avatar: req.file ? req.file.filename : "default-image-avatar.png",
+        rol: "user",
       };
-      if (req.body.remember) {
-        res.cookie("CeroTempo", req.session.userLogin, {
-          maxAge: 1000 * 60 * 2})
-      }
-      res.redirect("/");
 
+      users.push(newUser);
+
+      fs.writeFileSync(path.resolve(__dirname, "..", "data", "userDataBase.json"), JSON.stringify(users, null, 3), "utf-8");
+      return res.redirect("/");
     } else {
-      return res.render("login", {
+      return res.render("register", {
         errores: errors.mapped(),
-        old: req.body
+        old: req.body,
       });
     }
   },
-  profile: (req,res) => {
-    let users = readUsers();
-    const user = users.find(user => user.id === req.session.userLogin.id);
-    return res.render('profile', {
-      user
-    }) 
+
+  login: (req, res) => {
+    res.render("login");
   },
-  updateProfile: (req,res) => {
-    let users = readUsers();
-    const user = users.find(user => user.id === req.session.userLogin.id);
-    return res.render('update', {
-      user
-    }) 
+
+  processLogin: (req, res) => {
+    /* res.send(req.body); */
+    const errors = validationResult(req);
+    if (errors.isEmpty()) {
+      db.User.findOne({
+        where: { userEmail: req.body.userEmail },
+      })
+        .then(({ id, userName, userSurname, userEmail, userBirth, rol }) => {
+          req.session.userLogin = {
+            id: +id,
+            userName: userName.trim(),
+            userSurname: userSurname.trim(),
+            userEmail: userEmail.trim(),
+            userBirth: userBirth,
+            rol,
+          };
+
+          if (req.body.remember) {
+            res.cookie("CeroTempo", req.session.userLogin, {
+              maxAge: 1000 * 60 * 2,
+            });
+          }
+
+          /* res.local.user = req.session.user; */
+          res.redirect("/");
+        })
+        .catch((errors) => console.log(errors));
+    } else {
+      return res.render("login", {
+        errores: errors.mapped(),
+        old: req.body,
+      });
+    }
   },
-  processUpdateProfile : (req,res) => {
+
+  profile: (req, res) => {
+    let users = readUsers();
+    const user = users.find((user) => user.id === req.session.userLogin.id);
+    return res.render("profile", {
+      user,
+    });
+  },
+
+  updateProfile: (req, res) => {
+    let users = readUsers();
+    const user = users.find((user) => user.id === req.session.userLogin.id);
+    return res.render("update", {
+      user,
+    });
+  },
+
+  processUpdateProfile: (req, res) => {
     let errors = validationResult(req);
     if (errors.isEmpty()) {
-      const {userName, userSurname, userBirth} = req.body
-      const {id} = users.find(user => user.id === req.session.userLogin.id );
+      const { userName, userSurname, userBirth } = req.body;
+      const { id } = users.find((user) => user.id === req.session.userLogin.id);
 
       const usersModify = users.map((user) => {
         if (user.id === id) {
           let userModify = {
             ...user,
             userName: userName.trim(),
-            userSurname : userSurname.trim(),
+            userSurname: userSurname.trim(),
             userBirth: userBirth,
-            avatar : req.file ? req.file.filename : user.avatar,
+            avatar: req.file ? req.file.filename : user.avatar,
           };
-      
+
           if (req.file) {
             if (
-              fs.existsSync(
-                path.resolve(__dirname, "..", "public", "images", "users", user.avatar)
-              ) &&
+              fs.existsSync(path.resolve(__dirname, "..", "public", "images", "users", user.avatar)) &&
               user.avatar !== "default-image-avatar.png"
             ) {
-              fs.unlinkSync(
-                path.resolve(__dirname, "..", "public", "images", "users", user.avatar)
-              );
+              fs.unlinkSync(path.resolve(__dirname, "..", "public", "images", "users", user.avatar));
             }
           }
           return userModify;
@@ -131,29 +121,26 @@ module.exports = {
         return user;
       });
 
-      fs.writeFileSync(
-        path.resolve(__dirname, "..", "data", "userDataBase.json"),
-        JSON.stringify(usersModify, null, 3),
-        "utf-8"
-      );
+      fs.writeFileSync(path.resolve(__dirname, "..", "data", "userDataBase.json"), JSON.stringify(usersModify, null, 3), "utf-8");
 
       req.session.userLogin = {
         ...req.session.userLogin,
-        userName
-      }
+        userName,
+      };
 
       return res.redirect("/");
-    }else{
-        console.log(errors);
-        return res.render("update", {
-            user : req.body,
-            errors : errors.mapped()
-          });
+    } else {
+      console.log(errors);
+      return res.render("update", {
+        user: req.body,
+        errors: errors.mapped(),
+      });
     }
   },
-  logout : (req,res) => {
+
+  logout: (req, res) => {
     req.session.destroy();
-    res.cookie('userCeroTempo',null,{maxAge : -1})
-    return res.redirect('/')
-  }
+    res.cookie("userCeroTempo", null, { maxAge: -1 });
+    return res.redirect("/");
+  },
 };
