@@ -53,7 +53,7 @@ module.exports = {
                 characteristics: characteristics.trim().split(',').toString(), 
                 categoryId : category,
             }).then(product => {
-                if (req.files.length > 0) {              //1. preguntamos si viene una imagen por file
+                if (req.files.length > 0) {              
                     let images = req.files.map(({filename},i) => {       
                         let image = {       
                             name : filename,   
@@ -85,24 +85,25 @@ module.exports = {
 				}
 			}
 		).then(async () => {
-			if(req.file){
-				try {
-					await db.Image.update(
-						{
-							file : req.file.filename
+            if(req.files){
+                try {
+                    await db.Image.update(
+                        {
+                            name : req.files.filename
 						},
 						{
-							where : {
-								productId : req.params.id
+                            where : {
+                                productId : req.params.id
 							}
 						}
-					)
-				} catch (error) {
-					console.log(error);
-				}
-			}
-			return res.redirect('/products/productMain');
-
+                        )
+                    } catch (error) {
+                        console.log(error);
+                    }
+                }
+               //return res.send(req.files)
+                return res.redirect('/products/productMain');
+                
 		}).catch(error => console.log(error))
 },
         remove: (req, res) => {

@@ -43,18 +43,16 @@
                     <div class="into-admin-box">
                         <div class="admin-box add-img">
                             <label for="image">ADD IMAGE</label>
-                            <input type="file" name="image" id="imageProduct" accept="image/*">
+                            <input type="file" name="image" id="imageProduct" accept="image/*" multiple>
                             <span class="validation-text" hidden>Required Field</span>
                         </div>  
                         <div class="admin-box">
                             <label for="category">Category</label>
                             <select name="category" id="category-select">
-                                <option value="" hidden selected>...</option>
-                                <option value="strings" <%= product.category === "strings" && "selected" %>  >Strings</option>
-                                <option value="wind" <%= product.category === "wind" && "selected" %>  >Wind</option>
-                                <option value="percussion" <%= product.category === "percussion" && "selected" %>  >Percussion</option>
-                                <option value="idiophones" <%= product.category === "idiophones" && "selected" %>  >Idiophones</option>
-                                <option value="electronics" <%= product.category === "electronics" && "selected" %>  >Electronics</option>
+                                <option value="" hidden selected>Categories</option>
+                                <% categories.forEach(category => { %>
+                                    <option value="<%= category.id %>" <%= product.categoryId === category.id ? 'selected' : null %>><%= category.name %> </option>
+                                <% }) %>
                             </select>
                             <span class="validation-text">Required Field</span>
                         </div>  
