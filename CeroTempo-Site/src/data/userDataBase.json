@@ -1,22 +1,42 @@
 [
-    {
-       "id": 1,
-       "userName": "Daniel",
-       "userSurname": "Britos",
-       "userEmail": "danielbritospersonal@gmail.com",
-       "userPass": "$2a$10$hGQbqSs9c33tHwZb4AJtt.dTiv/Hr0m.xYd79yiJf6VINdJM9Rnx2",
-       "userBirth": "1986-06-10",
-       "avatar": "1655932871465_img.jpg",
-       "rol": "admin"
-    },
-    {
-       "id": 2,
-       "userName": "Clark",
-       "userSurname": "Kent",
-       "userEmail": "clarkent@gmail.com",
-       "userPass": "$2a$10$JZ1/owAwoN/.y8XOv5imT.hxcBNfvNUxTVlNh/KPLQvalMCzPJsO6",
-       "userBirth": "1986-06-10",
-       "avatar": "1655740343910_img.jpg",
-       "rol": "user"
-    }
- ]
+   {
+      "id": 1,
+      "userName": "Daniel",
+      "userSurname": "Britos",
+      "userEmail": "danielbritospersonal@gmail.com",
+      "userPass": "$2a$10$hGQbqSs9c33tHwZb4AJtt.dTiv/Hr0m.xYd79yiJf6VINdJM9Rnx2",
+      "userBirth": "1986-06-10",
+      "avatar": "1655932871465_img.jpg",
+      "rol": "admin"
+   },
+   {
+      "id": 2,
+      "userName": "Clark",
+      "userSurname": "Kent",
+      "userEmail": "clarkent@gmail.com",
+      "userPass": "$2a$10$JZ1/owAwoN/.y8XOv5imT.hxcBNfvNUxTVlNh/KPLQvalMCzPJsO6",
+      "userBirth": "1986-06-10",
+      "avatar": "1655740343910_img.jpg",
+      "rol": "user"
+   },
+   {
+      "id": 3,
+      "userName": "julie",
+      "userSurname": "julie",
+      "userEmail": "julie@julie.com.ar",
+      "userPass": "$2a$10$t3rZsnIRJqf0A6Axp/NuC.bcjz/Fpvh6zTjDNuZhelwCEjrIfryH2",
+      "userBirth": "1981-07-27",
+      "avatar": "1657476394512_img.jpg",
+      "rol": "user"
+   },
+   {
+      "id": 4,
+      "userName": "tina",
+      "userSurname": "tina",
+      "userEmail": "tina@tina.com.ar",
+      "userPass": "$2a$10$bgNs/n0J5RWzgjaWouG/iuS.dXmwOztIDGOG6hMSwzkdrVwP7mkkK",
+      "userBirth": "1995-02-12",
+      "avatar": "1657478657277_img.jpg",
+      "rol": "user"
+   }
+]

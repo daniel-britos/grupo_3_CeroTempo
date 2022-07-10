@@ -1,5 +1,6 @@
 const {check, body} = require('express-validator');
-const users = require('../data/userDataBase.json')
+// const users = require('../data/userDataBase.json')
+const db = require('../database/models')
 
 module.exports = [
     check('userName')
@@ -15,14 +16,20 @@ module.exports = [
     check('userEmail')
         .notEmpty().withMessage('This field is required').bail()
         .isEmail().withMessage('Invalid..').bail()
-        .custom((value) => {
-            const user = users.find(user => user.userEmail === value);
-            if(user){
-                return false
-            }else{
-                return true
+        .custom(value => {
+           return db.User.findOne({
+            where: {
+                userEmail: value
             }
-        }).withMessage('e-mail in use..'),
+           }).then(user => {
+            // console.log('>>>>>>>>>>>>>>>>>>>>>>>>>', user);
+            if(user){
+                // return Promise.reject('Este mail esta registrado')
+                return Promise.reject()
+            }
+        // }).catch(error => console.log(error))
+    }).catch(() => Promise.reject('Este email ya se encuentra registrado!'))
+    }),
 
     check('userPass')
         .isLength({min: 6, max:12}).withMessage('The field must contain at least 6 and 12 letters').bail(),
