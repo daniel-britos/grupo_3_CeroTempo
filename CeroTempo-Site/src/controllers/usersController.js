@@ -1,8 +1,9 @@
 const { validationResult } = require("express-validator");
-const fs = require("fs");
+// const fs = require("fs");
 const bcryptjs = require('bcryptjs');
-const path = require("path");
-const users = require('../data/userDataBase.json');
+// const path = require("path");
+// const users = require('../data/userDataBase.json');
+const db = require("../database/models");
 
 const usersFilePath = path.join(__dirname, '../data/userDataBase.json');
 
@@ -12,46 +13,46 @@ const readUsers = () => {
 }
 
 module.exports = {
-    register: (req, res) => {
-      const readUser = readUsers();
-      return res.render('register');
-    },
+    
+  register: (req, res) => {
+    // const readUser = readUsers();
+    return res.render("register");
+  },
+
     login: (req, res) => {
         return res.render('login');
     },
     processRegister: (req, res) => {
-        let errors = validationResult(req); 
-
-        if (errors.isEmpty()) {    
-          let { userName, userSurname, userPass, userBirth, userEmail } = req.body;
-          let lastID = users.length !== 0 ? users[users.length - 1].id : 0;
-          let newUser = {
-            id: +lastID + 1,
-            userName: userName.trim(),
-            userSurname: userSurname.trim(),
-            userEmail,
-            userPass: bcryptjs.hashSync(userPass.trim(), 10),
-            userBirth,
-            avatar: req.file ? req.file.filename : "default-image-avatar.png",
-            rol: "user"
-          };
-    
-          users.push(newUser);
-    
-          fs.writeFileSync(
-            path.resolve(__dirname, "..", "data", "userDataBase.json"),
-            JSON.stringify(users, null, 3),
-            "utf-8"
-          );
-        return res.redirect("/");
-    
-        }else{            
-            return res.render("register",{
-                errores : errors.mapped(),   
-                old : req.body   
-            });
-        }
+      let errors = validationResult(req);
+  
+      if (errors.isEmpty()) {
+        let { userName, userSurname, userPass, userBirth, userEmail } = req.body;
+        let lastID = users.length !== 0 ? users[users.length - 1].id : 0;
+        db.User.create({
+          userName: userName.trim(),
+          userSurname: userSurname.trim(),
+          userEmail: userEmail.trim(),
+          userPass: bcryptjs.hashSync(userPass.trim(), 10),
+          userBirth,
+          avatar: req.file ? req.file.filename : "default-image-avatar.png",
+          rol: "user",
+        })
+          .then(() => {
+            return res.redirect("login");
+          })
+          .catch((error) => console.log(error));
+      } else {
+        return res.render("register", {
+          old: req.body,
+          errores: errors.mapped(),
+        });
+      }
     },
+  
+    login: (req, res) => {
+      return res.render("login");
+    },
+  
 
   login: (req, res) => {
     return res.render("login");
