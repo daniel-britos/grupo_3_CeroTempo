@@ -14,7 +14,7 @@
 - Predisposición
 - Correcciónes
 
-4. Hacer menos.
+4. Hacer menos
 - No cumplir con dias y horarios de reuniones
 - Terminar con todo lo propuesto
 - Desorganizados
