@@ -14,6 +14,30 @@ module.exports = {
     if (errors.isEmpty()) {
       let { userName, userSurname, userPass, userBirth, userEmail } = req.body;
       let lastID = users.length !== 0 ? users[users.length - 1].id : 0;
+      db.User.create({
+        userName: userName.trim(),
+        userSurname: userSurname.trim(),
+        userEmail: userEmail.trim(),
+        userPass: bcryptjs.hashSync(userPass.trim(), 10),
+        userBirth,
+        avatar: req.file ? req.file.filename : "default-image-avatar.png",
+        rol: "user",
+      })
+        .then(() => {
+          return res.redirect("login");
+        })
+        .catch((error) => console.log(error));
+    } else {
+      return res.render("register", {
+        old: req.body,
+        errores: errors.mapped(),
+      });
+    }
+  },
+
+  /*  if (errors.isEmpty()) {
+      let { userName, userSurname, userPass, userBirth, userEmail } = req.body;
+      let lastID = users.length !== 0 ? users[users.length - 1].id : 0;
       let newUser = {
         id: +lastID + 1,
         userName: userName.trim(),
@@ -35,7 +59,7 @@ module.exports = {
         old: req.body,
       });
     }
-  },
+  }, */
 
   login: (req, res) => {
     res.render("login");
@@ -77,20 +101,38 @@ module.exports = {
   },
 
   profile: (req, res) => {
+    let user = db.User.findByPk(req.session.userLogin.id);
+    Promise.all([user]).then(([user]) =>
+      res.render("profile", {
+        user,
+      })
+    );
+  },
+
+  /* profile: (req, res) => {
     let users = readUsers();
     const user = users.find((user) => user.id === req.session.userLogin.id);
     return res.render("profile", {
       user,
     });
-  },
+  }, */
 
   updateProfile: (req, res) => {
+    let user = db.User.findByPk(req.session.userLogin.id);
+    Promise.all([user]).then(([user]) =>
+      res.render("update", {
+        user,
+      })
+    );
+  },
+
+  /*  updateProfile: (req, res) => {
     let users = readUsers();
     const user = users.find((user) => user.id === req.session.userLogin.id);
     return res.render("update", {
       user,
     });
-  },
+  }, */
 
   processUpdateProfile: (req, res) => {
     let errors = validationResult(req);
