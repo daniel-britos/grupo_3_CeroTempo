@@ -38,12 +38,13 @@
                 <div class="right-container">
                     <div class="img-create-preview">
                         <h2>PREVIEW</h2>
-                        <img src="/images/instruments/<%= product.images[0] %>" alt="">
+                        <img src="" id="imagePreview" alt="">
                     </div>
                     <div class="into-admin-box">
+                        
                         <div class="admin-box add-img">
                             <label for="image">ADD IMAGE</label>
-                            <input type="file" name="image" id="imageProduct" accept="image/*" multiple>
+                            <input type="file" name="image" id="image" accept="image/*" multiple>
                             <span class="validation-text" hidden>Required Field</span>
                         </div>  
                         <div class="admin-box">
@@ -68,7 +69,7 @@
     </main>
     <%- include('./partials/footer') %>
     <script>
-        document.getElementById('imgCreate').addEventListener('change',(e)=> {
+        document.getElementById('image').addEventListener('change', (e) => {
         let reader = new FileReader();
         reader.readAsDataURL(e.target.files[0])
         reader.onload = () => {
