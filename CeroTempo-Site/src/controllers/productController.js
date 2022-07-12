@@ -6,7 +6,7 @@ module.exports = {
 		db.Product.findAll({
 			include : ['images']
 		})
-			.then(products => {
+			.then(products => {						
 				return res.render('productMain',{
 					products
 				})
