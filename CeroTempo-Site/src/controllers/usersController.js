@@ -1,30 +1,28 @@
-const { validationResult } = require("express-validator");
-const bcryptjs = require("bcryptjs");
+const {validationResult} = require('express-validator');
+const bcryptjs = require('bcryptjs');
 
-const db = require("../database/models");
+const db = require('../database/models');
 
 module.exports = {
   register: (req, res) => {
-    return res.render("register");
+    return res.render('register');
   },
 
   processRegister: (req, res) => {
     let errors = validationResult(req);
 
     if (errors.isEmpty()) {
-      let { userName, userSurname, userPass, userBirth, userEmail } = req.body;
-      /* let lastID = users.length !== 0 ? users[users.length - 1].id : 0; */
+      let {userName, userSurname, userPass, userBirth, userEmail} = req.body;
       db.User.create({
         userName: userName.trim(),
         userSurname: userSurname.trim(),
         userEmail: userEmail.trim(),
         userPass: bcryptjs.hashSync(userPass.trim(), 10),
         userBirth,
-        avatar: req.file ? req.file.filename : "default-image-avatar.png",
-        rol: "user",
+        avatar: req.file ? req.file.filename : 'default-image-avatar.png',
+        rol: 'user',
       })
         .then(() => {
-          //return res.redirect("login");
           req.session.userLogin = {
             id: +id,
             userName: userName.trim(),
@@ -34,11 +32,11 @@ module.exports = {
             rol,
           };
           res.locals.user = req.session.user;
-          return res.redirect("/");
+          return res.redirect('/');
         })
         .catch((error) => console.log(error));
     } else {
-      return res.render("register", {
+      return res.render('register', {
         old: req.body,
         errores: errors.mapped(),
       });
@@ -46,17 +44,16 @@ module.exports = {
   },
 
   login: (req, res) => {
-    res.render("login");
+    res.render('login');
   },
 
   processLogin: (req, res) => {
-    /* res.send(req.body); */
     const errors = validationResult(req);
     if (errors.isEmpty()) {
       db.User.findOne({
-        where: { userEmail: req.body.userEmail },
+        where: {userEmail: req.body.userEmail},
       })
-        .then(({ id, userName, userSurname, userEmail, userBirth, rol }) => {
+        .then(({id, userName, userSurname, userEmail, userBirth, rol}) => {
           req.session.userLogin = {
             id: +id,
             userName: userName.trim(),
@@ -67,17 +64,15 @@ module.exports = {
           };
 
           if (req.body.remember) {
-            res.cookie("CeroTempo", req.session.userLogin, {
+            res.cookie('CeroTempo', req.session.userLogin, {
               maxAge: 1000 * 60 * 2,
             });
           }
-
-          /* res.local.user = req.session.user; */
-          res.redirect("/");
+          res.redirect('/');
         })
         .catch((errors) => console.log(errors));
     } else {
-      return res.render("login", {
+      return res.render('login', {
         errores: errors.mapped(),
         old: req.body,
       });
@@ -87,55 +82,27 @@ module.exports = {
   profile: (req, res) => {
     let user = db.User.findByPk(req.session.userLogin.id);
     Promise.all([user]).then(([user]) =>
-      res.render("profile", {
+      res.render('profile', {
         user,
       })
     );
   },
 
   updateProfile: (req, res) => {
-    db.User.findByPk(req.session.userLogin.id)
-      .then((user) => {
-        res.render("update", {
-          user,
-        });
-      })
-      .catch((errors) => console.log(errors));
-
-    /* let user = db.User.findByPk(req.session.userLogin.id);
+    let user = db.User.findByPk(req.session.userLogin.id);
     Promise.all([user]).then(([user]) =>
-      res.render("update", {
+      res.render('update', {
         user,
       })
-    ); */
+    );
   },
 
   processUpdateProfile: (req, res) => {
-    let id = req.params.id;
-    let { userName, userSurname, userPass } = req.body;
-    db.User.update(
-      {
-        userName,
-        userSurname,
-        userPass,
-        /* avatar: req.file ? req.file.filename : req.session.user.avatar, */
-      },
-      {
-        where: { id: +id },
-      }
-    )
-      .then(() => {
-        res.redirect("/users/profile");
-      })
-      .catch((errors) => console.log(errors));
-  },
-
-  /* processUpdateProfile: (req, res) => {
     let errors = validationResult(req);
     if (errors.isEmpty()) {
-      const { userName, userSurname, userPass } = req.body;
+      const {userName, userSurname, userPass} = req.body;
       db.User.findByPk(req.session.userLogin.id, {
-        attributes: ["userPass"],
+        attributes: ['userPass'],
       })
         .then((user) => {
           db.User.update(
@@ -151,16 +118,16 @@ module.exports = {
               },
             }
           ).then(() => {
-            return res.redirect("/users/profile");
+            return res.redirect('/users/profile');
           });
         })
         .catch((error) => console.log(error));
     }
-  }, */
+  },
 
   logout: (req, res) => {
     req.session.destroy();
-    res.cookie("userCeroTempo", null, { maxAge: -1 });
-    return res.redirect("/");
+    res.cookie('userCeroTempo', null, {maxAge: -1});
+    return res.redirect('/');
   },
 };
