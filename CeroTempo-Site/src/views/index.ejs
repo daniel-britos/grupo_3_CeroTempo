@@ -97,7 +97,7 @@
             <%  productsRecommended.forEach(product => {    %>
                 
                 <article class="offers-1">
-                    <a href="/products/productDetail">
+                    <a href="/products/productDetail/<%= product.id %> ">
                         <p>See Offer</p>
                         <img src="/images/instruments/<%= product.images[0].name %>" alt="<%= product.images[0].name %>">
                     </a>

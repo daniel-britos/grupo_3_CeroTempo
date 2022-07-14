@@ -6,7 +6,7 @@ module.exports = {
         let productsRecommended = db.Product.findAll({
 			where : {
 				discount : {
-					[Op.lt] : 20
+					[Op.gte] : 20
 				}
 			},
 			order : [['id','DESC']],
