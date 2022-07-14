@@ -1,7 +1,8 @@
 const {validationResult} = require('express-validator');
 const bcryptjs = require('bcryptjs');
-
 const db = require('../database/models');
+let fs = require('fs')
+let path = require('path')
 
 module.exports = {
   register: (req, res) => {
@@ -19,26 +20,27 @@ module.exports = {
         userEmail: userEmail.trim(),
         userPass: bcryptjs.hashSync(userPass.trim(), 10),
         userBirth,
-        avatar: req.file ? req.file.filename : 'default-image-avatar.png',
+        avatar: req.file ? req.file.filename : 'default-image-avatar.jpg', //sirve! , <NO BORRAR DEFAULT IMAGE DE PUBLIC>
+        // avatar: 'default-image-avatar.jpg',  //se cambio a jpg, 
         rol: 'user',
       })
-        .then(() => {
+        .then(user => {
           req.session.userLogin = {
-            id: +id,
-            userName: userName.trim(),
-            userSurname: userSurname.trim(),
-            userEmail: userEmail.trim(),
-            userBirth: userBirth,
-            rol,
+            id: user.id,
+            userName: user.userName.trim(),
+            userSurname: user.userSurname.trim(),
+            userEmail: user.userEmail.trim(),
+            userBirth: user.userBirth,
+            rol: user.rol
           };
-          res.locals.user = req.session.user;
-          return res.redirect('/');
+          res.locals.userLogin = req.session.userLogin; //se agrego login como está en middlewares locals
+          return res.redirect('login');
         })
-        .catch((error) => console.log(error));
+        .catch(errors => console.log(errors));
     } else {
       return res.render('register', {
+        errors: errors.mapped(),
         old: req.body,
-        errores: errors.mapped(),
       });
     }
   },
@@ -47,6 +49,7 @@ module.exports = {
     res.render('login');
   },
 
+  ////------------------de acá para arriba funciona----------------------------------/// NO MODIFICAR
   processLogin: (req, res) => {
     const errors = validationResult(req);
     if (errors.isEmpty()) {

@@ -13,9 +13,12 @@ module.exports = [
         .isLength({min: 2}).withMessage('The field must contain at least two letters').bail()
         .isAlpha().withMessage('Enter your name...'),
 
-    check('userEmail')
-        .notEmpty().withMessage('This field is required').bail()
-        .isEmail().withMessage('Invalid..').bail()
+
+    check('userEmail') //se agrego el check.userEmail, se dividió en check y body
+    .notEmpty().withMessage('This field is require').bail()
+    .isEmail().withMessage('Invalid...'),
+
+    body('userEmail')
         .custom(value => {
            return db.User.findOne({
             where: {
@@ -25,16 +28,19 @@ module.exports = [
             // console.log('>>>>>>>>>>>>>>>>>>>>>>>>>', user);
             if(user){
                 // return Promise.reject('Este mail esta registrado')
-                return Promise.reject()
+                return Promise.reject('Email alaready register.') //se agrego mensaje
             }
         // }).catch(error => console.log(error))
-    }).catch(() => Promise.reject('Este email ya se encuentra registrado!'))
+    })
+    // .catch(() => Promise.reject('Este email ya se encuentra registrado!')) //---se comentó.
     }),
 
     check('userPass')
-        .isLength({min: 6, max:12}).withMessage('The field must contain at least 6 and 12 letters').bail(),
+    .notEmpty().withMessage('Enter password').bail()    //se agrego notEmpty
+    .isLength({min: 6, max:12}).withMessage('The field must contain at least 6 and 12 letters').bail(),
 
     body('userPassConfirm')
+        .notEmpty().withMessage('You must confirm password').bail()
         .custom((value,{req}) => {
             if(value !== req.body.userPass){
                 return false
