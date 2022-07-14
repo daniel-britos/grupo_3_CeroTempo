@@ -1,17 +1,25 @@
-const fs = require('fs');
-const path = require('path');
-const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');
+const db = require('../database/models');
+const {Op} = require('sequelize');
 
-const readProduct = () => {  
-	const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8')); 
-    return products
-}
 module.exports = {
     index : (req, res) => {
-        const listProduct = readProduct()
-        res.render('index', {
-            listProduct    
-        })
+        let productsRecommended = db.Product.findAll({
+			where : {
+				discount : {
+					[Op.lt] : 20
+				}
+			},
+			order : [['id','DESC']],
+			limit : 3,
+			include : ['images']
+		})
+        Promise.all([productsRecommended])
+			.then(([productsRecommended]) => {
+				return res.render('index',{
+					productsRecommended,
+				})
+			})
+			.catch(error => console.log(error))
     },
     courses : (req, res) => {
         return res.render('courses');
