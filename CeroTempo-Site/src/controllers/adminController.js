@@ -43,14 +43,14 @@ module.exports = {
         },
         
         store: (req, res) => {    
-            let { name, price, discount, detail, characteristics, category } = req.body;
+            let { name, price, discount, detail, category } = req.body;
             db.Product.create({
                 //cargo todo lo que viene por body
                 name: name,
                 price: +price,
                 discount: +discount,
                 detail: detail.trim(),
-                characteristics: characteristics.trim().split(',').toString(), 
+                // characteristics: characteristics.trim().split(',').toString(), 
                 categoryId : category,
             }).then(product => {
                 if (req.files.length > 0) {              
