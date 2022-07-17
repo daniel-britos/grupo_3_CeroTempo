@@ -10,20 +10,20 @@ module.exports = {
       },
       userName: {
         allowNull: false,
-        type: Sequelize.STRING(25)
+        type: Sequelize.STRING(50)
       },
       userSurname: {
         allowNull: false,
-        type: Sequelize.STRING(25)
+        type: Sequelize.STRING(50)
       },
       userEmail: {
         allowNull: false,
-        type: Sequelize.STRING(45),
+        type: Sequelize.STRING(50),
         unique: true
       },
       userBirth: {
         allowNull: false,
-        type: Sequelize.DATE
+        type: Sequelize.DATEONLY
       },
       rol: {
         allowNull: false,
@@ -31,11 +31,11 @@ module.exports = {
       },
       userPass: {
         allowNull: false,
-        type: Sequelize.STRING
+        type: Sequelize.STRING(100)
       },
       avatar: {
         allowNull: true,
-        type: Sequelize.STRING(45)
+        type: Sequelize.STRING(50)
       },
       createdAt: {
         allowNull: false,

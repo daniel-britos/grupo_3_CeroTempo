@@ -14,13 +14,13 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   User.init({
-    userName: DataTypes.STRING(25),
-    userSurname: DataTypes.STRING(25),
-    userEmail: DataTypes.STRING(45),
-    userBirth: DataTypes.DATE,
+    userName: DataTypes.STRING(50),
+    userSurname: DataTypes.STRING(50),
+    userEmail: DataTypes.STRING(50),
+    userBirth: DataTypes.DATEONLY, //se cambio para que solo mande la fecha
     rol: DataTypes.STRING(25),
-    userPass: DataTypes.STRING,
-    avatar: DataTypes.STRING(45)
+    userPass: DataTypes.STRING(100),
+    avatar: DataTypes.STRING(50)
   }, {
     sequelize,
     modelName: 'User',

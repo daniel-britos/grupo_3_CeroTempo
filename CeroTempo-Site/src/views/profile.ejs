@@ -9,14 +9,14 @@
       <div class="dates-profile">
         <h3 class="profile-edit" for="name">Name: <%= userLogin.userName %></h3>
         <h3 class="profile-edit" for="surname">Surname: <%= userLogin.userSurname %></h3>
-        <h3 class="profile-edit" for="email">Email: <%= userLogin.userEmail %></h3>
+        <h3 class="profile-edit" for="email">Email: <%= userLogin.userEmail%></h3>
         <h3 class="profile-edit" for="date">Date of Birth: <%= userLogin.userBirth %></h3>
         <h3 class="profile-edit" for="rol">Rol: <%= userLogin.rol %></h3>
       </div>
 
       <div class="img-create-preview">
         <h2>User avatar</h2>
-        <img src="/images/users/<%= userLogin.avatar %>" id="" alt="<%= userLogin.avatar %>" style="height: 300px; width: 300px" />
+        <img src="/images/users/<%= user.avatar %>" id="" alt="" style="height: 300px; width: 300px" />
         <h3 class="profile-edit" for="avatar">Attach Avatar:</h3>
       </div>
     </div>
