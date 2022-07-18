@@ -120,12 +120,12 @@ module.exports = {
             id: req.session.userLogin.id
           }
         })
-        // .then((req.file) => {
-        //     if (fs.existsSync(path.join(__dirname, "../../public/images/users", usuario.avatar)) &&
-        //       usuario.avatar !== "default-image-avatar.jpg") {
-        //       fs.unlinkSync(path.join(__dirname, "../../public/images/users", usuarioEdit.avatar))
-        //     }
-        //   })
+        if(req.file){
+            if (fs.existsSync(path.join(__dirname, "../../public/images/users", user.avatar)) &&
+              usuario.avatar !== "default-image-avatar.jpg") {
+              fs.unlinkSync(path.join(__dirname, "../../public/images/users", userEdit.avatar))
+            }
+          }
         .then(() => {
           req.session.userLogin = {
             id: req.session.userLogin.id,
@@ -136,6 +136,7 @@ module.exports = {
             avatar: req.file && req.file.filename || req.session.userLogin.avatar,
             rol: req.session.userLogin.rol
           }
+          return res.send(req.session.userLogin)
           res.redirect('/users/profile')
         })
         .catch(error => console.log(error))
