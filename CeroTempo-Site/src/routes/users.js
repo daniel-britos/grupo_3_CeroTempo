@@ -8,8 +8,9 @@ const updateProfileValidator = require('../validations/updateProfileValidation')
 const uploadImagesAvatar = require('../middlewares/uploadImagesAvatar');
 const inSession = require('../middlewares/inSession');
 const profileCheck= require('../middlewares/profileCheck');
+const adminCheck = require('../middlewares/adminCheck');
 /*controller*/
-const {register, login, processRegister, processLogin, logout, profile, updateProfile, processUpdateProfile} = require('../controllers/usersController');
+const {userList, register, login, processRegister, processLogin, logout, profile, updateProfile, processUpdateProfile} = require('../controllers/usersController');
 /* GET users listing. */
 router.get('/', function(req, res, next) {
   res.send('respond with a resource');
@@ -22,7 +23,7 @@ router.get('/register', inSession, register)
       .get('/logout', logout)
       .get('/profile',profileCheck, profile)
       .get('/update',profileCheck, updateProfile)
-      .put('/update-profile',uploadImagesAvatar.single('avatar'), updateProfileValidator,processUpdateProfile);
-
+      .put('/update-profile',uploadImagesAvatar.single('avatar'), updateProfileValidator,processUpdateProfile)
+      .get('/userList', userList)
 
 module.exports = router;

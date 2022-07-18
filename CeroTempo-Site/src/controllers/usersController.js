@@ -8,6 +8,15 @@ module.exports = {
   register: (req, res) => {
     return res.render('register');
   },
+  userList: (req, res) => {
+		db.User.findAll({
+			include : ['images']
+		})
+			.then(users => {                
+				return res.render('userList',{users})
+			})
+			.catch(error => console.log(error))
+      },
   processRegister: (req, res) => {
     let errors = validationResult(req);
 
@@ -21,7 +30,7 @@ module.exports = {
         userBirth,
         avatar: req.file ? req.file.filename : 'default-image-avatar.jpg', //sirve! , <NO BORRAR DEFAULT IMAGE DE PUBLIC>
         // avatar: 'default-image-avatar.jpg',  //se cambio a jpg, 
-        rol: userEmail.includes("@admin") ? 'admin' : 'user'      
+        rol: 'user'      
       })
         .then(user => {
           req.session.userLogin = {
