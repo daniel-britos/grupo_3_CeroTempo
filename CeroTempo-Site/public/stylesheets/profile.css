@@ -119,7 +119,7 @@ body.profile {
   }
 
   .img-create-preview {
-    width: 39%;
+    /* width: 39%; */
     padding: 15px;
 
     background-color: var(--orangeLogo);

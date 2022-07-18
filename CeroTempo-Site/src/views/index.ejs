@@ -94,12 +94,12 @@
                 <div class="offers-arrow">
                     <i class="fas fa-arrow-left"></i>
                 </div>
-            <%  listProduct.forEach(product => {    %>
-                <%if (product.discount >= 20) {  %>
+            <%  productsRecommended.forEach(product => {    %>
+                
                 <article class="offers-1">
-                    <a href="/products/productDetail">
+                    <a href="/products/productDetail/<%= product.id %> ">
                         <p>See Offer</p>
-                        <img src="/images/instruments/<%= product.img[0] %>" alt="<%= product.img[0] %>">
+                        <img src="/images/instruments/<%= product.images[0].name %>" alt="<%= product.images[0].name %>">
                     </a>
                     <div class="foot-offers"> 
                         <h4 id="title-offers"><%= product.name %></h4>
@@ -109,7 +109,7 @@
                         </div>
                     </div>
                 </article>
-                <% }  %>
+                
                 <% }) %>
                 <div class="offers-arrow">
                     <i class="fas fa-arrow-right"></i>

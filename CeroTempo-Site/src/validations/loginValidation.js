@@ -1,10 +1,30 @@
 const bcryptjs = require("bcryptjs");
-const { check } = require("express-validator");
+const { check,body } = require("express-validator");
 const db = require("../database/models");
 
 module.exports = [
-  check("userEmail").notEmpty().withMessage("Enter your email").bail().isEmail().withMessage("Invalid email"),
+  check("userEmail")
+  .notEmpty()
+  .withMessage("Enter your email").bail()
+  .isEmail().withMessage("Invalid email"),
+//-------------------código de mati----------------//
+  // body('userEmail')
+  // .custom((value, {req}) => {
+  //     return Usuario.findOne({
+  //         where : { userEmail : value}
+  //     })
+  //     .then(user => {
+  //         if (!bcrypt.compareSync(req.body.userPass, user.userPass)){
+  //             return Promise.reject('Invalid credentials')
+  //         }
+  //     })
+  //     .catch(errors => {
+  //         console.log(errors);
+  //         return Promise.reject("Email or password is incorrect")
+  //     })
+  // }),
 
+//--------------arriba - bodyEmail, código de Mati-------------//
   check("userPass")
     .notEmpty()
     .withMessage("Enter your password")
@@ -23,3 +43,4 @@ module.exports = [
         .catch(() => Promise.reject("Invalid password"));
     }),
 ];
+//--------------------Es necesario hacer promesa en userEmail?? 

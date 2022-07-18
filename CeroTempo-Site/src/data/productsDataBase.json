@@ -5,7 +5,7 @@
       "price": 120000,
       "discount": 10,
       "category": 1,
-      "detail": "Cello madera maciza importado de Italia. con madera de 10 años de antiguedad",
+      "description": "Cello madera maciza importado de Italia. con madera de 10 años de antiguedad",
       "characteristics": [
          "microafinadores",
          "madera maciza",
@@ -24,7 +24,7 @@
       "price": 150000,
       "discount": 0,
       "category": 1,
-      "detail": "Guitarra fender importada, directo de china",
+      "description": "Guitarra fender importada, directo de china",
       "characteristics": [
          "guitarra colores varios",
          "metalica alma de madera",
@@ -44,7 +44,7 @@
       "price": 55000,
       "discount": 12,
       "category": 1,
-      "detail": "Bajo colores varios, clavijero metalico",
+      "description": "Bajo colores varios, clavijero metalico",
       "characteristics": [
          "bajo muchos colores",
          "metal rigido",
@@ -63,7 +63,7 @@
       "price": 250000,
       "discount": 15,
       "category": 3,
-      "detail": "Bateria ultima linea madera importada",
+      "description": "Bateria ultima linea madera importada",
       "characteristics": [
          "madera importada",
          "resonancia maxima",
@@ -82,7 +82,7 @@
       "price": 19999,
       "discount": 25,
       "category": 3,
-      "detail": "bateria generica fabricada por luthiers",
+      "description": "bateria generica fabricada por luthiers",
       "characteristics": [
          "4 tambores",
          "nacional",
@@ -101,7 +101,7 @@
       "price": 110000,
       "discount": 22,
       "category": 3,
-      "detail": "bateria electrica ultima generación",
+      "description": "bateria electrica ultima generación",
       "characteristics": [
          "electrica",
          "made in china",
@@ -120,7 +120,7 @@
       "price": 25000,
       "discount": 0,
       "category": 2,
-      "detail": "trompeta nacional fabricada con el mejor material sonoro",
+      "description": "trompeta nacional fabricada con el mejor material sonoro",
       "characteristics": [
          "instrumento de viento de calidad",
          "fabricada en el pais",
@@ -139,7 +139,7 @@
       "price": 66000,
       "discount": 10,
       "category": 2,
-      "detail": "saxofon importado de la mejor calidad, sonido amplio resonante",
+      "description": "saxofon importado de la mejor calidad, sonido amplio resonante",
       "characteristics": [
          "made in francia",
          "bronce metalico"
@@ -157,7 +157,7 @@
       "price": 22000,
       "discount": 5,
       "category": 2,
-      "detail": "Trompeta generica con amplia sonoridad para niveles intermedio",
+      "description": "Trompeta generica con amplia sonoridad para niveles intermedio",
       "characteristics": [
          "metal pintado",
          "fabricacion nacional"
@@ -175,7 +175,7 @@
       "price": 80000,
       "discount": 10,
       "category": 4,
-      "detail": "Viola enchapada para principiante, excelente resonancia",
+      "description": "Viola enchapada para principiante, excelente resonancia",
       "characteristics": [
          "made in china",
          "madera maciza",
@@ -194,7 +194,7 @@
       "price": 350000,
       "discount": 20,
       "category": 4,
-      "detail": "Piano fabricado por luthiers itelianos de 40 años de antiguedad",
+      "description": "Piano fabricado por luthiers itelianos de 40 años de antiguedad",
       "characteristics": [
          "fabricado en italia",
          "maderas macizas",
@@ -213,7 +213,7 @@
       "price": 220000,
       "discount": 10,
       "category": 4,
-      "detail": "Piano pared antiguo",
+      "description": "Piano pared antiguo",
       "characteristics": [
          "madera de pino de 90 años",
          "funcionalidad y resonancia perfecta"
@@ -231,7 +231,7 @@
       "price": 10000,
       "discount": 10,
       "category": 5,
-      "detail": "Afinador mapex perfecciona el sonido",
+      "description": "Afinador mapex perfecciona el sonido",
       "characteristics": [
          "made in china",
          "afinador electrico con cargador"
@@ -249,7 +249,7 @@
       "price": 50000,
       "discount": 10,
       "category": 5,
-      "detail": "Teclado electrico de ultima linea",
+      "description": "Teclado electrico de ultima linea",
       "characteristics": [
          "made in china",
          "incluye cargador",
@@ -268,7 +268,7 @@
       "price": 23000,
       "discount": 0,
       "category": 5,
-      "detail": "Teclado generico con cargodor, sonido perfecto",
+      "description": "Teclado generico con cargodor, sonido perfecto",
       "characteristics": [
          "tamaño small",
          "cargador",

@@ -26,10 +26,10 @@ module.exports = {
         allowNull: true,
         type: Sequelize.TEXT
       },
-      characteristics: {
-        allowNull: true,
-        type: Sequelize.STRING
-      },
+      // characteristics: {
+      //   allowNull: true,
+      //   type: Sequelize.STRING
+      // },
       categoryId: {
         type: Sequelize.INTEGER.UNSIGNED,
         allowNull: false,

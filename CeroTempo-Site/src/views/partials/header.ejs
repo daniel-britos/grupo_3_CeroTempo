@@ -42,7 +42,10 @@
                         <a href="/products/productCart">
                             <p>Shopping Cart</p>
                         </a>
-                        <i class="fa-solid fa-cart-shopping"></i>
+                        <a href="/products/productCart">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </a>
+                        
                     <% } %> 
                 </span>
                 <span>
@@ -50,7 +53,9 @@
                         <a href="/users/login">
                             <p>Login</p>
                         </a>
-                        <i class="fa-solid fa-user"></i>                        
+                        <a href="/users/profile">
+                            <i class="fa-solid fa-user"></i>
+                        </a>                       
                     <% }else { %> 
                         <a href="/users/profile">
                             <p>Welcome <%= userLogin.userName %>! | </p>
@@ -58,7 +63,9 @@
                                 <p>Logout</p>
                             </a>
                         </a>
-                        <i class="fa-solid fa-user"></i>  
+                        <a href="/users/profile">
+                            <i class="fa-solid fa-user"></i>
+                        </a>  
                     <% } %> 
                 </span>
             </div>
@@ -67,7 +74,7 @@
         <nav class="nav-menu">
             <ul class="menu-horizontal"> 
                 <li><a href="/">Home</a></li>
-                <li><a href="#aboutUs">About us</a></li>
+                <li><a href="/#aboutUs">About us</a></li>
                 <li>
                     <a href="/products/productMain">Products</a>
                     <ul class="menu-vertical">
