@@ -104,62 +104,6 @@ module.exports = {
     );
   },
 
-  // processUpdateProfile: async (req, res) => {
-  //   try {
-  //     let usuarioEdit = await db.User.findByPk(req.params.id)
-  //     await db.User.update({
-  //       ...req.body,
-  //       avatar: req.file ? req.file.filename : req.session.userLogin.avatar
-  //       }, 
-  //       {
-  //         where: { id: req.params.id }
-  //       })
-  //     let usuario = await db.User.findByPk(req.params.id)
-  //     if (req.file) {
-  //       if (fs.existsSync(path.join(__dirname, "../../public/images/users", usuario.avatar)) &&
-  //         usuario.avatar !== "default-image-avatar.jpg") {
-  //         fs.unlinkSync(path.join(__dirname, "../../public/images/users", usuarioEdit.avatar))
-  //       }
-  //       req.session.userLogin = {
-  //         // id : usuario.id,
-  //         userName: usuario.userName,
-  //         userSurname: usuario.userSurname,
-  //         avatar: usuario.avatar,
-  //         // rol : usuario.rol
-  //       }
-  //       // res.locals.userLogin = req.session.userLogin;
-  //       res.send(usuario)
-  //     }
-  //   }
-  // },
-
-
-  // processUpdateProfile: (req, res) => {
-  //   let errors = validationResult(req);
-  //   if (errors.isEmpty()) {
-  //     const {userName, userSurname, userPass} = req.body;
-  //     db.User.findByPk(req.session.userLogin.id)
-  //       .then((user) => {
-  //         db.User.update(
-  //           {
-  //             userName: userName.trim(),
-  //             userSurname: userSurname.trim(),
-  //             userPass: userPass ? bcryptjs.hashSync(userPass, 10) : user.userPass,
-  //             avatar: req.file && req.file.filename,
-  //           },
-  //           {
-  //             where: {
-  //               id: req.session.userLogin.id,
-  //             },
-  //           }
-  //         )
-  //           return res.send(user);
-  //           // return res.redirect('/users/profile');
-  //         })
-  //         .catch((error) => console.log(error));
-  //       }
-
-  //   },
   processUpdateProfile: (req, res) => {
     let errores = validationResult(req);
     if (errores.isEmpty()) {
@@ -176,6 +120,12 @@ module.exports = {
             id: req.session.userLogin.id
           }
         })
+        // .then((req.file) => {
+        //     if (fs.existsSync(path.join(__dirname, "../../public/images/users", usuario.avatar)) &&
+        //       usuario.avatar !== "default-image-avatar.jpg") {
+        //       fs.unlinkSync(path.join(__dirname, "../../public/images/users", usuarioEdit.avatar))
+        //     }
+        //   })
         .then(() => {
           req.session.userLogin = {
             id: req.session.userLogin.id,
@@ -205,67 +155,4 @@ module.exports = {
     return res.redirect('/');
   }
 }
-//   processUpdateProfile: (req, res) => {
-//     let errors = validationResult(req);
-//     if (errors.isEmpty()) {
-//       const {userName, userSurname, userPass} = req.body;
-//       db.User.findByPk(req.session.userLogin.id)
-//         .then((user) => {
-//           db.User.update(
-//             {
-//               userName: userName.trim(),
-//               userSurname: userSurname.trim(),
-//               userPass: userPass ? bcryptjs.hashSync(userPass, 10) : user.userPass,
-//               avatar: req.file && req.file.filename,
-//             },
-//             {
-//               where: {
-//                 id: req.session.userLogin.id,
-//               },
-//             }
-//           ).then(() => {
-//             return res.redirect('/users/profile');
-//           });
-//         })
-//         .catch((error) => console.log(error));
-//     }
-//   },
 
-// processUpdateProfile: (req, res) => {
-//   let { userName, userSurname, userBirth, userPass } = req.body;
-// db.User.update(
-// {
-//   userName: userName.trim(),
-//   userSurname: userSurname.trim(),
-//   userBirth,
-//   userPass: userPass ? bcryptjs.hashSync(userPass, 10) : user.userPass,
-//   avatar: req.file && req.file.filename,
-// },
-// {
-//   where : {
-//     id : req.params.id
-//   }
-// }
-// )
-// .then(async () => {
-//       if(req.files){
-//           try {
-//               await db.Image.update(
-//                   {
-//                       name : req.files.filename
-//       },
-//       {
-//                       where : {
-//                           productId : req.params.id
-//         }
-//       }
-//                   )
-//               } catch (error) {
-//                   console.log(error);
-//               }
-//           }
-// .then((user) =>
-//          res.send(user))
-//   res.redirect('/users/profile')
-// .catch(error => console.log(error))
-// }

@@ -5,7 +5,7 @@ const products = products_db.map(product => {
     name : product.name,
     price : product.price,
     discount : product.discount,
-    description : product.detail,
+    description : product.description,
     // characteristics : product.characteristics.toString(),
     categoryId : product.category,
     createdAt : new Date(),

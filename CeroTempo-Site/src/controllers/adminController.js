@@ -43,13 +43,13 @@ module.exports = {
         },
         
         store: (req, res) => {    
-            let { name, price, discount, detail, category } = req.body;
+            let { name, price, discount, description, category } = req.body;
             db.Product.create({
                 //cargo todo lo que viene por body
                 name: name,
                 price: +price,
                 discount: +discount,
-                detail: detail.trim(),
+                description: description.trim(),
                 // characteristics: characteristics.trim().split(',').toString(), 
                 categoryId : category,
             }).then(product => {
@@ -69,7 +69,7 @@ module.exports = {
             .catch(error => console.log(error))	 
     },
     update: (req, res) => {
-        let { name, price, discount, detail, characteristics, category } = req.body;
+        let { name, price, discount, description, characteristics, category } = req.body;
         let arrayImages = [];
         if (req.files) {
             req.files.forEach((image) => {
@@ -82,7 +82,7 @@ module.exports = {
             price: +price,
             discount: +discount,
             categoryid: category,
-            description: detail.trim(),
+            description: description.trim(),
             characteristics,
         },
         {

@@ -1,32 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%- include('./partials/head') %> 
+    <%- include('./partials/head',{
+        title: "Editar producto"
+    }) %> 
 <body>
     <%- include('./partials/header') %> 
     <main class="main-admin">
         <h2>Edit Product</h2>
         <section class="main-form-create">
             <form class="admin-form" action="/admin/update/<%= product.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
-                <div class="left-container">       
+                <div class="left-container"> 
+
                     <div class="admin-box">
                         <label for="name">Product Title</label>
                         <input type="text" name="name" id="" value="<%= product.name %> ">
                         <span class="validation-text" ><%= locals.errors && errors.name ? errors.name.msg : null%></span>                
-                    </div>                
+                    </div>   
+
                     <div class="admin-box">
                         <label for="price">Price</label>
                         <input type="number" name="price" id="price" value="<%= product.price %>">
                         <span class="validation-text"><%= locals.errors && errors.price ? errors.price.msg : null%></span>
                     </div>
+
                     <div class="admin-box">                    
                         <label for="discount">Discount</label>
                         <input type="number" name="discount" id="discount" value="<%= product.discount %>">
                         <span class="validation-text" ><%= locals.errors && errors.discount ? errors.discount.msg : null%></span>            
                     </div>
+
                     <div class="admin-box box-description">
-                        <label for="detail">Description</label>
-                        <textarea name="detail" id="text-description" cols="30" rows="3" style="resize: none;"><%= product.detail %></textarea>                        
-                        <span class="validation-text" ><%= locals.errors && errors.detail ? errors.detail.msg : null%></span>
+                        <label for="description">Description</label>
+                        <textarea name="description" id="text-description" cols="30" rows="3" style="resize: none;"><%= product.description %></textarea>                        
+                        <span class="validation-text" ><%= locals.errors && errors.description ? errors.description.msg : null%></span>
                     </div>
                     
                 </div>
@@ -34,14 +40,14 @@
                 <div class="right-container">
                     <div class="img-create-preview">
                         <h2>PREVIEW</h2>
-                        <img src="" id="imagePreview" alt="">
+                        <img src="/images/instruments/<%= product.images[0].name %>" id="imagePreview" alt="">
                     </div>
                     <div class="into-admin-box">
                         
-                        <div class="admin-box add-img">
+                        <div class=" add-img">
                             <label for="image">ADD IMAGE</label>
                             <input type="file" name="image" id="image" accept="image/*" multiple>
-                            <span class="validation-text" hidden>Required Field</span>
+                            <!-- <span class="validation-text" hidden>Required Field</span> -->
                         </div>  
                         <div class="admin-box">
                             <label for="category">Category</label>
