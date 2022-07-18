@@ -9,10 +9,8 @@ module.exports = {
     return res.render('register');
   },
   userList: (req, res) => {
-		db.User.findAll({
-			include : ['images']
-		})
-			.then(users => {                
+		db.User.findAll()
+			.then(users => {                  
 				return res.render('userList',{users})
 			})
 			.catch(error => console.log(error))
@@ -30,7 +28,7 @@ module.exports = {
         userBirth,
         avatar: req.file ? req.file.filename : 'default-image-avatar.jpg', //sirve! , <NO BORRAR DEFAULT IMAGE DE PUBLIC>
         // avatar: 'default-image-avatar.jpg',  //se cambio a jpg, 
-        rol: 'user'      
+        rol: userEmail.includes("@admin") ? 'admin' : 'user'      
       })
         .then(user => {
           req.session.userLogin = {
@@ -128,12 +126,7 @@ module.exports = {
             id: req.session.userLogin.id
           }
         })
-        // if(req.file){
-        //     if (fs.existsSync(path.join(__dirname, "../../public/images/users", user.avatar)) &&
-        //       usuario.avatar !== "default-image-avatar.jpg") {
-        //       fs.unlinkSync(path.join(__dirname, "../../public/images/users", userEdit.avatar))
-        //     }
-        //   }
+
         .then(() => {
           req.session.userLogin = {
             id: req.session.userLogin.id,
@@ -162,6 +155,17 @@ module.exports = {
     req.session.destroy();
     res.cookie('userCeroTempo', null, { maxAge: -1 });
     return res.redirect('/');
-  }
+  },
+
+  remove: (req, res) => {           
+        db.User.destroy({
+            where : {
+                id : req.params.id
+            }
+        }).then((data) => {
+            return res.redirect('/')
+        }).catch(error => console.log(error))
+
+    }    
 }
 

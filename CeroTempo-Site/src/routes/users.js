@@ -10,7 +10,7 @@ const inSession = require('../middlewares/inSession');
 const profileCheck= require('../middlewares/profileCheck');
 const adminCheck = require('../middlewares/adminCheck');
 /*controller*/
-const {userList, register, login, processRegister, processLogin, logout, profile, updateProfile, processUpdateProfile} = require('../controllers/usersController');
+const {remove, userList, register, login, processRegister, processLogin, logout, profile, updateProfile, processUpdateProfile} = require('../controllers/usersController');
 /* GET users listing. */
 router.get('/', function(req, res, next) {
   res.send('respond with a resource');
@@ -24,6 +24,7 @@ router.get('/register', inSession, register)
       .get('/profile',profileCheck, profile)
       .get('/update',profileCheck, updateProfile)
       .put('/update-profile',uploadImagesAvatar.single('avatar'), updateProfileValidator,processUpdateProfile)
+      .delete('/remove/:id', remove)
       .get('/userList', userList)
 
 module.exports = router;
