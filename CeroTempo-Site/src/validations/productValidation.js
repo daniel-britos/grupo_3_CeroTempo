@@ -1,7 +1,6 @@
 const {check} = require('express-validator');
 
 module.exports = [
-
     check('name')
         .notEmpty().withMessage("Enter product's name")
         .isLength({min:3,max:20}).withMessage('At least 3 characters').bail(),

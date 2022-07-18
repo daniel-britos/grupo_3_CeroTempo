@@ -32,7 +32,7 @@ module.exports = [
     }),
 
     check('userPass')
-        .isLength({min: 6, max:12}).withMessage('The field must contain at least 6 and 12 letters').bail(),
+        .isLength({min: 6, max:16}).withMessage('The field must contain at least 6 and 12 letters').bail(),
 
     body('userPassConfirm')
         .custom((value,{req}) => {

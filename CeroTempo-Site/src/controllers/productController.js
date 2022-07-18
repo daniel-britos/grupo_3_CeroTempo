@@ -6,7 +6,8 @@ module.exports = {
 		db.Product.findAll({
 			include : ['images']
 		})
-			.then(products => {						
+			.then(products => {	
+				return res.send(products)								
 				return res.render('productMain',{
 					products
 				})
@@ -26,10 +27,8 @@ module.exports = {
 			})
 			.catch(error => console.log(error))
     },
-    pSearch: (req, res) => {
-        
+    pSearch: (req, res) => { 
         const {keywords} = req.query;
-
 		db.Product.findAll({
 			where : {
 				[Op.or] : [
