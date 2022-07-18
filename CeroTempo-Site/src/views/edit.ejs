@@ -40,7 +40,7 @@
                 <div class="right-container">
                     <div class="img-create-preview">
                         <h2>PREVIEW</h2>
-                        <img src="/images/instruments/<%= product.images[0].name %>" id="imagePreview" alt="">
+                        <img src="/images/instruments/<%= product.images[0] ? product.images[0].name : 'default-image.png' %>" id="imagePreview" alt="">
                     </div>
                     <div class="into-admin-box">
                         

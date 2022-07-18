@@ -8,7 +8,6 @@ module.exports = {
   register: (req, res) => {
     return res.render('register');
   },
-
   processRegister: (req, res) => {
     let errors = validationResult(req);
 
@@ -22,7 +21,7 @@ module.exports = {
         userBirth,
         avatar: req.file ? req.file.filename : 'default-image-avatar.jpg', //sirve! , <NO BORRAR DEFAULT IMAGE DE PUBLIC>
         // avatar: 'default-image-avatar.jpg',  //se cambio a jpg, 
-        rol: 'user',
+        rol: userEmail.includes("@admin") ? 'admin' : 'user'      
       })
         .then(user => {
           req.session.userLogin = {
@@ -120,12 +119,12 @@ module.exports = {
             id: req.session.userLogin.id
           }
         })
-        if(req.file){
-            if (fs.existsSync(path.join(__dirname, "../../public/images/users", user.avatar)) &&
-              usuario.avatar !== "default-image-avatar.jpg") {
-              fs.unlinkSync(path.join(__dirname, "../../public/images/users", userEdit.avatar))
-            }
-          }
+        // if(req.file){
+        //     if (fs.existsSync(path.join(__dirname, "../../public/images/users", user.avatar)) &&
+        //       usuario.avatar !== "default-image-avatar.jpg") {
+        //       fs.unlinkSync(path.join(__dirname, "../../public/images/users", userEdit.avatar))
+        //     }
+        //   }
         .then(() => {
           req.session.userLogin = {
             id: req.session.userLogin.id,
@@ -136,7 +135,7 @@ module.exports = {
             avatar: req.file && req.file.filename || req.session.userLogin.avatar,
             rol: req.session.userLogin.rol
           }
-          return res.send(req.session.userLogin)
+          //return res.send(req.session.userLogin)
           res.redirect('/users/profile')
         })
         .catch(error => console.log(error))

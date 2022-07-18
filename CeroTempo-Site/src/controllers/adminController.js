@@ -69,9 +69,9 @@ module.exports = {
             .catch(error => console.log(error))	 
     },
     update: (req, res) => {
-        let { name, price, discount, description, characteristics, category } = req.body;
+        let { name, price, discount, description, category } = req.body;
         let arrayImages = [];
-        if (req.files) {
+        if (req.files.length > 0) {
             req.files.forEach((image) => {
                 arrayImages.push(image.filename);
             });
@@ -83,14 +83,14 @@ module.exports = {
             discount: +discount,
             categoryid: category,
             description: description.trim(),
-            characteristics,
+            //characteristics,
         },
         {
             where: {
                 id: req.params.id,
             },
         }
-        ).then((result) => {
+        ).then(async(result) => {
             if (result) {
                 if (arrayImages.length > 0) {
                 let images = arrayImages.map((image) => {
@@ -99,25 +99,24 @@ module.exports = {
                         productId: req.params.id,
                     };
                 });                
-                db.Image.findAll({
+                let imagenes = await db.Image.findAll({
                     where: {
-                    productId: req.params.id,
+                        productId: req.params.id,
                     },
-                }).then((result) => {
-                    result.forEach((image) => {
+                })
+                if(imagenes) {
+                    imagenes.forEach((image) => {
                         fs.existsSync("../public/images/instruments/", image.name)
                         ? fs.unlinkSync("../public/images/instruments/" + image.name)
                         : console.log("-- No se encontró");
-                    });
-                    db.Image.destroy({
+                    })
+                    await db.Image.destroy({
                             where: {
                             productId: req.params.id,
                         },
-                    }).then(
-                    db.Image.bulkCreate(images).then(
-                        res.redirect("/products/productMain")
-                    ))
-                });
+                    })
+                    await db.Image.bulkCreate(images)        
+                };
             }
             return res.redirect("/products/productMain");
             }
