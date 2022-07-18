@@ -36,12 +36,8 @@ module.exports = [
     }),
 
     check('userPass')
-<<<<<<< HEAD
-        .isLength({min: 6, max:16}).withMessage('The field must contain at least 6 and 12 letters').bail(),
-=======
     .notEmpty().withMessage('Enter password').bail()    //se agrego notEmpty
     .isLength({min: 6, max:12}).withMessage('The field must contain at least 6 and 12 letters').bail(),
->>>>>>> userlist
 
     body('userPassConfirm')
         .notEmpty().withMessage('You must confirm password').bail()
