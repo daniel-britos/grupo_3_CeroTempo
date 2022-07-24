@@ -40,13 +40,13 @@
                 <div class="right-container">
                     <div class="img-create-preview">
                         <h2>PREVIEW</h2>
-                        <img src="/images/instruments/<%= product.images[0] ? product.images[0].name : 'default-image.png' %>" id="imagePreview" alt="">
+                        <img src="/images/instruments/<%= product.images[0] ? product.images[0].name : 'default-image.png' %>" id="imagePreview" alt="" >
                     </div>
                     <div class="into-admin-box">
                         
                         <div class=" add-img">
                             <label for="image">ADD IMAGE</label>
-                            <input type="file" name="image" id="image" accept="image/*" multiple>
+                            <input type="file" name="image" id="image" multiple accept=".png, .jpg, .jpeg, .gif">
                             <!-- <span class="validation-text" hidden>Required Field</span> -->
                         </div>  
                         <div class="admin-box">
