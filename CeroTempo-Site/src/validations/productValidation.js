@@ -3,7 +3,7 @@ const {check} = require('express-validator');
 module.exports = [
     check('name')
         .notEmpty().withMessage("Enter product's name")
-        .isLength({min:3,max:20}).withMessage('At least 3 characters').bail(),
+        .isLength({min:5,max:20}).withMessage('At least 3 characters').bail(),
     
     check('price')
         .notEmpty()
@@ -13,13 +13,10 @@ module.exports = [
         .notEmpty()
         .withMessage("Enter product's discount").bail(),
 
-    check('detail')
+    check('detail') //cambiar por description?
         .notEmpty()
-        .withMessage("Enter product's description").bail(),
-
-    check('characteristics')
-        .notEmpty()
-        .withMessage("Enter characteristics").bail(),
+        .withMessage("Enter product's description").bail()
+        .isLength({min:20}).withMessage('At least 3 characters').bail(),
 
     check('category')
         .notEmpty()

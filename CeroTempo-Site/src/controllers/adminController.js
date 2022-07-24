@@ -52,14 +52,14 @@ module.exports = {
                 description: description.trim(),
                 // characteristics: characteristics.trim().split(',').toString(), 
                 categoryId : category,
-            }).then(product => {
+            }).then(product => {                
                 if (req.files.length > 0) {              
                     let images = req.files.map(({filename},i) => {       
                         let image = {       
                             name : filename,   
                             productId : product.id,
                         }
-                        return image
+                        return image;
                     })
                     db.Image.bulkCreate(images,{validate : true})
                         .then((result) => console.log(result))

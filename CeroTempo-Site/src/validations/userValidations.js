@@ -13,7 +13,6 @@ module.exports = [
         .isLength({min: 2}).withMessage('The field must contain at least two letters').bail()
         .isAlpha().withMessage('Enter your name...'),
 
-
     check('userEmail') //se agrego el check.userEmail, se dividió en check y body
     .notEmpty().withMessage('This field is require').bail()
     .isEmail().withMessage('Invalid...'),
@@ -36,12 +35,8 @@ module.exports = [
     }),
 
     check('userPass')
-<<<<<<< HEAD
-        .isLength({min: 6, max:16}).withMessage('The field must contain at least 6 and 12 letters').bail(),
-=======
     .notEmpty().withMessage('Enter password').bail()    //se agrego notEmpty
-    .isLength({min: 6, max:12}).withMessage('The field must contain at least 6 and 12 letters').bail(),
->>>>>>> userlist
+    .isLength({min: 8, max:12}).withMessage('The field must contain at least 6 and 12 letters').bail(),
 
     body('userPassConfirm')
         .notEmpty().withMessage('You must confirm password').bail()

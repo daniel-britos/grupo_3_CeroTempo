@@ -21,8 +21,8 @@
    },
    {
       "id": 3,
-      "userName": "julie",
-      "userSurname": "julie",
+      "userName": "Judith",
+      "userSurname": "Maths",
       "userEmail": "julie@julie.com.ar",
       "userPass": "$2a$10$t3rZsnIRJqf0A6Axp/NuC.bcjz/Fpvh6zTjDNuZhelwCEjrIfryH2",
       "userBirth": "1981-07-27",
@@ -31,8 +31,8 @@
    },
    {
       "id": 4,
-      "userName": "tina",
-      "userSurname": "tina",
+      "userName": "Tina",
+      "userSurname": "Thurner",
       "userEmail": "tina@tina.com.ar",
       "userPass": "$2a$10$bgNs/n0J5RWzgjaWouG/iuS.dXmwOztIDGOG6hMSwzkdrVwP7mkkK",
       "userBirth": "1995-02-12",

@@ -1,25 +1,25 @@
-const { validationResult } = require('express-validator');
+const {validationResult} = require('express-validator');
 const bcryptjs = require('bcryptjs');
 const db = require('../database/models');
-let fs = require('fs')
-let path = require('path')
+let fs = require('fs');
+let path = require('path');
 
 module.exports = {
   register: (req, res) => {
     return res.render('register');
   },
   userList: (req, res) => {
-		db.User.findAll()
-			.then(users => {                  
-				return res.render('userList',{users})
-			})
-			.catch(error => console.log(error))
-      },
+    db.User.findAll()
+      .then((users) => {
+        return res.render('userList', {users});
+      })
+      .catch((error) => console.log(error));
+  },
   processRegister: (req, res) => {
     let errors = validationResult(req);
 
     if (errors.isEmpty()) {
-      let { userName, userSurname, userPass, userBirth, userEmail } = req.body;
+      let {userName, userSurname, userPass, userBirth, userEmail} = req.body;
       db.User.create({
         userName: userName.trim(),
         userSurname: userSurname.trim(),
@@ -27,22 +27,22 @@ module.exports = {
         userPass: bcryptjs.hashSync(userPass.trim(), 10),
         userBirth,
         avatar: req.file ? req.file.filename : 'default-image-avatar.jpg', //sirve! , <NO BORRAR DEFAULT IMAGE DE PUBLIC>
-        // avatar: 'default-image-avatar.jpg',  //se cambio a jpg, 
-        rol: userEmail.includes("@admin") ? 'admin' : 'user'      
+        // avatar: 'default-image-avatar.jpg',  //se cambio a jpg,
+        rol: userEmail.includes('@admin') ? 'admin' : 'user',
       })
-        .then(user => {
+        .then((user) => {
           req.session.userLogin = {
             id: user.id,
             userName: user.userName.trim(),
             userSurname: user.userSurname.trim(),
             userEmail: user.userEmail.trim(),
             userBirth: user.userBirth,
-            rol: user.rol
+            rol: user.rol,
           };
           res.locals.userLogin = req.session.userLogin; //se agrego login como está en middlewares locals
           return res.redirect('login');
         })
-        .catch(errors => console.log(errors));
+        .catch((errors) => console.log(errors));
     } else {
       return res.render('register', {
         errors: errors.mapped(),
@@ -60,32 +60,31 @@ module.exports = {
     const errors = validationResult(req);
     if (errors.isEmpty()) {
       db.User.findOne({
-        where: { userEmail: req.body.userEmail },
-      })
-        .then(({ id, userName, userSurname, userEmail, userBirth, rol, avatar }) => {
-          req.session.userLogin = {
-            id: +id,
-            userName,
-            userSurname,
-            userEmail,
-            userBirth,
-            avatar: avatar,
-            rol,
-          };
+        where: {userEmail: req.body.userEmail},
+      }).then(({id, userName, userSurname, userEmail, userBirth, rol, avatar}) => {
+        req.session.userLogin = {
+          id: +id,
+          userName,
+          userSurname,
+          userEmail,
+          userBirth,
+          avatar: avatar,
+          rol,
+        };
 
-          if (req.body.remember) {
-            res.cookie('CeroTempo', req.session.userLogin, {
-              maxAge: 1000 * 60 * 2,
-            });
-          }
-          // res.locals.userLogin = res.session.userLogin //se agrego esto!
-          res.redirect('/');
-        })
+        if (req.body.remember) {
+          res.cookie('CeroTempo', req.session.userLogin, {
+            maxAge: 1000 * 60 * 2,
+          });
+        }
+        // res.locals.userLogin = res.session.userLogin //se agrego esto!
+        res.redirect('/');
+      });
       // .catch((errors) => console.log(errors))
     } else {
       return res.render('login', {
         errors: errors.mapped(),
-        // old: req.body,   //esto va? 
+        // old: req.body,   //esto va?
       });
     }
   },
@@ -113,19 +112,21 @@ module.exports = {
   processUpdateProfile: (req, res) => {
     let errores = validationResult(req);
     if (errores.isEmpty()) {
-      const { userName, userSurname, avatar, userBirth, userEmail } = req.body;
-      db.User.update({
-        userName: userName.trim(),
-        userSurname: userSurname.trim(),
-        userEmail: userEmail,
-        avatar: req.file ? req.file.filename : avatar,
-        userBirth: userBirth
-      },
+      const {userName, userSurname, avatar, userBirth, userEmail} = req.body;
+      db.User.update(
+        {
+          userName: userName.trim(),
+          userSurname: userSurname.trim(),
+          userEmail: userEmail,
+          avatar: req.file ? req.file.filename : avatar,
+          userBirth: userBirth,
+        },
         {
           where: {
-            id: req.session.userLogin.id
-          }
-        })
+            id: req.session.userLogin.id,
+          },
+        }
+      )
 
         .then(() => {
           req.session.userLogin = {
@@ -134,38 +135,36 @@ module.exports = {
             userSurname: req.body.userSurname,
             userBirth: req.body.userBirth,
             userEmail: req.body.userEmail,
-            avatar: req.file && req.file.filename || req.session.userLogin.avatar,
-            rol: req.session.userLogin.rol
-          }
+            avatar: (req.file && req.file.filename) || req.session.userLogin.avatar,
+            rol: req.session.userLogin.rol,
+          };
           //return res.send(req.session.userLogin)
-          res.redirect('/users/profile')
+          res.redirect('/users/profile');
         })
-        .catch(error => console.log(error))
-
+        .catch((error) => console.log(error));
     } else {
       return res.render('profile', {
         old: req.body,
         errors: errors.mapped(),
-
       });
     }
   },
 
   logout: (req, res) => {
     req.session.destroy();
-    res.cookie('userCeroTempo', null, { maxAge: -1 });
+    res.cookie('userCeroTempo', null, {maxAge: -1});
     return res.redirect('/');
   },
 
-  remove: (req, res) => {           
-        db.User.destroy({
-            where : {
-                id : req.params.id
-            }
-        }).then((data) => {
-            return res.redirect('/')
-        }).catch(error => console.log(error))
-
-    }    
-}
-
+  remove: (req, res) => {
+    db.User.destroy({
+      where: {
+        id: req.params.id,
+      },
+    })
+      .then((data) => {
+        return res.redirect('/');
+      })
+      .catch((error) => console.log(error));
+  },
+};
