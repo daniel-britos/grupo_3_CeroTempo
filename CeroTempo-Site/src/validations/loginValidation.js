@@ -6,25 +6,20 @@ module.exports = [
   check("userEmail")
   .notEmpty()
   .withMessage("Enter your email").bail()
-  .isEmail().withMessage("Invalid email"),
-//-------------------código de mati----------------//
-  // body('userEmail')
-  // .custom((value, {req}) => {
-  //     return Usuario.findOne({
-  //         where : { userEmail : value}
-  //     })
-  //     .then(user => {
-  //         if (!bcrypt.compareSync(req.body.userPass, user.userPass)){
-  //             return Promise.reject('Invalid credentials')
-  //         }
-  //     })
-  //     .catch(errors => {
-  //         console.log(errors);
-  //         return Promise.reject("Email or password is incorrect")
-  //     })
-  // }),
+  .isEmail().withMessage("Invalid email")
+  .custom((value,{req}) => {
+    return db.User.findOne({
+     where: {
+         userEmail: req.body.userEmail
+     }
+    })
+    .then(user =>{
+     if(!user) {
+         return Promise.reject() 
+     }
+    }).catch(() => Promise.reject('Invalid Email'))
+   }),
 
-//--------------arriba - bodyEmail, código de Mati-------------//
   check("userPass")
     .notEmpty()
     .withMessage("Enter your password")

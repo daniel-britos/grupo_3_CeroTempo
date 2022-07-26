@@ -13,7 +13,7 @@
                 type="email" id="email" name="userEmail"
                     placeholder="Please, enter your email" />
                     <span class="l__text__errors">
-                        <%= locals.errores && errores.userEmail ? errores.userEmail.msg : null %>
+                        <%= locals.errors && errors.userEmail ? errors.userEmail.msg : null %>
                     </span>
             </div>
             <div class="l__main__credentials">
@@ -21,7 +21,7 @@
                 <input class="l__main__credentials__imput" type="password" id="password" name="userPass"
                     placeholder="Please, enter your password" />
                 <span class="l__text__errors">
-                    <%= locals.errores && errores.userPass ? errores.userPass.msg : null %>.
+                    <%= locals.errors && errors.userPass ? errors.userPass.msg : null %>.
                 </span>
             </div>
             <button class="l__main__login">Login</button>
