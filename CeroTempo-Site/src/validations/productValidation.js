@@ -13,7 +13,7 @@ module.exports = [
 
   check("discount").notEmpty().withMessage("Enter product's discount").bail(),
 
-  check("detail") //cambiar por description?
+  check("description")
     .notEmpty()
     .withMessage("Enter product's description")
     .bail()

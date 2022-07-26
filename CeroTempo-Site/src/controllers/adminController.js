@@ -47,6 +47,7 @@ module.exports = {
 
   store: (req, res) => {
     let errors = validationResult(req);
+    //return res.send(errors);
     if (errors.isEmpty()) {
       let { name, price, discount, description, category } = req.body;
       db.Product.create({

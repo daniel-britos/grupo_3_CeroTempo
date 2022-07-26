@@ -52,13 +52,13 @@
                         </div>
                         <label><b>Imagen de perfil:</b></label>
                         <input id="imgCreate" type="file" name="avatar" class="form-control"
-                        value="<%= locals.old && old.avatar ? old.avatar : null %>"/>
+                        value="<%= locals.old && old.avatar ? old.avatar : null %>" accept="image/png, image/jpeg, image/gif, image/jpg" />
                         <span class="alert-validation"><%= locals.errors && errors.avatar ? errors.avatar.msg : null %></span>
                     </div>
                     <div class="sign-up-terms">
                         <div class="terms-box">
                             <input type="checkbox" name="terms" id="terms"
-                            value="<%= locals.old && old.terms ? old.terms : null %>" />
+                            value="<%= locals.old && old.terms ? old.terms : null %>"/>
                             <label for="terms">Términos y condiciones</label>
                         </div>
                         <span class="alert-validation"><%= locals.errors && errors.terms ? errors.terms.msg : null %></span>

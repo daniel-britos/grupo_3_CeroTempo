@@ -26,14 +26,11 @@
                         <input type="number" name="discount" id="discount" value="<%= locals.old && old.discount ? old.discount : null%>">
                         <span class="validation-text"><%= locals.errors && errors.discount ? errors.discount.msg : null%></span>            
                     </div>
-
                     <div class="admin-box box-description">
                         <label for="description">Description</label>
-
-                        <textarea name="description" id="text-description" cols="30" rows="3" style="resize: none;"><%= locals.old && old.description? old.description: null %>
-                        </textarea>                        
+                        <textarea name="description" id="text-description" cols="30" rows="3" style="resize: none;"><%= locals.old && old.description? old.description: null %></textarea>                        
                         <span class="validation-text"><%= locals.errors && errors.description ? errors.description.msg : null%></span>
-                    </div>                    
+                    </div>                   
                 </div>
                 <div class="right-container">
                     <div class="img-create-preview">
@@ -43,7 +40,7 @@
                     <div class="into-admin-box">
                         <div class="admin-box add-img">
                             <label for="image">ADD IMAGE</label>                            
-                            <input type="file" name="image" id="image" accept="image/*" multiple>
+                            <input type="file" name="image" id="image" accept="image/png, image/jpeg, image/gif, image/jpg" multiple>
                             <span class="validation-text" hidden>Required Field</span>
                         </div>
                         <div class="admin-box">
