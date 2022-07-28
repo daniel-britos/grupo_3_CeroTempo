@@ -1,17 +1,17 @@
-const {validationResult} = require('express-validator');
-const bcryptjs = require('bcryptjs');
-const db = require('../database/models');
-let fs = require('fs');
-let path = require('path');
+const { validationResult } = require("express-validator");
+const bcryptjs = require("bcryptjs");
+const db = require("../database/models");
+let fs = require("fs");
+let path = require("path");
 
 module.exports = {
   register: (req, res) => {
-    return res.render('register');
+    return res.render("register");
   },
   userList: (req, res) => {
     db.User.findAll()
       .then((users) => {
-        return res.render('userList', {users});
+        return res.render("userList", { users });
       })
       .catch((error) => console.log(error));
   },
@@ -19,16 +19,16 @@ module.exports = {
     let errors = validationResult(req);
 
     if (errors.isEmpty()) {
-      let {userName, userSurname, userPass, userBirth, userEmail} = req.body;
+      let { userName, userSurname, userPass, userBirth, userEmail } = req.body;
       db.User.create({
         userName: userName.trim(),
         userSurname: userSurname.trim(),
         userEmail,
         userPass: bcryptjs.hashSync(userPass.trim(), 10),
         userBirth,
-        avatar: req.file ? req.file.filename : 'default-image-avatar.jpg', //sirve! , <NO BORRAR DEFAULT IMAGE DE PUBLIC>
+        avatar: req.file ? req.file.filename : "default-image-avatar.jpg", //sirve! , <NO BORRAR DEFAULT IMAGE DE PUBLIC>
         // avatar: 'default-image-avatar.jpg',  //se cambio a jpg,
-        rol: userEmail.includes('@admin') ? 'admin' : 'user',
+        rol: userEmail.includes("@admin") ? "admin" : "user",
       })
         .then((user) => {
           req.session.userLogin = {
@@ -40,79 +40,73 @@ module.exports = {
             rol: user.rol,
           };
           res.locals.userLogin = req.session.userLogin; //se agrego login como está en middlewares locals
-          return res.redirect('login');
+          return res.redirect("login");
         })
         .catch((errors) => console.log(errors));
     } else {
-      return res.render('register', {
+      return res.render("register", {
         errors: errors.mapped(),
         old: req.body,
       });
     }
   },
-
   login: (req, res) => {
-    res.render('login');
+    res.render("login");
   },
-
-  ////------------------de acá para arriba funciona----------------------------------/// NO MODIFICAR
   processLogin: (req, res) => {
     const errors = validationResult(req);
     if (errors.isEmpty()) {
       db.User.findOne({
-        where: {userEmail: req.body.userEmail},
-      }).then(({id, userName, userSurname, userEmail, userBirth, rol, avatar}) => {
-        req.session.userLogin = {
-          id: +id,
-          userName,
-          userSurname,
-          userEmail,
-          userBirth,
-          avatar: avatar,
-          rol,
-        };
+        where: { userEmail: req.body.userEmail },
+      }).then(
+        ({ id, userName, userSurname, userEmail, userBirth, rol, avatar }) => {
+          req.session.userLogin = {
+            id: +id,
+            userName,
+            userSurname,
+            userEmail,
+            userBirth,
+            avatar: avatar,
+            rol,
+          };
 
-        if (req.body.remember) {
-          res.cookie('CeroTempo', req.session.userLogin, {
-            maxAge: 1000 * 60 * 2,
-          });
+          if (req.body.remember) {
+            res.cookie("CeroTempo", req.session.userLogin, {
+              maxAge: 1000 * 60 * 2,
+            });
+          }
+          // res.locals.userLogin = res.session.userLogin //se agrego esto!
+          res.redirect("/");
         }
-        // res.locals.userLogin = res.session.userLogin //se agrego esto!
-        res.redirect('/');
-      });
-      // .catch((errors) => console.log(errors))
+      );
     } else {
-      return res.render('login', {
+      return res.render("login", {
         errors: errors.mapped(),
-        // old: req.body,   //esto va?
       });
     }
   },
-
   profile: (req, res) => {
     let user = db.User.findByPk(req.session.userLogin.id);
 
     Promise.all([user]) //los corchetes van si o si, porque sino me trae los datos
       .then(([user]) =>
-        res.render('profile', {
+        res.render("profile", {
           user,
         })
       );
   },
-  ////------------------de acá para arriba funciona----------------------------------/// NO MODIFICAR
   updateProfile: (req, res) => {
     let user = db.User.findByPk(req.session.userLogin.id);
     Promise.all([user]).then(([user]) =>
-      res.render('update', {
+      res.render("update", {
         user,
       })
     );
   },
-
   processUpdateProfile: (req, res) => {
     let errores = validationResult(req);
     if (errores.isEmpty()) {
-      const {userName, userSurname, avatar, userBirth, userEmail} = req.body;
+      const { userName, userSurname, avatar, userBirth, userEmail } = req.body;
       db.User.update(
         {
           userName: userName.trim(),
@@ -135,27 +129,26 @@ module.exports = {
             userSurname: req.body.userSurname,
             userBirth: req.body.userBirth,
             userEmail: req.body.userEmail,
-            avatar: (req.file && req.file.filename) || req.session.userLogin.avatar,
+            avatar:
+              (req.file && req.file.filename) || req.session.userLogin.avatar,
             rol: req.session.userLogin.rol,
           };
           //return res.send(req.session.userLogin)
-          res.redirect('/users/profile');
+          res.redirect("/users/profile");
         })
         .catch((error) => console.log(error));
     } else {
-      return res.render('profile', {
+      return res.render("profile", {
         old: req.body,
         errors: errors.mapped(),
       });
     }
   },
-
   logout: (req, res) => {
     req.session.destroy();
-    res.cookie('userCeroTempo', null, {maxAge: -1});
-    return res.redirect('/');
+    res.cookie("userCeroTempo", null, { maxAge: -1 });
+    return res.redirect("/");
   },
-
   remove: (req, res) => {
     db.User.destroy({
       where: {
@@ -163,7 +156,7 @@ module.exports = {
       },
     })
       .then((data) => {
-        return res.redirect('/');
+        return res.redirect("/");
       })
       .catch((error) => console.log(error));
   },

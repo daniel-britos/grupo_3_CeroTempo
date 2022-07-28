@@ -8,6 +8,7 @@ const toThousand = (n) =>
     .toFixed(0)
     .toString()
     .replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+
 module.exports = {
   panel: (req, res) => {
     return res.render("panel");
@@ -44,7 +45,6 @@ module.exports = {
       })
       .catch((error) => console.log(error));
   },
-
   store: (req, res) => {
     let errors = validationResult(req);
     //return res.send(errors);
@@ -84,7 +84,6 @@ module.exports = {
       });
     }
   },
-
   update: (req, res) => {
     let errors = validationResult(req);
     if (errors.isEmpty()) {
@@ -156,7 +155,6 @@ module.exports = {
         .catch((error) => console.log(error));
     }
   },
-
   remove: (req, res) => {
     db.Image.findAll({
       where: {
