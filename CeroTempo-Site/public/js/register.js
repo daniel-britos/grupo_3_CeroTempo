@@ -7,6 +7,26 @@ const regExEmail =
   /^(([^<>()\[\]\.,;:\s@\”]+(\.[^<>()\[\]\.,;:\s@\”]:+)*)|(\”.+\”))@(([^<>()[\]\.,;:\s@\”]+\.)+[^<>()[\]\.,;:\s@\”]{2,})$/;
 const regExPass = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,12}$/;
 
+/* Verificacion de email con la base de datos*/
+const verifyEmail = async (email) => {
+  console.log('>>>>>', email);
+  try {
+    let response = await fetch('/users/api/check-email', {
+      method: 'POST',
+      body: JSON.stringify({
+        userEmail: email,
+      }),
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
+    let result = await response.json();
+    return result.data;
+  } catch (error) {
+    console.error;
+  }
+};
+
 /* Validacion Name */
 /* capturo por ID del imput name */
 $('name').addEventListener('blur', function () {
@@ -54,25 +74,8 @@ $('surname').addEventListener('blur', function () {
       break;
   }
 });
-
-/* const verifyEmail = async (email) => {
-  try {
-    let response = await fetch('/users/api/check-email', {
-      method: 'POST',
-      body: JSON.stringify({
-        email: userEmail,
-      }),
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    });
-    let result = await response.json();
-    return result.data;
-  } catch (error) {
-    console.error;
-  }
-};
-
+/* Validacion Email */
+/* capturo por ID del imput email */
 $('email').addEventListener('blur', async function () {
   switch (true) {
     case !this.value.trim():
@@ -93,4 +96,4 @@ $('email').addEventListener('blur', async function () {
       $('errorEmail').innerHTML = null;
       break;
   }
-}); */
+});

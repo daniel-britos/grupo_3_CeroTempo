@@ -167,4 +167,26 @@ module.exports = {
       })
       .catch((error) => console.log(error));
   },
+
+  /* APIs */
+  checkEmail: async (req, res) => {
+    try {
+      let user = await db.User.findOne({
+        where: {
+          userEmail: req.body.userEmail,
+        },
+      });
+      let response = {
+        ok: true,
+        data: user ? true : false,
+      };
+      return res.status(200).json(response);
+    } catch (error) {
+      console.log(error);
+      return res.status(error.status || 500).json({
+        ok: false,
+        msg: error.message || 'Comuniquese con el administrador del sitio',
+      });
+    }
+  },
 };

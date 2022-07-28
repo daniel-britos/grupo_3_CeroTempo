@@ -4,7 +4,7 @@
   <body>
     <%- include('./partials/header') %>
     <main class="main-register">
-      <form class="form-r" action="" method="POST" enctype="multipart/form-data">
+      <form class="form-r" action="" method="POST" enctype="multipart/form-data" novalidate>
         <div class="sign-up">
           <p class="sign-up-p">¡SIGN UP!</p>
         </div>
@@ -41,10 +41,10 @@
               type="email"
               id="email"
               name="userEmail"
-              class="<%= locals.errors && errors.userEmail ? 'is-invalid' : null %>"
+              class="form-control <%= locals.errors && errors.userEmail ? 'is-invalid' : null %>"
               value="<%= locals.old && old.userEmail ? old.userEmail : null %>"
             />
-            <span class="alert-validation"
+            <span id="errorEmail" class="alert-validation"
               ><%= locals.errors && errors.userEmail ? errors.userEmail.msg : null %></span
             >
           </div>
