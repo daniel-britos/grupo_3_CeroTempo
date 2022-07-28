@@ -54,9 +54,10 @@
               type="password"
               id="pass1"
               name="userPass"
+              class="form-control"
               value="<%= locals.old && old.userPass ? old.userPass : null %>"
             />
-            <span class="alert-validation"
+            <span id="errorPass1" class="alert-validation"
               ><%= locals.errors && errors.userPass ? errors.userPass.msg : null %></span
             >
           </div>
@@ -66,9 +67,10 @@
               type="password"
               id="pass2"
               name="userPassConfirm"
+              class="form-control"
               value="<%= locals.old && old.userPassConfirm ? old.userPassConfirm : null %>"
             />
-            <span class="alert-validation"
+            <span id="errorPass2" class="alert-validation"
               ><%= locals.errors && errors.userPassConfirm ? errors.userPassConfirm.msg : null
               %></span
             >
