@@ -141,18 +141,19 @@ module.exports = {
         }
       });
     } else {
-      let categories = db.Category.findAll();
-
-      Promise.all([categories]).then(([categories]) => {
-        return res.render("edit", {
-          product: {
-            id: req.params.id,
-            ...req.body,
-          },
-          errors: errors.mapped(),
-          categories,
-        });
+      let product = db.Product.findByPk(req.params.id, {
+        include: ["images"],
       });
+      let categories = db.Category.findAll();
+      Promise.all([product, categories])
+        .then(([product, categories]) => {
+          return res.render("edit", {
+            product,
+            categories,
+            errors: errors.mapped(),
+          });
+        })
+        .catch((error) => console.log(error));
     }
   },
 

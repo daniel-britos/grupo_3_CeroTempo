@@ -6,7 +6,7 @@ module.exports = [
     .notEmpty()
     .withMessage("Enter product's name")
     .isLength({ min: 5, max: 20 })
-    .withMessage("At least 3 characters")
+    .withMessage("At least 5 characters")
     .bail(),
 
   check("price").notEmpty().withMessage("Enter product's price").bail(),
@@ -18,7 +18,7 @@ module.exports = [
     .withMessage("Enter product's description")
     .bail()
     .isLength({ min: 20 })
-    .withMessage("At least 3 characters")
+    .withMessage("At least 20 characters")
     .bail(),
 
   check("category").notEmpty().withMessage("Enter a category").bail(),
