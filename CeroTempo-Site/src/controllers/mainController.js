@@ -6,11 +6,11 @@ module.exports = {
     let productsRecommended = db.Product.findAll({
       where: {
         discount: {
-          [Op.gte]: 20,
+          [Op.lte]: 20,
         },
       },
       order: [["id", "DESC"]],
-      limit: 3,
+      limit: 9,
       include: ["images"],
     });
     Promise.all([productsRecommended])

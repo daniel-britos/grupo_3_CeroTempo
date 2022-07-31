@@ -83,104 +83,97 @@
     background-image: url(/images/brands/bateria.jpg);
 }
 
-/* OFFERS */
-.main-offers {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+/* --- --- CAROUSEL --- --- */
+.offers-container {
+	max-width: 800px;
+	width: 90%;
+	margin: auto;
 }
-.main-offers h2 {
-    color: var(--naranjaLogo);
-    font-size: 2rem;
-    margin: 10px;
-    padding: 0;  
-}
-.main-offers article {
-    width: 90%;
-    margin: 5px;
-    background-color: black;
-    border-radius: 10px;
-    border: 3px black solid;
-}
-.main-offers i {
-    font-size: 20px;
-    color: white;
-    margin: 10px;
-    transform: rotate(90deg);
-}
-.offers-arrow {
-    background-color: black;
-    border-radius: 50%;
-    margin: 10px 0px;
-}
-.offers-arrow:hover {
-    background-color: var(--orangeLogo);
-}
-.main-offers article img {
-    width: 100%;
-    height: 300px;
-    border-radius: 6px;
-}
-.foot-offers {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    width: 100%;
-}
-#price {
-    font-size: 16px;
-    font-family: 'Raleway', sans-serif;
-    color: white;
-    text-align: right;
-    margin: 5px;
-}
-#discount {
-    font-size: 26px;
-    font-family: 'Righteous';
-    color: rgb(0, 255, 47) !important;
-    margin: 5px;
-}
-#title-offers {
-    width: 60%;
-    color: white;
-    font-family: 'Raleway', sans-serif;
-    font-size: 18px;
-    font-weight: 600;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-}
-.offers-data {
-    width: 40%;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    border-left: 1px solid white;
 
+.carousel__container {
+	position: relative;
+}
 
+.carousel__back,
+.carousel__next {
+	position: absolute;
+	display: block;
+	width: 30px;
+	height: 30px;
+	border: none;
+	top: calc(50% - 35px);
+	cursor: pointer;
+	line-height: 30px;
+	text-align: center;
+	background: none;
+	color: #fff;
+	opacity: 20%;
 }
-.main-offers article a {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: white;
-    font-size: 35px;
-    position: relative;
+.carousel__back > .fas,
+.carousel__next > .fas {
+    color: red;
+    font-size: 50px;
 }
-.main-offers article a p {
-    position: absolute;
-    top: 50px;
-    background-color: rgba(0, 0, 0, 0.4);
-    width: 100%;
-    text-align: center;
-    padding: 10px 0;
+
+.carousel__back:hover,
+.carousel__next:hover {
+	opacity: 100%;
 }
-.main-offers article a p:hover {
-    transform: scale(1.2);
-    transition: all 0.5s;
-    position: absolute;
+
+.carousel__back {
+	left: -30px;
 }
+/* .carousel__back > .fas {
+    color: red;
+    font-size: 60px;
+    
+} */
+
+.carousel__next {
+	right: -30px;
+}
+/* .carousel__next > .fas {
+    color: red;
+    font-size: 60px;
+    
+} */
+
+.carousel__list {
+	overflow: hidden;
+}
+
+.carousel__element {
+	text-align: center;
+}
+
+.carousel__points .glider-dot {
+	display: block;
+	width: 30px;
+	height: 4px;
+	background: #fff;
+	opacity: .2;
+	border-radius: 0;
+}
+
+.carousel__points .glider-dot:hover {
+	opacity: .5;
+}
+
+.carousel__points .glider-dot.active {
+	opacity: 1;
+}
+/*
+@media screen and (max-width: 800px) {
+
+	.contenido-principal {
+		flex-direction: column;
+	}
+
+	.contenido-principal > * {
+		width: 100%;
+	}
+}
+*/
 /* CATEGORIES */
 .main-categories {
     background-color: black;

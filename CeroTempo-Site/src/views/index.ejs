@@ -89,32 +89,34 @@
                     </video>
                 </article>
             </section>
+
             <!-- OFERTAS -->
-            <section class="main-offers">
-                <div class="offers-arrow">
-                    <i class="fas fa-arrow-left"></i>
-                </div>
-            <%  productsRecommended.forEach(product => {    %>
-                
-                <article class="offers-1">
-                    <a href="/products/productDetail/<%= product.id %> ">
-                        <p>See Offer</p>
-                        <img src="/images/instruments/<%= product.images[0].name %>" alt="<%= product.images[0].name %>">
-                    </a>
-                    <div class="foot-offers"> 
-                        <h4 id="title-offers"><%= product.name %></h4>
-                        <div class="offers-data">
-                            <p id="price">$<%= product.price %></p>    
-                            <p id="discount"><%= product.discount %>% off</p>   
+            <div class="offers-container">
+                <div class="carousel">
+                    <div class="carousel__container">
+                        <button aria-label="Anterior" class="carousel__back">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+
+                        <div class="carousel__list">
+                        <%  productsRecommended.forEach(product => {    %>    
+                                <div class="carousel__element">
+                                    <img src="/images/instruments/<%= product.images[0].name %>" alt="<%= product.images[0].name %>" style="width: 350; height: 210px;">
+                                    <p>Rock and Roll Hall of Fame</p>
+                                </div>
+                                <% }) %>
                         </div>
+        
+                        <button aria-label="Siguiente" class="carousel__next">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
                     </div>
-                </article>
-                
-                <% }) %>
-                <div class="offers-arrow">
-                    <i class="fas fa-arrow-right"></i>
+        
+                    <div role="tablist" class="carousel__points"></div>
                 </div>
-            </section>
+            </div>
+
+
             <!-- Categories -->
             <section class="main-categories">
                 <article class="categories-article strings">                    
@@ -171,5 +173,7 @@
             <%- include('./partials/footer') %> 
         </main>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        <script src="/js/app.slider.js"></script>
+        <script src="/js/slider.min.js"></script>
     </body>    
 </html>
