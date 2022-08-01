@@ -47,8 +47,9 @@
                         </div>
                         <div class="admin-box">
                             <!--<label for="category"></label>-->
+                            
                             <select name="category" id="category">                            
-                                <option value="" hidden selected>Categories</option>
+                                <option value="" hidden selected>Categories</option>  
                                 <% categories.forEach(category => { %>
                                     <option value="<%= category.id %>"><%= category.name %> </option>
                                 <% }) %>
