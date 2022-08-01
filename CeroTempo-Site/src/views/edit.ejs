@@ -8,31 +8,31 @@
     <main class="main-admin">
         <h2>Edit Product</h2>
         <section class="main-form-create">
-            <form class="admin-form" action="/admin/update/<%= product.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+            <form id="editProduct" class="admin-form" action="/admin/update/<%= product.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
                 <div class="left-container"> 
 
                     <div class="admin-box">
                         <label for="name">Product Title</label>
-                        <input type="text" name="name" id="" value="<%= product.name %> ">
-                        <span class="validation-text" ><%= locals.errors && errors.name ? errors.name.msg : null%></span>                
+                        <input type="text" name="name" id="name" value="<%= product.name %> ">
+                        <span class="validation-text" id="errorName" ><%= locals.errors && errors.name ? errors.name.msg : null%></span>                
                     </div>   
 
                     <div class="admin-box">
                         <label for="price">Price</label>
                         <input type="number" name="price" id="price" value="<%= product.price %>">
-                        <span class="validation-text"><%= locals.errors && errors.price ? errors.price.msg : null%></span>
+                        <span class="validation-text" id="errorPrice"><%= locals.errors && errors.price ? errors.price.msg : null%></span>
                     </div>
 
                     <div class="admin-box">                    
                         <label for="discount">Discount</label>
                         <input type="number" name="discount" id="discount" value="<%= product.discount %>">
-                        <span class="validation-text" ><%= locals.errors && errors.discount ? errors.discount.msg : null%></span>            
+                        <span class="validation-text" id="errorDiscount"><%= locals.errors && errors.discount ? errors.discount.msg : null%></span>            
                     </div>
 
                     <div class="admin-box box-description">
                         <label for="description">Description</label>
-                        <textarea name="description" id="text-description" cols="30" rows="3" style="resize: none;"><%= product.description %></textarea>                        
-                        <span class="validation-text" ><%= locals.errors && errors.description ? errors.description.msg : null%></span>
+                        <textarea name="description" id="description" cols="30" rows="3" style="resize: none;"><%= product.description %></textarea>                        
+                        <span class="validation-text" id="errorDescription"><%= locals.errors && errors.description ? errors.description.msg : null%></span>
                     </div>
                     
                 </div>
@@ -47,37 +47,32 @@
                         <div class=" add-img">
                             <label for="image">ADD IMAGE</label>
                             <input type="file" name="image" id="image" accept="image/png, image/jpeg, image/gif, image/jpg" multiple>
-                            <!-- <span class="validation-text" hidden>Required Field</span> -->
+                            <span class="validation-text"  id="errorImage" ></span>
                         </div>  
                         <div class="admin-box">
                             <label for="category">Category</label>
-                            <select name="category" id="category-select">
+                            <select name="category" id="category">
                                 <option value="" hidden selected>Categories</option>
                                 <% categories.forEach(category => { %>
                                     <option value="<%= category.id %>" <%= product.categoryId === category.id ? 'selected' : null %>><%= category.name %> </option>
                                 <% }) %>
                             </select>
-                            <span class="validation-text">Required Field</span>
+                            <span class="validation-text" id="errorCategory"><%= locals.errors && errors.category ? errors.category.msg : null%></span>
                         </div>  
                     </div>
                 </div>
 
                 <div class="btn-send-create">
                     <button type="submit">Save Changes</button>
+                    <span class="validation-text" id="errorsForm"></span>
+                    </div>
                 </div>
             </form>        
         </section>
         
     </main>
     <%- include('./partials/footer') %>
-    <script>
-        document.getElementById('image').addEventListener('change', (e) => {
-        let reader = new FileReader();
-        reader.readAsDataURL(e.target.files[0])
-        reader.onload = () => {
-            document.getElementById('imagePreview').src = reader.result
-        }
-        })
-    </script>
+    <script src="/js/imgPreview.js"></script>
+    <script src="/js/editProduct.js"></script>
 </body>
 </html>

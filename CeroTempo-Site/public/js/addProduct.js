@@ -1,38 +1,37 @@
 let qs = (selector) => document.querySelector(selector); //función para reemplazar todos los querySelector del archivo
-
-window.addEventListener("load", () => {
-  //carga toda la pantalla.
+window.addEventListener("load", () => {    //carga toda la pantalla.
 
   //creación de todas las variables, para evitar colocar let, uso las comas ","
-  let form = qs("form"),
+  let addProduct= qs("#addProduct"),
+    //***********capturo los inputs por id*****************/
     name = qs("#name"),
     price = qs("#price"),
     discount = qs("#discount"),
     description = qs("#description"),
-    category = qs("#category-select"),
+    category = qs("#category"),
     image = qs("#image"),
-    regExExtensions = /(.jpg|.jpeg|.png|.gif)$/i; //Formatos válidos.
+    regExExtensions = /(.jpg|.jpeg|.png|.gif)$/i, //Formatos válidos.
+    errorName = qs("#errorName"),   //****************** capturo los spans por id ************/
+    errorPrice = qs("#errorPrice"),
+    errorDiscount = qs("#errorDiscount"),
+    errorDescription = qs('#errorDescription'),
+    errorCategory = qs('#errorCategory'),
+    errorForm = qs('#errorForm'),
+    errors;
+  
+    
 
-  //******************No hace falta estas variables para que se muestren los errores************/
-  // errorName = qs('#errorName'),
-  // errorPrice = qs('#errorPrice'),
-  // errorDiscount = qs('#errorDiscount'),
-  // errorDescription = qs('#errorDescription'),
-  // errorCategory = qs('#errorCategory');
 
   //validación por campo
 
-  name.addEventListener("blur", () => {
-    //uso event blur
-    switch (
-      true //uso switch para validar cada condicón del campo
-    ) {
-      case name.value.length == 0: //si existe este error
+  name.addEventListener("blur", () => {    //uso event blur
+    switch (true) {   //uso switch para validar cada condición del campo
+      case !name.value: //si existe este error
         name.classList.add("is-invalid"); // uso clase de bootstrap
-        errorName.innerHTML = "Enter product's name"; //mostrar leyenda del error
+        errorName.innerHTML = "Enter name"; //mostrar leyenda del error
         errors = true;
         break;
-      case name.value.length <= 5:
+      case name.value.length <= 4:
         name.classList.add("is-invalid"); // uso clase de bootstrap
         errorName.innerHTML = "At least 5 characters"; //mostrar leyenda del error
         errors = true;
@@ -44,21 +43,16 @@ window.addEventListener("load", () => {
         errors = false;
         break;
     }
-  });
+  }); //end --- name.addEvent
 
   price.addEventListener("blur", () => {
     switch (true) {
-      case (price.value = ""):
+      case !price.value:
         price.classList.add("is-invalid");
-        errorPrice.innerHTML = "Enter product's price";
+        errorPrice.innerHTML = "Enter price";
         errors = true;
         break;
-      case typeof price == Number:
-        price.classList.add("is-invalid");
-        errorPrice.innerHTML = "Only numbers";
-        errors = true;
-        break;
-      case price.value < 1:
+      case price.value < 0:
         price.classList.add("is-invalid");
         errorPrice.innerHTML = "Price must be more than 0";
         errors = true;
@@ -70,16 +64,16 @@ window.addEventListener("load", () => {
         errors = false;
         break;
     }
-  });
+  });   //end --- price.addEvent
 
   discount.addEventListener("blur", () => {
     switch (true) {
-      case (discount.value = " "):
+      case !discount.value :
         discount.classList.add("is-invalid");
-        errorDiscount.innerHTML = "Enter product's discount";
+        errorDiscount.innerHTML = "Enter discount";
         errors = true;
         break;
-      case discount.value >= 0:
+      case discount.value < 0:
         discount.classList.add("is-invalid");
         errorDiscount.innerHTML = "discount must be more than 0";
         errors = true;
@@ -91,81 +85,98 @@ window.addEventListener("load", () => {
         errors = false;
         break;
     }
-  });
+  });   //end --- discount.addEvent
 
-  description.addEventListener("blur", () => {
+  description.addEventListener('blur', () => {
     switch (true) {
-      case (description.value = ""):
-        description.classList.add("is-invalid");
-        errorDescription.innerHTML = "Enter product's description";
+      case !description.value:
+        description.classList.add('is-invalid');
+        errorDescription.innerHTML = 'Enter description';
         errors = true;
         break;
-      case description.value >= 20:
-        description.classList.add("is-invalid");
-        errorDescription.innerHTML = "description must be more than 20";
+      case description.value.length <= 20:
+        description.classList.add('is-invalid');
+        errorDescription.innerHTML = 'description must be more than 20 characters';
         errors = true;
         break;
       default:
-        description.classList.remove("is-invalid");
-        description.classList.add("is-valid");
+        description.classList.remove('is-invalid');
+        description.classList.add('is-valid');
         errorDescription.innerHTML = "";
         errors = false;
         break;
     }
-  });
-  category.addEventListener("blur", () => {
+  });   //end --- description.addEvent
+
+  category.addEventListener('blur', () => {
     switch (true) {
-      case category.value == "Seleccione una categoria":
-        category.classList.add("is-invalid");
-        errorCategory.innerHTML = "Debe seleccionar una categoria";
-        break;
-
-      default:
-        category.classList.remove("is-invalid");
-        errorCategory.innerHTML = "";
-        break;
-    }
-  });
-
-  image.addEventListener("change", () => {
-    if (!regExExtensions.exec(image.value)) {
-      image.value = "";
-      image.classList.add("is-invalid");
-      errorImage.innerHTML = "Only jpg, jpge, png, gif";
-      errores = true;
-    } else {
-      image.classList.remove("is-invalid");
-      image.classList.add("is-valid");
-      errorImage.innerHTML = " ";
-      errores = false;
-    }
-  });
-
-  form.addEventListener("submit", (e) => {
-    let errors = true;
-    e.preventDefault();
-    let elementsForm = form.elements;
-
-    for (let i = 0; i < elementsForm.length - 1; i++) {
-      if (
-        elementsForm[i].value === "" ||
-        elementsForm[i].classList.contains("is-invalid")
-      ) {
-        elementsForm[i].classList.add("is-invalid");
-        errorForm.innerHTML = "Check out the required fields";
+      case category.value = '':   // == 'Categories'   --tampoco funciona, se generan dos clases
+        category.classList.add('is-invalid');
+        errorCategory.innerHTML = 'Select a cetegory';
         errors = true;
-      } else {
+        break;
+      default:
+        category.classList.remove('is-invalid');
+        category.classList.add('is-valid');
+        errorCategory.innerHTML = "";
         errors = false;
-      }
+        break;
     }
-    if (category.value.length === 0) {
-      errors = true;
+  });     //end --- category.addEvent
+
+
+  image.addEventListener('change', () => {
+    switch (true) {
+      case !regExExtensions.exec(image.value):
+        image.classList.add('is-invalid');
+        errorImage.innerHTML = 'Only jpg, jpge, png, gif';
+        errors = true;
+        break;
+      default:
+        image.classList.remove('is-invalid');
+        image.classList.add('is-valid');
+        errorImage.innerHTML = "";
+        errors = false;
+        break;
     }
-    if (errors == false) {
-      console.log("everything ok");
-      errorForm.innerHTML = " ";
-      alert("Carga realizada correctamente");
-      form.submit();
+  });    //end --- image.addEvent
+
+
+  // image.addEventListener("change", () => {
+  //   if (!regExExtensions.exec(image.value)) {
+  //     image.value = "";
+  //     image.classList.add('is-invalid');
+  //     errorImage.innerHTML = "Only jpg, jpge, png, gif";
+  //     errors= true;
+  //   } else {
+  //     image.classList.remove('is-invalid');
+  //     image.classList.add('is-valid');
+  //     errorImage.innerHTML = " ";
+  //     errores = false;
+  //   }
+  // });
+
+  addProduct.addEventListener('submit',(e) => {
+    let errors = true;
+    e.preventDefault()    //evita que se ejecute directamente el boton del form.
+    
+    let elementsForm = addProduct.elements;  //agarra a todos los elementos nativos del formulario
+    // console.log(elementsForm)
+
+    for (let i = 0; i < elementsForm.length-1; i++) {  // -1 porque no tomo el boton submit
+        if(elementsForm[i].value === ""  || elementsForm[i].classList.contains('is-invalid')){
+            elementsForm[i].classList.add('is-invalid');
+            errorForm.innerHTML = "Complete the required inputs";
+            errors = true;
+        }else{
+            errors= false;
+        }
     }
-  });
-});
+    if(errors == false){
+        errorForm.value.innerHTML = '';
+        alert("Product added");
+        addProduct.submit();
+    }
+  })
+  
+}); //end   --window.addEvent 

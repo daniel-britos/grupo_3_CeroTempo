@@ -6,7 +6,7 @@
     <main class="main-admin">
         <h2>ADD PRODUCT</h2>
         <section class="main-form-create">
-            <form id="createForm"class="admin-form" action="/admin/create" method="POST" enctype="multipart/form-data">      
+            <form id="addProduct" class="admin-form" action="/admin/create" method="POST" enctype="multipart/form-data">      
                 <div class="left-container"> 
                     
                     
@@ -30,7 +30,7 @@
                     </div>
                     <div class="admin-box box-description">
                         <label for="description">Description</label>
-                        <textarea name="description" id="text-description" cols="30" rows="3" style="resize: none;" value="<%= locals.old && old.description ? old.description : null%>"><%= locals.old && old.description? old.description: null %></textarea>                        
+                        <textarea name="description" id="description" cols="30" rows="3" style="resize: none;" value="<%= locals.old && old.description ? old.description : null%>"><%= locals.old && old.description? old.description: null %></textarea>                        
                         <span class="alert-validation" id="errorDescription"><%= locals.errors && errors.description ? errors.description.msg : null%></span>
                     </div>                   
                 </div>
@@ -43,11 +43,11 @@
                         <div class="admin-box add-img">
                             <label for="image">ADD IMAGE</label>                            
                             <input type="file" name="image" id="image" accept="image/png, image/jpeg, image/gif, image/jpg" multiple value="<%= locals.old && old.image ? old.image : null%>">
-                            <span class="alert-validation" hidden>Required Field</span>
+                            <span class="alert-validation" id="errorImage"></span>
                         </div>
                         <div class="admin-box">
                             <!--<label for="category"></label>-->
-                            <select name="category" id="category-select">                            
+                            <select name="category" id="category">                            
                                 <option value="" hidden selected>Categories</option>
                                 <% categories.forEach(category => { %>
                                     <option value="<%= category.id %>"><%= category.name %> </option>
@@ -59,21 +59,14 @@
                     <div class="btn-send-create">
                         <button type="reset">reset</button>
                         <button type="submit">Send</button>
+                        <span class="alert-validation" id="errorForm"></span>
                     </div>
                 </div>
             </form>        
         </section>
     </main>
     <%- include('./partials/footer') %>
-    <script>
-        document.getElementById('image').addEventListener('change', (e) => {
-        let reader = new FileReader();
-        reader.readAsDataURL(e.target.files[0])
-        reader.onload = () => {
-            document.getElementById('imgPreview').src = reader.result
-        }
-        })
-    </script>
+    <script src="/js/imgPreview.js"></script>
     <script src="/js/addProduct.js"></script>
 </body>
 </html>
