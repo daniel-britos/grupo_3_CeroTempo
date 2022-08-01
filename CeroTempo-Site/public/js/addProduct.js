@@ -16,8 +16,8 @@ window.addEventListener("load", () => {    //carga toda la pantalla.
     errorDiscount = qs("#errorDiscount"),
     errorDescription = qs('#errorDescription'),
     errorCategory = qs('#errorCategory'),
-    errorForm = qs('#errorForm'),
-    errors;
+    errorForm = qs('#errorForm');
+    // errors;
   
     
 
@@ -110,7 +110,7 @@ window.addEventListener("load", () => {    //carga toda la pantalla.
 
   category.addEventListener('blur', () => {
     switch (true) {
-      case category.value = '':   // == 'Categories'   --tampoco funciona, se generan dos clases
+      case !category.value:   // == 'Categories'   --tampoco funciona, se generan dos clases
         category.classList.add('is-invalid');
         errorCategory.innerHTML = 'Select a cetegory';
         errors = true;
@@ -161,9 +161,9 @@ window.addEventListener("load", () => {    //carga toda la pantalla.
     e.preventDefault()    //evita que se ejecute directamente el boton del form.
     
     let elementsForm = addProduct.elements;  //agarra a todos los elementos nativos del formulario
-    // console.log(elementsForm)
+    console.log(elementsForm)
 
-    for (let i = 0; i < elementsForm.length-1; i++) {  // -1 porque no tomo el boton submit
+    for (let i = 0; i < elementsForm.length-2; i++) {  // -1 porque no tomo el boton submit
         if(elementsForm[i].value === ""  || elementsForm[i].classList.contains('is-invalid')){
             elementsForm[i].classList.add('is-invalid');
             errorForm.innerHTML = "Complete the required inputs";
@@ -173,7 +173,7 @@ window.addEventListener("load", () => {    //carga toda la pantalla.
         }
     }
     if(errors == false){
-        errorForm.value.innerHTML = '';
+        errorForm.innerHTML = '';
         alert("Product added");
         addProduct.submit();
     }

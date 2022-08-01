@@ -111,7 +111,7 @@ window.addEventListener("load", () => {    //carga toda la pantalla.
 
   category.addEventListener('blur', () => {
     switch (true) {
-      case category.value = '':   // == 'Categories'   --tampoco funciona, se generan dos clases
+      case !category.value:   // == 'Categories'   --tampoco funciona, se generan dos clases
         category.classList.add('is-invalid');
         errorCategory.innerHTML = 'Select a cetegory';
         errors = true;
@@ -152,14 +152,14 @@ window.addEventListener("load", () => {    //carga toda la pantalla.
     for (let i = 0; i < elementsForm.length-1; i++) {  // -1 porque no tomo el boton submit
         if(elementsForm[i].value === ""  || elementsForm[i].classList.contains('is-invalid')){
             elementsForm[i].classList.add('is-invalid');
-            errorForm.innerHTML = "Complete the required inputs";
+            errorsForm.innerHTML = "Complete the required inputs";
             errors = true;
         }else{
             errors= false;
         }
     }
     if(errors == false){
-        errorForm.value.innerHTML = '';
+        errorsForm.innerHTML = '';
         alert("Product added");
         editProduct.submit();
     }
