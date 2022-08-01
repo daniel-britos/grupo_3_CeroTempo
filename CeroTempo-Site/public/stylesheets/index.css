@@ -85,18 +85,22 @@
 
 /* --- --- CAROUSEL --- --- */
 .offers-container {
-	max-width: 800px;
+	max-width: 80%;
 	width: 90%;
 	margin: auto;
+    padding-top: 20px;
 }
 
 .carousel__container {
-	position: relative;
+	position: relative; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .carousel__back,
 .carousel__next {
-	position: absolute;
+    position: absolute; 
 	display: block;
 	width: 30px;
 	height: 30px;
@@ -107,7 +111,7 @@
 	text-align: center;
 	background: none;
 	color: #fff;
-	opacity: 20%;
+	opacity: 55%;
 }
 .carousel__back > .fas,
 .carousel__next > .fas {
@@ -121,7 +125,7 @@
 }
 
 .carousel__back {
-	left: -30px;
+	left: -60px;
 }
 /* .carousel__back > .fas {
     color: red;
@@ -130,7 +134,7 @@
 } */
 
 .carousel__next {
-	right: -30px;
+	right: -40px;
 }
 /* .carousel__next > .fas {
     color: red;
@@ -140,6 +144,7 @@
 
 .carousel__list {
 	overflow: hidden;
+    border: black solid 4px;
 }
 
 .carousel__element {
@@ -162,18 +167,46 @@
 .carousel__points .glider-dot.active {
 	opacity: 1;
 }
-/*
+.foot-offers {
+    background-color: black;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+#title-offers {
+    color: white;
+    font-size: 18px;
+    width: 70%;
+    margin: 0;
+    padding: 0;
+}
+.offers-data {
+    width: 30%;
+}
+#price {
+    font-size: 22px;
+    margin: 5px;
+    padding: 0;
+    color: white;
+}
+#discount {
+    font-size: 16px;
+    margin: 5px;
+    padding: 0;
+    color: rgb(35, 255, 35);
+}
+
 @media screen and (max-width: 800px) {
 
-	.contenido-principal {
-		flex-direction: column;
-	}
-
-	.contenido-principal > * {
-		width: 100%;
-	}
+    .carousel__back {
+        left: -40px;
+    }
+    .carousel__next {
+        right: -25px;
+    }
 }
-*/
+
 /* CATEGORIES */
 .main-categories {
     background-color: black;
