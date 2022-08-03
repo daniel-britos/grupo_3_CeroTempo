@@ -175,7 +175,7 @@
 
 }
 .pDetail-characteristic-container{
-    width: 100;
+    width: 100%;
 }
 .pDetail-characteristic-title, .pDetail-description-title{
     color: rgb(47, 47, 47);
@@ -301,7 +301,7 @@
        display: flex;
        flex-direction: column;
        justify-content: flex-start;
-       align-items: space-between;
+       align-items: center;
         width: 30%;
         padding: 20px 20px 20px 0;
         /* height: 1000px; */
