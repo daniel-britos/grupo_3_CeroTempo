@@ -13,7 +13,7 @@
 
                     <div class="admin-box">
                         <label for="name">Product Title</label>
-                        <input type="text" name="name" id="" value="<%= product.name %> ">
+                        <input type="text" name="name" id="" value="<%= product.name %>">
                         <span class="validation-text" ><%= locals.errors && errors.name ? errors.name.msg : null%></span>                
                     </div>   
 
@@ -33,20 +33,18 @@
                         <label for="description">Description</label>
                         <textarea name="description" id="text-description" cols="30" rows="3" style="resize: none;"><%= product.description %></textarea>                        
                         <span class="validation-text" ><%= locals.errors && errors.description ? errors.description.msg : null%></span>
-                    </div>
-                    
+                    </div>                    
                 </div>
 
                 <div class="right-container">
                     <div class="img-create-preview">
                         <h2>PREVIEW</h2>
-                        <img src="/images/instruments/<%= product.images[0] ? product.images[0].name : 'default-image.png' %>" id="imagePreview" alt="" >
+                        <img src="/images/instruments/<%= product.images[0] ? product.images[0].name : 'default-image.png' %>" id="imagePreview" alt="<% product.images[0] ? product.images[0].name : 'default-image.png' %>">
                     </div>
                     <div class="into-admin-box">
-                        
                         <div class=" add-img">
                             <label for="image">ADD IMAGE</label>
-                            <input type="file" name="image" id="image" multiple accept=".png, .jpg, .jpeg, .gif">
+                            <input type="file" name="image" id="image" accept="image/png, image/jpeg, image/gif, image/jpg" multiple>
                             <!-- <span class="validation-text" hidden>Required Field</span> -->
                         </div>  
                         <div class="admin-box">
@@ -61,13 +59,11 @@
                         </div>  
                     </div>
                 </div>
-
                 <div class="btn-send-create">
                     <button type="submit">Save Changes</button>
                 </div>
             </form>        
         </section>
-        
     </main>
     <%- include('./partials/footer') %>
     <script>

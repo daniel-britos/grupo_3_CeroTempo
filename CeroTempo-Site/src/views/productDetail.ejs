@@ -18,7 +18,7 @@
         <section class="pDetail-container">
           <article class="pDetail-images-container">
             <div class="pDetail-image">
-              <img class="pDetail-image-img" src="/images/instruments/<%= product.images[0].name %>" alt="<%= product.images[0].name %>"
+              <img class="pDetail-image-img" src="/images/instruments/<%= product.images[0] ? product.images[0].name : 'default-image.png' %>" alt="<%= product.images[0] ? product.images[0].name : 'default-image.png' %>"
                 id="imgMaster" />
             </div>
             <div class="pDetail-zoomImage-container">

@@ -1,5 +1,4 @@
 const {check, body} = require('express-validator');
-// const users = require('../data/userDataBase.json')
 const db = require('../database/models')
 
 module.exports = [
@@ -12,21 +11,17 @@ module.exports = [
         .notEmpty().withMessage('This field is required').bail()
         .isLength({min: 2}).withMessage('The field must contain at least two letters').bail()
         .isAlpha().withMessage('Enter your name...'),
-
-    check('userEmail') //se agrego el check.userEmail, se dividió en check y body
-    .notEmpty().withMessage('This field is require').bail()
-    .isEmail().withMessage('Invalid...'),
-
-    body('userEmail')
+    
+    body("userEmail")
+        .notEmpty().withMessage('This field is require').bail()
+        .isEmail().withMessage('Invalid...')
         .custom(value => {
            return db.User.findOne({
             where: {
                 userEmail: value
             }
            }).then(user => {
-            // console.log('>>>>>>>>>>>>>>>>>>>>>>>>>', user);
-            if(user){
-                // return Promise.reject('Este mail esta registrado')
+            if(user){                
                 return Promise.reject('Email alaready register.') //se agrego mensaje
             }
         // }).catch(error => console.log(error))
@@ -36,7 +31,8 @@ module.exports = [
 
     check('userPass')
     .notEmpty().withMessage('Enter password').bail()    //se agrego notEmpty
-    .isLength({min: 8, max:12}).withMessage('The field must contain at least 6 and 12 letters').bail(),
+    .isLength({min: 8, max:12}).withMessage('The field must contain at least 8 letters').bail()
+    .isAlpha().withMessage("the password must be alphanumeric"),
 
     body('userPassConfirm')
         .notEmpty().withMessage('You must confirm password').bail()

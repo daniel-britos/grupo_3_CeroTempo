@@ -10,8 +10,9 @@
                 <div class="left-container">       
                     <div class="admin-box">
                         <label for="name">Product Title</label>
-                        <input type="text" name="name" id="name" value="<%= locals.old && old.name ? old.name : null%>">
-                        <span class="validation-text"><%= locals.errors && errors.name ? errors.name.msg : null %></span>                
+                        <input type="text" name="name" id="name" 
+                        value="<%= locals.old && old.name ? old.name : null%>">
+                        <span class="validation-text"><%= locals.errors && errors.name ? errors.name.msg : null %></span>                        
                     </div>
 
                     <div class="admin-box">
@@ -25,18 +26,12 @@
                         <input type="number" name="discount" id="discount" value="<%= locals.old && old.discount ? old.discount : null%>">
                         <span class="validation-text"><%= locals.errors && errors.discount ? errors.discount.msg : null%></span>            
                     </div>
-
                     <div class="admin-box box-description">
                         <label for="description">Description</label>
-
-                        <textarea name="description" id="text-description" cols="30" rows="3" style="resize: none;"><%= locals.old && old.description? old.description: null %>
-                        </textarea>                        
+                        <textarea name="description" id="text-description" cols="30" rows="3" style="resize: none;"><%= locals.old && old.description? old.description: null %></textarea>                        
                         <span class="validation-text"><%= locals.errors && errors.description ? errors.description.msg : null%></span>
-                    </div>
-
-                    
+                    </div>                   
                 </div>
-
                 <div class="right-container">
                     <div class="img-create-preview">
                         <h2>PREVIEW</h2>
@@ -44,11 +39,10 @@
                     </div>
                     <div class="into-admin-box">
                         <div class="admin-box add-img">
-                            <label for="image">ADD IMAGE</label>
-                            <input type="file" name="image" id="image" multiple accept=".png, .jpg, .jpeg, .gif">
+                            <label for="image">ADD IMAGE</label>                            
+                            <input type="file" name="image" id="image" accept="image/png, image/jpeg, image/gif, image/jpg" multiple>
                             <span class="validation-text" hidden>Required Field</span>
-                        </div>  
-
+                        </div>
                         <div class="admin-box">
                             <!--<label for="category"></label>-->
                             <select name="category" id="category-select">                            
@@ -57,7 +51,6 @@
                                     <option value="<%= category.id %>"><%= category.name %> </option>
                                 <% }) %>
                             </select>
-
                             <span class="validation-text"><%= locals.errors && errors.category ? errors.category.msg : null%></span>
                         </div>  
                     </div>
