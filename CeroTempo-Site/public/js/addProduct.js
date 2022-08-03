@@ -34,7 +34,7 @@ window.addEventListener("load", () => {
         break;
       case name.value.length < 5:
         name.classList.add("is-invalid"); // uso clase de bootstrap
-        errorName.innerHTML = "At least 5 characters"; //mostrar leyenda del error
+        errorName.innerHTML = "At least SIIII characters"; //mostrar leyenda del error
         errors = true;
         break;
       default:
