@@ -1,53 +1,58 @@
 <!DOCTYPE html>
 <html lang="es">
-    <%- include('./partials/head') %>
-<body>
+  <%- include('./partials/head') %>
+  <body>
     <%- include('./partials/header') %>
 
     <main class="l__main">
-        <form class="form-login" method="POST" action="">
-            <h1>Welcome!</h1>
-            <div class="l__main__credentials">
-                <label for="email">Email</label>
-                <input class="l__main__credentials__imput" 
-                type="email" id="email" name="userEmail"
-                    placeholder="Please, enter your email" />
-                    <span class="l__text__errors">
-                        <%= locals.errors && errors.userEmail ? errors.userEmail.msg : null %>
-                    </span>
-            </div>
-            <div class="l__main__credentials">
-                <label for="nombre">Password</label>
-                <input class="l__main__credentials__imput" type="password" id="password" name="userPass"
-                    placeholder="Please, enter your password" />
-                <span class="l__text__errors">
-                    <%= locals.errors && errors.userPass ? errors.userPass.msg : null %>.
-                </span>
-            </div>
-            <button class="l__main__login">Login</button>
-            <div class="l_main__credentials__remember">
-                <input type="checkbox" name="remember" id="remember">
-                <label for="remember">Remember me</label>
-            </div>
-            <nav class="l__main__options">
-                <ul>
-                    <li class="l__main__options__link">
-                        <a href="#">
-                            I don't remember my password
-                        </a>
-                    </li>
-                    <li class="l__main__options__link">
-                        <a href="/users/register">
-                            Register
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-        </form>
+      <form class="form-login" method="POST" action="" id="form-login">
+        <h1>Welcome!</h1>
+        <div class="l__main__credentials">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            class="l__main__credentials__imput form-control"
+            name="userEmail"
+            placeholder="Please, enter your email"
+          />
+          <span id="errorEmail" class="l__text__errors">
+            <%= locals.errors && errors.userEmail ? errors.userEmail.msg : null %>
+          </span>
+        </div>
+        <div class="l__main__credentials">
+          <label for="nombre">Password</label>
+          <input
+            class="l__main__credentials__imput"
+            type="password"
+            id="password"
+            name="userPass"
+            placeholder="Please, enter your password"
+          />
+          <span id="errorPassword" class="l__text__errors">
+            <%= locals.errors && errors.userPass ? errors.userPass.msg : null %>.
+          </span>
+        </div>
+        <button class="l__main__login">Login</button>
+        <div class="l_main__credentials__remember">
+          <input type="checkbox" name="remember" id="remember" />
+          <label for="remember">Remember me</label>
+        </div>
+        <nav class="l__main__options">
+          <ul>
+            <li class="l__main__options__link">
+              <a href="#"> I don't remember my password </a>
+            </li>
+            <li class="l__main__options__link">
+              <a href="/users/register"> Register </a>
+            </li>
+          </ul>
+        </nav>
+      </form>
     </main>
 
     <!-- FOOTER -->
     <%- include('./partials/footer') %>
-</body>
-
+    <script src="/js/login.js"></script>
+  </body>
 </html>

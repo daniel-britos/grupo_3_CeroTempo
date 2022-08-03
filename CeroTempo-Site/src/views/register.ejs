@@ -4,20 +4,15 @@
   <body>
     <%- include('./partials/header') %>
     <main class="main-register">
-      <form class="form-r" action="" method="POST" enctype="multipart/form-data">
+      <form class="form-r" action="" method="POST" enctype="multipart/form-data" novalidate>
         <div class="sign-up">
           <p class="sign-up-p">¡SIGN UP!</p>
         </div>
         <div class="form-div">
           <div class="sign-up">
             <label for="userName" class="name-l">NAME</label>
-            <input
-              type="text"
-              id="name"
-              name="userName"
-              value="<%= locals.old && old.userName ? old.userName : null %>"
-            />
-            <span class="alert-validation"
+            <input type="text" />
+            <span id="errorNombre" class="alert-validation"
               ><%= locals.errors && errors.userName ? errors.userName.msg : null %></span
             >
           </div>
@@ -25,11 +20,12 @@
             <label for="surname" class="surname-l">SURNAME</label>
             <input
               type="text"
+              class="form-control"
               id="surname"
               name="userSurname"
               value="<%= locals.old && old.userSurname ? old.userSurname : null %>"
             />
-            <span class="alert-validation"
+            <span id="errorApellido" class="alert-validation"
               ><%= locals.errors && errors.userSurname ? errors.userSurname.msg : null %></span
             >
           </div>
@@ -39,10 +35,10 @@
               type="email"
               id="email"
               name="userEmail"
-              class="<%= locals.errors && errors.userEmail ? 'is-invalid' : null %>"
+              class="form-control <%= locals.errors && errors.userEmail ? 'is-invalid' : null %>"
               value="<%= locals.old && old.userEmail ? old.userEmail : null %>"
             />
-            <span class="alert-validation"
+            <span id="errorEmail" class="alert-validation"
               ><%= locals.errors && errors.userEmail ? errors.userEmail.msg : null %></span
             >
           </div>
@@ -52,9 +48,10 @@
               type="password"
               id="pass1"
               name="userPass"
+              class="form-control"
               value="<%= locals.old && old.userPass ? old.userPass : null %>"
             />
-            <span class="alert-validation"
+            <span id="errorPass1" class="alert-validation"
               ><%= locals.errors && errors.userPass ? errors.userPass.msg : null %></span
             >
           </div>
@@ -64,9 +61,10 @@
               type="password"
               id="pass2"
               name="userPassConfirm"
+              class="form-control"
               value="<%= locals.old && old.userPassConfirm ? old.userPassConfirm : null %>"
             />
-            <span class="alert-validation"
+            <span id="errorPass2" class="alert-validation"
               ><%= locals.errors && errors.userPassConfirm ? errors.userPassConfirm.msg : null
               %></span
             >
@@ -122,14 +120,16 @@
       <!-- FOOTER -->
       <%- include('./partials/footer') %>
     </main>
-    <script>
-      document.getElementById('imgCreate').addEventListener('change', (e) => {
-        let reader = new FileReader();
-        reader.readAsDataURL(e.target.files[0]);
-        reader.onload = () => {
-          document.getElementById('imagePreview').src = reader.result;
-        };
-      });
-    </script>
+    <!--   <script>
+            	document.getElementById('imgCreate').addEventListener('change',(e)=> {
+                let reader = new FileReader();
+                reader.readAsDataURL(e.target.files[0])
+                reader.onload = () => {
+                    document.getElementById('imagePreview').src = reader.result
+                }
+                })
+
+        </script> -->
+    <script src="/js/register.js"></script>
   </body>
 </html>
