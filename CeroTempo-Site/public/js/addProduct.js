@@ -142,20 +142,6 @@ window.addEventListener('load', () => {
     }
   }); //end --- image.addEvent
 
-  // image.addEventListener("change", () => {
-  //   if (!regExExtensions.exec(image.value)) {
-  //     image.value = "";
-  //     image.classList.add('is-invalid');
-  //     errorImage.innerHTML = "Only jpg, jpge, png, gif";
-  //     errors= true;
-  //   } else {
-  //     image.classList.remove('is-invalid');
-  //     image.classList.add('is-valid');
-  //     errorImage.innerHTML = " ";
-  //     errores = false;
-  //   }
-  // });
-
   addProduct.addEventListener('submit', (e) => {
     let errors = true;
     e.preventDefault(); //evita que se ejecute directamente el boton del form.
