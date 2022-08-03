@@ -43,6 +43,7 @@
                         <img src="/images/instruments/<%= product.images[0] ? product.images[0].name : 'default-image.png' %>" id="imagePreview" alt="<% product.images[0] ? product.images[0].name : 'default-image.png' %>">
                     </div>
                     <div class="into-admin-box">
+                        
                         <div class=" add-img">
                             <label for="image">ADD IMAGE</label>
                             <input type="file" name="image" id="image" accept="image/png, image/jpeg, image/gif, image/jpg" multiple>
@@ -60,6 +61,7 @@
                         </div>  
                     </div>
                 </div>
+
                 <div class="btn-send-create">
                     <button type="submit">Save Changes</button>
                     <span class="validation-text" id="errorsForm"></span>
@@ -67,6 +69,7 @@
                 </div>
             </form>        
         </section>
+        
     </main>
     <%- include('./partials/footer') %>
     <script src="/js/imgPreview.js"></script>
