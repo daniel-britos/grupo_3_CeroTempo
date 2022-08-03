@@ -1,6 +1,7 @@
 .main-header {
   background-color: black;
 }
+
 /* HEADER-NAV */
 .header-nav {
   display: flex;
@@ -91,25 +92,28 @@
 .menu-horizontal {
   list-style: none;
   display: flex;
-  flex-direction: column;  
+  flex-direction: column;
 }
+.menu-horizontal--show {
+  display: none;
+}
+
 .menu-horizontal>li>a {
   color: white;
   text-decoration: none;
-  display: block;
   padding: 15px 20px;
 }
 .menu-horizontal > li:hover {
   background-color: #f25824;
 }
-.menu-vertical {
-  position: relative;
-  display: none;
-  list-style: none;
-  background-color: rgba(0, 0, 0, 0.5);
-}
 .menu-horizontal li:hover .menu-vertical {
   display: block;
+}
+.menu-vertical {
+  position: relative;
+  list-style: none;
+  display: none;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 .menu-vertical li:hover {
   background-color: #f25824b1;
@@ -132,6 +136,7 @@
       width: 170px;
       height: 127px;
   }
+
    /* ICONS */
   .fa-bars {
       display: none;   
@@ -217,6 +222,7 @@
   .nav-menu {
       max-width: 900px;
       z-index: 1;
+
   }
   .menu-horizontal {
       flex-direction: row;
