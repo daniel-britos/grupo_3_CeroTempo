@@ -25,16 +25,22 @@
     display: flex;
     flex-direction: column;
 }
+.is-invalid{
+    border: 3px solid red;
+}
+.is-valid{
+    border: 3px solid rgb(64, 255, 0);
+}
 .admin-box input {
     background-color: var(--orangeLogo);
-    border: 4px solid black;
+    /* border: 4px solid black; */
     border-radius: 5px;
     color: white;
 }
 
-#text-description {
+#description {
     background-color: var(--orangeLogo);
-    border: 4px solid black;
+    /* border: 4px solid black; */
     border-radius: 5px;
     color: white;
 }
@@ -93,10 +99,10 @@
     height: 60px;
 }
 
-#category-select {
+#category {
     background-color: var(--orangeLogo);
     color: white;
-    border: 4px solid black;
+    /* border: 4px solid black; */
     border-radius: 5px; 
 }
 

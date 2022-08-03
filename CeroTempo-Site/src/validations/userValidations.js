@@ -24,9 +24,7 @@ module.exports = [
             if(user){                
                 return Promise.reject('Email alaready register.') //se agrego mensaje
             }
-        // }).catch(error => console.log(error))
     })
-    // .catch(() => Promise.reject('Este email ya se encuentra registrado!')) //---se comentó.
     }),
 
     check('userPass')

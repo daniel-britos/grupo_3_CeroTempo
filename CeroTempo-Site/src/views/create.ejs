@@ -6,30 +6,32 @@
     <main class="main-admin">
         <h2>ADD PRODUCT</h2>
         <section class="main-form-create">
-            <form class="admin-form" action="/admin/create" method="POST" enctype="multipart/form-data">      
-                <div class="left-container">       
+            <form id="addProduct" class="admin-form" action="/admin/create" method="POST" enctype="multipart/form-data">      
+                <div class="left-container"> 
+                    
+                    
                     <div class="admin-box">
                         <label for="name">Product Title</label>
                         <input type="text" name="name" id="name" 
                         value="<%= locals.old && old.name ? old.name : null%>">
-                        <span class="validation-text"><%= locals.errors && errors.name ? errors.name.msg : null %></span>                        
+                        <span class="alert-validation" id="errorName"><%= locals.errors && errors.name ? errors.name.msg : null %></span>                        
                     </div>
 
                     <div class="admin-box">
                         <label for="price">Price</label>
                         <input type="number" name="price" id="price" value="<%= locals.old && old.price ? old.price : null%>">
-                        <span class="validation-text"><%= locals.errors && errors.price ? errors.price.msg : null%></span>
+                        <span class="alert-validation" id="errorPrice"><%= locals.errors && errors.price ? errors.price.msg : null%></span>
                     </div>
 
                     <div class="admin-box">                    
                         <label for="discount">Discount</label>
                         <input type="number" name="discount" id="discount" value="<%= locals.old && old.discount ? old.discount : null%>">
-                        <span class="validation-text"><%= locals.errors && errors.discount ? errors.discount.msg : null%></span>            
+                        <span class="alert-validation" id="errorDiscount"><%= locals.errors && errors.discount ? errors.discount.msg : null%></span>            
                     </div>
                     <div class="admin-box box-description">
                         <label for="description">Description</label>
-                        <textarea name="description" id="text-description" cols="30" rows="3" style="resize: none;"><%= locals.old && old.description? old.description: null %></textarea>                        
-                        <span class="validation-text"><%= locals.errors && errors.description ? errors.description.msg : null%></span>
+                        <textarea name="description" id="description" cols="30" rows="3" style="resize: none;" value="<%= locals.old && old.description ? old.description : null%>"><%= locals.old && old.description? old.description: null %></textarea>                        
+                        <span class="alert-validation" id="errorDescription"><%= locals.errors && errors.description ? errors.description.msg : null%></span>
                     </div>                   
                 </div>
                 <div class="right-container">
@@ -40,37 +42,32 @@
                     <div class="into-admin-box">
                         <div class="admin-box add-img">
                             <label for="image">ADD IMAGE</label>                            
-                            <input type="file" name="image" id="image" accept="image/png, image/jpeg, image/gif, image/jpg" multiple>
-                            <span class="validation-text" hidden>Required Field</span>
+                            <input type="file" name="image" id="image" accept="image/png, image/jpeg, image/gif, image/jpg" multiple value="<%= locals.old && old.image ? old.image : null%>">
+                            <span class="alert-validation" id="errorImage"></span>
                         </div>
                         <div class="admin-box">
                             <!--<label for="category"></label>-->
-                            <select name="category" id="category-select">                            
-                                <option value="" hidden selected>Categories</option>
+                            
+                            <select name="category" id="category">                            
+                                <option value="" hidden selected>Categories</option>  
                                 <% categories.forEach(category => { %>
                                     <option value="<%= category.id %>"><%= category.name %> </option>
                                 <% }) %>
                             </select>
-                            <span class="validation-text"><%= locals.errors && errors.category ? errors.category.msg : null%></span>
+                            <span class="alert-validation" id="errorCategory"><%= locals.errors && errors.category ? errors.category.msg : null%></span>
                         </div>  
                     </div>
                     <div class="btn-send-create">
                         <button type="reset">reset</button>
                         <button type="submit">Send</button>
+                        <span class="alert-validation" id="errorForm"></span>
                     </div>
                 </div>
             </form>        
         </section>
     </main>
     <%- include('./partials/footer') %>
-    <script>
-        document.getElementById('image').addEventListener('change', (e) => {
-        let reader = new FileReader();
-        reader.readAsDataURL(e.target.files[0])
-        reader.onload = () => {
-            document.getElementById('imgPreview').src = reader.result
-        }
-        })
-    </script>
+    <script src="/js/imgPreview.js"></script>
+    <script src="/js/addProduct.js"></script>
 </body>
 </html>
