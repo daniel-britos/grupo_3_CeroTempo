@@ -1,8 +1,9 @@
 let qs = (selector) => document.querySelector(selector); //función para reemplazar todos los querySelector del archivo
-window.addEventListener("load", () => {    //carga toda la pantalla.
+window.addEventListener("load", () => {
+  //carga toda la pantalla.
 
   //creación de todas las variables, para evitar colocar let, uso las comas ","
-  let addProduct= qs("#addProduct"),
+  let addProduct = qs("#addProduct"),
     //***********capturo los inputs por id*****************/
     name = qs("#name"),
     price = qs("#price"),
@@ -11,27 +12,27 @@ window.addEventListener("load", () => {    //carga toda la pantalla.
     category = qs("#category"),
     image = qs("#image"),
     regExExtensions = /(.jpg|.jpeg|.png|.gif)$/i, //Formatos válidos.
-    errorName = qs("#errorName"),   //****************** capturo los spans por id ************/
+    errorName = qs("#errorName"), //****************** capturo los spans por id ************/
     errorPrice = qs("#errorPrice"),
     errorDiscount = qs("#errorDiscount"),
-    errorDescription = qs('#errorDescription'),
-    errorCategory = qs('#errorCategory'),
-    errorForm = qs('#errorForm');
-    // errors;
-  
-    
-
+    errorDescription = qs("#errorDescription"),
+    errorCategory = qs("#errorCategory"),
+    errorForm = qs("#errorForm");
+  //errors;
 
   //validación por campo
 
-  name.addEventListener("blur", () => {    //uso event blur
-    switch (true) {   //uso switch para validar cada condición del campo
+  name.addEventListener("blur", () => {
+    //uso event blur
+    switch (
+      true //uso switch para validar cada condición del campo
+    ) {
       case !name.value: //si existe este error
         name.classList.add("is-invalid"); // uso clase de bootstrap
         errorName.innerHTML = "Enter name"; //mostrar leyenda del error
         errors = true;
         break;
-      case name.value.length <= 4:
+      case name.value.length < 5:
         name.classList.add("is-invalid"); // uso clase de bootstrap
         errorName.innerHTML = "At least 5 characters"; //mostrar leyenda del error
         errors = true;
@@ -64,11 +65,11 @@ window.addEventListener("load", () => {    //carga toda la pantalla.
         errors = false;
         break;
     }
-  });   //end --- price.addEvent
+  }); //end --- price.addEvent
 
   discount.addEventListener("blur", () => {
     switch (true) {
-      case !discount.value :
+      case !discount.value:
         discount.classList.add("is-invalid");
         errorDiscount.innerHTML = "Enter discount";
         errors = true;
@@ -85,62 +86,61 @@ window.addEventListener("load", () => {    //carga toda la pantalla.
         errors = false;
         break;
     }
-  });   //end --- discount.addEvent
+  }); //end --- discount.addEvent
 
-  description.addEventListener('blur', () => {
+  description.addEventListener("blur", () => {
     switch (true) {
       case !description.value:
-        description.classList.add('is-invalid');
-        errorDescription.innerHTML = 'Enter description';
+        description.classList.add("is-invalid");
+        errorDescription.innerHTML = "Enter description";
         errors = true;
         break;
       case description.value.length <= 20:
-        description.classList.add('is-invalid');
-        errorDescription.innerHTML = 'description must be more than 20 characters';
+        description.classList.add("is-invalid");
+        errorDescription.innerHTML =
+          "description must be more than 20 characters";
         errors = true;
         break;
       default:
-        description.classList.remove('is-invalid');
-        description.classList.add('is-valid');
+        description.classList.remove("is-invalid");
+        description.classList.add("is-valid");
         errorDescription.innerHTML = "";
         errors = false;
         break;
     }
-  });   //end --- description.addEvent
+  }); //end --- description.addEvent
 
-  category.addEventListener('blur', () => {
+  category.addEventListener("blur", () => {
     switch (true) {
-      case !category.value:   // == 'Categories'   --tampoco funciona, se generan dos clases
-        category.classList.add('is-invalid');
-        errorCategory.innerHTML = 'Select a cetegory';
+      case !category.value: // == 'Categories'   --tampoco funciona, se generan dos clases
+        category.classList.add("is-invalid");
+        errorCategory.innerHTML = "Select a cetegory";
         errors = true;
         break;
       default:
-        category.classList.remove('is-invalid');
-        category.classList.add('is-valid');
+        category.classList.remove("is-invalid");
+        category.classList.add("is-valid");
         errorCategory.innerHTML = "";
         errors = false;
         break;
     }
-  });     //end --- category.addEvent
+  }); //end --- category.addEvent
 
-
-  image.addEventListener('change', () => {
+  image.addEventListener("change", () => {
     switch (true) {
       case !regExExtensions.exec(image.value):
-        image.classList.add('is-invalid');
-        errorImage.innerHTML = 'Only jpg, jpge, png, gif';
+        image.classList.add("is-invalid");
+        errorImage.innerHTML = "Only jpg, jpge, png, gif";
         errors = true;
         break;
       default:
-        image.classList.remove('is-invalid');
-        image.classList.add('is-valid');
+        image.classList.remove("is-invalid");
+        image.classList.add("is-valid");
         errorImage.innerHTML = "";
         errors = false;
         break;
     }
-  });    //end --- image.addEvent
-
+  }); //end --- image.addEvent
 
   // image.addEventListener("change", () => {
   //   if (!regExExtensions.exec(image.value)) {
@@ -156,27 +156,30 @@ window.addEventListener("load", () => {    //carga toda la pantalla.
   //   }
   // });
 
-  addProduct.addEventListener('submit',(e) => {
+  addProduct.addEventListener("submit", (e) => {
     let errors = true;
-    e.preventDefault()    //evita que se ejecute directamente el boton del form.
-    
-    let elementsForm = addProduct.elements;  //agarra a todos los elementos nativos del formulario
-    console.log(elementsForm)
+    e.preventDefault(); //evita que se ejecute directamente el boton del form.
 
-    for (let i = 0; i < elementsForm.length-2; i++) {  // -1 porque no tomo el boton submit
-        if(elementsForm[i].value === ""  || elementsForm[i].classList.contains('is-invalid')){
-            elementsForm[i].classList.add('is-invalid');
-            errorForm.innerHTML = "Complete the required inputs";
-            errors = true;
-        }else{
-            errors= false;
-        }
+    let elementsForm = addProduct.elements; //agarra a todos los elementos nativos del formulario
+    console.log(elementsForm);
+
+    for (let i = 0; i < elementsForm.length - 2; i++) {
+      // -1 porque no tomo el boton submit
+      if (
+        elementsForm[i].value === "" ||
+        elementsForm[i].classList.contains("is-invalid")
+      ) {
+        elementsForm[i].classList.add("is-invalid");
+        errorForm.innerHTML = "Complete the required inputs";
+        errors = true;
+      } else {
+        errors = false;
+      }
     }
-    if(errors == false){
-        errorForm.innerHTML = '';
-        alert("Product added");
-        addProduct.submit();
+    if (errors == false) {
+      errorForm.innerHTML = "";
+      alert("Product added");
+      addProduct.submit();
     }
-  })
-  
-}); //end   --window.addEvent 
+  });
+}); //end   --window.addEvent
