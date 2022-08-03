@@ -118,7 +118,7 @@
       </section>
 
       <!-- OFERTAS -->
-      <div class="offers-container">
+      <!--  <div class="offers-container">
         <div class="carousel">
           <div class="carousel__container">
             <button aria-label="Anterior" class="carousel__back">
@@ -126,24 +126,24 @@
             </button>
 
             <div class="carousel__list">
-              <% productsRecommended.forEach(product => { %>
-              <a href="/products/productDetail/<%= product.id %>">
+               < % productsRecommended.forEach(product => { %>
+              <a href="/products/productDetail/< % = product.id %>">
                 <div class="carousel__element">
                   <img
-                    src="/images/instruments/<%= product.images[0].name %>"
-                    alt="<%= product.images[0].name %>"
+                    src="/images/instruments/< %= product.images[0].name %>"
+                    alt="< %= product.images[0].name %>"
                     style="width: 300; height: 200px"
                   />
                   <div class="foot-offers">
-                    <h4 id="title-offers"><%= product.name %></h4>
+                    <h4 id="title-offers">< %= product.name %></h4>
                     <div class="offers-data">
-                      <p id="price">$<%= product.price %></p>
-                      <p id="discount"><%= product.discount %>% off</p>
+                      <p id="price">$< %= product.price %></p>
+                      <p id="discount">< %= product.discount %>% off</p>
                     </div>
                   </div>
                 </div>
               </a>
-              <% }) %>
+              < % }) %>
             </div>
 
             <button aria-label="Siguiente" class="carousel__next">
@@ -153,7 +153,8 @@
 
           <div role="tablist" class="carousel__points"></div>
         </div>
-      </div>
+      </div> -->
+
       <!-- Categories -->
       <section class="main-categories">
         <article class="categories-article strings">
