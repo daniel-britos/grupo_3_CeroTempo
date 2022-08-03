@@ -32,21 +32,21 @@ const verifyEmail = async (email) => {
 $('name').addEventListener('blur', function () {
   switch (true) {
     case !this.value.trim():
-      $('errorNombre').innerHTML = 'Debe ingresar su nombre';
+      $('errorName').innerHTML = 'Enter name';
       this.classList.add('is-invalid');
       break;
     case !regExLetter.test(this.value.trim()):
-      $('errorNombre').innerHTML = 'Solo caracteres alfabeticos';
+      $('errorName').innerHTML = 'Only letters';
       this.classList.add('is-invalid');
       break;
     case this.value.trim().length < 2:
-      $('errorNombre').innerHTML = 'El nombre debe tener como minimo dos caracteres';
+      $('errorName').innerHTML = 'At least two characters';
       this.classList.add('is-invalid');
       break;
     default:
       this.classList.remove('is-invalid');
       this.classList.add('is-valid');
-      $('errorNombre').innerHTML = null;
+      $('errorName').innerHTML = null;
       break;
   }
 });
@@ -56,21 +56,21 @@ $('name').addEventListener('blur', function () {
 $('surname').addEventListener('blur', function () {
   switch (true) {
     case !this.value.trim():
-      $('errorApellido').innerHTML = 'Debe ingresar su apellido';
+      $('errorSurname').innerHTML = 'Enter surname';
       this.classList.add('is-invalid');
       break;
     case !regExLetter.test(this.value.trim()):
-      $('errorApellido').innerHTML = 'Solo caracteres alfabeticos';
+      $('errorSurname').innerHTML = 'Only letters';
       this.classList.add('is-invalid');
       break;
     case this.value.trim().length < 2:
-      $('errorApellido').innerHTML = 'El apellido debe tener como minimo dos caracteres';
+      $('errorSurname').innerHTML = 'At least two characters';
       this.classList.add('is-invalid');
       break;
     default:
       this.classList.remove('is-invalid');
       this.classList.add('is-valid');
-      $('errorApellido').innerHTML = null;
+      $('errorSurname').innerHTML = null;
       break;
   }
 });
@@ -80,15 +80,15 @@ $('surname').addEventListener('blur', function () {
 $('email').addEventListener('blur', async function () {
   switch (true) {
     case !this.value.trim():
-      $('errorEmail').innerHTML = 'Debes ingresar tu email';
+      $('errorEmail').innerHTML = 'Enter email';
       this.classList.add('is-invalid');
       break;
     case !regExEmail.test(this.value.trim()):
-      $('errorEmail').innerHTML = 'El email tiene un formato invalido';
+      $('errorEmail').innerHTML = 'Only valid email';
       this.classList.add('is-invalid');
       break;
     case await verifyEmail(this.value.trim()):
-      $('errorEmail').innerHTML = 'El email ya se encuentra registrado';
+      $('errorEmail').innerHTML = 'Email already register';
       this.classList.add('is-invalid');
       break;
     default:
@@ -104,12 +104,12 @@ $('email').addEventListener('blur', async function () {
 $('pass1').addEventListener('blur', async function () {
   switch (true) {
     case !this.value.trim():
-      $('errorPass1').innerHTML = 'Debes ingresar una contraseña';
+      $('errorPass1').innerHTML = 'Enter password';
       this.classList.add('is-invalid');
       break;
     case !regExPass.test(this.value.trim()):
       $('errorPass1').innerHTML =
-        'La contraseña debe ser por lo menos de 8 caracteres. Debera contener al menos una mayuscula, una minuscula, un numero y un caracter especial';
+        '8 characters or longer. It should contain at least one uppercase, lowercase, numbers and special character';
       this.classList.add('is-invalid');
       break;
     default:
@@ -125,11 +125,11 @@ $('pass1').addEventListener('blur', async function () {
 $('pass2').addEventListener('blur', async function () {
   switch (true) {
     case !this.value.trim():
-      $('errorPass2').innerHTML = 'Debes ingresar una contraseña 2';
+      $('errorPass2').innerHTML = 'Repeat password';
       this.classList.add('is-invalid');
       break;
     case !regExPass.test(this.value.trim()):
-      $('errorPass2').innerHTML = 'Las contraseñas ingresadas no coinciden';
+      $('errorPass2').innerHTML = 'The passwords do not match';
       this.classList.add('is-invalid');
       break;
     default:

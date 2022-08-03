@@ -11,8 +11,14 @@
         <div class="form-div">
           <div class="sign-up">
             <label for="userName" class="name-l">NAME</label>
-            <input type="text" />
-            <span id="errorNombre" class="alert-validation"
+            <input
+              type="text"
+              class="form-control"
+              id="name"
+              name="userName"
+              value="<%= locals.old && old.userName ? old.userName : null %>"
+            />
+            <span id="errorName" class="alert-validation"
               ><%= locals.errors && errors.userName ? errors.userName.msg : null %></span
             >
           </div>
@@ -25,10 +31,11 @@
               name="userSurname"
               value="<%= locals.old && old.userSurname ? old.userSurname : null %>"
             />
-            <span id="errorApellido" class="alert-validation"
+            <span id="errorSurname" class="alert-validation"
               ><%= locals.errors && errors.userSurname ? errors.userSurname.msg : null %></span
             >
           </div>
+
           <div class="sign-up">
             <label for="email" class="email-l">EMAIL</label>
             <input

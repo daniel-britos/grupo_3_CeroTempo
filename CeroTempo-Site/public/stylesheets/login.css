@@ -1,179 +1,174 @@
 .l__header .fa-square-xmark {
-    font-size: 35px;
-    color: white;
-  }
-  .l__main {
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-    width: 60%;
-    margin: auto;
-  }
-  
+  font-size: 35px;
+  color: white;
+}
+.l__main {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  margin: auto;
+}
+
+.l__main h1 {
+  display: flex;
+  justify-content: center;
+  color: black;
+  margin: 25px 0;
+}
+
+.l__main label {
+  color: black;
+  font-size: 20px;
+  margin: 0 auto;
+  width: 60%;
+}
+
+.l__main__credentials {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 25px auto;
+  text-align: left;
+}
+
+.l__main__credentials__imput {
+  width: 60% !important;
+  height: 25px !important;
+  border: none !important;
+  background: var(--orangeLogo) !important;
+  color: white !important;
+  padding: 5px !important;
+  border-radius: 5px;
+  margin-bottom: 10px !important;
+}
+.l__main__credentials__imput::placeholder {
+  color: white;
+}
+.l_main__credentials__remember {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  width: 60%;
+}
+.l_main__credentials__remember label {
+  margin: 0;
+  text-align: center;
+  width: 150px;
+}
+.l__text__errors {
+  color: rgb(255, 0, 0) !important;
+}
+
+.l__main__login {
+  background-color: var(--orangeLogo);
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #f25824;
+  border-radius: 25px;
+  margin: 25px auto;
+  width: 40%;
+  height: 30px;
+  color: white;
+}
+.l__main__login:hover {
+  background-color: black;
+  transition: all 0.5s;
+  transform: scale(1.2);
+}
+
+.l__main__options {
+  margin: 25px 0;
+}
+
+.l__main__options__link {
+  display: flex;
+  justify-content: center;
+  margin: 25px 0;
+}
+
+.l__main__copyright {
+  display: none;
+}
+
+.form-login {
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+  margin: 20px;
+}
+
+@media (min-width: 768px) {
   .l__main h1 {
-    display: flex;
-    justify-content: center;
-    color: black;
-    margin: 25px 0;
+    font-size: 50px;
+    margin: 75px 0;
   }
-  
-  .l__main label {
-    color: black;
-    font-size: 20px;
-    margin: 0 auto;
-    width: 60%;
+
+  .l__main h2 {
+    font-size: 30px;
   }
-  
+
   .l__main__credentials {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 25px auto;
-    text-align: left;
+    margin-bottom: 50px;
   }
-  
+
   .l__main__credentials__imput {
-    width: 60%!important;
-    height: 25px!important;
-    border: none!important;
-    background: var(--orangeLogo)!important;
-    color: white!important;
-    padding: 5px!important;
-    border-radius: 5px;
-    margin-bottom: 10px!important;
-    
-  }
-  .l__main__credentials__imput::placeholder {
-    color: white;
-  }
-  .l_main__credentials__remember{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: auto;
-    width: 60%;
-  }
-  .l_main__credentials__remember label{
-    margin: 0;
-    text-align: center;
-    width: 150px;
-  }
-  .l__text__errors{
-    color: rgb(255, 0, 0)!important;
-    
+    height: 30px;
   }
 
   .l__main__login {
-    background-color: var(--orangeLogo);
     font-size: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid #f25824;
-    border-radius: 25px;
-    margin: 25px auto;
-    width: 40%;
-    height: 30px;
-    color: white;
-
-  }
-  .l__main__login:hover {
-     background-color: black;
-     transition: all .5s;
-     transform: scale(1.2);
-
+    margin: 75px auto;
+    width: 30%;
+    height: 35px;
   }
 
   .l__main__options {
     margin: 25px 0;
   }
-  
+
   .l__main__options__link {
     display: flex;
     justify-content: center;
+    font-size: 75px;
     margin: 25px 0;
   }
-  
+
+  .l__main__options__link a {
+    font-size: large;
+  }
+
   .l__main__copyright {
-    display: none;
+    display: flex;
+    justify-content: center;
+    margin: 50px 0;
   }
-  
-  .form-login{
-    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
-    margin: 20px;
+}
+
+@media (min-width: 1024px) {
+  .l__main h1 {
+    margin: 25px 0;
   }
-  
-  @media (min-width: 768px) {
-    .l__main h1 {
-      font-size: 50px;
-      margin: 75px 0;
-    }
-  
-    .l__main h2 {
-      font-size: 30px;
-    }
-  
-    .l__main__credentials {
-      margin-bottom: 50px;
-    }
-  
-    .l__main__credentials__imput {
-      height: 30px;
-    }
-  
-    .l__main__login {
-      font-size: 30px;
-      margin: 75px auto;
-      width: 30%;
-      height: 35px;
-    }
-  
-    .l__main__options {
-      margin: 25px 0;
-    }
-  
-    .l__main__options__link {
-      display: flex;
-      justify-content: center;
-      font-size: 75px;
-      margin: 25px 0;
-    }
-  
-    .l__main__options__link a {
-      font-size: large;
-    }
-  
-    .l__main__copyright {
-      display: flex;
-      justify-content: center;
-      margin: 50px 0;
-    }
+
+  .l__main h2 {
+    width: 50%;
   }
-  
-  @media (min-width: 1024px) {
-  
-    .l__main h1 {
-      margin: 25px 0;
-    }
-  
-    .l__main h2 {
-      width: 50%;
-    }
-  
-    .l__main__credentials {
-      margin-bottom: 25px;
-    }
-  
-    .l__main__credentials__imput {
-      width: 50%;
-    }
-  
-    .l__main__login {
-      margin: 50px auto;
-    }
-  
-    .l__main__options {
-      margin: 0;
-    }
+
+  .l__main__credentials {
+    margin-bottom: 25px;
   }
+
+  .l__main__credentials__imput {
+    width: 50%;
+  }
+
+  .l__main__login {
+    margin: 50px auto;
+  }
+
+  .l__main__options {
+    margin: 0;
+  }
+}
