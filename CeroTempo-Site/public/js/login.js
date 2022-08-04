@@ -3,6 +3,9 @@ console.log('login.js success!');
 const regExEmail =
   /^(([^<>()\[\]\.,;:\s@\”]+(\.[^<>()\[\]\.,;:\s@\”]:+)*)|(\”.+\”))@(([^<>()[\]\.,;:\s@\”]+\.)+[^<>()[\]\.,;:\s@\”]{2,})$/;
 
+let imputEmail = $('email');
+imputEmail.focus();
+
 /* Validacion email*/
 $('email').addEventListener('blur', function () {
   switch (true) {

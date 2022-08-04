@@ -7,6 +7,10 @@ const regExEmail =
   /^(([^<>()\[\]\.,;:\s@\”]+(\.[^<>()\[\]\.,;:\s@\”]:+)*)|(\”.+\”))@(([^<>()[\]\.,;:\s@\”]+\.)+[^<>()[\]\.,;:\s@\”]{2,})$/;
 const regExPass = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,12}$/;
 
+/* Hacer foco en el primer campo a completar */
+let imputName = $('name');
+imputName.focus();
+
 /* Verificacion de email con la base de datos*/
 const verifyEmail = async (email) => {
   console.log('>>>>>', email);

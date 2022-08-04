@@ -1,5 +1,8 @@
 /* let qs = (selector) => document.querySelector(selector); */ //función para reemplazar todos los querySelector del archivo
 
+let imputTitle = $('name');
+imputTitle.focus();
+
 window.addEventListener('load', () => {
   //carga toda la pantalla.
 
@@ -19,7 +22,7 @@ window.addEventListener('load', () => {
     errorDescription = qs('#errorDescription'),
     errorCategory = qs('#errorCategory'),
     errorForm = qs('#errorForm');
-    // errors; 
+  // errors;
 
   //validación por campo
 

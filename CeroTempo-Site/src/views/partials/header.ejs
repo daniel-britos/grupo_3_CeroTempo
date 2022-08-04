@@ -1,116 +1,122 @@
 <header class="main-header" id="headerpush">
-    <nav class="header-nav">
-        <div class="header-nav-intro">
-            <i id="toggle-menu" class="fa-solid fa-bars"></i>
-            <a href="/">
-                <img src="/images/logo.png" alt="logo" class="header-logo">
+  <nav class="header-nav">
+    <div class="header-nav-intro">
+      <i id="toggle-menu" class="fa-solid fa-bars"></i>
+      <a href="/">
+        <img src="/images/logo.png" alt="logo" class="header-logo" />
+      </a>
+
+      <!-- Formulario de busqueda -->
+      <!-- - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+      <ul>
+        <form action="/products/search" method="GET">
+          <div class="header-search-desktop">
+            <input
+              type="text"
+              name="keywords"
+              placeholder="What are you looking for?"
+              autofocus
+              required="required"
+            />
+            <button class="header-search-btn" type="submit">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </div>
+        </form>
+      </ul>
+
+      <!-- - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+      <div class="header-icons">
+        <span>
+          <% if (locals.userLogin?.rol === "admin") { %>
+          <a href="/admin/panel">
+            <p>Admin</p>
+          </a>
+          <i class="fa-solid fa-circle-exclamation"></i>
+          <% } %>
+        </span>
+        <span>
+          <a href="#contactUs">
+            <p>Help</p>
+          </a>
+          <i class="fa-brands fa-whatsapp"></i>
+        </span>
+        <span>
+          <% if (locals.userLogin) { %>
+          <a href="/products/productCart">
+            <p>Shopping Cart</p>
+          </a>
+          <a href="/products/productCart">
+            <i class="fa-solid fa-cart-shopping"></i>
+          </a>
+
+          <% } %>
+        </span>
+        <span>
+          <% if (!locals.userLogin) { %>
+          <a href="/users/login">
+            <p>Login</p>
+          </a>
+          <a href="/users/profile">
+            <i class="fa-solid fa-user"></i>
+          </a>
+          <% }else { %>
+          <a href="/users/profile">
+            <p>Welcome <%= userLogin.userName %>! |</p>
+            <a href="/users/logout">
+              <p>Logout</p>
             </a>
-            
-            <!-- Formulario de busqueda --> 
-            <!-- - - - - - - - - - - - - - - - - - - - - - - - - - -->
-
-            <ul>
-                <form action="/products/search" method="GET">
-                    <div class="header-search-desktop">
-                        <input type="text" name="keywords" placeholder="What are you looking for?" autofocus/>
-                        <button class="header-search-btn" type="submit">
-                            <i class="fa-solid fa-magnifying-glass"></i>
-                        </button>
-                    </div>
-                </form>
-            </ul>
-
-            <!-- - - - - - - - - - - - - - - - - - - - - - - - - - -->
-
-            <div class="header-icons">   
-                <span>
-                    <% if (locals.userLogin?.rol === "admin") { %>
-                        <a href="/admin/panel">
-                            <p>Admin</p>
-                        </a>
-                        <i class="fa-solid fa-circle-exclamation"></i>                     
-                    <% } %>
-                </span>                     
-                <span>
-                    <a href="#contactUs">
-                        <p>Help</p>
-                    </a>                        
-                    <i class="fa-brands fa-whatsapp"></i>
-                </span>
-                <span>
-                    <% if (locals.userLogin) { %>
-                        <a href="/products/productCart">
-                            <p>Shopping Cart</p>
-                        </a>
-                        <a href="/products/productCart">
-                            <i class="fa-solid fa-cart-shopping"></i>
-                        </a>
-                        
-                    <% } %> 
-                </span>
-                <span>
-                    <% if (!locals.userLogin) { %>
-                        <a href="/users/login">
-                            <p>Login</p>
-                        </a>
-                        <a href="/users/profile">
-                            <i class="fa-solid fa-user"></i>
-                        </a>                       
-                    <% }else { %> 
-                        <a href="/users/profile">
-                            <p>Welcome <%= userLogin.userName %>! | </p>
-                            <a href="/users/logout">
-                                <p>Logout</p>
-                            </a>
-                        </a>
-                        <a href="/users/profile">
-                            <i class="fa-solid fa-user"></i>
-                        </a>  
-                    <% } %> 
-                </span>
-            </div>
-        </div>
-        <!-- MENU -->
-        <nav class="nav-menu">
-            <ul id="menu-bar" class="menu-horizontal"> 
-                <li><a href="/">Home</a></li>
-                <li><a href="/#aboutUs">About us</a></li>
-                <li>
-                    <a  href="/products/productMain">Products</a>
-                        <ul class="menu-vertical">
-                        <li><a href="/products/productMain">See All</a></li>
-                        <li><a href="/products/productMain">Guitars</a></li>
-                        <li><a href="/products/productMain">Basses</a></li>
-                        <li><a href="/products/productMain">Pianos</a></li>
-                        <li><a href="/products/productMain">Keyboards</a></li>
-                        <li><a href="/products/productMain">Drums</a></li>
-                        <li><a href="/products/productMain">Violins</a></li>
-                        <li><a href="/products/productMain">Cellos</a></li>
-                        <li><a href="/products/productMain">Violas</a></li>
-                        <li><a href="/products/productMain">Electronics</a></li>
-                        <li><a href="/products/productMain">Cables</a></li>
-                        <li><a href="/products/productMain">Others</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#">Courses</a>
-                    <ul class="menu-vertical menu-courses">
-                        <li><a href="/courses">Guitar lessons</a></li>
-                        <li><a href="/courses">Violin lessons</a></li>
-                        <li><a href="/courses">Cello lessons</a></li>
-                        <li><a href="/courses">Piano lessons</a></li>
-                    </ul>
-                </li>
-                <li><a href="/luthiers">Luthier</a></li>
-                <li><a href="#contactUs">Contact</a></li>
-            </ul>
-        </nav>
-                        
-        <div class="header-search">
-            <input type="text" placeholder="What are you looking for?" autofocus> 
-            <button class="header-search-btn">
-                <i class="fa-solid fa-magnifying-glass"></i>
-            </button>            
-        </div>
+          </a>
+          <a href="/users/profile">
+            <i class="fa-solid fa-user"></i>
+          </a>
+          <% } %>
+        </span>
+      </div>
+    </div>
+    <!-- MENU -->
+    <nav class="nav-menu">
+      <ul id="menu-bar" class="menu-horizontal">
+        <li><a href="/">Home</a></li>
+        <li><a href="/#aboutUs">About us</a></li>
+        <li>
+          <a href="/products/productMain">Products</a>
+          <ul class="menu-vertical">
+            <li><a href="/products/productMain">See All</a></li>
+            <li><a href="/products/productMain">Guitars</a></li>
+            <li><a href="/products/productMain">Basses</a></li>
+            <li><a href="/products/productMain">Pianos</a></li>
+            <li><a href="/products/productMain">Keyboards</a></li>
+            <li><a href="/products/productMain">Drums</a></li>
+            <li><a href="/products/productMain">Violins</a></li>
+            <li><a href="/products/productMain">Cellos</a></li>
+            <li><a href="/products/productMain">Violas</a></li>
+            <li><a href="/products/productMain">Electronics</a></li>
+            <li><a href="/products/productMain">Cables</a></li>
+            <li><a href="/products/productMain">Others</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">Courses</a>
+          <ul class="menu-vertical menu-courses">
+            <li><a href="/courses">Guitar lessons</a></li>
+            <li><a href="/courses">Violin lessons</a></li>
+            <li><a href="/courses">Cello lessons</a></li>
+            <li><a href="/courses">Piano lessons</a></li>
+          </ul>
+        </li>
+        <li><a href="/luthiers">Luthier</a></li>
+        <li><a href="#contactUs">Contact</a></li>
+      </ul>
     </nav>
+
+    <div class="header-search">
+      <input type="text" placeholder="What are you looking for?" autofocus />
+      <button class="header-search-btn">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </button>
+    </div>
+  </nav>
 </header>
