@@ -128,16 +128,9 @@
       <!-- FOOTER -->
       <%- include('./partials/footer') %>
     </main>
-      <script>
-            	document.getElementById('imgCreate').addEventListener('change',(e)=> {
-                let reader = new FileReader();
-                reader.readAsDataURL(e.target.files[0])
-                reader.onload = () => {
-                    document.getElementById('imagePreview').src = reader.result
-                }
-                })
-
-        </script>
+    <script src="/js/imgPreview.js"></script>
     <script src="/js/register.js"></script>
+    <script src="/js/menubar.js"></script>
   </body>
+  
 </html>

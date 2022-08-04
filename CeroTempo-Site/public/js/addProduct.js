@@ -19,7 +19,7 @@ window.addEventListener('load', () => {
     errorDescription = qs('#errorDescription'),
     errorCategory = qs('#errorCategory'),
     errorForm = qs('#errorForm');
-  /*   errors; */
+    // errors; 
 
   //validación por campo
 

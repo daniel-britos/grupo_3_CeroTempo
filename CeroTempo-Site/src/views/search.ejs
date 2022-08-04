@@ -38,14 +38,7 @@
     </main>
 
     <%- include('./partials/footer') %>
-    <script>
-      let filter_col = document.querySelector("#filter-col");
-      document
-        .querySelector("#filter-toggle")
-        .addEventListener("click", () => filter_col.classList.toggle("active"));
-      document
-        .querySelector("#filter-close")
-        .addEventListener("click", () => filter_col.classList.toggle("active"));
-    </script>
+    <script src="/js/imgPreview.js"></script>
+    <script src="/js/menubar.js"></script>
   </body>
 </html>

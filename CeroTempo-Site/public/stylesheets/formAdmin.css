@@ -25,19 +25,41 @@
   display: flex;
   flex-direction: column;
 }
-.is-invalid2 {
+#addProduct input, #editProduct input {
+  background-color: var(--orangeLogo)!important;
+}
+/* .is-invalid2 {
   border: 3px solid red;
 }
 .is-valid2 {
   border: 3px solid rgb(64, 255, 0);
-}
+} */
 .admin-box input {
   background-color: var(--orangeLogo);
   /* border: 4px solid black; */
   border-radius: 5px;
   color: white;
 }
-
+/* //Chrome: */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+-webkit-appearance: none;
+margin: 0;
+}
+/* //Firefox: */
+input[type="number"] {
+-moz-appearance: textfield;
+}
+input[type="number"]:hover,
+input[type="number"]:focus {
+-moz-appearance: number-input;
+}
+/* //Other */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+-webkit-appearance: none;
+margin: 0;
+}
 #description {
   background-color: var(--orangeLogo);
   /* border: 4px solid black; */
