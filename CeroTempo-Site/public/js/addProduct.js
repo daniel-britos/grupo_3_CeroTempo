@@ -1,7 +1,7 @@
-/* let qs = (selector) => document.querySelector(selector); */ //función para reemplazar todos los querySelector del archivo
+let qs = (selector) => document.querySelector(selector);  //función para reemplazar todos los querySelector del archivo
 
-let imputTitle = $('name');
-imputTitle.focus();
+// let imputTitle = $('name');
+// imputTitle.focus();
 
 window.addEventListener('load', () => {
   //carga toda la pantalla.
