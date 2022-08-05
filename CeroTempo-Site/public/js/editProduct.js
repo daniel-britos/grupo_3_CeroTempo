@@ -1,4 +1,4 @@
-let qs = (selector) => document.querySelector(selector)
+// let qs = (selector) => document.querySelector(selector)
 
 window.addEventListener("load", () => {    //carga toda la pantalla.
 
@@ -159,7 +159,7 @@ window.addEventListener("load", () => {    //carga toda la pantalla.
         }
     }
     if(errors == false){
-        errorsForm.innerHTML = '';
+        errorForm.innerHTML = '';
         alert("Product added");
         editProduct.submit();
     }
