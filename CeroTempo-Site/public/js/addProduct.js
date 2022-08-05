@@ -1,7 +1,4 @@
-let qs = (selector) => document.querySelector(selector);  //función para reemplazar todos los querySelector del archivo
-
-// let imputTitle = $('name');
-// imputTitle.focus();
+// let qs = (selector) => document.querySelector(selector);  //función para reemplazar todos los querySelector del archivo
 
 window.addEventListener('load', () => {
   //carga toda la pantalla.
@@ -22,7 +19,7 @@ window.addEventListener('load', () => {
     errorDescription = qs('#errorDescription'),
     errorCategory = qs('#errorCategory'),
     errorForm = qs('#errorForm');
-  // errors;
+    // errors;
 
   //validación por campo
 
@@ -153,7 +150,7 @@ window.addEventListener('load', () => {
     console.log(elementsForm);
 
     for (let i = 0; i < elementsForm.length - 2; i++) {
-      // -1 porque no tomo el boton submit
+      // -2 porque no tomo el boton submit y el reset
       if (elementsForm[i].value === '' || elementsForm[i].classList.contains('is-invalid')) {
         elementsForm[i].classList.add('is-invalid');
         errorForm.innerHTML = 'Complete the required inputs';

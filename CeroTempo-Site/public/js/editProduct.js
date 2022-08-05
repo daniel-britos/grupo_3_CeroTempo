@@ -152,7 +152,7 @@ window.addEventListener("load", () => {    //carga toda la pantalla.
     for (let i = 0; i < elementsForm.length-1; i++) {  // -1 porque no tomo el boton submit
         if(elementsForm[i].value === ""  || elementsForm[i].classList.contains('is-invalid')){
             elementsForm[i].classList.add('is-invalid');
-            errorsForm.innerHTML = "Complete the required inputs";
+            errorForm.innerHTML = "Complete the required inputs";
             errors = true;
         }else{
             errors= false;
