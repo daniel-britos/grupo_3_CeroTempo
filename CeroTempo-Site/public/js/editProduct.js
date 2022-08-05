@@ -142,15 +142,16 @@ window.addEventListener("load", () => {    //carga toda la pantalla.
     }
   });    //end --- image.addEvent
 
+
   editProduct.addEventListener('submit',(e) => {
-    let errors = true;
-    e.preventDefault()    //evita que se ejecute directamente el boton del form.
     
+    e.preventDefault()    //evita que se ejecute directamente el boton del form.
     let elementsForm = editProduct.elements;  //agarra a todos los elementos nativos del formulario
     // console.log(elementsForm)
-
+    let errors = false;
+    
     for (let i = 0; i < elementsForm.length-1; i++) {  // -1 porque no tomo el boton submit
-        if(elementsForm[i].value === ""  || elementsForm[i].classList.contains('is-invalid')){
+        if(!elementsForm[i].value || elementsForm[i].classList.contains('is-invalid')){
             elementsForm[i].classList.add('is-invalid');
             errorForm.innerHTML = "Complete the required inputs";
             errors = true;
@@ -159,8 +160,6 @@ window.addEventListener("load", () => {    //carga toda la pantalla.
         }
     }
     if(errors == false){
-        errorForm.innerHTML = '';
-        alert("Product added");
         editProduct.submit();
     }
   })
