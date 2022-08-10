@@ -30,7 +30,7 @@ module.exports = [
     check('userPass')
     .notEmpty().withMessage('Enter password').bail()    //se agrego notEmpty
     .isLength({min: 8, max:12}).withMessage('The field must contain at least 8 letters').bail()
-    .isAlpha().withMessage("the password must be alphanumeric"),
+    .isAlphanumeric().withMessage("the password must be alphanumeric"),
 
     body('userPassConfirm')
         .notEmpty().withMessage('You must confirm password').bail()

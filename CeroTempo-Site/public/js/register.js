@@ -5,7 +5,7 @@ console.log('register.js success!');
 const regExLetter = /^[A-Z]+$/i;
 const regExEmail =
   /^(([^<>()\[\]\.,;:\s@\”]+(\.[^<>()\[\]\.,;:\s@\”]:+)*)|(\”.+\”))@(([^<>()[\]\.,;:\s@\”]+\.)+[^<>()[\]\.,;:\s@\”]{2,})$/;
-const regExPass = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,12}$/;
+const regExPass = /^[a-zA-Z0-9\_\-]{8,12}$/;
 
 /* Hacer foco en el primer campo a completar */
 let imputName = $('name');
@@ -113,7 +113,7 @@ $('pass1').addEventListener('blur', async function () {
       break;
     case !regExPass.test(this.value.trim()):
       $('errorPass1').innerHTML =
-        '8 characters or longer. It should contain at least one uppercase, lowercase, numbers and special character';
+        '8 characters or longer. It should contain at least one uppercase, lowercase, and numbers';
       this.classList.add('is-invalid');
       break;
     default:

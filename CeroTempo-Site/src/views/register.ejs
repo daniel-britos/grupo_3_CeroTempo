@@ -16,6 +16,7 @@
               class="form-control"
               id="name"
               name="userName"
+              placeholder="Exp: Martin"
               value="<%= locals.old && old.userName ? old.userName : null %>"
             />
             <span id="errorName" class="alert-validation"
@@ -56,6 +57,7 @@
               id="pass1"
               name="userPass"
               class="form-control"
+              placeholder="Please, enter your password"
               value="<%= locals.old && old.userPass ? old.userPass : null %>"
             />
             <span id="errorPass1" class="alert-validation"
@@ -69,6 +71,7 @@
               id="pass2"
               name="userPassConfirm"
               class="form-control"
+              placeholder="Please, enter your password"
               value="<%= locals.old && old.userPassConfirm ? old.userPassConfirm : null %>"
             />
             <span id="errorPass2" class="alert-validation"

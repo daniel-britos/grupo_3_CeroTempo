@@ -26,9 +26,8 @@ module.exports = {
         userEmail,
         userPass: bcryptjs.hashSync(userPass.trim(), 10),
         userBirth,
-        avatar: req.file ? req.file.filename : "default-image-avatar.jpg", //sirve! , <NO BORRAR DEFAULT IMAGE DE PUBLIC>
-        // avatar: 'default-image-avatar.jpg',  //se cambio a jpg,
-        rol: userEmail.includes("@admin") ? "admin" : "user",
+        avatar: req.file ? req.file.filename : "default-image-avatar.jpg", // <NO BORRAR DEFAULT IMAGE DE PUBLIC>
+        rol: "user",
       })
         .then((user) => {
           req.session.userLogin = {
@@ -88,24 +87,34 @@ module.exports = {
   profile: (req, res) => {
     let user = db.User.findByPk(req.session.userLogin.id);
 
-    Promise.all([user]) //los corchetes van si o si, porque sino me trae los datos
+    Promise.all([user]) 
       .then(([user]) =>
         res.render("profile", {
           user,
         })
-      );
+      )
+      .catch((error) => console.log(error));
   },
+
+
+
   updateProfile: (req, res) => {
     let user = db.User.findByPk(req.session.userLogin.id);
-    Promise.all([user]).then(([user]) =>
-      res.render("update", {
-        user,
-      })
-    );
+
+    Promise.all([user]) 
+      .then(([user]) =>
+        res.render("update", {
+          user,
+        })
+      )
+      .catch((error) => console.log(error));
   },
+
+
+
   processUpdateProfile: (req, res) => {
-    let errores = validationResult(req);
-    if (errores.isEmpty()) {
+    let errors = validationResult(req);
+    if (errors.isEmpty()) {
       const { userName, userSurname, avatar, userBirth, userEmail } = req.body;
       db.User.update(
         {
@@ -156,7 +165,7 @@ module.exports = {
       },
     })
       .then((data) => {
-        return res.redirect("/");
+        return res.redirect("/users/userList");
       })
       .catch((error) => console.log(error));
   },
