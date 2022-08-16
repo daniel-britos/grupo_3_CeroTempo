@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./partials/head') %>
+<body>
+    <%- include('./partials/header') %>
+
+
+
+    <main class="products-main">
+        <h1> Mapex </h1>
+        <div class="bg-main">
+          <div class="container-products">
+            <div class="box">        
+                <div class="product-cards product-wrap">
+                  <% categories.forEach(({id,name,price,discount,images}) => { %>                               
+                    <article>
+                      <a href="/products/productDetail/<%= id %>">                                                 
+                        <img class="pDetail-image-img" src="/images/instruments/<%= images[0] ? images[0].name : 'default-image.png' %>" alt="<%=  images[0] ? images[0].name : 'default-image.png' %>" id="imgMaster" />                        
+                      </a>                            
+                      <div class="product-cards-info">
+                        <h4 id="cards-title"><%= name %></h4>
+                        <div class="cards-data">
+                          <% if (+discount > 0) { %>
+                            <p id="cards-price">$<%= +price %></p>
+                            <p id="cards-discount"><%= +discount %>% off</p>
+                            <% } else { %>
+                          <p id="cards-price">$<%= price %></p>
+                          <% }  %>
+                        </div>
+                      </div>
+                    </article>
+                  <% }) %>
+                </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <%- include('./partials/footer') %>
+</body>
+</html>

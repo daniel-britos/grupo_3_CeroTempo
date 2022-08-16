@@ -12,6 +12,10 @@ const {
   pPercussion,
   pIdiophones,
   pElectronics,
+  brandCremona,
+  brandFender,
+  brandMapex,
+  brandYamaha,
 } = require("../controllers/productController");
 
 router.get("/productMain", pMain);
@@ -23,5 +27,9 @@ router.get("/categoryWind", pWind);
 router.get("/categoryPercussion", pPercussion);
 router.get("/categoryIdiophones", pIdiophones);
 router.get("/categoryElectronics", pElectronics);
+router.get("/brandCremona", brandCremona);
+router.get("/brandFender", brandFender);
+router.get("/brandMapex", brandMapex);
+router.get("/brandYamaha", brandYamaha);
 
 module.exports = router;

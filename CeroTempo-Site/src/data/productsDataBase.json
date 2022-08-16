@@ -24,7 +24,7 @@
       "price": 150000,
       "discount": 0,
       "category": 1,
-      "description": "Guitarra fender importada, directo de china",
+      "description": "Guitarra Fender importada, directo de china",
       "characteristics": [
          "guitarra colores varios",
          "metalica alma de madera",
@@ -59,7 +59,7 @@
    },
    {
       "id": 4,
-      "name": "Bateria mapex",
+      "name": "Bateria Mapex",
       "price": 250000,
       "discount": 15,
       "category": 3,
@@ -78,7 +78,7 @@
    },
    {
       "id": 5,
-      "name": "bateria mapex tuned",
+      "name": "bateria Mapex tuned",
       "price": 110000,
       "discount": 0,
       "category": 3,
@@ -97,7 +97,7 @@
    },
    {
       "id": 6,
-      "name": "trompeta imperio",
+      "name": "Trompeta Imperial",
       "price": 25000,
       "discount": 0,
       "category": 2,
@@ -208,11 +208,11 @@
    },
    {
       "id": 12,
-      "name": "Afinador mapex",
+      "name": "Afinador Mapex",
       "price": 10000,
       "discount": 10,
       "category": 5,
-      "description": "Afinador mapex perfecciona el sonido",
+      "description": "Afinador Mapex perfecciona el sonido",
       "characteristics": [
          "made in china",
          "afinador electrico con cargador"
@@ -288,7 +288,7 @@
       "price": 150000,
       "discount": 0,
       "category": 1,
-      "description": "Guitarra fender importada, directo de china",
+      "description": "Guitarra Fender importada, directo de china",
       "characteristics": [
          "guitarra colores varios",
          "metalica alma de madera",
@@ -323,7 +323,7 @@
    },
    {
       "id": 18,
-      "name": "Bateria mapex",
+      "name": "Bateria Mapex",
       "price": 250000,
       "discount": 15,
       "category": 3,
@@ -342,7 +342,7 @@
    },
    {
       "id": 19,
-      "name": "bateria mapex tuned",
+      "name": "bateria Mapex tuned",
       "price": 110000,
       "discount": 22,
       "category": 3,
@@ -472,11 +472,11 @@
    },
    {
       "id": 26,
-      "name": "Afinador mapex",
+      "name": "Afinador Mapex",
       "price": 10000,
       "discount": 10,
       "category": 5,
-      "description": "Afinador mapex perfecciona el sonido",
+      "description": "Afinador Mapex perfecciona el sonido",
       "characteristics": [
          "made in china",
          "afinador electrico con cargador"

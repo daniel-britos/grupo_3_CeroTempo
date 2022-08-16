@@ -113,4 +113,60 @@ module.exports = {
       })
       .catch((error) => console.log(error));
   },
+  brandCremona: (req, res) => {
+    db.Product.findAll({
+      include: ["images"],
+    })
+      .then((products) => {
+        let categories = products.filter((product) =>
+          product.name.includes("Cremona")
+        );
+        res.render("brandCremona", {
+          categories,
+        });
+      })
+      .catch((error) => console.log(error));
+  },
+  brandFender: (req, res) => {
+    db.Product.findAll({
+      include: ["images"],
+    })
+      .then((products) => {
+        let categories = products.filter((product) =>
+          product.name.includes("Fender")
+        );
+        res.render("brandFender", {
+          categories,
+        });
+      })
+      .catch((error) => console.log(error));
+  },
+  brandMapex: (req, res) => {
+    db.Product.findAll({
+      include: ["images"],
+    })
+      .then((products) => {
+        let categories = products.filter((product) =>
+          product.name.includes("Mapex")
+        );
+        res.render("brandMapex", {
+          categories,
+        });
+      })
+      .catch((error) => console.log(error));
+  },
+  brandYamaha: (req, res) => {
+    db.Product.findAll({
+      include: ["images"],
+    })
+      .then((products) => {
+        let categories = products.filter((product) =>
+          product.name.includes("Yamaha")
+        );
+        res.render("brandYamaha", {
+          categories,
+        });
+      })
+      .catch((error) => console.log(error));
+  },
 };
