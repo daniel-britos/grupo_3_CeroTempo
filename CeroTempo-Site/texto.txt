@@ -1,0 +1,21 @@
+      "name": "Cello Ancona",
+      "name": "Guitarra Fender",
+      "name": "Bajo Stratocaster",
+      "name": "Bateria Mapex",
+      "name": "bateria Mapex tuned",
+      "name": "Trompeta Imperial",
+      "name": "Trompeta generica",
+      "name": "Viola Cremona",
+      "name": "Piano italiano",
+      "name": "Piano pared",
+      "name": "Afinador Mapex",
+      "name": "Teclado Yamaha",
+      "name": "Teclado generico",
+
+[
+    "Strings",
+    "Wind",
+    "Percussion",
+    "Idiophones",
+    "Electronics"
+]
