@@ -41,12 +41,7 @@ router
   .get('/logout', logout)
   .get('/profile', profileCheck, profile)
   .get('/update', profileCheck, updateProfile)
-  .put(
-    '/update-profile',
-    uploadImagesAvatar.single('avatar'),
-    updateProfileValidator,
-    processUpdateProfile
-  )
+  .put('/update-profile', uploadImagesAvatar.single('avatar'), updateProfileValidator, processUpdateProfile)
   .delete('/remove/:id', remove)
   .get('/userList', userList)
 

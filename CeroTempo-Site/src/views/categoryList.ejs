@@ -25,7 +25,7 @@
                       <tr>
                         <th scope="row"> <%= id %> </th>
                         <td> <%= name %> </td>
-                        <td>
+                        <td class="buttons">
                       <a href="../categories/editCategory/<%= id %>" class="btn btn-sm btn-success m-1"><i class="fas fa-edit"></i></a>
                       <form action="/categories/removeCategory/<%= id %>?_method=DELETE" method="POST">
                         <button type="submit" class="btn btn-sm btn-danger m-1"><i class="fas fa-trash-alt"></i></button>
