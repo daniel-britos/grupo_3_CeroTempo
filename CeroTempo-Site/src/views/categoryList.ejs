@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/head') %>
+
+  <body>
+    <%- include('./partials/header') %>
+
+      <div class="container">
+        <section class="row mt-5">
+          <article class="col-12 col-md-10 col-lg-8 mx-auto">
+            <div class="card">
+              <div class="card-header">
+                <p class="card-title">Category</p>
+              </div>
+              <div class="card-body">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="col">#</th>
+                      <th scope="col">Name</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <% categories.forEach(({id,name})=> { %>
+                      <tr>
+                        <th scope="row"> <%= id %> </th>
+                        <td> <%= name %> </td>
+                        <td>
+                      <a href="../categories/editCategory/<%= id %>" class="btn btn-sm btn-success m-1"><i class="fas fa-edit"></i></a>
+                      <form action="/categories/removeCategory/<%= id %>?_method=DELETE" method="POST">
+                        <button type="submit" class="btn btn-sm btn-danger m-1"><i class="fas fa-trash-alt"></i></button>
+                    </form>
+                      </td>
+                      </tr>
+                      <% }) %>
+                  </tbody>
+                </table>
+              </div>
+              <div class="contenedor_a">
+                <a href="/categories/addCategory"><button>Add Category</button></a>
+              </div>
+              
+            </div>
+          </article>
+        </section>
+        </main>
+        <%- include('./partials/footer') %>
+          <script src="/js/menubar.js"></script>
+  </body>
+
+</html>

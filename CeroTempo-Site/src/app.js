@@ -9,11 +9,13 @@ const methodOverride = require('method-override')
 const session = require('express-session');
 const localsCheck = require('./middlewares/localsCheck');
 const cookieCheck = require('./middlewares/cookieCheck');
+const adminCheck = require('./middlewares/adminCheck');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var productsRouter = require('./routes/products');
 var adminRouter = require('./routes/admin');
+var categoriesRouter= require('./routes/category');
 
 
 var app = express();
@@ -43,7 +45,8 @@ app.use(localsCheck);
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/products', productsRouter); 
-app.use('/admin', adminRouter); 
+app.use('/admin', adminRouter);
+app.use('/categories',adminCheck, categoriesRouter)
 
 
 // catch 404 and forward to error handler

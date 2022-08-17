@@ -146,14 +146,14 @@ window.addEventListener('load', () => {
     let errors = true;
     e.preventDefault(); //evita que se ejecute directamente el boton del form.
 
-    let elementsForm = addProduct.elements; //agarra a todos los elementos nativos del formulario
-    console.log(elementsForm);
-
-    for (let i = 0; i < elementsForm.length - 2; i++) {
-      // -2 porque no tomo el boton submit y el reset
+    let elementsForm = addCategory.elements; //agarra a todos los elementos nativos del formulario
+    
+    for (let i = 0; i < elementsForm.length - 1; i++) {
+  
       if (elementsForm[i].value === '' || elementsForm[i].classList.contains('is-invalid')) {
+
         elementsForm[i].classList.add('is-invalid');
-        errorForm.innerHTML = 'Complete the required inputs';
+        errorForm.innerHTML = 'Complete the required input';
         errors = true;
       } else {
         errors = false;
