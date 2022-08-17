@@ -59,7 +59,7 @@
    },
    {
       "id": 4,
-      "name": "Bateria Mapex",
+      "name": "Batería Mapex",
       "price": 250000,
       "discount": 15,
       "category": 3,
@@ -78,7 +78,7 @@
    },
    {
       "id": 5,
-      "name": "bateria Mapex tuned",
+      "name": "batería Mapex tuned",
       "price": 110000,
       "discount": 0,
       "category": 3,

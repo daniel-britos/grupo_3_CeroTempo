@@ -4,15 +4,7 @@ const productValidation = require("../validations/productValidation");
 const upload = require("../middlewares/uploadImagesProducts");
 const adminCheck = require("../middlewares/adminCheck");
 
-const {
-  panel,
-  create,
-  edit,
-  update,
-  store,
-  remove,
-  list,
-} = require("../controllers/adminController");
+const { panel, create, edit, update, store, remove, list } = require("../controllers/adminController");
 
 router
   .get("/panel", adminCheck, panel)

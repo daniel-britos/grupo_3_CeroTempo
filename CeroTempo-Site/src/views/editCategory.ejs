@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('./partials/head') %>
+  <body>
+    <%- include('./partials/header') %>
+    <main class="main-admin">
+      <h2>EDIT CATEGORY</h2>
+      <section class="main-form-create">
+        <form id="addCategory" class="admin-form editCategory" method="POST" action="/categories/updateCategory/<%= category.id %>?_method=PUT">
+          <div class="left-container">
+            <div class="admin-box">
+              <label for="name">Category Name</label>
+              <input type="text" name="name" class="form-control" id="name" value="<%= category.name%>" />
+              <span class="alert-validation" id="errorName"><%= locals.errors && errors.name ? errors.name.msg : null %></span>
+            </div>
+          </div>
+          <div class="right-container">
+            
+            <div class="btn-send-create">
+              <button type="submit">Save Changes</button>
+            </div>
+          </div>
+        </form>
+      </section>
+    </main>
+    <%- include('./partials/footer') %>
+    <script src="/js/imgPreview.js"></script>
+    <script src="/js/addCategory.js"></script>
+    <script src="/js/menubar.js"></script>
+  </body>
+</html>
