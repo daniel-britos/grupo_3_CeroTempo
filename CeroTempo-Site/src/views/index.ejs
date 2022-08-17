@@ -102,7 +102,7 @@
                         <%  productsRecommended.forEach(product => {    %>  
                             <a href="/products/productDetail/<%= product.id %>">
                                 <div class="carousel__element">
-                                    <img src="/images/instruments/<%= product.images[0].name %>" alt="<%= product.images[0].name %>" style="width: 300; height: 200px;">                                    
+                                    <img src="/images/instruments/<%= product.images[0] ? product.images[0].name : 'default-image.png' %>" alt="/images/instruments/<%= product.images[0] ? product.images[0].name : 'default-image.png'%>"  style="width: 300; height: 200px;">                                    
                                     <div class="foot-offers"> 
                                         <h4 id="title-offers"><%= product.name %></h4>
                                         <div class="offers-data">
