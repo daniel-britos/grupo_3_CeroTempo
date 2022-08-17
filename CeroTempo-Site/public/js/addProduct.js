@@ -105,7 +105,7 @@ window.addEventListener('load', () => {
         description.classList.remove('is-invalid');
         description.classList.add('is-valid');
         errorDescription.innerHTML = '';
-        errors = false;
+        // errors = false;
         break;
     }
   }); //end --- description.addEvent
