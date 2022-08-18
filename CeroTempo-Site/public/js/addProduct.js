@@ -146,7 +146,7 @@ window.addEventListener('load', () => {
     let errors = true;
     e.preventDefault(); //evita que se ejecute directamente el boton del form.
 
-    let elementsForm = addCategory.elements; //agarra a todos los elementos nativos del formulario
+    let elementsForm = addProduct.elements; //agarra a todos los elementos nativos del formulario
     
     for (let i = 0; i < elementsForm.length - 1; i++) {
   
