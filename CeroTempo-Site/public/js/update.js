@@ -75,5 +75,32 @@ window.addEventListener('load', () => {
         $('errorSurname').innerHTML = null;
         break;
     }
+    $('birth').addEventListener('blur', async function () {
+      switch (true) {
+        case !this.value:
+          $('errorBirth').innerHTML = 'Chose birth date front';
+          this.classList.add('is-invalid');
+          break;
+        default:
+          this.classList.remove('is-invalid');
+          this.classList.add('is-valid');
+          $('errorBirth').innerHTML = null;
+          break;
+      }
+    });
+    
+    $('imgCreate').addEventListener("change", () => {
+      if (!regExExtensions.exec($('imgCreate').value)) {
+        $('imgCreate').value = "";
+        $('imgCreate').classList.add("is-invalid");
+        errorAvatar.innerHTML = "Only jpg, jpge, png, gif front";
+        errors = true;
+      } else {
+        $('imgCreate').classList.remove("is-invalid");
+        $('imgCreate').classList.add("is-valid");
+        errorAvatar.innerHTML = "";
+        errors = false;
+      }
+    });
   });
 });

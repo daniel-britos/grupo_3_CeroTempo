@@ -5,6 +5,7 @@
     <%- include('./partials/header') %>
     <main class="main-register">
       <form
+      id="form-register"
         class="form-r"
         action="/users/update-profile/?_method=PUT"
         method="POST"
@@ -58,14 +59,14 @@
             </div>
             <label><b>Imagen de perfil:</b></label>
             <input
-              id="image"
+              id="imgCreate"
               type="file"
               name="avatar"
               class="form-control"
-              accept="image/png, image/jpeg, image/gif, image/jpg"
+              accept=".png, .jpeg, .gif, .jpg"
               value="<%= user.avatar %>"
             />
-            <span class="alert-validation"
+            <span class="alert-validation" id="errorAvatar"
               ><%= locals.errors && errors.avatar ? errors.avatar.msg : null %></span
             >
           </div>

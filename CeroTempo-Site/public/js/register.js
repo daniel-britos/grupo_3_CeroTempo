@@ -117,6 +117,11 @@ $('pass1').addEventListener('blur', async function () {
         '8 characters or longer. It should contain at least one uppercase, lowercase, and numbers F';
       this.classList.add('is-invalid');
       break;
+      case (this.value.length < 8):
+      $('errorPass1').innerHTML =
+        '8 characters or longer. It should contain at least one uppercase, lowercase, and numbers F';
+      this.classList.add('is-invalid');
+      break;
     default:
       this.classList.remove('is-invalid');
       this.classList.add('is-valid');
@@ -147,7 +152,7 @@ $('pass2').addEventListener('blur', async function () {
 $('birth').addEventListener('blur', async function () {
   switch (true) {
     case !this.value:
-      $('errorBirth').innerHTML = 'Chose bith date';
+      $('errorBirth').innerHTML = 'Chose birth date';
       this.classList.add('is-invalid');
       break;
     default:
