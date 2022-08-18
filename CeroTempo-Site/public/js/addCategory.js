@@ -13,6 +13,10 @@ window.addEventListener("load", () => {
         name.classList.add('is-invalid'); // uso clase de bootstrap
         errorName.innerHTML = "Enter category's name"; //mostrar leyenda del error
         break;
+        case name.value.length < 3: //si existe este error
+        name.classList.add('is-invalid'); // uso clase de bootstrap
+        errorName.innerHTML = "At least 3 character"; //mostrar leyenda del error
+        break;
       default:
         name.classList.remove('is-invalid');
         name.classList.add('is-valid');
