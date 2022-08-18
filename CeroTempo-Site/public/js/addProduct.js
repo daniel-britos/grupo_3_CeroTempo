@@ -1,4 +1,4 @@
-let qs = (selector) => document.querySelector(selector); //función para reemplazar todos los querySelector del archivo
+// let qs = (selector) => document.querySelector(selector); //función para reemplazar todos los querySelector del archivo
 
 window.addEventListener("load", () => {
   //carga toda la pantalla.
@@ -159,7 +159,7 @@ window.addEventListener("load", () => {
 
     let elementsForm = form.elements; //agarra a todos los elementos nativos del formulario
 
-    for (let i = 0; i < elementsForm.length - 1; i++) {
+    for (let i = 0; i < elementsForm.length - 2; i++) {
       if (
         elementsForm[i].value == "" ||
         elementsForm[i].classList.contains("is-invalid")
