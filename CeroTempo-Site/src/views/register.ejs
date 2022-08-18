@@ -101,22 +101,18 @@
             >
           </div>
           <div class="sign-up">
-            <div>
-              <img src="" alt="" id="imagePreview" style="height: 250px; width: 250px" />
+            <div class="img-create-preview">
+              <h2>PREVIEW</h2>
+              <img src="" id="imgPreview" alt="" />
             </div>
-            <label><b>Imagen de perfil:</b></label>
-            <input
-              id="imgCreate"
-              type="file"
-              name="avatar"
-              class="form-control"
-              value="<%= locals.old && old.avatar ? old.avatar : null %>"
-              accept="image/png, image/jpeg, image/gif, image/jpg"
-            />
-            <span class="alert-validation"
-              ><%= locals.errors && errors.avatar ? errors.avatar.msg : null %></span
-            >
-          </div>
+            <div class="admin-box add-img">
+              <label for="image">ADD IMAGE</label>
+              <input type="file" name="avatar" id="image" class="form-control" accept="image/png, image/jpeg, image/gif, image/jpg"
+                multiple value="<%= locals.old && old.avatar ? old.avatar : "" %>" />
+              <span class="alert-validation" id="errorImage"><%= locals.errors && errors.avatar ? errors.avatar.msg : null %></span>
+            </div>
+
+            
           <div class="sign-up-terms">
             <div class="terms-box" class="form-control">
               <input
