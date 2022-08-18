@@ -8,8 +8,8 @@ const regExEmail =
 const regExPass = /^[a-zA-Z0-9\_\-]{8,12}$/;
 
 /* Hacer foco en el primer campo a completar */
-let imputName = $('name');
-imputName.focus();
+/* let imputName = $('name');
+imputName.focus(); */
 
 /* Verificacion de email con la base de datos*/
 const verifyEmail = async (email) => {
@@ -141,5 +141,47 @@ $('pass2').addEventListener('blur', async function () {
       this.classList.add('is-valid');
       $('errorPass2').innerHTML = null;
       break;
+  }
+});
+
+$('terms').addEventListener('click', function () {
+  this.classList.remove('is-invalid');
+  $('errorTerms').innerHTML = null;
+});
+
+$('form-register').addEventListener('submit', function (e) {
+  e.preventDefault();
+  let error = false;
+  let elements = this.elements;
+
+  /* console.log(elements); */
+
+  for (let i = 0; i < elements.length - 3; i++) {
+    if (!elements[i].value) {
+      elements[i].classList.add('is-invalid');
+      $('errorMessage').innerHTML = 'Required fields';
+      error = true;
+    } else {
+      error = false;
+    }
+  }
+
+  for (let i = 0; i < elements.length - 3; i++) {
+    if (elements[i].classList.contains('is-invalid')) {
+      error = true;
+    } else {
+      error = false;
+    }
+  }
+
+  if (!$('terms').checked) {
+    $('terms').classList.add('is-invalid');
+    $('errorTerms').innerHTML = 'Accept Terms & Conditions';
+    error = true;
+  }
+
+  if (!error) {
+    $('errorMessage').innerHTML = null;
+    e.target.submit();
   }
 });

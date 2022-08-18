@@ -16,18 +16,29 @@
         <div class="form-div">
           <div class="sign-up">
             <label for="userName" class="name-l">NAME</label>
-            <input type="text" id="name" name="userName" value="<%= user.userName %>" />
-            <span class="alert-validation"
-              ><%= locals.errors && errors.userName ? errors.userName.msg : null %></span
-            >
+
+            <input
+              type="text"
+              id="name"
+              class="form-control"
+              name="userName"
+              value="<%= user.userName %>"
+            />
+            <span id="errorName" class="alert-validation"><%= locals.errors && errors.userName ? errors.userName.msg : null %></span>
           </div>
           <div class="sign-up">
             <label for="surname" class="surname-l">SURNAME</label>
-            <input type="text" id="surname" name="userSurname" value="<%= user.userSurname %>" />
-            <span class="alert-validation"
-              ><%= locals.errors && errors.userSurname ? errors.userSurname.msg : null %></span
-            >
+
+            <input
+              type="text"
+              id="surname"
+              class="form-control"
+              name="userSurname"
+              value="<%= user.userSurname %>"
+            />
+            <span id="errorSurname" class="alert-validation"><%= locals.errors && errors.userSurname ? errors.userSurname.msg : null %></span>
           </div>
+
           <div class="sign-up">
             <label for="birth" class="birth-l">DATE OF BIRTH</label>
             <input type="date" id="birth" name="userBirth" value="<%= user.userBirth %>" />
@@ -71,6 +82,7 @@
     <!-- FOOTER -->
     <%- include('./partials/footer') %>
     <script src="/js/imgPreview.js"></script>
+    <script src="/js/update.js"></script>
     <script src="/js/menubar.js"></script>
   </body>
 </html>

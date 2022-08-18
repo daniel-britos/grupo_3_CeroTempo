@@ -4,7 +4,14 @@
   <body>
     <%- include('./partials/header') %>
     <main class="main-register">
-      <form class="form-r" action="" method="POST" enctype="multipart/form-data" novalidate>
+      <form
+        id="form-register"
+        class="form-r"
+        action=""
+        method="POST"
+        enctype="multipart/form-data"
+        novalidate
+      >
         <div class="sign-up">
           <p class="sign-up-p">¡SIGN UP!</p>
         </div>
@@ -16,7 +23,7 @@
               class="form-control"
               id="name"
               name="userName"
-              placeholder="Exp: Martin"
+              placeholder="Exp: John"
               value="<%= locals.old && old.userName ? old.userName : null %>"
             />
             <span id="errorName" class="alert-validation"
@@ -30,6 +37,7 @@
               class="form-control"
               id="surname"
               name="userSurname"
+              placeholder="Exp: Doe"
               value="<%= locals.old && old.userSurname ? old.userSurname : null %>"
             />
             <span id="errorSurname" class="alert-validation"
@@ -44,6 +52,7 @@
               id="email"
               name="userEmail"
               class="form-control <%= locals.errors && errors.userEmail ? 'is-invalid' : null %>"
+              placeholder="Exp: johndoe@example.com"
               value="<%= locals.old && old.userEmail ? old.userEmail : null %>"
             />
             <span id="errorEmail" class="alert-validation"
@@ -109,7 +118,7 @@
             >
           </div>
           <div class="sign-up-terms">
-            <div class="terms-box">
+            <div class="terms-box" class="form-control">
               <input
                 type="checkbox"
                 name="terms"
@@ -118,22 +127,21 @@
               />
               <label for="terms">Términos y condiciones</label>
             </div>
-            <span class="alert-validation"
+            <span id="errorTerms" class="alert-validation"
               ><%= locals.errors && errors.terms ? errors.terms.msg : null %></span
             >
           </div>
           <div class="sign-up-button">
             <button type="submit" class="button-f">SIGN UP</button>
           </div>
+          <span id="errorMessage" class="alert-validation"></span>
         </div>
       </form>
-      
     </main>
     <!-- FOOTER -->
     <%- include('./partials/footer') %>
-    <script src="/js/imgPreview.js"></script>
     <script src="/js/register.js"></script>
+    <script src="/js/imgPreview.js"></script>
     <script src="/js/menubar.js"></script>
   </body>
-  
 </html>
