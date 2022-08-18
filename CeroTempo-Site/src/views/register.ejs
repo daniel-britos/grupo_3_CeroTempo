@@ -96,7 +96,7 @@
               name="userBirth"
               value="<%= locals.old && old.userBirth ? old.userBirth : null %>"
             />
-            <span class="alert-validation"
+            <span class="alert-validation" id="errorBirth"
               ><%= locals.errors && errors.userBirth ? errors.userBirth.msg : null %></span
             >
           </div>
@@ -107,9 +107,9 @@
             </div>
             <div class="admin-box add-img">
               <label for="image">ADD IMAGE</label>
-              <input type="file" name="avatar" id="image" class="form-control" accept="image/png, image/jpeg, image/gif, image/jpg"
+              <input type="file" name="avatar" id="image" class="form-control" accept=".png, .jpeg, .gif, .jpg"
                 multiple value="<%= locals.old && old.avatar ? old.avatar : "" %>" />
-              <span class="alert-validation" id="errorImage"><%= locals.errors && errors.avatar ? errors.avatar.msg : null %></span>
+              <span class="alert-validation" id="errorAvatar"><%= locals.errors && errors.avatar ? errors.avatar.msg : null %></span>
             </div>
 
             

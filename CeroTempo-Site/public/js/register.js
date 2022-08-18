@@ -6,6 +6,7 @@ const regExLetter = /^[A-Z]+$/i;
 const regExEmail =
   /^(([^<>()\[\]\.,;:\s@\”]+(\.[^<>()\[\]\.,;:\s@\”]:+)*)|(\”.+\”))@(([^<>()[\]\.,;:\s@\”]+\.)+[^<>()[\]\.,;:\s@\”]{2,})$/;
 const regExPass = /^[a-zA-Z0-9\_\-]{8,12}$/;
+const regExExtensions = /(.jpg|.jpeg|.png|.gif)$/i;
 
 /* Hacer foco en el primer campo a completar */
 /* let imputName = $('name');
@@ -143,10 +144,36 @@ $('pass2').addEventListener('blur', async function () {
       break;
   }
 });
-
+$('birth').addEventListener('blur', async function () {
+  switch (true) {
+    case !this.value:
+      $('errorBirth').innerHTML = 'Chose bith date';
+      this.classList.add('is-invalid');
+      break;
+    default:
+      this.classList.remove('is-invalid');
+      this.classList.add('is-valid');
+      $('errorBirth').innerHTML = null;
+      break;
+  }
+});
 $('terms').addEventListener('click', function () {
   this.classList.remove('is-invalid');
   $('errorTerms').innerHTML = null;
+});
+
+$('image').addEventListener("change", () => {
+  if (!regExExtensions.exec($('image').value)) {
+    $('image').value = "";
+    $('image').classList.add("is-invalid");
+    errorAvatar.innerHTML = "Only jpg, jpge, png, gif";
+    errors = true;
+  } else {
+    $('image').classList.remove("is-invalid");
+    $('image').classList.add("is-valid");
+    errorAvatar.innerHTML = "";
+    errors = false;
+  }
 });
 
 $('form-register').addEventListener('submit', function (e) {
