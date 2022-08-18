@@ -147,8 +147,10 @@ module.exports = {
         })
         .catch((error) => console.log(error));
     } else {
+
       return res.render("update", {
         user: req.body,
+        avatar : req.session.userLogin.avatar,
         errors: errors.mapped(),
       });
     }
