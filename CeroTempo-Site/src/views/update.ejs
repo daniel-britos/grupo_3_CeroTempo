@@ -35,7 +35,7 @@
                         </div>
                         <label><b>Imagen de perfil:</b></label>
                         <input id="image" type="file" name="avatar" class="form-control"
-                        value=""/>
+                        accept="image/png, image/jpeg, image/gif, image/jpg" value="<%= user.avatar %>"/>
                         <span class="alert-validation"><%= locals.errors && errors.avatar ? errors.avatar.msg : null %></span>
                     </div>
 
