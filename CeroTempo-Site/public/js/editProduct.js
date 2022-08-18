@@ -1,4 +1,4 @@
-// let qs = (selector) => document.querySelector(selector)
+let qs = (selector) => document.querySelector(selector)
 
 window.addEventListener("load", () => {    //carga toda la pantalla.
 
@@ -126,23 +126,35 @@ window.addEventListener("load", () => {    //carga toda la pantalla.
   });     //end --- category.addEvent
 
 
+  // image.addEventListener('change', () => {
+  //   switch (true) {
+  //     case !regExExtensions.exec(image.value):
+  //       image.classList.add('is-invalid');
+  //       errorImage.innerHTML = 'Only jpg, jpge, png, gif';
+  //       errors = true;
+  //       break;
+  //     default:
+  //       image.classList.remove('is-invalid');
+  //       image.classList.add('is-valid');
+  //       errorImage.innerHTML = "";
+  //       errors = false;
+  //       break;
+  //   }
+  // });    //end --- image.addEvent
+
   image.addEventListener('change', () => {
-    switch (true) {
-      case !regExExtensions.exec(image.value):
+    if(!regExExtensions.exec(image.value)){
+        image.value = '';
         image.classList.add('is-invalid');
         errorImage.innerHTML = 'Only jpg, jpge, png, gif';
-        errors = true;
-        break;
-      default:
+        errors = true
+    }else{
         image.classList.remove('is-invalid');
         image.classList.add('is-valid');
-        errorImage.innerHTML = "";
+        errorImage.innerHTML = '';
         errors = false;
-        break;
     }
-  });    //end --- image.addEvent
-
-
+})
   editProduct.addEventListener('submit',(e) => {
     
     e.preventDefault()    //evita que se ejecute directamente el boton del form.

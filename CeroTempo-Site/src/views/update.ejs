@@ -13,35 +13,29 @@
 
                         <label for="userName" class="name-l">NAME</label>
                         <input type="text" id="name" name="userName"
-                        value="<%= userLogin.userName %>" />
+                        value="<%= user.userName %>" />
                         <span class="alert-validation"><%= locals.errors && errors.userName ? errors.userName.msg : null %></span>
                     </div>
                     <div class="sign-up">
                         <label for="surname" class="surname-l">SURNAME</label>
                         <input type="text" id="surname" name="userSurname"
-                        value="<%= userLogin.userSurname %>" />
+                        value="<%= user.userSurname %>" />
                         <span class="alert-validation"><%= locals.errors && errors.userSurname ? errors.userSurname.msg : null %></span>
-                    </div>
-                    <div class="sign-up">
-                        <label for="email" class="surname-l">Email</label>
-                        <input type="email" id="email" name="userEmail"
-                        value="<%= userLogin.userEmail %>" disabled/>
-                        <span class="alert-validation"><%= locals.errors && errors.userEmail ? errors.userEmail.msg : null %></span>
                     </div>
                     <div class="sign-up">
                         <label for="birth" class="birth-l">DATE OF BIRTH</label>
                         <input type="date" id="birth" name="userBirth"
-                        value="<%= userLogin.userBirth %>" />
+                        value="<%= user.userBirth %>" />
                         <span class="alert-validation"><%= locals.errors && errors.userBirth ? errors.userBirth.msg : null %></span>
                     </div>
 
                     <div class="sign-up">
                         <div>
-                            <img src="/images/users/<%= user.avatar %> " alt="" id="imagePreview" style="height: 250px; width: 250px;"/>
+                            <img src="/images/users/<%= user.avatar ? user.avatar : "default-image-avatar" %>" alt="" id="imagePreview" style="height: 250px; width: 250px;"/>
                         </div>
                         <label><b>Imagen de perfil:</b></label>
-                        <input id="imgCreate" type="file" name="avatar" class="form-control"
-                        value="<%= userLogin.avatar %>"/>
+                        <input id="image" type="file" name="avatar" class="form-control"
+                        value=""/>
                         <span class="alert-validation"><%= locals.errors && errors.avatar ? errors.avatar.msg : null %></span>
                     </div>
 

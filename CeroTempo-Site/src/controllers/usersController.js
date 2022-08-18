@@ -147,8 +147,8 @@ module.exports = {
         })
         .catch((error) => console.log(error));
     } else {
-      return res.render("profile", {
-        old: req.body,
+      return res.render("update", {
+        user: req.body,
         errors: errors.mapped(),
       });
     }
