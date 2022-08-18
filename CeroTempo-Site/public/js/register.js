@@ -156,17 +156,21 @@ $('form-register').addEventListener('submit', function (e) {
 
   /* console.log(elements); */
 
-  for (let i = 0; i < elements.length - 4; i++) {
+  for (let i = 0; i < elements.length - 3; i++) {
     if (!elements[i].value) {
       elements[i].classList.add('is-invalid');
       $('errorMessage').innerHTML = 'Required fields';
       error = true;
+    } else {
+      error = false;
     }
   }
 
-  for (let i = 0; i < elements.length - 4; i++) {
+  for (let i = 0; i < elements.length - 3; i++) {
     if (elements[i].classList.contains('is-invalid')) {
       error = true;
+    } else {
+      error = false;
     }
   }
 
@@ -178,5 +182,6 @@ $('form-register').addEventListener('submit', function (e) {
 
   if (!error) {
     $('errorMessage').innerHTML = null;
+    e.target.submit();
   }
 });
