@@ -3,120 +3,91 @@
   <%- include('./partials/head') %>
   <body>
     <%- include('./partials/header') %>
-    <main class="main-admin">
-      <h2>ADD PRODUCTS</h2>
-      <section class="main-form-create">
-        <form
-          id="addProduct"
-          class="admin-form"
-          action="/admin/create"
-          method="POST"
-          enctype="multipart/form-data"
-        >
-          <div class="left-container">
-            <div class="admin-box">
-              <label for="name">Product Title</label>
-              <input
-                type="text"
-                name="name"
-                class="form-control"
-                id="name"
-                value="<%= locals.old && old.name ? old.name : null%>"
-              />
-              <span class="alert-validation" id="errorName"
-                ><%= locals.errors && errors.name ? errors.name.msg : null %></span
-              >
-            </div>
-
-            <div class="admin-box">
-              <label for="price">Price</label>
-              <input
-                type="number"
-                name="price"
-                class="form-control"
-                id="price"
-                value="<%= locals.old && old.price ? old.price : null%>"
-              />
-              <span class="alert-validation" id="errorPrice"
-                ><%= locals.errors && errors.price ? errors.price.msg : null%></span
-              >
-            </div>
-
-            <div class="admin-box">
-              <label for="discount">Discount</label>
-              <input
-                type="number"
-                name="discount"
-                class="form-control"
-                id="discount"
-                value="<%= locals.old && old.discount ? old.discount : null%>"
-              />
-              <span class="alert-validation" id="errorDiscount"
-                ><%= locals.errors && errors.discount ? errors.discount.msg : null%></span
-              >
-            </div>
-            <div class="admin-box box-description">
-              <label for="description">Description</label>
-              <textarea
-                name="description"
-                id="description"
-                class="form-control"
-                cols="30"
-                rows="3"
-                style="resize: none"
-                value="<%= locals.old && old.description ? old.description : null%>"
-              >
-<%= locals.old && old.description? old.description: null %></textarea
-              >
-              <span class="alert-validation" id="errorDescription"
-                ><%= locals.errors && errors.description ? errors.description.msg : null%></span
-              >
-            </div>
-          </div>
-          <div class="right-container">
-            <div class="img-create-preview">
-              <h2>PREVIEW</h2>
-              <img src="" id="imgPreview" alt="" />
-            </div>
-            <div class="into-admin-box">
-              <div class="admin-box add-img">
-                <label for="image">ADD IMAGE</label>
-                <input
-                  type="file"
-                  name="image"
-                  id="image"
-                  accept="image/png, image/jpeg, image/gif, image/jpg"
-                  multiple
-                  value="<%= locals.old && old.image ? old.image : null%>"
-                />
-                <span class="alert-validation" id="errorImage"></span>
-              </div>
+      <main class="main-admin">
+        <h2>ADD PRODUCTS</h2>
+        <section class="main-form-create">
+          <form id="form" class="admin-form" action="/admin/create" method="POST" enctype="multipart/form-data">
+            <div class="left-container">
               <div class="admin-box">
-                <!--<label for="category"></label>-->
+                <label for="name">Product Title</label>
+                <input type="text" name="name" class="form-control" id="name"
+                  value="<%= locals.old && old.name ? old.name : "" %>" />
+                <span class="alert-validation" id="errorName">
+                  <%= locals.errors && errors.name ? errors.name.msg : "" %>
+                </span>
+              </div>
 
-                <select name="category" id="category" class="form-control">
-                  <option value="" hidden selected>Categories</option>
-                  <% categories.forEach(category => { %>
-                  <option value="<%= category.id %>"><%= category.name %></option>
-                  <% }) %>
-                </select>
-                <span class="alert-validation" id="errorCategory"
-                  ><%= locals.errors && errors.category ? errors.category.msg : null%></span
-                >
+              <div class="admin-box">
+                <label for="price">Price</label>
+                <input type="number" name="price" class="form-control" id="price"
+                  value="<%= locals.old && old.price ? old.price : "" %>" />
+                <span class="alert-validation" id="errorPrice">
+                  <%= locals.errors && errors.price ? errors.price.msg : "" %>
+                </span>
+              </div>
+
+              <div class="admin-box">
+                <label for="discount">Discount</label>
+                <input type="number" name="discount" class="form-control" id="discount"
+                  value="<%= locals.old && old.discount ? old.discount : "" %>" />
+                <span class="alert-validation" id="errorDiscount">
+                  <%= locals.errors && errors.discount ? errors.discount.msg : "" %>
+                </span>
+              </div>
+              <div class="admin-box box-description">
+                <label for="description">Description</label>
+                <textarea name="description" id="description" class="form-control" cols="30" rows="3"
+                  style="resize: none" value="<%= locals.old && old.description ? old.description : "" %>">
+<%= locals.old && old.description? old.description: "" %></textarea>
+                <span class="alert-validation" id="errorDescription">
+                  <%= locals.errors && errors.description ? errors.description.msg : "" %>
+                </span>
               </div>
             </div>
-            <div class="btn-send-create">
-              <button type="reset">reset</button>
-              <button type="submit">Send</button>
-              <span class="alert-validation" id="errorForm"></span>
+            <div class="right-container">
+
+              <div class="img-create-preview">
+                <h2>PREVIEW</h2>
+                <img src="" id="imgPreview" alt="" />
+              </div>
+              <div class="into-admin-box">
+                <div class="admin-box add-img">
+                  <label for="image">ADD IMAGE</label>
+                  <input type="file" name="image" id="image" class="form-control" accept="image/png, image/jpeg, image/gif, image/jpg"
+                    multiple value="<%= locals.old && old.image ? old.image : "" %>" />
+                  <span class="alert-validation" id="errorImage"></span>
+                </div>
+
+
+                <div class="admin-box">
+                  <!--<label for="category"></label>-->
+
+                  <select name="category" id="category" class="form-select">
+                    <option value="" hidden selected>Categories</option>
+                    <% categories.forEach(category=> { %>
+                      <option value="<%= category.id %>">
+                        <%= category.name %>
+                      </option>
+                      <% }) %>
+                  </select>
+                  <span class="alert-validation" id="errorCategory">
+                    <%= locals.errors && errors.category ? errors.category.msg : "" %>
+                  </span>
+                </div>
+              </div>
+              <div class="btn-send-create">
+                <button type="reset">reset</button>
+                <button type="submit">Send</button>
+                <span class="alert-validation" id="errorForm"></span>
+              </div>
             </div>
-          </div>
-        </form>
-      </section>
-    </main>
-    <%- include('./partials/footer') %>
-    <script src="/js/imgPreview.js"></script>
-    <script src="/js/addProduct.js"></script>
-    <script src="/js/menubar.js"></script>
+          </form>
+        </section>
+      </main>
+      <%- include('./partials/footer') %>
+        <script src="/js/imgPreview.js"></script>
+        <script src="/js/addProduct.js"></script>
+        <script src="/js/menubar.js"></script>
   </body>
+
 </html>
