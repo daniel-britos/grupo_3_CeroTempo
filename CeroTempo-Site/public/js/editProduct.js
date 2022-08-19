@@ -1,4 +1,4 @@
-let qs = (selector) => document.querySelector(selector)
+// let qs = (selector) => document.querySelector(selector)
 
 window.addEventListener("load", () => {    //carga toda la pantalla.
 
@@ -156,22 +156,17 @@ window.addEventListener("load", () => {    //carga toda la pantalla.
     }
 })
   editProduct.addEventListener('submit',(e) => {
-    
-    e.preventDefault()    //evita que se ejecute directamente el boton del form.
-    let elementsForm = editProduct.elements;  //agarra a todos los elementos nativos del formulario
-    // console.log(elementsForm)
     let errors = false;
-    
-    for (let i = 0; i < elementsForm.length-1; i++) {  // -1 porque no tomo el boton submit
-        if(!elementsForm[i].value || elementsForm[i].classList.contains('is-invalid')){
+    e.preventDefault()   
+    let elementsForm = editProduct.elements; 
+    for (let i = 0; i < elementsForm.length-3; i++) {  // -1 porque no tomo el boton submit
+        if(elementsForm[i].classList.contains('is-invalid') || elementsForm[i].value == ""){
             elementsForm[i].classList.add('is-invalid');
             errorForm.innerHTML = "Complete the required inputs";
             errors = true;
-        }else{
-            errors= false;
         }
     }
-    if(errors == false){
+    if(!errors){
         editProduct.submit();
     }
   })
