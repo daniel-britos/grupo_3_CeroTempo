@@ -88,19 +88,50 @@ window.addEventListener('load', () => {
           break;
       }
     });
-    
-    $('imgCreate').addEventListener("change", () => {
+
+    $('imgCreate').addEventListener('change', () => {
       if (!regExExtensions.exec($('imgCreate').value)) {
-        $('imgCreate').value = "";
-        $('imgCreate').classList.add("is-invalid");
-        errorAvatar.innerHTML = "Only jpg, jpge, png, gif front";
+        $('imgCreate').value = '';
+        $('imgCreate').classList.add('is-invalid');
+        errorAvatar.innerHTML = 'Only jpg, jpge, png, gif front';
         errors = true;
       } else {
-        $('imgCreate').classList.remove("is-invalid");
-        $('imgCreate').classList.add("is-valid");
-        errorAvatar.innerHTML = "";
+        $('imgCreate').classList.remove('is-invalid');
+        $('imgCreate').classList.add('is-valid');
+        errorAvatar.innerHTML = '';
         errors = false;
       }
     });
   });
+});
+
+$('form-update').addEventListener('submit', function (e) {
+  e.preventDefault();
+  let error = false;
+  let elements = this.elements;
+
+  /* console.log(elements); */
+
+  for (let i = 0; i < elements.length - 3; i++) {
+    if (!elements[i].value) {
+      elements[i].classList.add('is-invalid');
+      $('errorMessage').innerHTML = 'Required fields F';
+      error = true;
+    } else {
+      error = false;
+    }
+  }
+
+  for (let i = 0; i < elements.length - 3; i++) {
+    if (elements[i].classList.contains('is-invalid')) {
+      error = true;
+    } else {
+      error = false;
+    }
+  }
+
+  if (!error) {
+    $('errorMessage').innerHTML = null;
+    e.target.submit();
+  }
 });

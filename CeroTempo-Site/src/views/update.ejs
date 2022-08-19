@@ -5,7 +5,7 @@
     <%- include('./partials/header') %>
     <main class="main-register">
       <form
-      id="form-register"
+        id="form-update"
         class="form-r"
         action="/users/update-profile/?_method=PUT"
         method="POST"
@@ -25,7 +25,9 @@
               name="userName"
               value="<%= user.userName %>"
             />
-            <span id="errorName" class="alert-validation"><%= locals.errors && errors.userName ? errors.userName.msg : null %></span>
+            <span id="errorName" class="alert-validation"
+              ><%= locals.errors && errors.userName ? errors.userName.msg : null %></span
+            >
           </div>
           <div class="sign-up">
             <label for="surname" class="surname-l">SURNAME</label>
@@ -37,13 +39,21 @@
               name="userSurname"
               value="<%= user.userSurname %>"
             />
-            <span id="errorSurname" class="alert-validation"><%= locals.errors && errors.userSurname ? errors.userSurname.msg : null %></span>
+            <span id="errorSurname" class="alert-validation"
+              ><%= locals.errors && errors.userSurname ? errors.userSurname.msg : null %></span
+            >
           </div>
 
           <div class="sign-up">
             <label for="birth" class="birth-l">DATE OF BIRTH</label>
-            <input type="date" id="birth" name="userBirth" value="<%= user.userBirth %>" />
-            <span class="alert-validation"
+            <input
+              type="date"
+              id="birth"
+              class="form-control"
+              name="userBirth"
+              value="<%= user.userBirth %>"
+            />
+            <span id="errorBirth" class="alert-validation"
               ><%= locals.errors && errors.userBirth ? errors.userBirth.msg : null %></span
             >
           </div>
@@ -57,7 +67,7 @@
                 style="height: 250px; width: 250px"
               />
             </div>
-            <label><b>Imagen de perfil:</b></label>
+            <label><b>Profile Image</b></label>
             <input
               id="imgCreate"
               type="file"
@@ -77,6 +87,7 @@
               <button type="button" class="button-f">Cancel</button>
             </a>
           </div>
+          <span id="errorMessage" class="alert-validation"></span>
         </div>
       </form>
     </main>
