@@ -27,4 +27,7 @@ module.exports = {
   luthiers: (req, res) => {
     return res.render("luthiers");
   },
+  terms: (req, res) => {
+    return res.render("terms");
+  },
 };

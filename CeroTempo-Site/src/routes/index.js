@@ -1,11 +1,17 @@
-var express = require('express');
+var express = require("express");
 var router = express.Router();
 
-const  {index, courses, luthiers} = require('../controllers/mainController');
+const {
+  index,
+  courses,
+  luthiers,
+  terms,
+} = require("../controllers/mainController");
 
 /* GET home page. */
-router.get('/', index);
-router.get('/courses', courses);
-router.get('/luthiers', luthiers);
+router.get("/", index);
+router.get("/courses", courses);
+router.get("/luthiers", luthiers);
+router.get("/terms", terms);
 
 module.exports = router;

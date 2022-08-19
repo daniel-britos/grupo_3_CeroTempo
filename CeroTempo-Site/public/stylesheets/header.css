@@ -107,7 +107,7 @@
   background-color: #f25824;
 }
 .menu-horizontal li:hover .menu-vertical {
-  display: block;
+  display: none;
 }
 .menu-vertical {
   position: relative;
@@ -131,6 +131,7 @@
 }
 /* DESKTOP */
 @media (min-width: 1024px) {
+
    /* HEADER NAV */
   .header-logo {
       width: 170px;
@@ -234,7 +235,7 @@
       width: 200px;
   }
   .menu-horizontal li:hover .menu-vertical {
-      display: block;
+      display: none;
   }
   .menu-vertical li a {
       text-align: center;
