@@ -231,7 +231,7 @@
   }
   .menu-vertical {
       position: absolute;
-      display: none;
+      display: block;
       width: 200px;
   }
   .menu-horizontal li:hover .menu-vertical {
