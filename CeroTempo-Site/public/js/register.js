@@ -117,7 +117,7 @@ $('pass1').addEventListener('blur', async function () {
         '8 characters or longer. It should contain at least one uppercase, lowercase, and numbers F';
       this.classList.add('is-invalid');
       break;
-      case (this.value.length < 8):
+    case this.value.length < 8:
       $('errorPass1').innerHTML =
         '8 characters or longer. It should contain at least one uppercase, lowercase, and numbers F';
       this.classList.add('is-invalid');
@@ -149,6 +149,7 @@ $('pass2').addEventListener('blur', async function () {
       break;
   }
 });
+
 $('birth').addEventListener('blur', async function () {
   switch (true) {
     case !this.value:
@@ -162,21 +163,22 @@ $('birth').addEventListener('blur', async function () {
       break;
   }
 });
+
 $('terms').addEventListener('click', function () {
   this.classList.remove('is-invalid');
   $('errorTerms').innerHTML = null;
 });
 
-$('image').addEventListener("change", () => {
+$('image').addEventListener('change', () => {
   if (!regExExtensions.exec($('image').value)) {
-    $('image').value = "";
-    $('image').classList.add("is-invalid");
-    errorAvatar.innerHTML = "Only jpg, jpge, png, gif";
+    $('image').value = '';
+    $('image').classList.add('is-invalid');
+    errorAvatar.innerHTML = 'Only jpg, jpge, png, gif';
     errors = true;
   } else {
-    $('image').classList.remove("is-invalid");
-    $('image').classList.add("is-valid");
-    errorAvatar.innerHTML = "";
+    $('image').classList.remove('is-invalid');
+    $('image').classList.add('is-valid');
+    errorAvatar.innerHTML = '';
     errors = false;
   }
 });
