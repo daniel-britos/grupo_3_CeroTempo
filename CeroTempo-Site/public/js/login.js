@@ -50,7 +50,7 @@ $('form-login').addEventListener('submit', function (e) {
   for (let i = 0; i < elements.length - 2; i++) {
     if (!elements[i].value) {
       elements[i].classList.add('is-invalid');
-      $('errorLogin').innerHTML = 'Required fields F';
+      $('errorLogin').innerHTML = 'Required fields';
       error = true;
     } else {
       error = false;
