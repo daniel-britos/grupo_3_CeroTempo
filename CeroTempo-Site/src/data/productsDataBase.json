@@ -5,12 +5,7 @@
       "price": 120000,
       "discount": 10,
       "category": 1,
-      "description": "Cello madera maciza importado de Italia. con madera de 10 años de antiguedad",
-      "characteristics": [
-         "microafinadores",
-         "madera maciza",
-         "importado de italia"
-      ],
+      "description": "Solid wood cello imported from Italy. with 10 year old wood",
       "img": [
          "1657280240540_img.jpg",
          "1657280240541_img.jpg",
@@ -20,16 +15,11 @@
    },
    {
       "id": 2,
-      "name": "Guitarra Fender",
+      "name": "Guitar Fender",
       "price": 150000,
       "discount": 0,
       "category": 1,
-      "description": "Guitarra Fender importada, directo de china",
-      "characteristics": [
-         "guitarra colores varios",
-         "metalica alma de madera",
-         "importada de china"
-      ],
+      "description": "imported fender guitar direct from china",
       "img": [
          "1657280495755_img.jpg",
          "1657280495772_img.jpg",
@@ -40,16 +30,11 @@
    },
    {
       "id": 3,
-      "name": "Bajo Stratocaster",
+      "name": "Bass Stratocaster",
       "price": 55000,
       "discount": 12,
       "category": 1,
-      "description": "Bajo colores varios, clavijero metalico",
-      "characteristics": [
-         "bajo muchos colores",
-         "metal rigido",
-         "importado de china"
-      ],
+      "description": "Bass various colors, metal headstock",
       "img": [
          "1657280606771_img.jpg",
          "1657280606773_img.jpg",
@@ -59,16 +44,11 @@
    },
    {
       "id": 4,
-      "name": "Batería Mapex",
+      "name": "Drums Mapex",
       "price": 250000,
       "discount": 15,
       "category": 3,
-      "description": "Bateria ultima linea madera importada",
-      "characteristics": [
-         "madera importada",
-         "resonancia maxima",
-         "palitos integrados"
-      ],
+      "description": "Last line imported wood battery",
       "img": [
          "1657282390667_img.jpg",
          "1657282390669_img.jpg",
@@ -78,16 +58,11 @@
    },
    {
       "id": 5,
-      "name": "batería Mapex tuned",
+      "name": "Drums Mapex tuned",
       "price": 110000,
       "discount": 0,
       "category": 3,
-      "description": "bateria electrica ultima generación",
-      "characteristics": [
-         "electrica",
-         "made in china",
-         "todas las funciones disponibles"
-      ],
+      "description": "latest generation electric battery",
       "img": [
          "1657282752365_img.jpg",
          "1657282752369_img.jpg",
@@ -97,16 +72,11 @@
    },
    {
       "id": 6,
-      "name": "Trompeta Imperial",
+      "name": "Trumpet Imperial",
       "price": 25000,
       "discount": 0,
       "category": 2,
-      "description": "trompeta nacional fabricada con el mejor material sonoro",
-      "characteristics": [
-         "instrumento de viento de calidad",
-         "fabricada en el pais",
-         "material de punta"
-      ],
+      "description": "National trumpet made with the best sound material",
       "img": [
          "1657283374169_img.jpg",
          "1657283374170_img.jpg",
@@ -116,15 +86,11 @@
    },
    {
       "id": 7,
-      "name": "Saxofon lintop",
+      "name": "Saxophone Yamaha",
       "price": 66000,
       "discount": 10,
       "category": 2,
-      "description": "saxofon importado de la mejor calidad, sonido amplio resonante",
-      "characteristics": [
-         "made in francia",
-         "bronce metalico"
-      ],
+      "description": "Top quality imported saxophone, wide resonant sound",
       "img": [
          "1657283648029_img.jpg",
          "1657283648029_img.jpg",
@@ -134,15 +100,11 @@
    },
    {
       "id": 8,
-      "name": "Trompeta Generica",
+      "name": "Trumpet Generic",
       "price": 22000,
       "discount": 5,
       "category": 2,
-      "description": "Trompeta generica con amplia sonoridad para niveles intermedio",
-      "characteristics": [
-         "metal pintado",
-         "fabricacion nacional"
-      ],
+      "description": "Generic trumpet with wide sonority for intermediate levels",
       "img": [
          "1657283716383_img.jpg",
          "1657283716383_img.jpg",
@@ -156,12 +118,7 @@
       "price": 80000,
       "discount": 10,
       "category": 4,
-      "description": "Viola enchapada para principiante, excelente resonancia",
-      "characteristics": [
-         "made in china",
-         "madera maciza",
-         "microafinadores"
-      ],
+      "description": "Beginner Veneered Viola, Excellent Resonance",
       "img": [
          "1657283880369_img.jpg",
          "1657283880371_img.jpg",
@@ -171,16 +128,11 @@
    },
    {
       "id": 10,
-      "name": "Piano italiano",
+      "name": "Italian Piano",
       "price": 350000,
       "discount": 20,
       "category": 4,
-      "description": "Piano fabricado por luthiers itelianos de 40 años de antiguedad",
-      "characteristics": [
-         "fabricado en italia",
-         "maderas macizas",
-         "funcionalidad completa"
-      ],
+      "description": "Piano made by Italian luthiers 40 years old",
       "img": [
          "1657283974795_img.jpg",
          "1657283974795_img.jpg",
@@ -190,15 +142,11 @@
    },
    {
       "id": 11,
-      "name": "Piano pared",
+      "name": "Wall Piano Casio",
       "price": 220000,
       "discount": 10,
       "category": 4,
-      "description": "Piano pared antiguo",
-      "characteristics": [
-         "madera de pino de 90 años",
-         "funcionalidad y resonancia perfecta"
-      ],
+      "description": "Old wall piano similar to texas style.",
       "img": [
          "1657284066181_img.jpg",
          "1657284066188_img.jpg",
@@ -208,15 +156,11 @@
    },
    {
       "id": 12,
-      "name": "Afinador Yamaha",
+      "name": "Tuner Yamaha",
       "price": 10000,
       "discount": 10,
       "category": 5,
-      "description": "Afinador Yamaha perfecciona el sonido",
-      "characteristics": [
-         "made in china",
-         "afinador electrico con cargador"
-      ],
+      "description": "Yamaha tuner perfects the sound",
       "img": [
          "1657284168394_img.jpg",
          "1657284168396_img.jpg",
@@ -226,16 +170,11 @@
    },
    {
       "id": 13,
-      "name": "Teclado Yamaha",
+      "name": "Yamaha musical keyboard",
       "price": 50000,
       "discount": 10,
       "category": 5,
-      "description": "Teclado electrico de ultima linea",
-      "characteristics": [
-         "made in china",
-         "incluye cargador",
-         "tamaño large"
-      ],
+      "description": "Last line electric keyboard",
       "img": [
          "1657284392354_img.png",
          "1657284392356_img.png",
@@ -245,17 +184,11 @@
    },
    {
       "id": 14,
-      "name": "Teclado generico",
+      "name": "Generic musical keyboard",
       "price": 23000,
       "discount": 0,
       "category": 5,
-      "description": "Teclado generico con cargodor, sonido perfecto",
-      "characteristics": [
-         "tamaño small",
-         "cargador",
-         "conectores",
-         "con soporte"
-      ],
+      "description": "Generic keyboard with charger, perfect sound",
       "img": [
          "1657284526595_img.jpg",
          "1657284526595_img.jpg",
