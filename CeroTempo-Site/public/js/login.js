@@ -3,8 +3,8 @@ console.log('login.js success!');
 const regExEmail =
   /^(([^<>()\[\]\.,;:\s@\”]+(\.[^<>()\[\]\.,;:\s@\”]:+)*)|(\”.+\”))@(([^<>()[\]\.,;:\s@\”]+\.)+[^<>()[\]\.,;:\s@\”]{2,})$/;
 
-let imputEmail = $('email');
-imputEmail.focus();
+/* let imputEmail = $('email');
+imputEmail.focus(); */
 
 /* Validacion email*/
 $('email').addEventListener('blur', function () {
@@ -37,5 +37,36 @@ $('password').addEventListener('blur', function () {
       this.classList.add('is-valid');
       $('errorPassword').innerHTML = null;
       break;
+  }
+});
+
+$('form-login').addEventListener('submit', function (e) {
+  e.preventDefault();
+  let error = false;
+  let elements = this.elements;
+
+  /* console.log(elements); */
+
+  for (let i = 0; i < elements.length - 2; i++) {
+    if (!elements[i].value) {
+      elements[i].classList.add('is-invalid');
+      $('errorLogin').innerHTML = 'Required fields F';
+      error = true;
+    } else {
+      error = false;
+    }
+  }
+
+  for (let i = 0; i < elements.length - 2; i++) {
+    if (elements[i].classList.contains('is-invalid')) {
+      error = true;
+    } else {
+      error = false;
+    }
+  }
+
+  if (!error) {
+    $('errorLogin').innerHTML = null;
+    e.target.submit();
   }
 });
