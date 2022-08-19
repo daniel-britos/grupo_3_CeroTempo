@@ -107,7 +107,7 @@
   background-color: #f25824;
 }
 .menu-horizontal li:hover .menu-vertical {
-  display: none;
+  display: block;
 }
 .menu-vertical {
   position: relative;
@@ -235,7 +235,7 @@
       width: 200px;
   }
   .menu-horizontal li:hover .menu-vertical {
-      display: none;
+      display: block;
   }
   .menu-vertical li a {
       text-align: center;

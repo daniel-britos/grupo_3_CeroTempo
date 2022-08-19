@@ -1,0 +1,39 @@
+.terms{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 20px auto;
+}
+.title-section-terms {
+    font-size: 18px;
+    font-weight: 600;
+    font-family: 'Raleway', sans-serif;
+    color: var(--orangeLogo);
+    text-align: left;
+    margin-bottom: 20px;
+}
+.terms-subtitle {
+    font-size: 18px;
+    font-weight: 600;
+    font-family: 'Raleway', sans-serif;
+    color: var(--orangeLogo);
+    text-align: left;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+.terms-text {
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    color: #000000;
+    margin-bottom: 10px;
+}
+.terms-text-list{
+    margin-bottom: 0;
+}
+@media (min-width: 760px){
+    .terms{
+        width: 80%;
+        margin: 30px auto;
+    }
+}

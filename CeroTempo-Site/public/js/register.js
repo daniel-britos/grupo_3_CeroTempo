@@ -37,15 +37,15 @@ const verifyEmail = async (email) => {
 $('name').addEventListener('blur', function () {
   switch (true) {
     case !this.value.trim():
-      $('errorName').innerHTML = 'Enter name F';
+      $('errorName').innerHTML = 'Enter name';
       this.classList.add('is-invalid');
       break;
     case !regExLetter.test(this.value.trim()):
-      $('errorName').innerHTML = 'Only letters F';
+      $('errorName').innerHTML = 'Only letters';
       this.classList.add('is-invalid');
       break;
     case this.value.trim().length < 2:
-      $('errorName').innerHTML = 'At least two characters F';
+      $('errorName').innerHTML = 'At least two characters';
       this.classList.add('is-invalid');
       break;
     default:
@@ -61,15 +61,15 @@ $('name').addEventListener('blur', function () {
 $('surname').addEventListener('blur', function () {
   switch (true) {
     case !this.value.trim():
-      $('errorSurname').innerHTML = 'Enter surname F';
+      $('errorSurname').innerHTML = 'Enter surname';
       this.classList.add('is-invalid');
       break;
     case !regExLetter.test(this.value.trim()):
-      $('errorSurname').innerHTML = 'Only letters F';
+      $('errorSurname').innerHTML = 'Only letters';
       this.classList.add('is-invalid');
       break;
     case this.value.trim().length < 2:
-      $('errorSurname').innerHTML = 'At least two characters F';
+      $('errorSurname').innerHTML = 'At least two characters';
       this.classList.add('is-invalid');
       break;
     default:
@@ -85,15 +85,15 @@ $('surname').addEventListener('blur', function () {
 $('email').addEventListener('blur', async function () {
   switch (true) {
     case !this.value.trim():
-      $('errorEmail').innerHTML = 'Enter email F';
+      $('errorEmail').innerHTML = 'Enter email';
       this.classList.add('is-invalid');
       break;
     case !regExEmail.test(this.value.trim()):
-      $('errorEmail').innerHTML = 'Only valid email F ';
+      $('errorEmail').innerHTML = 'Only valid email';
       this.classList.add('is-invalid');
       break;
     case await verifyEmail(this.value.trim()):
-      $('errorEmail').innerHTML = 'Email already register F ';
+      $('errorEmail').innerHTML = 'Email already register';
       this.classList.add('is-invalid');
       break;
     default:
@@ -109,17 +109,17 @@ $('email').addEventListener('blur', async function () {
 $('pass1').addEventListener('blur', async function () {
   switch (true) {
     case !this.value.trim():
-      $('errorPass1').innerHTML = 'Enter password F';
+      $('errorPass1').innerHTML = 'Enter password';
       this.classList.add('is-invalid');
       break;
     case !regExPass.test(this.value.trim()):
       $('errorPass1').innerHTML =
-        '8 characters or longer. It should contain at least one uppercase, lowercase, and numbers F';
+        '8 characters or longer. It should contain at least one uppercase, lowercase, and numbers';
       this.classList.add('is-invalid');
       break;
     case this.value.length < 8:
       $('errorPass1').innerHTML =
-        '8 characters or longer. It should contain at least one uppercase, lowercase, and numbers F';
+        '8 characters or longer. It should contain at least one uppercase, lowercase, and numbers';
       this.classList.add('is-invalid');
       break;
     default:
@@ -135,11 +135,11 @@ $('pass1').addEventListener('blur', async function () {
 $('pass2').addEventListener('blur', async function () {
   switch (true) {
     case !this.value.trim():
-      $('errorPass2').innerHTML = 'Repeat password F';
+      $('errorPass2').innerHTML = 'Repeat password';
       this.classList.add('is-invalid');
       break;
     case !regExPass.test(this.value.trim()):
-      $('errorPass2').innerHTML = 'The passwords do not match F';
+      $('errorPass2').innerHTML = 'The passwords do not match';
       this.classList.add('is-invalid');
       break;
     default:

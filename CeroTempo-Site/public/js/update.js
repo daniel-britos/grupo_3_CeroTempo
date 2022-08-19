@@ -34,7 +34,7 @@ window.addEventListener('load', () => {
   $('name').addEventListener('blur', function () {
     switch (true) {
       case !this.value.trim():
-        $('errorName').innerHTML = 'Enter name front';
+        $('errorName').innerHTML = 'Enter name';
         this.classList.add('is-invalid');
         break;
       case !regExLetter.test(this.value.trim()):
@@ -58,7 +58,7 @@ window.addEventListener('load', () => {
   $('surname').addEventListener('blur', function () {
     switch (true) {
       case !this.value.trim():
-        $('errorSurname').innerHTML = 'Enter surname front';
+        $('errorSurname').innerHTML = 'Enter surname';
         this.classList.add('is-invalid');
         break;
       case !regExLetter.test(this.value.trim()):
@@ -78,7 +78,7 @@ window.addEventListener('load', () => {
     $('birth').addEventListener('blur', async function () {
       switch (true) {
         case !this.value:
-          $('errorBirth').innerHTML = 'Chose birth date front';
+          $('errorBirth').innerHTML = 'Chose birth date';
           this.classList.add('is-invalid');
           break;
         default:
@@ -93,7 +93,7 @@ window.addEventListener('load', () => {
       if (!regExExtensions.exec($('imgCreate').value)) {
         $('imgCreate').value = '';
         $('imgCreate').classList.add('is-invalid');
-        errorAvatar.innerHTML = 'Only jpg, jpge, png, gif front';
+        errorAvatar.innerHTML = 'Only jpg, jpge, png, gif';
         errors = true;
       } else {
         $('imgCreate').classList.remove('is-invalid');
@@ -115,7 +115,7 @@ $('form-update').addEventListener('submit', function (e) {
   for (let i = 0; i < elements.length - 3; i++) {
     if (!elements[i].value) {
       elements[i].classList.add('is-invalid');
-      $('errorMessage').innerHTML = 'Required fields F';
+      $('errorMessage').innerHTML = 'Required fields';
       error = true;
     } else {
       error = false;
