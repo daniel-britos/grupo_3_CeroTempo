@@ -136,7 +136,7 @@ module.exports = {
               await db.Image.bulkCreate(images);
             }
           }
-          return res.redirect("/products/productMain");
+          return res.redirect("/admin/list");
         }
       });
     } else {
