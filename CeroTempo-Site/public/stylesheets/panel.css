@@ -50,7 +50,10 @@
     width: 600px;
     height: 260px;
 }
-
+.buttons-products{
+    display: flex;
+    justify-content: center;
+}
 @media (max-width:  425px) {
     .main-panel-admin div {
         display: flex;
