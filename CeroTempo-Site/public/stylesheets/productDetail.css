@@ -44,7 +44,12 @@
     font-weight: 600;
     font-size: 20px;
 }
-
+#discount{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    color: var(--orangeLogo);
+}
 .pDetail-buttons-container {
     display: flex;
     flex-direction: column;
