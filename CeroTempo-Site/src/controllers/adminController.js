@@ -70,7 +70,7 @@ module.exports = {
               console.log(result)
             );
           }
-          return res.redirect("/");
+          return res.redirect("/admin/list");
         })
         .catch((error) => console.log(error));
     } else {
@@ -187,7 +187,7 @@ module.exports = {
       },
     })
       .then((info) => {
-        return res.redirect("/");
+        return res.redirect("/admin/list");
       })
       .catch((error) => console.log(error));
   },

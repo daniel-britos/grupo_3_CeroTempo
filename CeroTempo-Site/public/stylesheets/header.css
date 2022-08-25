@@ -148,14 +148,17 @@
   .fa-cart-shopping {
       display: block;
       font-size: 16px;
+      margin-top: 5px;
   }
   .fa-whatsapp {
       display: block;
       font-size: 16px;
+      margin-top: 5px;
   }
   .fa-circle-exclamation{
       display: block;
       font-size: 16px;
+      margin-top: 5px;
   }
   .header-nav-intro p {
       display: block;

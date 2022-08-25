@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <%- include('./partials/head',{ title : 'Profile' }) %>
-
+  <%- include('./partials/header') %>
   <body class="profile">
     <h1>My Profile</h1>
 
@@ -25,6 +25,7 @@
       <button type="button" class="button-register"><a href="/users/update">EDIT</a></button>
       <button type="button" class="button-profile"><a href="/">HOME</a></button>
     </div>
+    <%- include('./partials/footer') %>
     <script src="/js/menubar.js"></script>
   </body>
 </html>

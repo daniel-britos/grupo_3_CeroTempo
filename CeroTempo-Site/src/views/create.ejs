@@ -22,7 +22,7 @@
               <input
                 type="text"
                 name="name"
-                class="form-control"
+                class="form-control product-form-text"
                 id="name"
                 value="<%= locals.old && old.name ? old.name : null%>"
               />
@@ -36,7 +36,7 @@
               <input
                 type="number"
                 name="price"
-                class="form-control"
+                class="form-control product-form-text"
                 id="price"
                 value="<%= locals.old && old.price ? old.price : null%>"
               />
@@ -50,7 +50,7 @@
               <input
                 type="number"
                 name="discount"
-                class="form-control discount"
+                class="form-control product-form-text"
                 id="discount"
                 value="<%= locals.old && old.discount ? old.discount : null%>"
               />
@@ -63,7 +63,7 @@
               <textarea
                 name="description"
                 id="description"
-                class="form-control"
+                class="form-control product-form-text"
                 cols="30"
                 rows="3"
                 style="resize: none"
@@ -97,7 +97,7 @@
               <div class="admin-box">
                 <!--<label for="category"></label>-->
 
-                <select name="category" id="category">
+                <select name="category" id="category" class="product-form-text">
                   <option value="" hidden selected>Categories</option>
                   <% categories.forEach(category => { %>
                   <option value="<%= category.id %>"><%= category.name %></option>

@@ -4,7 +4,14 @@
   <body>
     <%- include('./partials/header') %>
     <main class="main-register">
-      <form class="form-r" action="" method="POST" enctype="multipart/form-data">
+      <form
+        id="form-register"
+        class="form-r"
+        action=""
+        method="POST"
+        enctype="multipart/form-data"
+        novalidate
+      >
         <div class="sign-up">
           <p class="sign-up-p">¡SIGN UP!</p>
         </div>
@@ -13,10 +20,13 @@
             <label for="userName" class="name-l">NAME</label>
             <input
               type="text"
+              class="form-control"
               id="name"
               name="userName"
-              value="<%= locals.old && old.userName ? old.userName : null %>" />
-            <span class="alert-validation"
+              placeholder="Exp: John"
+              value="<%= locals.old && old.userName ? old.userName : null %>"
+            />
+            <span id="errorName" class="alert-validation"
               ><%= locals.errors && errors.userName ? errors.userName.msg : null %></span
             >
           </div>
@@ -24,22 +34,28 @@
             <label for="surname" class="surname-l">SURNAME</label>
             <input
               type="text"
+              class="form-control"
               id="surname"
               name="userSurname"
-              value="<%= locals.old && old.userSurname ? old.userSurname : null %>" />
-            <span class="alert-validation"
+              placeholder="Exp: Doe"
+              value="<%= locals.old && old.userSurname ? old.userSurname : null %>"
+            />
+            <span id="errorSurname" class="alert-validation"
               ><%= locals.errors && errors.userSurname ? errors.userSurname.msg : null %></span
             >
           </div>
+
           <div class="sign-up">
             <label for="email" class="email-l">EMAIL</label>
             <input
               type="email"
               id="email"
               name="userEmail"
-              class="<%= locals.errors && errors.userEmail ? 'is-invalid' : null %>"
-              value="<%= locals.old && old.userEmail ? old.userEmail : null %>" />
-            <span class="alert-validation"
+              class="form-control <%= locals.errors && errors.userEmail ? 'is-invalid' : null %>"
+              placeholder="Exp: johndoe@example.com"
+              value="<%= locals.old && old.userEmail ? old.userEmail : null %>"
+            />
+            <span id="errorEmail" class="alert-validation"
               ><%= locals.errors && errors.userEmail ? errors.userEmail.msg : null %></span
             >
           </div>
@@ -49,8 +65,11 @@
               type="password"
               id="pass1"
               name="userPass"
-              value="<%= locals.old && old.userPass ? old.userPass : null %>" />
-            <span class="alert-validation"
+              class="form-control"
+              placeholder="Please, enter your password"
+              value="<%= locals.old && old.userPass ? old.userPass : null %>"
+            />
+            <span id="errorPass1" class="alert-validation"
               ><%= locals.errors && errors.userPass ? errors.userPass.msg : null %></span
             >
           </div>
@@ -60,8 +79,11 @@
               type="password"
               id="pass2"
               name="userPassConfirm"
-              value="<%= locals.old && old.userPassConfirm ? old.userPassConfirm : null %>" />
-            <span class="alert-validation"
+              class="form-control"
+              placeholder="Please, enter your password"
+              value="<%= locals.old && old.userPassConfirm ? old.userPassConfirm : null %>"
+            />
+            <span id="errorPass2" class="alert-validation"
               ><%= locals.errors && errors.userPassConfirm ? errors.userPassConfirm.msg : null
               %></span
             >
@@ -72,48 +94,50 @@
               type="date"
               id="birth"
               name="userBirth"
-              value="<%= locals.old && old.userBirth ? old.userBirth : null %>" />
-            <span class="alert-validation"
+              value="<%= locals.old && old.userBirth ? old.userBirth : null %>"
+            />
+            <span class="alert-validation" id="errorBirth"
               ><%= locals.errors && errors.userBirth ? errors.userBirth.msg : null %></span
             >
           </div>
           <div class="sign-up">
             <div class="img-create-preview">
               <h2>PREVIEW</h2>
-              <img id="imgPreview" alt="" />
+              <img src="" id="imgPreview" alt="" />
             </div>
-            <label><b>Image profile: </b></label>
-            <input
-              id="imgCreate"
-              type="file"
-              name="avatar"
-              class="form-control"
-              value="<%= locals.old && old.avatar ? old.avatar : null %>"
-              accept="image/png, image/jpeg, image/gif, image/jpg" />
-            <span class="alert-validation"
-              ><%= locals.errors && errors.avatar ? errors.avatar.msg : null %></span
-            >
-          </div>
+            <div class="admin-box add-img">
+              <label for="image">ADD IMAGE</label>
+              <input type="file" name="avatar" id="image" class="form-control" accept=".png, .jpeg, .gif, .jpg"
+                multiple value="<%= locals.old && old.avatar ? old.avatar : "" %>" />
+              <span class="alert-validation" id="errorAvatar"><%= locals.errors && errors.avatar ? errors.avatar.msg : null %></span>
+            </div>
+
+
           <div class="sign-up-terms">
-            <div class="terms-box">
+            <div class="terms-box" class="form-control">
               <input
                 type="checkbox"
                 name="terms"
                 id="terms"
-                value="<%= locals.old && old.terms ? old.terms : null %>" />
-              <label for="terms">Terms and conditions</label>
+                value="<%= locals.old && old.terms ? old.terms : null %>"
+              />
+              <label for="terms">Términos y condiciones</label>
             </div>
-            <span class="alert-validation"
+            <span id="errorTerms" class="alert-validation"
               ><%= locals.errors && errors.terms ? errors.terms.msg : null %></span
             >
           </div>
           <div class="sign-up-button">
             <button type="submit" class="button-f">SIGN UP</button>
           </div>
+          <span id="errorMessage" class="alert-validation"></span>
         </div>
       </form>
-      <!-- FOOTER -->
-      <%- include('./partials/footer') %>
     </main>
+    <!-- FOOTER -->
+    <%- include('./partials/footer') %>
+    <script src="/js/register.js"></script>
+    <script src="/js/imgPreview.js"></script>
+    <script src="/js/menubar.js"></script>
   </body>
 </html>
