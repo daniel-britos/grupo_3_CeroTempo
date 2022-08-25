@@ -13,25 +13,25 @@
 
                     <div class="admin-box">
                         <label for="name">Product Title</label>
-                        <input type="text" name="name" id="name" value="<%= product.name %> " class="form-control">
+                        <input type="text" name="name" id="name" value="<%= product.name %> " class="form-control product-form-text">
                         <span class="alert-validation" id="errorName" ><%= locals.errors && errors.name ? errors.name.msg : null%></span>                
                     </div>   
 
                     <div class="admin-box">
                         <label for="price">Price</label>
-                        <input type="number" name="price" id="price" value="<%= product.price %>" class="form-control">
+                        <input type="number" name="price" id="price" value="<%= product.price %>" class="form-control product-form-text">
                         <span class="alert-validation" id="errorPrice"><%= locals.errors && errors.price ? errors.price.msg : null%></span>
                     </div>
 
                     <div class="admin-box">                    
                         <label for="discount">Discount</label>
-                        <input type="number" name="discount" id="discount" value="<%= product.discount %>" class="form-control">
+                        <input type="number" name="discount" id="discount" value="<%= product.discount %>" class="form-control product-form-text">
                         <span class="alert-validation" id="errorDiscount"><%= locals.errors && errors.discount ? errors.discount.msg : null%></span>            
                     </div>
 
                     <div class="admin-box box-description">
                         <label for="description">Description</label>
-                        <textarea name="description" id="description" cols="30" rows="3" style="resize: none;" class="form-control"><%= product.description %></textarea>                        
+                        <textarea name="description" id="description" cols="30" rows="7" style="resize: none;" class="form-control product-form-text"><%= product.description %></textarea>                        
                         <span class="alert-validation" id="errorDescription"><%= locals.errors && errors.description ? errors.description.msg : null%></span>
                     </div>
                     
@@ -51,7 +51,7 @@
                         </div>  
                         <div class="admin-box">
                             <label for="category">Category</label>
-                            <select name="category" id="category" class="form-control">
+                            <select name="category" id="category" class="form-control product-form-text">
                                 <option value="" hidden selected>Categories</option>
                                 <% categories.forEach(category => { %>
                                     <option value="<%= category.id %>" <%= product.categoryId === category.id ? 'selected' : null %>><%= category.name %> </option>
